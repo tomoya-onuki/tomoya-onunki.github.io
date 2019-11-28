@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Connect:つなぐ | Tomoya Onuki</title>
+    <link rel="stylesheet" type="text/css" href="../my.css">
+    <script src="https://www.u.tsukuba.ac.jp/~s1711441/tomoyaonuki/sorce/my_processing/processing.min.js"></script>
+  </head>
+
+  <body class="main body">
+
+    <div name="top" class="header">
+      <div class="head_font">
+        <a href="../">TOMOYA ONUKI</a>
+        <span class="head_menu">
+          <a class ="link" href="../works.html" style="margin-left:1vw">WORKS</a>
+          <a class ="link" href="../profile.html" style="margin-left:1vw">PROFILE</a>
+          <a class ="link" href="../news.html" style="margin-left:1vw">NEWS</a>
+
+        </span>
+      </div>
+   </div>
+
+
+   <div>
+	    <h1 class="title first">Connect:つなぐ</h1>
+      <div class="main">
+        キーボードから入力によって様々な模様を描くツール。<br>
+        文章とは何か。それは文字という最小要素によって構築されるものである。
+        入力した文字は点で表現され，各点は線によって繋がってゆく。
+        時間と文字の組み合わせによってその形は変容する。文章を抽象的に視覚化する試み。<br><br>
+      </div>
+      <p>
+        Programing: Processing<br>
+      </p>
+      <hr>
+      <center>
+        <div>
+        <br>
+            <script type="application/processing">
+                int MAX = 100;  // 入力できる文字数の最大値
+
+// 折れ線の頂点の各座標
+float[] x = new float[MAX];
+float[] y = new float[MAX];
+float[] z = new float[MAX];
+// 折れ線の頂点の各速度
+float[] vx = new float[MAX];
+float[] vy = new float[MAX];
+float[] vz = new float[MAX];
+// 文字を各値に変換した時の保存先
+float _x, _y, _z, _vx, _vy, _vz;
+
+int SIZE; //描画されている線の数
+boolean DEL;  //線の消去のフラグ
+float EDGE; //立方体の辺の長さ
+
+char keydata; //キーボードからの入力
+String sentence = ""; //表示する文字列
+PFont font; //表示する文字列のフォント
+
+/**************************
+String[] text = null; //読み込んだテキストデータを１行ずつ保存する変数
+char[] txt_char = new char[500]; //読み込んだテキストデータを1文字ずつ保存する変数
+int INDEX;  //読み込んだテキストデータのインデックス
+int txt_num;  //読み込んだテキストデータの文字数
+boolean INTRO; //読み込んだテキストデータの表示のフラグ
+***************************/
+
+//@pjs preload="intro_myself.txts";
+
+
+void setup( ) {
+  size(600, 600, P3D);
+  SIZE = 0;
+  EDGE = width/2;
+  DEL = false;
+  INDEX = 0;
+  txt_num = 0;
+  INTRO = false;
+  font = loadFont("sans-serif", 10);
+  //load_text();
+}
+
+void draw() {
+  background(0);
+  pushMatrix();
+  translate(width/2, height/2);
+  rotateY(frameCount*PI/400);
+  rotateZ(frameCount*PI/400);
+
+  noFill(); stroke(255);
+  box(EDGE);
+
+  if(SIZE > 0){
+    stroke(255); noFill();
+    polygonal_line(x, y, z);  //描画
+    update(); //座標の更新と反射
+    if( DEL ){ delete_line(); }  //線の消去
+
+    popMatrix(); pushMatrix();
+
+    /*文字表示*/
+    fill(255); textFont(font);
+    textAlign(CENTER, BOTTOM);
+    textSize(20);
+    text(sentence, width/2, height-40);
+  }
+  popMatrix();
+
+  /***************************
+  if( INTRO && frameCount % 6 == 0) {
+    intro();
+    key2bin(); //keyを各パラメータに変換
+    add_line(); //線の追加
+    sentence += str(keydata); //sentenceに入力された文字を追加
+  }
+  ***************************/
+
+}
+
+void keyPressed() {
+  if(31 < int(key) && int(key) < 127) {
+    keydata = key;
+    key2bin(); //keyを各パラメータに変換
+    add_line(); //線の追加
+    sentence += str(keydata); //sentenceに入力された文字を追加
+  }
+  if(key == ENTER) {
+    if(sentence.equals("help") == true) { INTRO = true; }
+    DEL = true; //線の消去
+    sentence = ""; //文字列の消去
+  }
+  if(key == BACKSPACE) { del_char(); } //１文字の消去
+}
+
+//線の消去
+void delete_line() {
+  if(frameCount % 3 == 0){ SIZE--; }
+  if(SIZE == 0){ DEL = false; }
+}
+
+
+//線の追加
+void add_line() {
+  if(SIZE < MAX) {
+    x[SIZE] = _x;
+    y[SIZE] = _y;
+    z[SIZE] = _z;
+    vx[SIZE] = _vx;
+    vy[SIZE] = _vy;
+    vz[SIZE] = _vz;
+    SIZE++;
+  } else {
+    for(int i = 1; i < SIZE; i++){
+      x[i-1] = x[i];
+      y[i-1] = y[i];
+      z[i-1] = z[i];
+      vx[i-1] = vx[i];
+      vy[i-1] = vy[i];
+      vz[i-1] = vz[i];
+    }
+    x[SIZE-1] = _x;
+    y[SIZE-1] = _y;
+    z[SIZE-1] = _z;
+    vx[SIZE-1] = _vx;
+    vy[SIZE-1] = _vy;
+    vz[SIZE-1] = _vz;
+  }
+}
+
+//線の描画
+void polygonal_line(float _x[], float _y[], float _z[]){
+  beginShape();
+    for(int i = 0; i < SIZE; i++){
+      vertex(_x[i], _y[i], _z[i]);
+    }
+  endShape();
+}
+
+//各点の更新
+void update(){
+  for(int i = 0; i < SIZE; i++){
+    x[i]+=vx[i];
+    y[i]+=vy[i];
+    z[i]+=vz[i];
+
+    if(x[i] < -EDGE/2 || EDGE/2 < x[i] ) { vx[i]*=(-1); }
+    if(y[i] < -EDGE/2 || EDGE/2 < y[i]) { vy[i]*=(-1); }
+    if(z[i] < -EDGE/2 || EDGE/2 < z[i]) { vz[i]*=(-1); }
+  }
+}
+
+void key2bin(){
+  String bin = binary(keydata); //keyを2進数に変換
+  char[] buf = new char[7];
+  int[] seed = new int[7];
+  for(int i = 0; i < 7; i++) {
+    buf[i] = bin.charAt(i+9);
+    seed[i] = int(buf[i]);
+  }
+  _x = pow(-1, seed[6]) * ( 50 * seed[0] + 40 * seed[1] + 30 * seed[2] + 20 * seed[3] + 10 * seed[4]);
+  _y = pow(-1, seed[5]) * ( 50 * seed[6] + 40 * seed[5] + 30 * seed[4] + 20 * seed[3] + 10 * seed[2]);
+  _z = pow(-1, seed[4]) * ( 50 * seed[0] + 40 * seed[4] + 30 * seed[0] + 20 * seed[6] + 10 * seed[2]);
+  _vx = pow(-1, seed[3]) * ( seed[3] + seed[4] + seed[5] + seed[6] + seed[5]);
+  _vy = pow(-1, seed[2]) * ( seed[5] + seed[2] + seed[4] + seed[0] + seed[1]);
+  _vz = pow(-1, seed[1]) * ( seed[3] + seed[6] + seed[0] + seed[1] + seed[2]);
+  // println(key+": P("+_x+", "+_y+", "+_z+")"+" , S("+_vx+", "+_vy+", "+_vz+")");
+}
+
+
+//１文字ずつ消去
+void del_char() {
+  int len = sentence.length();
+  char[] buf = new char[len];
+  for(int i = 0; i < len; i++) {
+    buf[i] = sentence.charAt(i);
+  }
+  String tmp = "";
+  for(int i = 0; i < len-1; i++) {
+    tmp += str(buf[i]);
+  }
+  sentence = tmp;
+  SIZE--;
+}
+
+
+            </script>
+          <canvas></canvas>
+        </div>
+      </center>
+      <br>
+      <hr>
+      <br>
+      <center>
+        <img width=600px height=600px src="../img/intro.gif">
+      </center>
+      <br>
+      <hr>
+
+       <center style="font-size: 1.5vh; margin-top:30px; margin-bottom:80px;" class="main">
+        <p>©️2017 - 2019 小貫智弥 | Tomoya Onuki</p>
+		</center>
+    </div>
+  </body>
+</html>
