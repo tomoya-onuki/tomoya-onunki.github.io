@@ -1,4 +1,4 @@
-var img_size = 14;
+var img_size = 17;
 var img = document.getElementById("image_place"); // img要素を取得する
 setInterval("changeImage()", 6000);               // 一定時間で関数を実行
 
