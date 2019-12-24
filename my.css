@@ -33,19 +33,6 @@ hr{
 }
 
 
-.first{
-	padding-top: 12vh;
-}
-/*ヘッダのフォント設定*/
-.head_font{
-	/* font-family: Futura, "sans-serif"; */
-	font-family: HelveticaNeue, "sans-serif";
-	font-weight: lighter;
-	color: #000000;
-	margin-top: 3vh;
-	/*font-size: 3vw;*/
-	font-size: 3vh;
-}
 
 
 
@@ -75,7 +62,7 @@ a {
 	}
 
 	.header{
-		height: 10vh; /* 高さ */
+		height: 80px; /* 高さ */
 		width: 100%; /* 長さ */
 		background-color: #ffffff;
 		position: fixed; /* ヘッダーを固定(これが重要) */
@@ -85,11 +72,27 @@ a {
 		z-index: 3;
 	}
 
+	.first{
+		padding-top: 85px;
+	}
+
+
+	/*ヘッダのフォント設定*/
+	.head_font{
+		/* font-family: Futura, "sans-serif"; */
+		font-family: HelveticaNeue, "sans-serif";
+		font-weight: lighter;
+		color: #000000;
+		margin-top: 20px;
+		/*font-size: 3vw;*/
+		font-size: 150%;
+	}
+
 	.head_menu{
 		position:absolute;
 		right:40%;
 		font-family: HelveticaNeue-light, "sans-serif";
-		font-size: 2vh;
+		font-size: 60%;
 	}
 	/*本文のフォント指定*/
 	.main{
@@ -177,7 +180,7 @@ a {
 
 
 	.header{
-		height: 10vh; /* 高さ */
+		height: 100px; /* 高さ */
 		width: 100%; /* 長さ */
 		background-color: #ffffff;
 		position: fixed; /* ヘッダーを固定(これが重要) */
@@ -186,12 +189,26 @@ a {
 		position:　absolute;
 		z-index: 3;
 	}
+	.first{
+		padding-top: 105px;
+	}
 
+
+	/*ヘッダのフォント設定*/
+	.head_font{
+		/* font-family: Futura, "sans-serif"; */
+		font-family: HelveticaNeue, "sans-serif";
+		font-weight: lighter;
+		color: #000000;
+		margin-top: 30px;
+		/*font-size: 3vw;*/
+		font-size: 300%;
+	}
 	.head_menu{
 		position:absolute;
 		right:10%;
 		font-family: HelveticaNeue-light, "sans-serif";
-		font-size: 1.5vh;
+		font-size: 50%;
 	}
 
 		/*本文のフォント指定*/
