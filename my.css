@@ -122,10 +122,11 @@ a {
 
 
 	.works_img_size{
-		/*width:200px;*/
-		/*height:200px;*/
-		width: 15vw;
-		height: 15vw;
+		width:160px;
+		height:160px;
+		/* width: 15vw; */
+		/* height: 15vw; */
+		/* width: 200px; */
 	}
 
 	.img_size{
@@ -147,7 +148,7 @@ a {
 		text-decoration: none;
 		font-family: 'ヒラギノ角ゴ Pro W3';
 		color: #4f4f4f;
-		font-size: 1.5vh;
+		font-size: 0.5vw;
 	}
 	.group {
 		background: #4f4f4f;
@@ -170,7 +171,7 @@ a {
 
 @media screen and (max-width:980px){
 	h1{
-		font-size: 5vh;
+		font-size: 100%;
 		color: #000000;
 	}
 
