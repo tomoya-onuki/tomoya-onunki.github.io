@@ -39,10 +39,10 @@ a {
 }
 /*リンクの色はなし*/
 
-.link {
+a{
 	color:#4f4f4f
 }
-.link:hover {
+a:hover {
 	background-color :#4f4f4f;
 	color:#ffffff
 }
