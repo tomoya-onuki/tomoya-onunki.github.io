@@ -32,14 +32,11 @@ hr{
 
 
 /*リンクの色はなし*/
-a {
-	text-decoration: none;
-	color: #000000;
-	/* background-color :#cccccc; */
-}
+
 /*リンクの色はなし*/
 
-a{
+a {
+	text-decoration: none;
 	color:#4f4f4f
 }
 a:hover {
@@ -50,11 +47,13 @@ a:hover {
 input {
 	-webkit-appearance: none;
 }
+button,
 input[type="submit"],
 input[type="reset"] {
 	width:80px;
 	height:20px;
 	border:solid 1px #ccc;
+	border-radius:3px;
 }
 input[type="text"],
 input[type="number"]{
@@ -77,15 +76,12 @@ textarea{
 
 
 /*ヘッダのフォント設定*/
-.head_font{
-	font-family: HelveticaNeue, "sans-serif";
-	font-weight: lighter;
-	color: #000000;
+.head_text {
 	margin-top: 20px;
-	font-size: 150%;
 }
+
 .first{
-	padding-top: 85px;
+	padding-top: 72px;
 }
 
 
@@ -99,28 +95,43 @@ textarea{
 @media screen and (min-width:980px){
 
 	h1{
-		font-size: 200%;
+		font-family: Helvetica, "sans-serif";
 		color: #000000;
-		margin-bottom: -10px;
+		font-size: 200%;
+		/* margin-bottom: 40px; */
 	}
 
 	.header{
-		height: 80px; /* 高さ */
+		height: 70px; /* 高さ */
 		width: 100%; /* 長さ */
 		background-color: #ffffff;
 		position: fixed; /* ヘッダーを固定(これが重要) */
 		top: 0; /* 固定する位置 */
-		left: 20%; /* 固定する位置 */
+		left: 0; /* 固定する位置 */
 		position:　absolute;
 		z-index: 3;
 	}
 
+	.head_font{
+		font-family: HelveticaNeue, "sans-serif";
+		font-weight: lighter;
+		color: #000000;
+		font-size: 150%;
+		text-decoration: none;
+		margin-left: 20%;
+	}
+	.head_font:hover{
+		color: #000000;
+		background-color :#ffffff;
+	}
 
 	.head_menu{
 		position:absolute;
-		right:40%;
+		right:20%;
 		font-family: HelveticaNeue-light, "sans-serif";
-		font-size: 50%;
+		font-size: 90%;
+		color: #000000;
+		margin-top: 6px;
 	}
 
 
@@ -189,27 +200,43 @@ textarea{
 
 @media screen and (max-width:980px){
 	h1{
-		font-size: 120%;
+		font-family: Helvetica, "sans-serif";
 		color: #000000;
+		font-size: 4vh;
 	}
 
 
 	.header{
-		height: 80px; /* 高さ */
+		height: 70px; /* 高さ */
 		width: 100%; /* 長さ */
 		background-color: #ffffff;
 		position: fixed; /* ヘッダーを固定(これが重要) */
 		top: 0; /* 固定する位置 */
-		left: 5%; /* 固定する位置 */
+		left: 0%; /* 固定する位置 */
 		position:　absolute;
 		z-index: 3;
 	}
 
+	.head_font{
+		font-family: HelveticaNeue, "sans-serif";
+		font-weight: lighter;
+		color: #000000;
+		font-size: 150%;
+		text-decoration: none;
+		margin-left: 5%;
+	}
+	.head_font:hover{
+		color: #000000;
+		background-color :#ffffff;
+	}
+
 	.head_menu{
 		position:absolute;
-		right:10%;
+		right:5%;
 		font-family: HelveticaNeue-light, "sans-serif";
-		font-size: 50%;
+		font-size: 80%;
+		color: #000000;
+		margin-top: 8px;
 	}
 
 		/*本文のフォント指定*/
