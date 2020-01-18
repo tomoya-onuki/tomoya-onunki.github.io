@@ -65,8 +65,8 @@ $out_file_name = "../".$tmp[0].".html";
 $img_file_path = glob("../img/".$tmp[0]."/*");
 if (count($img_file_path) > 0) $html .= "<hr>\n";
 for ($i=0; $i < count($img_file_path); $i++) {
-  explode("/",$img_file_path[$i]);
-  $img_file = $html .= '<p><img class="img_size" src="./img/'.$tmp[0].$img_file[count($img_file)-1].'"></p>'."\n";
+  $img_file = explode("/",$img_file_path[$i]);
+  $html .= '<p><img class="img_size" src="./img/'.$tmp[0]."/".$img_file[count($img_file)-1].'"></p>'."\n";
 }
 
 // ファイルに書き込む内容を整形
