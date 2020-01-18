@@ -8,9 +8,9 @@
   </head>
   <script type="text/javascript" src="../js/header.js"></script>
 
-<body class="body">
+<body class="body first">
     {md}
 		<hr>
-    <script type="text/javascript" src="./js/footer.js"></script>
+    <script type="text/javascript" src="../js/footer.js"></script>
 </body>
 </html>

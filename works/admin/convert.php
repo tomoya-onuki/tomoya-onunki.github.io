@@ -62,7 +62,7 @@ $tmp = explode(".", $tmp[count($tmp)-1]);
 $out_file_name = "../".$tmp[0].".html";
 
 // 画像があれば追加
-$img_file = glob("../img/".$tmp[0]."/*");
+$img_file = glob("./img/".$tmp[0]."/*");
 if (count($img_file) > 0) $html .= "<hr>\n";
 for ($i=0; $i < count($img_file); $i++) {
   $html .= '<p><img class="img_size" src="'.$img_file[$i].'"></p>'."\n";
