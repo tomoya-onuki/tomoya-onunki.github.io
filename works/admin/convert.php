@@ -84,7 +84,7 @@ if ($argv[3] == "-index") {
 
   // ファイル読み込み
   $in_index_html = file_get_contents("../index.html");
-  $add_html = '<!-- new -->'."\n".'<div class=figure>'."\n".'<a class="linkGallery" href="./'.$tmp[0].'.html">'."\n".'<img src="../img/index/'.$tmp[0].'.png" class="works_img_size" >'."\n".'<p class="caption">'.$title.'<br>'.$date.'</p>'."\n".'</a>'."\n".'</div>';
+  $add_html = '<!-- new -->'."\n".'<div class=figure>'."\n".'<a class="linkGallery" href="./'.$tmp[0].'.html">'."\n".'<img src="./img/index/'.$tmp[0].'.png" class="works_img_size" >'."\n".'<p class="caption">'.$title.'<br>'.$date.'</p>'."\n".'</a>'."\n".'</div>';
 
   $out_index_html = str_replace("<!-- new -->", $add_html, $in_index_html);
 
