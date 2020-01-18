@@ -1,0 +1,7 @@
+#COLOR SELECTION
+非デザイナーのための配色用のパレット。自身のカラーデザインを支援するために制作した。
+
+統一性のある色選びを促すためにHSB(HSV)色空間で色を設定できるようにしている。 また色相(Hue)の選択を12段階に制限することで、色選びの複雑性を軽減させた。
+制作したカラーセットは保存し、全世界のユーザーと共有することができる。
+
+リンク： [https://color-selection.herokuapp.com/](https://color-selection.herokuapp.com/)

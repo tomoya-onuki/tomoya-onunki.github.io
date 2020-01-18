@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" >
+    <title>{md} | Tomoya Onuki</title>
+        <link rel="stylesheet" type="text/css" href="../my.css">
+  </head>
+  <script type="text/javascript" src="../js/header.js"></script>
+
+<body class="body">
+    {md}
+		<hr>
+		<script type="text/javascript" src="./js/hooter.js"></script>
+</body>
+</html>
