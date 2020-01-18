@@ -1,5 +1,12 @@
 
 <?php
+// markdownファイル読み込み
+$handle = fopen($argv[1], "r");
+// タイトルを取得
+$title = str_replace("#", "", fgets($handle));
+fclose($handle);
+
+
 // indexの書き換え
 $date = $argv[2];
 // 書き出すファイル名を生成

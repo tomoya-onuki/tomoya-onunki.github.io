@@ -37,6 +37,8 @@ if (count($argv) == 1) {
   exit();
 }
 
+
+
 // htmlのテンプレート読み込み
 $buf = file_get_contents("template.txt");
 $html_template = explode("{md}", $buf);
@@ -54,12 +56,10 @@ for ($i = 0; $line = fgets($handle); $i++) {
 }
 fclose($handle);
 
-
 // 書き出すファイル名を生成
 $tmp = explode("/", $argv[1]);
 $tmp = explode(".", $tmp[count($tmp)-1]);
 $out_file_name = "../".$tmp[0].".html";
-
 
 // 画像があれば追加
 $img_file = glob("../img/".$tmp[0]."/*");
@@ -71,9 +71,25 @@ for ($i=0; $i < count($img_file); $i++) {
 // ファイルに書き込む内容を整形
 $out_html = $html_template[0].$title.$html_template[1].$html.$html_template[2];
 
-
-
 // ファイル書き出し
 file_put_contents($out_file_name, $out_html);
+
+
+if ($argv[3] == "-index") {
+  // indexの書き換え
+  $date = $argv[2];
+  // 書き出すファイル名を生成
+  $tmp = explode("/", $argv[1]);
+  $tmp = explode(".", $tmp[count($tmp)-1]);
+
+  // ファイル読み込み
+  $in_index_html = file_get_contents("../index.html");
+  $add_html = '<!-- new -->'."\n".'<div class=figure>'."\n".'<a class="linkGallery" href="./'.$tmp[0].'.html">'."\n".'<img src="../img/index/'.$tmp[0].'.png" class="works_img_size" >'."\n".'<p class="caption">'.$title.'<br>'.$date.'</p>'."\n".'</a>'."\n".'</div>';
+
+  $out_index_html = str_replace("<!-- new -->", $add_html, $in_index_html);
+
+  // ファイル書き出し
+  file_put_contents("../index.html", $out_index_html);
+}
 exit();
 ?>
