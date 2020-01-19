@@ -23,8 +23,13 @@ function convert_orginal_tag ($html) {
     // htmlタグを削除
     $html = strip_tags($html);
     // Youtubeのリンクを成形
+    // IDを取得
     $str = explode("/", $html);
-    $html = '<div style="margin-bottom:20px;">'."\n".'<iframe class="mov_size" src="https://www.youtube.com/embed/'.$str[count($str)-1].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'."\n".'</div>'."\n";
+    $video_id = $str[count($str)-1];
+    // 再生リストだった場合の処理
+    $video_id = str_replace("playlist", "videoseries", $video_id);
+    // html形式に変換    
+    $html = '<div style="margin-bottom:20px;">'."\n".'<iframe class="mov_size" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'."\n".'</div>'."\n";
   }
 
   return $html;
