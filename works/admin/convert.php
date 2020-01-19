@@ -81,7 +81,7 @@ $out_html = $html_template[0].$title.$html_template[1].$html.$html_template[2];
 file_put_contents($out_file_name, $out_html);
 
 //  オプションの処理
-for($i = 2; $i < 4; $i++) {
+for($i = 2; $i < $argc; $i++) {
   // indexの書き換え
   if ($argv[$i] == "-index") {
     // 日付の指定
