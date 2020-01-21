@@ -28,7 +28,17 @@ hr{
 }
 
 
+.logo_img{
+	width:17px;
+	height:17px;
+	margin-right: 3px;
+}
 
+.contact{
+	align-items: center;
+  display: flex;
+	margin-bottom: 5px;
+}
 
 
 /*リンクの色はなし*/
@@ -42,6 +52,15 @@ a {
 a:hover {
 	background-color :#4f4f4f;
 	color:#ffffff
+}
+
+.no_link_decoration{
+	color: #000000;
+	text-decoration: none;
+}
+.no_link_decoration:hover{
+	color: #000000;
+	background-color :#ffffff;
 }
 
 input {
