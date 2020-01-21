@@ -292,9 +292,14 @@ textarea{
 		width:  90vw;
 		height: 50.625vw;
 	}
-	.works_img_size{
+	/* .works_img_size{
 		width: 35vw;
-		/* height: 15vw; */
+		height: 35vw;
+	} */
+
+	.works_img_size{
+		width:160px;
+		height:160px;
 	}
 	.caption {
 		text-decoration: none;
