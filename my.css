@@ -292,15 +292,15 @@ textarea{
 		width:  90vw;
 		height: 50.625vw;
 	}
-	.works_img_size{
-		width: 25vw;
-		height: 25vw;
-	}
-
 	/* .works_img_size{
-		width:100px;
-		height:100px;
+		width: 30vw;
+		height: 30vw;
 	} */
+
+	.works_img_size{
+		width:130px;
+		height:130px;
+	}
 	.caption {
 		text-decoration: none;
 		font-family: 'ヒラギノ角ゴ Pro W3';
