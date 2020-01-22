@@ -293,13 +293,13 @@ textarea{
 		height: 50.625vw;
 	}
 	.works_img_size{
-		width: 35vw;
-		height: 35vw;
+		width: 25vw;
+		height: 25vw;
 	}
 
 	/* .works_img_size{
-		width:160px;
-		height:160px;
+		width:100px;
+		height:100px;
 	} */
 	.caption {
 		text-decoration: none;
