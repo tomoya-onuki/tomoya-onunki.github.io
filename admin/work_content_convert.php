@@ -86,10 +86,18 @@ EOF;
   // {contact=mail}[表示](リンク)
   if (strpos($html, "{contact=") !== false) {
 
+    // 画像をつける
+    $is_img = false;
+    if (strpos($html, "img") !== false) {
+      $html = str_replace(" img", "", $html);
+      $is_img = true;
+    }
+
     // "{contact="を削除
     $html = str_replace("{contact=", "", $html);
     $html = str_replace("<br>", "", $html);
     $html = str_replace("\n", "", $html);
+
 
     //メディアが何か判別
     $buf = explode("}", $html);
@@ -99,10 +107,13 @@ EOF;
     // メールの時はメール用にリンクを成形
     if($media == "mail") $html = str_replace("href=\"", "href=\"mailto:", $html);
 
+    // 画像タグの生成
+    if ($is_img) $img_tag = '<img class="logo_img" src="https://tomoya-onuki.github.io/img/logos/'.$media.'_logo.png">';
+
     // htmlに成形
     $html = <<< EOF
     <div class="contact">
-      <img class="logo_img" src="./img/logos/{$media}_logo.png">
+      {$img_tag}
       {$html}
     </div>\n\n
 EOF;
