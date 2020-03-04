@@ -157,7 +157,7 @@ textarea{
 	/*本文のフォント指定*/
 	.main{
 		font-family: 'ヒラギノ角ゴ Pro W3';
-		font-size: 100%;
+		font-size: 80%;
 	}
 
 	.mini-fot{
@@ -263,7 +263,7 @@ textarea{
 		/*本文のフォント指定*/
 	.main{
 		font-family: 'ヒラギノ角ゴ Pro W3';
-		font-size: 2.4vh;
+		font-size: 80%;
 	}
 	.mini-font{
 	    font-size:1.8vh;
