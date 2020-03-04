@@ -9,22 +9,21 @@ global $title;
 global $work_code;
 
 // コマンドライン引数が少ないとき
-if ($argc == 1) exit("Error : please input file name.\n");
-
+if ($argc == 1) {
+  echo "\n";
+  echo " filname         : convert filename to filname.html .\n";
+  echo "    -index       : update /works/index.html .\n";
+  echo "      year.month : add date.\n";
+  echo "      border     : add border 1 px.\n";
+  echo "    -img         : make image directory\n\n";
+  echo " -profile        : update profile.html\n";
+  echo " -h              : usage convert.php\n\n";
+  exit();
+}
 
 switch ($argv[1]) {
 
-  // ヘルプの出力
-  case "-h":
-    echo "\n";
-    echo " filname         : convert filename to filname.html .\n";
-    echo "    -index       : update /works/index.html .\n";
-    echo "      year.month : add date.\n";
-    echo "      border     : add border 1 px.\n";
-    echo "    -img         : make image directory\n\n";
-    echo " -profile        : update profile.html\n";
-    echo " -h              : usage convert.php\n\n";
-    break;
+
 
 
   case "-profile":
