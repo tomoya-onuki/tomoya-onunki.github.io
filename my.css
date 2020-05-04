@@ -133,7 +133,7 @@ h1{
 
 	.head_font{
 		font-family: HelveticaNeue, "sans-serif";
-		font-weight: lighter;
+		/* font-weight: lighter; */
 		color: #000000;
 		font-size: 150%;
 		text-decoration: none;
@@ -234,7 +234,7 @@ h1{
 
 	.head_font{
 		font-family: HelveticaNeue, "sans-serif";
-		font-weight: lighter;
+		/* font-weight: lighter; */
 		color: #000000;
 		font-size: 150%;
 		text-decoration: none;
