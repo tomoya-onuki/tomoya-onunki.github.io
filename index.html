@@ -23,19 +23,8 @@
 
       <!-- 画像表示 -->
       <center>
-        <img name="image_place" src="./img/index/0.JPG" style="width:100%; height:65vh; object-fit: cover;">
-        <script type="text/javascript">
-        var max = 14;
-        var count = Math.floor(Math.random() * max);
-        imgTimer();
-
-        function imgTimer() {
-        	count++;
-        	document.image_place.src = "./img/index/"+count+".JPG";
-          if (count == max) count = 0;
-        	setTimeout("imgTimer()",8000); //*6
-        }
-        </script>
+        <img name="image_place" src="./img/index/0.JPG" class="index_img_size">
+        <script type="text/javascript" src="./js/index_img.js"></script>
         <!-- <video src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/portfolio.mp4" loop autoplay muted style="width:100%;"></video>
         <script type="text/javascript" src="./js/change_top_image.js"></script> -->
       </center>
