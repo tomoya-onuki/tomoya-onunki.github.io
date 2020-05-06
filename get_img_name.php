@@ -23,7 +23,7 @@ function imgTimer() {
     count = 0;
   }
   console.log(delta);
-  setTimeout("imgTimer()",500);
+  setTimeout("imgTimer()",8000);
 }
 EOD;
 
