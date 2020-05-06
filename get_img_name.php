@@ -10,15 +10,19 @@ $jsArray2 = str_replace('""', '", "', $jsArray);
 
 
 $ctx2 = <<<EOD
-var max = 23;
+var max = fname.length;
+var delta = 1:
 var count = Math.floor(Math.random() * max);
 imgTimer();
 
 function imgTimer() {
   document.image_place.src = fname[count];
-  count++;
-  if (count > fname.size()) count = 0;
-  setTimeout("imgTimer()",8000); //*6
+  count += delta;
+  if (count > fname.size()) {
+    delta = Math.floor(Math.random() * (5 - (-5) ) + (-5);
+    count = 0;
+  }
+  setTimeout("imgTimer()",8000);
 }
 EOD;
 
