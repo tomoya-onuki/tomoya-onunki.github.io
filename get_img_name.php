@@ -18,7 +18,7 @@ function imgTimer() {
   document.image_place.src = fname[count];
   count++;
   if (count > fname.size()) count = 0;
-  setTimeout("imgTimer()",1000); //*6
+  setTimeout("imgTimer()",8000); //*6
 }
 EOD;
 
