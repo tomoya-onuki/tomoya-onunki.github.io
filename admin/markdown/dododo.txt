@@ -1,4 +1,0 @@
-#タスク管理ツール
-主に自身の，個人あるいは小規模開発の際に利用することを想定して作成したタスク管理ツール。
-
-リンク：[https://three-do.herokuapp.com/](https://three-do.herokuapp.com/)
