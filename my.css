@@ -1,5 +1,6 @@
 html{
 	scroll-behavior: smooth;
+	background-color: #000000;
 }
 
 hr{
@@ -10,21 +11,6 @@ hr{
 .l {
 	padding-top: 150px;
 	margin-top: -150px;
-}
-
-.figures {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-	/*画像のマスク*/
-.figure {
-	padding-bottom: 25px;
-	/* padding-top: 25px; */
-	/* padding-left: 25px; */
-	padding-right: 25px;
-
 }
 
 
@@ -40,10 +26,14 @@ hr{
 	margin-bottom: 5px;
 }
 
+.profile_img{
+		width:200px;
+		height:200px;
+		margin-top:5px;
+		margin-right:20px;
+		padding-bottom:0px;
+}
 
-/*リンクの色はなし*/
-
-/*リンクの色はなし*/
 
 a {
 	text-decoration: none;
@@ -61,35 +51,6 @@ a:hover {
 .no_link_decoration:hover{
 	color: #000000;
 	background-color :#ffffff;
-}
-
-input {
-	-webkit-appearance: none;
-}
-button,
-input[type="submit"],
-input[type="reset"] {
-	width:80px;
-	height:20px;
-	border:solid 1px #ccc;
-	border-radius:3px;
-}
-input[type="text"],
-input[type="number"]{
-	width:90%;
-	height:20px;
-	font-size: 110%;
-	margin-bottom:20px;
-	border:solid 1px #ccc;
-	padding: 8px;
-}
-textarea{
-	width:90%;
-	font-size: 110%;
-	margin-bottom:20px;
-	resize: none;
-	border:solid 1px #ccc;
-	padding: 8px;
 }
 
 
@@ -314,47 +275,7 @@ h1{
 		color: #4f4f4f;
 		font-size: 50%;
 	}
-}
 
-@media screen and (max-height:1000px){
-	.profile_img{
-			/* float:left; */
-			width:200px;
-			height:200px;
-			margin-top:5px;
-			margin-right:20px;
-			padding-bottom:0px;
-	}
 
-	.contact_info{
-		margin-bottom: 10px;
-	}
-	.logo_img{
-		width:20px;
-		height:20px;
-	}
-	.contact_text{
-		margin-top:-28px;
-		margin-left: 25px;
-	}
-}
-@media screen and (min-height:1000px){
-		.profile_img{
-			width:20vh;
-			height:20vh;
-			margin-right:30vh;
-			margin-bottom:0px;
-	}
 
-	.contact_info{
-		margin-top: 1vh;
-	}
-	.logo_img{
-		width:3vh;
-		height:3vh;
-	}
-	.contact_text{
-		margin-top:-4.2vh;
-		margin-left: 3.5vh;
-	}
 }
