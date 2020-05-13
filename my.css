@@ -52,6 +52,12 @@ a:hover {
 	background-color :#ffffff;
 }
 
+img {
+  pointer-events: none;
+}
+video {
+  pointer-events: none;
+}
 
 
 /*ヘッダのフォント設定*/
