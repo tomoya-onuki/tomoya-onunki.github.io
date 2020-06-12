@@ -1,0 +1,37 @@
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.modal__bg{
+
+}
+@media screen and (min-width:980px){
+  .modal__content{
+      background: #ffffff;
+      opacity:0.95;
+      color: #1f1f1f;
+      left: 0%;
+      top: 70px;
+      padding: 40px;
+      position: absolute;
+      width: 55%;
+      height:auto;
+  }
+}
+@media screen and (max-width:980px){
+  .modal__content{
+      background: #ffffff;
+      opacity:0.95;
+      color: #1f1f1f;
+      font-size: 80%;
+      left: 0%;
+      top: 70px;
+      padding: 40px;
+      position: absolute;
+      width: 82%;
+      height:auto;
+  }
+}
