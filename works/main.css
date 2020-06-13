@@ -43,7 +43,7 @@ img{
 .genre{
   /* color: #ffffff; */
   color: #000000;
-  font-family: sans-serif "Helvechica";
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 .position{
   padding-top: 72px;
