@@ -36,11 +36,12 @@ hr{
 
 a {
 	text-decoration: none;
-	color:#4f4f4f
+	/* color:#4f4f4f; */
+	color:#1f1f1f;
 }
 a:hover {
-	background-color :#4f4f4f;
-	color:#ffffff
+	/* background-color :#4f4f4f; */
+	color:#afafaf
 }
 
 .no_link_decoration{
@@ -108,12 +109,15 @@ h1{
 		font-size: 150%;
 		text-decoration: none;
 		margin-left: 20%;
+		font-weight: bold;
 	}
 	.head_font:hover{
 		color: #000000;
 		background-color :#ffffff;
 	}
-
+	.head_menu_font{
+		font-weight: bold;
+	}
 	.head_menu{
 		position:absolute;
 		right:20%;
@@ -214,12 +218,16 @@ h1{
 		font-size: 150%;
 		text-decoration: none;
 		margin-left: 5%;
+		font-weight: bold;
 	}
 	.head_font:hover{
 		color: #000000;
 		background-color :#ffffff;
 	}
 
+	.head_menu_font{
+		font-weight: bold;
+	}
 	.head_menu{
 		position:absolute;
 		right:5%;
@@ -227,6 +235,7 @@ h1{
 		font-size: 80%;
 		color: #000000;
 		margin-top: 8px;
+		font-weight: bold;
 	}
 
 		/*本文のフォント指定*/
