@@ -1,4 +1,5 @@
 
+
  <!doctype html>
   <html>
   <head>
@@ -12,6 +13,7 @@
     </style>
     <script type="text/javascript" src="./js/img_file_name.js"></script>
   	<link rel="stylesheet" type="text/css" href="./my.css">
+  	<link rel="stylesheet" type="text/css" href="./photo.css">
   </head>
 
 
@@ -21,23 +23,18 @@
     <!-- ここまで -->
 
 	  <div class="first main">
-
-      <!-- 画像表示 -->
-      <center>
-        <a href="./photos.html">
-          <img name="image_place" src="./img/index/0.JPG" class="index_img_size">
-          <script type="text/javascript" src="./js/index_img.js"></script>
-        </a>
-        <!-- <video src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/portfolio.mp4" loop autoplay muted style="width:100%;" class="index_img_size"></video> -->
-        <!-- <script type="text/javascript" src="./js/change_top_image.js"></script> -->
-      </center>
-      <!-- ここまで -->
+      <div class="flex">
+        <script type="text/javascript">
+          for (var i = 0; i < fname.length; i++) {
+            var img_tag = '<img src="'+fname[i]+'">'
+            document.write(img_tag);
+          }
+        </script>
+      </div>
 
       <div style="clear:both; margin-top:30px;">
         <script type="text/javascript" src="./js/footer.js"></script>
       </div>
-
-
 	  </div>
   </body>
   </html>
