@@ -230,9 +230,9 @@ h1{
 	}
 
 
-	.head_menu_font{
+	/* .head_menu_font{
 		font-weight: bold;
-	}
+	} */
 	.head_menu{
 		position:absolute;
 		right:5%;
