@@ -15,18 +15,63 @@
  <body class="body">
   <script type="text/javascript" src="../js/header.js"></script>
  	<div class="first main">
-    <h1 style="margin-bottom:20px;">WORKS</h1>
-    <center>
-      <div style="margin-bottom:20px; font-size:90%;">
-        <a href="#video">Video</a> /
-        <a href="#art">Art</a> /
-        <!-- <a href="#game">Game</a> | -->
-        <a href="#application">Application</a>
-      </div>
-    </center>
+    <!-- <h1 style="margin-bottom:20px;">WORKS</h1> -->
+    <h1>
+      <a id="videoBtn" onclick="visibleVideo()" style="cursor:pointer; text-decoration:none;">Video</a> /
+      <a id="artBtn" onclick="visibleArt()" style="cursor:pointer; text-decoration:none;">Art</a> /
+      <a id="appBtn" onclick="visibleApp()" style="cursor:pointer; text-decoration:none;">Application</a>
+      <script type="text/javascript">
+        function visibleVideo(){
+          document.getElementById("top").style.display ="none";
+          document.getElementById("video").style.display ="block";
+          document.getElementById("art").style.display ="none";
+          document.getElementById("application").style.display ="none";
 
-    <div id="video" class="position">
-      <p class="genre">Video</p>
+          document.getElementById("videoBtn").style.textDecoration ="underline";
+          document.getElementById("artBtn").style.textDecoration ="none";
+          document.getElementById("appBtn").style.textDecoration ="none";
+        }
+        function visibleArt(){
+          document.getElementById("top").style.display ="none";
+          document.getElementById("video").style.display ="none";
+          document.getElementById("art").style.display ="block";
+          document.getElementById("application").style.display ="none";
+
+          document.getElementById("videoBtn").style.textDecoration ="none";
+          document.getElementById("artBtn").style.textDecoration ="underline";
+          document.getElementById("appBtn").style.textDecoration ="none";
+        }
+        function visibleApp(){
+          document.getElementById("top").style.display ="none";
+          document.getElementById("video").style.display ="none";
+          document.getElementById("art").style.display ="none";
+          document.getElementById("application").style.display ="block";
+
+          document.getElementById("videoBtn").style.textDecoration ="none";
+          document.getElementById("artBtn").style.textDecoration ="none";
+          document.getElementById("appBtn").style.textDecoration ="underline";
+        }
+      </script>
+    </h1>
+
+    <div id="top" class="position" style="display:block;">
+      <h1 style="margin-top:-8px;">Recommend Works</h1>
+      <a target="_blank" href="https://youtu.be/Zn46mk79o-E" class="no_link_decoration">
+        <img src="./img/recommend/rotate_making.png" style="vertical-align:middle;">
+      </a>
+      <a target="_blank" href="https://www.youtube.com/playlist?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t" class="no_link_decoration">
+        <img src="./img/recommend/express.png" style="vertical-align:middle;">
+      </a>
+      <a target="_blank" href="https://youtu.be/DdYMoKtYVlc" class="no_link_decoration">
+        <img src="./img/recommend/intheblackoutandeternal.png" style="vertical-align:middle;">
+      </a>
+      <a target="_blank" href="https://youtu.be/aMkhraO-NBQ" class="no_link_decoration">
+        <img src="./img/recommend/lost_anima.png" style="vertical-align:middle;">
+      </a>
+    </div>
+
+    <div id="video" class="position" style="display:none;">
+      <!-- <p class="genre">Video</p> -->
 
       <div class="contents">
         <a target="_blank" href="https://youtu.be/32P2vfq96-I" class="no_link_decoration">
@@ -153,10 +198,9 @@
       </div>
     </div>
 
-      <center><hr style="width:20%;"></center>
 
-    <div id="art" class="position">
-      <p class="genre">Art</p>
+    <div id="art" class="position" style="display:none;">
+      <!-- <p class="genre">Art</p> -->
 
       <div class="contents">
         <a target="_blank" href="https://youtu.be/DdYMoKtYVlc" class="no_link_decoration">
@@ -164,7 +208,7 @@
             <img src="./img/index/intheblackoutandeternal.png">
             <name>暗転と永遠の中で。</name>
             <date>2019.12</date>
-            <category>Video Instalation</category>
+            <category>Video Installation</category>
             <div><stmt>東京の河川を通して、文明によって消え去った都市の暗闇と、日常でふと感じる永遠に続くかのような瞬間を表現したビデオインスタレーション</stmt></div>
           </div>
         </a>
@@ -265,7 +309,7 @@
             <img src="./img/index/silence.png">
             <name>沈黙</name>
             <date>2017.09</date>
-            <category>Instalation Art</category>
+            <category>Installation Art</category>
             <div><stmt>「伝える」というテーマを、「静止」というモチーフで表現した作品</stmt></div>
           </div>
         </a>
@@ -273,17 +317,11 @@
     </div>
 
 
-      <!-- <center><hr style="width:20%;"></center> -->
-
-    <!-- <div id="game" class="position">
-      <p class="genre">Game</p> -->
 
 
 
-      <center><hr style="width:20%;"></center>
 
-    <div id="application" class="position">
-      <p class="genre">Application</p>
+    <div id="application" class="position" style="display:none;">
 
       <div class="contents">
         <!-- <a href="https://three-do.herokuapp.com/" target="_blank" class="no_link_decoration"> -->
@@ -446,7 +484,7 @@
     </div>
 
   </div>
- 		<hr>
+ 		<!-- <hr> -->
  			<script type="text/javascript" src="../js/footer.js"></script>
  </body>
  </html>

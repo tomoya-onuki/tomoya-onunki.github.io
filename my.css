@@ -54,7 +54,7 @@ a:hover {
 }
 
 img {
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 video {
   pointer-events: none;
