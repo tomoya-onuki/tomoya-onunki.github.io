@@ -13,45 +13,32 @@
 
 
  <body class="body">
-  <script type="text/javascript" src="../js/header.js"></script>
+  <!-- <script type="text/javascript" src="../js/header.js"></script> -->
+  <div name="top" class="header">
+    <div class="head_text">
+      <a target="_self" class="head_logo" href="../">
+        <!-- <div class="head_font1">TMYONUKI</div> -->
+        <div class="head_font1">TM.ONUKI</div>
+        <div class="head_font2">Tomoya Onuki Portfolio Site.</div>
+      </a>
+      <span class="head_menu">
+        <a id="works" target="_self" class ="link head_menu_font btn" style="border-bottom: solid 1px;" href="../works/">WORKS</a>
+        <span class="head_menu_font"> / </span>
+        <a id="about" target="_self" class ="link head_menu_font btn" href="../profile.html">ABOUT</a>
+      </span>
+
+    </div>
+  </div>
+
+
  	<div class="first main">
     <!-- <h1 style="margin-bottom:20px;">WORKS</h1> -->
     <h1>
-      <a id="videoBtn" onclick="visibleVideo()" style="cursor:pointer; text-decoration:underline;">Video</a> /
-      <a id="artBtn" onclick="visibleArt()" style="cursor:pointer; text-decoration:none;">Art</a> /
-      <a id="appBtn" onclick="visibleApp()" style="cursor:pointer; text-decoration:none;">Application</a>
-      <script type="text/javascript">
-        function visibleVideo(){
-          document.getElementById("top").style.display ="none";
-          document.getElementById("video").style.display ="block";
-          document.getElementById("art").style.display ="none";
-          document.getElementById("application").style.display ="none";
-
-          document.getElementById("videoBtn").style.textDecoration ="underline";
-          document.getElementById("artBtn").style.textDecoration ="none";
-          document.getElementById("appBtn").style.textDecoration ="none";
-        }
-        function visibleArt(){
-          document.getElementById("top").style.display ="none";
-          document.getElementById("video").style.display ="none";
-          document.getElementById("art").style.display ="block";
-          document.getElementById("application").style.display ="none";
-
-          document.getElementById("videoBtn").style.textDecoration ="none";
-          document.getElementById("artBtn").style.textDecoration ="underline";
-          document.getElementById("appBtn").style.textDecoration ="none";
-        }
-        function visibleApp(){
-          document.getElementById("top").style.display ="none";
-          document.getElementById("video").style.display ="none";
-          document.getElementById("art").style.display ="none";
-          document.getElementById("application").style.display ="block";
-
-          document.getElementById("videoBtn").style.textDecoration ="none";
-          document.getElementById("artBtn").style.textDecoration ="none";
-          document.getElementById("appBtn").style.textDecoration ="underline";
-        }
-      </script>
+      WORKS<br> -
+      <a id="videoBtn" class="btn" onclick="visibleVideo()" style="cursor:pointer; border-bottom: solid 1px">Video</a> /
+      <a id="artBtn" class="btn" onclick="visibleArt()" style="cursor:pointer;">Art</a> /
+      <a id="appBtn" class="btn" onclick="visibleApp()" style="cursor:pointer;">Application</a>
+      <script type="text/javascript" src="../js/btn.js"></script>
     </h1>
 
     <div id="top" class="position" style="display:none;">
