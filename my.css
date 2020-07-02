@@ -127,9 +127,6 @@ h1{
     position:absolute;
 		left:20%;
   }
-	.head_menu_font{
-		font-weight: bold;
-	}
 	.head_menu{
 		position:absolute;
 		right:20%;
@@ -137,6 +134,7 @@ h1{
 		font-size: 90%;
 		color: #000000;
 		margin-top: 6px;
+    font-weight: bold;
 	}
 
 
