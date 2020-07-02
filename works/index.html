@@ -16,12 +16,23 @@
   <!-- <script type="text/javascript" src="../js/header.js"></script> -->
   <div name="top" class="header">
     <div class="head_text">
+      <!-- <div class="head_logo">
+        <a target="_self" href="../">
+          <div class="head_font1">TOMOYAONUKI.</div>
+          <div class="head_font2">Tomoya Onuki Portfolio Site. 1999- ________</div>
+        </a>
+        <div class="head_font1" style="margin-top:10px;">
+          <a id="works" target="_self" class ="btn" style="background:linear-gradient(transparent 50%, #ffff66 50%)" href="../works/">WORKS</a>
+          <strong> / </strong>
+          <a id="about" target="_self" class ="btn" href="../profile.html">ABOUT</a>
+        </div>
+      </div> -->
       <a target="_self" class="head_logo" href="../">
         <div class="head_font1">TOMOYAONUKI.</div>
         <div class="head_font2">Tomoya Onuki Portfolio Site. 1999- ________</div>
       </a>
       <span class="head_menu">
-        <a id="works" target="_self" class ="btn" href="../works/">WORKS</a>
+        <a id="works" target="_self" class ="btn highlight" href="../works/">WORKS</a>
         <strong> / </strong>
         <a id="about" target="_self" class ="btn" href="../profile.html">ABOUT</a>
       </span>
@@ -31,17 +42,16 @@
 
 
  	<div class="first main">
-    <!-- <h1 style="margin-bottom:20px;">WORKS</h1> -->
     <h1>
-      WORKS<br> -
-      <a id="videoBtn" class="btn" onclick="visibleVideo()" style="cursor:pointer; border-bottom: solid 1px">Video</a> /
+      <span class="highlight">WORKS</span><br>-
+      <a id="videoBtn" class="btn" onclick="visibleVideo()" style="cursor:pointer;">Video</a> /
       <a id="artBtn" class="btn" onclick="visibleArt()" style="cursor:pointer;">Art</a> /
-      <a id="appBtn" class="btn" onclick="visibleApp()" style="cursor:pointer;">Application</a>
+      <a id="appBtn" class="btn" onclick="visibleApp()" style="cursor:pointer;">App</a> /
+      <a id="recBtn" class="btn highlight" onclick="visibleRecommend()" style="cursor:pointer; ">Recommend</a>
       <script type="text/javascript" src="../js/btn.js"></script>
     </h1>
 
-    <div id="top" class="position" style="display:none;">
-      <h1 style="margin-top:-8px;">Recommend Works</h1>
+    <div id="top" class="position" style="display:block;">
       <a target="_blank" href="https://youtu.be/Zn46mk79o-E" class="no_link_decoration">
         <img src="./img/recommend/rotate_making.png" style="vertical-align:middle;">
       </a>
@@ -56,7 +66,7 @@
       </a>
     </div>
 
-    <div id="video" class="position" style="display:block;">
+    <div id="video" class="position" style="display:none;">
       <!-- <p class="genre">Video</p> -->
 
       <div class="contents">

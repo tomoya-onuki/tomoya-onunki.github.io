@@ -4,12 +4,11 @@ function visibleVideo(){
   document.getElementById("art").style.display ="none";
   document.getElementById("application").style.display ="none";
 
-  document.getElementById("videoBtn").style.borderBottom ="solid 1px";
-  document.getElementById("artBtn").style.borderBottom ="hidden";
-  document.getElementById("appBtn").style.borderBottom ="hidden";
   document.getElementById("videoBtn").style.color ="#000000";
-  // document.getElementById("artBtn").style.color ="#1f1f1f";
-  // document.getElementById("appBtn").style.color ="#1f1f1f";
+  document.getElementById("videoBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
+  document.getElementById("artBtn").style.background="none";
+  document.getElementById("appBtn").style.background="none";
+  document.getElementById("recBtn").style.background="none";
 }
 function visibleArt(){
   document.getElementById("top").style.display ="none";
@@ -17,12 +16,11 @@ function visibleArt(){
   document.getElementById("art").style.display ="block";
   document.getElementById("application").style.display ="none";
 
-  document.getElementById("videoBtn").style.borderBottom ="hidden";
-  document.getElementById("artBtn").style.borderBottom ="solid 1px";
-  document.getElementById("appBtn").style.borderBottom ="hidden";
-  // document.getElementById("videoBtn").style.color ="#1f1f1f";
   document.getElementById("artBtn").style.color ="#000000";
-  // document.getElementById("appBtn").style.color ="#1f1f1f";
+  document.getElementById("videoBtn").style.background="none";
+  document.getElementById("artBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
+  document.getElementById("appBtn").style.background="none";
+  document.getElementById("recBtn").style.background="none";
 }
 function visibleApp(){
   document.getElementById("top").style.display ="none";
@@ -30,22 +28,21 @@ function visibleApp(){
   document.getElementById("art").style.display ="none";
   document.getElementById("application").style.display ="block";
 
-  document.getElementById("videoBtn").style.borderBottom ="hidden";
-  document.getElementById("artBtn").style.borderBottom ="none";
-  document.getElementById("appBtn").style.borderBottom ="solid 1px";
-  // document.getElementById("videoBtn").style.color ="#1f1f1f";
-  // document.getElementById("artBtn").style.color ="#1f1f1f";
   document.getElementById("appBtn").style.color ="#000000";
+  document.getElementById("videoBtn").style.background="none";
+  document.getElementById("artBtn").style.background="none";
+  document.getElementById("appBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
+  document.getElementById("recBtn").style.background="none";
 }
-function worksBtn() {
-  // document.getElementById("works").style.borderButton ="solid 1px";
-  // document.getElementById("about").style.borderButton ="hidden";
-  // document.getElementById("works").style.color ="#F43E43";
-  // document.getElementById("about").style.color ="#1f1f1f";
-}
-function aboutBtn() {
-  // document.getElementById("works").style.borderButton ="hidden";
-  // document.getElementById("about").style.borderButton ="solid 1px";
-  // document.getElementById("works").style.color ="#1f1f1f";
-  // document.getElementById("about").style.color ="#F43E43";
+function visibleRecommend(){
+  document.getElementById("top").style.display ="block";
+  document.getElementById("video").style.display ="none";
+  document.getElementById("art").style.display ="none";
+  document.getElementById("application").style.display ="none";
+
+  document.getElementById("recBtn").style.color ="#000000";
+  document.getElementById("videoBtn").style.background="none";
+  document.getElementById("artBtn").style.background="none";
+  document.getElementById("appBtn").style.background="none";
+  document.getElementById("recBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
 }
