@@ -4,7 +4,7 @@ function visibleVideo(){
   document.getElementById("art").style.display ="none";
   document.getElementById("application").style.display ="none";
 
-  document.getElementById("videoBtn").style.opacity="1.0";
+  // document.getElementById("videoBtn").style.opacity="1.0";
   document.getElementById("videoBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
   document.getElementById("artBtn").style.background="none";
   document.getElementById("appBtn").style.background="none";
@@ -16,7 +16,7 @@ function visibleArt(){
   document.getElementById("art").style.display ="block";
   document.getElementById("application").style.display ="none";
 
-  document.getElementById("artBtn").style.opacity="1.0";
+  // document.getElementById("artBtn").style.opacity="1.0";
   document.getElementById("videoBtn").style.background="none";
   document.getElementById("artBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
   document.getElementById("appBtn").style.background="none";
@@ -28,7 +28,7 @@ function visibleApp(){
   document.getElementById("art").style.display ="none";
   document.getElementById("application").style.display ="block";
 
-  document.getElementById("appBtn").style.opacity="1.0";
+  // document.getElementById("appBtn").style.opacity="1.0";
   document.getElementById("videoBtn").style.background="none";
   document.getElementById("artBtn").style.background="none";
   document.getElementById("appBtn").style.background="linear-gradient(transparent 50%, #ffff66 50%)";
@@ -40,7 +40,7 @@ function visibleRecommend(){
   document.getElementById("art").style.display ="none";
   document.getElementById("application").style.display ="none";
 
-  document.getElementById("recBtn").style.opacity="1.0";
+  // document.getElementById("recBtn").style.opacity="1.0";
   document.getElementById("videoBtn").style.background="none";
   document.getElementById("artBtn").style.background="none";
   document.getElementById("appBtn").style.background="none";
