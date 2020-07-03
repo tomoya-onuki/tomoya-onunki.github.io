@@ -199,12 +199,6 @@ h1{
 		width:30%;
 	}
 
-	.caption {
-		text-decoration: none;
-		font-family: 'ヒラギノ角ゴ Pro W3';
-		color: #4f4f4f;
-		font-size: 60%;
-	}
 }
 
 
@@ -293,12 +287,12 @@ h1{
 		width:140px;
 		height:140px;
 	}
-	.caption {
+	/* .caption {
 		text-decoration: none;
 		font-family: 'ヒラギノ角ゴ Pro W3';
 		color: #4f4f4f;
 		font-size: 50%;
-	}
+	} */
 
 
 
