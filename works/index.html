@@ -43,52 +43,48 @@
     <style>
 
     </style>
-    <div id="top" class="position" style="display:block;">
-      <div class="wrap">
+    <div id="top" class="position">
 
-        <div class="half_gif">
-          <a target="_blank" href="https://youtu.be/Zn46mk79o-E">
-            <img src="./img/gif/rotate_making.gif" style="vertical-align:middle;"　style="position:relative;">
-            <div class="caption white">
-              MakingMoive<br>
-              1stSingle「回せ!」<br>
-              回せ！グルーヴ開発部
-            </div>
-          </a>
-        </div>
-
-        <div class="half_gif">
-          <a target="_blank" href="https://www.youtube.com/playlist?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t">
-            <img src="./img/gif/express.gif" style="vertical-align:middle;">
-            <div class="caption white">
-              DocumentaryMovie<br>
-              EXPRESS 筑波大学ダンス部
-            </div>
-          </a>
-        </div>
-
-        <div class="half_gif">
-          <a target="_blank" href="https://youtu.be/DdYMoKtYVlc">
-            <img src="./img/gif/black.gif" style="vertical-align:middle;">
-            <div class="caption white">
-              VideoInstallationArt<br>
-              暗転と永遠の中で。
-            </div>
-          </a>
-        </div>
-
-        <div class="half_gif">
-          <a target="_blank" href="https://youtu.be/aMkhraO-NBQ">
-            <img src="./img/gif/lost_anima.gif" style="vertical-align:middle;">
-            <div class="caption white">
-              MediaArt<br>
-              アニマの消失
-            </div>
-          </a>
-        </div>
+      <div id="2" style="width:100%; display:none;">
+        <a target="_blank" href="https://youtu.be/Zn46mk79o-E">
+          <div>
+            <video loop autoplay muted width=100% style="vertical-align:middle;">
+              <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/res2/rotate_making.mp4" type="video/mp4">
+              <p>動画を再生できません</p>
+            </video>
+            <!-- <img src="./img/gif/rotate_making.gif" style="vertical-align:middle;"　style="position:relative;"> -->
+            <name>MakingMoive / 1stSingle「回せ!」/ 回せ！グルーヴ開発部</name>
+          </div>
+        </a>
       </div>
-    </div>
 
+      <div id="1" style="width:100%; display:none;">
+        <a target="_blank" href="https://www.youtube.com/playlist?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t">
+          <div>
+            <video loop autoplay muted width=100% style="vertical-align:middle;">
+              <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/res2/black.mp4" type="video/mp4">
+              <p>動画を再生できません</p>
+            </video>
+            <!-- <img src="./img/gif/express.gif" style="vertical-align:middle;"> -->
+            <name>
+              DocumentaryMovie / EXPRESS 筑波大学ダンス部 / Sta2one
+            </name>
+          </div>
+        </a>
+      </div>
+
+      <script type="text/javascript">
+      window.onload = function(){
+        var id = Math.floor(Math.random() * 2);
+        if(id == 0) {
+          document.getElementById("1").style.display ="block";
+          document.getElementById("2").style.display ="none";
+        } else {
+          document.getElementById("1").style.display ="none";
+          document.getElementById("2").style.display ="block";
+        }
+      }
+      </script>
 
   </div>
  		<!-- <hr> -->
