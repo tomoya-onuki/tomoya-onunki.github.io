@@ -1,11 +1,4 @@
-.modal{
-    display: none;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 3;
-}
+
 .modal__content > p > img {
   opacity:0.8;
 }
@@ -19,6 +12,15 @@
   height:100%;
 }
 @media screen and (min-width:980px){
+  .modal{
+      display: none;
+      height: 300%;
+      width: 60%;
+      position: absolute;
+      top: 0;
+      z-index: 3;
+  }
+
   .modal__content{
       background: rgba(255,255,255,0);
       color: #1f1f1f;
@@ -31,6 +33,14 @@
   }
 }
 @media screen and (max-width:980px){
+  .modal{
+      display: none;
+      height: 300%;
+      width: 90%;
+      position: absolute;
+      top: 0;
+      z-index: 3;
+  }
   .modal__content{
       background: rgba(255,255,255,0);
       color: #1f1f1f;
