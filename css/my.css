@@ -57,13 +57,14 @@ a {
 	color:#000000;
 	/* color:#1f1f1f; */
 }
-a:hover {
+h1 a:hover {
+  opacity:0.4;
+}
+.head_menu a:hover {
   opacity:0.4;
 }
 
-img {
-  /* pointer-events: none; */
-}
+
 video {
   pointer-events: none;
   width:100%;
