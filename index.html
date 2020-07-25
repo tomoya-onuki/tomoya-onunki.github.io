@@ -21,9 +21,9 @@
         <div class="head_font1">TOMOYAONUKI.</div>
       </a>
       <span class="head_menu">
-        <a id="works" target="_self" class ="btn highlight" href="./video.html">WORKS</a>
+        <a id="works" target="_self" href="./video.html">WORKS</a>
         <strong> / </strong>
-        <a id="about" target="_self" class ="btn" href="./profile.html">ABOUT</a>
+        <a id="about" target="_self" href="./profile.html">ABOUT</a>
       </span>
     </div>
   </div>
@@ -33,73 +33,150 @@
     <div id="top" class="position">
 
       <h1>
-        <!-- <span class="highlight">WORKS</span><br>- -->
-        - <a href="./video.html" style="cursor:pointer;">Video</a> /
+        Feature >>
+        <a id="l1" style="cursor:pointer;" onclick="selectVideo(0)">Ex</a> /
+        <a id="l2" style="cursor:pointer;" onclick="selectVideo(1)">Ma</a> /
+        <a id="l3" style="cursor:pointer;" onclick="selectVideo(2)">Yu</a> /
+        <a id="l4" style="cursor:pointer;" onclick="selectVideo(3)">La</a>
+        <br>-
+        <a href="./video.html" style="cursor:pointer;">Video</a> /
         <a href="./art.html" style="cursor:pointer;">Art</a> /
         <a href="./app.html" style="cursor:pointer;">Application</a>
       </h1>
 
-      <div id="2" style="width:100%; display:none;">
+      <div id="2" style="width:100%; display:none;" onclick="youtube(1)">
           <video loop autoplay muted playsinline width=100% style="vertical-align:middle;">
             <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/res3/rotate_making.mp4" type="video/mp4">
             <p>動画を再生できません</p>
           </video>
           <name>MakingMoive / 1stSingle「回せ!」/ 回せ！グルーヴ開発部</name>
       </div>
+      <div id="y2" style="display:none;">
+        <iframe class="mov" src="https://www.youtube.com/embed/Zn46mk79o-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <name>MakingMoive / 1stSingle「回せ!」/ 回せ！グルーヴ開発部</name>
+      </div>
 
-      <div id="1" style="width:100%; display:none;">
+
+
+      <div id="1" style="width:100%; display:none;" onclick="youtube(0)">
           <video loop autoplay muted playsinline width=100% style="vertical-align:middle;">
             <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/res3/express.mp4" type="video/mp4">
             <p>動画を再生できません</p>
           </video>
           <name>DocumentaryMovie / EXPRESS 筑波大学ダンス部 / Sta2one</name>
       </div>
+      <div id="y1" style="display:none;">
+        <iframe class="mov" src="https://www.youtube.com/embed/videoseries?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <name>DocumentaryMovie / EXPRESS 筑波大学ダンス部 / Sta2one</name>
+      </div>
 
-      <div id="3" style="width:100%; display:none;">
+
+
+      <div id="3" style="width:100%; display:none;" onclick="youtube(2)">
         <video loop autoplay muted playsinline width=100% style="vertical-align:middle;">
           <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/res3/yuragi.mp4" type="video/mp4">
           <p>動画を再生できません</p>
         </video>
         <name>DigestMovie / ゆらぎ / TParty</name>
       </div>
+      <div id="y3" style="display:none;">
+        <iframe class="mov" src="https://www.youtube.com/embed/MgjNDQPaecU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <name>DigestMovie / ゆらぎ / TParty</name>
+      </div>
 
-      <div id="4" style="width:100%; display:none;">
+
+      <div id="4" style="width:100%; display:none;" onclick="youtube(3)">
         <video loop autoplay muted playsinline width=100% style="vertical-align:middle;">
           <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/res3/launch.mp4" type="video/mp4">
           <p>動画を再生できません</p>
         </video>
         <name>DigestMovie / LaunchParty / TParty</name>
       </div>
+      <div id="y4" style="display:none;">
+        <iframe class="mov" src="https://www.youtube.com/embed/uLGHA1VhZtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <name>DigestMovie / LaunchParty / TParty</name>
+      </div>
+
+
 
       <script type="text/javascript">
       window.onload = function(){
         var id = Math.floor(Math.random() * 3);
+        selectVideo(id);
+      }
+
+      function selectVideo(id) {
         switch (id) {
           case 0:
             document.getElementById("1").style.display ="block";
             document.getElementById("2").style.display ="none";
             document.getElementById("3").style.display ="none";
             document.getElementById("4").style.display ="none";
+
+            document.getElementById("l1").classList.add("highlight");
+            document.getElementById("l2").classList.remove("highlight");
+            document.getElementById("l3").classList.remove("highlight");
+            document.getElementById("l4").classList.remove("highlight");
             break;
           case 1:
             document.getElementById("1").style.display ="none";
             document.getElementById("2").style.display ="block";
             document.getElementById("3").style.display ="none";
             document.getElementById("4").style.display ="none";
+
+            document.getElementById("l1").classList.remove("highlight");
+            document.getElementById("l2").classList.add("highlight");
+            document.getElementById("l3").classList.remove("highlight");
+            document.getElementById("l4").classList.remove("highlight");
             break;
           case 2:
             document.getElementById("1").style.display ="none";
             document.getElementById("2").style.display ="none";
             document.getElementById("3").style.display ="block";
             document.getElementById("4").style.display ="none";
+
+            document.getElementById("l1").classList.remove("highlight");
+            document.getElementById("l2").classList.remove("highlight");
+            document.getElementById("l3").classList.add("highlight");
+            document.getElementById("l4").classList.remove("highlight");
             break;
           case 3:
             document.getElementById("1").style.display ="none";
             document.getElementById("2").style.display ="none";
             document.getElementById("3").style.display ="none";
             document.getElementById("4").style.display ="block";
+
+            document.getElementById("l1").classList.remove("highlight");
+            document.getElementById("l2").classList.remove("highlight");
+            document.getElementById("l3").classList.remove("highlight");
+            document.getElementById("l4").classList.add("highlight");
             break;
           default:
+        }
+        document.getElementById("y1").style.display ="none";
+        document.getElementById("y2").style.display ="none";
+        document.getElementById("y3").style.display ="none";
+        document.getElementById("y4").style.display ="none";
+      }
+
+      function youtube(id){
+        switch (id) {
+          case 0:
+            document.getElementById("1").style.display ="none";
+            document.getElementById("y1").style.display ="block";
+            break;
+          case 1:
+            document.getElementById("2").style.display ="none";
+            document.getElementById("y2").style.display ="block";
+            break;
+          case 2:
+            document.getElementById("3").style.display ="none";
+            document.getElementById("y3").style.display ="block";
+            break;
+          case 3:
+            document.getElementById("4").style.display ="none";
+            document.getElementById("y4").style.display ="block";
+            break;
         }
       }
       </script>
