@@ -237,14 +237,11 @@ h3{
   .reel{
     width:60vw;
     height:25vw;
-    /* height:33.75vw; */
-    margin-bottom:50px;
+    margin-bottom:30px;
   }
   .mov {
     width:60vw;
-    /* height:25vw; */
     height:33.75vw;
-    margin-bottom:50px;
   }
 
 }
@@ -344,14 +341,11 @@ h3{
   .reel {
     width:90vw;
     height:38vw;
-    /* height:50.625vw; */
-    margin-bottom:50px;
+    margin-bottom:30px;
   }
   .mov {
     width:90vw;
-    /* height:38vw; */
     height:50.625vw;
-    margin-bottom:50px;
   }
 
 
