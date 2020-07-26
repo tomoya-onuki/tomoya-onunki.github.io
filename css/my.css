@@ -234,10 +234,16 @@ h3{
 		width:30%;
 	}
 
-  .mov {
+  .reel{
     width:60vw;
     height:25vw;
     /* height:33.75vw; */
+    margin-bottom:50px;
+  }
+  .mov {
+    width:60vw;
+    /* height:25vw; */
+    height:33.75vw;
     margin-bottom:50px;
   }
 
@@ -335,10 +341,16 @@ h3{
 		color: #4f4f4f;
 		font-size: 50%;
 	} */
-  .mov {
+  .reel {
     width:90vw;
     height:38vw;
     /* height:50.625vw; */
+    margin-bottom:50px;
+  }
+  .mov {
+    width:90vw;
+    /* height:38vw; */
+    height:50.625vw;
     margin-bottom:50px;
   }
 
