@@ -46,5 +46,5 @@ function imgTimer() {
     }
   // });
 
-  setTimeout("imgTimer()", 6000);
+  setTimeout("imgTimer()", 3000);
 }
