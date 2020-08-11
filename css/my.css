@@ -149,6 +149,7 @@ h3{
   background:linear-gradient(transparent 50%, #ffff66 50%);
 }
 
+
 @media screen and (min-width:980px){
 	.index_img_size{
 		width:100%;
@@ -159,7 +160,8 @@ h3{
 	.header{
 		height: 65px; /* 高さ */
 		width: 100%; /* 長さ */
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
+    background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.95));
 		position: fixed; /* ヘッダーを固定(これが重要) */
 		top: 0; /* 固定する位置 */
 		left: 0; /* 固定する位置 */
@@ -263,7 +265,8 @@ h3{
 	.header{
 		height: 65px; /* 高さ */
 		width: 100%; /* 長さ */
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
+    background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.95));
 		position: fixed; /* ヘッダーを固定(これが重要) */
 		top: 0; /* 固定する位置 */
 		left: 0%; /* 固定する位置 */
