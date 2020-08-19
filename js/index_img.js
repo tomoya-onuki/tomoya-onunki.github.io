@@ -1,27 +1,36 @@
-
-
 var max = fname.length;
-var delta = 1;
-var count = Math.floor(Math.random() * max);
+var count = 0;
+var idxList = getRandomIdx();
+
 imgTimer();
 
 function imgTimer() {
   var imgtag = document.getElementById('image_place');
 
-  // $.when( //ここに先に終わらせたい処理
-  //   $(imgtag).fadeTo("slow", 0.15)
-  //
-  // ).done(function(){
-    imgtag.src = fname[count];
-    // $(imgtag).hide().fadeIn();
-    // $(imgtag)fadeTo("slow", 1.0);
+  imgtag.src = fname[idxList[count]];
+  count++;
 
-    count += delta;
-    if (count >= max) {
-      delta = Math.floor(Math.random() * 5)+1;
-      count = 0;
-    }
-  // });
+  if (count >= max) {
+    count = 0;
+    idxList = getRandomIdx();
+  }
 
   setTimeout("imgTimer()", 3000);
+}
+
+function getRandomIdx() {
+  var arr = [];
+  var numArr = [];
+
+  for(var i = 0; i < max; i++){
+    arr[i] = i;
+  }
+
+  for(var j = max; j > 0; j--) {
+    rndNum = Math.floor(Math.random()*j);
+    numArr.push(arr[rndNum]);
+    arr[rndNum] = arr[j-1];
+  }
+
+  return numArr;
 }
