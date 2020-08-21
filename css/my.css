@@ -83,7 +83,7 @@ a:hover u{
 
 
 video {
-  pointer-events: none;
+  /* pointer-events: no ne; */
   object-fit: cover;
 }
 
@@ -242,8 +242,10 @@ h3{
 
   .reel{
     width:60vw;
-    height:25vw;
+    height:20vw;
+    /* height:25vw; */
     margin-bottom:30px;
+    object-fit: cover;
   }
   .mov {
     width:60vw;
@@ -347,13 +349,13 @@ h3{
 	} */
   .reel {
     width:90vw;
-    height:38vw;
+    height:30vw;
     margin-bottom:30px;
+    object-fit: cover;
   }
   .mov {
     width:90vw;
     height:50.625vw;
   }
-
 
 }
