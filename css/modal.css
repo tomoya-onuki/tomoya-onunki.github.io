@@ -30,6 +30,14 @@
     position: fixed;
     z-index: 5;
 }
+.modal__content__full .close{
+  left: 0;
+  top: 28vw;
+  position: fixed;
+  transform: rotate(-90deg);
+  color: #4f4f4f;
+}
+
 @media screen and (min-width:980px){
   .modal__content{
       background: rgba(255,255,255,0);
