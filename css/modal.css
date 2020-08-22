@@ -2,8 +2,8 @@
     display: none;
     position: absolute;
     top: 0;
-    z-index: 3;
     margin-bottom: 30px;
+    z-index: 2;
 }
 .modal__bg{
   background: #ffffff;
@@ -13,6 +13,22 @@
   position: fixed;
   width: 100%;
   height:100%;
+  z-index: 2;
+}
+.modal-full{
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-bottom: 30px;
+    z-index: 5;
+}
+.modal__content__full{
+    background: #ffffff;
+    color: #1f1f1f;
+    left: 5%;
+    top: 0px;
+    position: fixed;
+    z-index: 5;
 }
 @media screen and (min-width:980px){
   .modal__content{
@@ -24,6 +40,7 @@
       position: absolute;
       width: 60vw;
       overflow: auto;
+      z-index: 3;
   }
 }
 @media screen and (max-width:980px){
@@ -38,5 +55,6 @@
       position: absolute;
       width: 90vw;
       overflow: auto;
+      z-index: 3;
   }
 }
