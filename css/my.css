@@ -149,6 +149,21 @@ h3{
   background:linear-gradient(transparent 50%, #ffff66 50%);
 }
 
+.mov {
+  position: relative;
+  height: 0;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.mov iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 @media screen and (min-width:980px){
 	.index_img_size{
@@ -241,17 +256,15 @@ h3{
 	}
 
   .reel{
-    /* width:60vw; */
     width:100%;
     height:20vw;
-    /* height:25vw; */
     margin-bottom:30px;
     object-fit: cover;
   }
-  .mov {
+  /* .mov {
     width:60vw;
     height:33.75vw;
-  }
+  } */
 
 }
 
@@ -356,9 +369,9 @@ h3{
     margin-bottom:30px;
     object-fit: cover;
   }
-  .mov {
+  /* .mov {
     width:90vw;
     height:50.625vw;
-  }
+  } */
 
 }

@@ -9,6 +9,8 @@
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <link rel="stylesheet" type="text/css" href="./css/modal.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 	<script src="./js/modal.js"></script>
  </head>
 
@@ -47,12 +49,19 @@
           </a>
         </div>
         <div id="reel" class="modal-full js-modal">
-          <div class="modal__bg js-modal-close"></div>
+          <div id="reel_close" class="modal__bg js-modal-close"></div>
           <div class="modal__content__full">
-            <iframe style="width:90vw; height:56.6vw;" src="https://player.vimeo.com/video/450021560" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <a class="js-modal-close close" href="" style=""><u>close</u></a>
+            <iframe id="reel_player" src="https://player.vimeo.com/video/450021560?color=ffffff&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <a id="reel_close" class="js-modal-close close" href="" style=""><u>close</u></a>
           </div>
         </div>
+        <script>
+        var player = new Vimeo.Player($('#reel_player'), options);
+        // 一時停止
+        $('#reel_close').on('click', function() {
+          player.pause();
+        });
+        </script>
 
 
         <div class="wrap">
@@ -70,7 +79,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>Performing Arts Tamago Vol.22</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/32P2vfq96-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/32P2vfq96-I?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2020.06 / 撮影・編集 / ChoreoVideo</p>
                 <p>企画・制作：筑波大学舞踊研究室</p>
                 <p>協力：筑波大学ダンス部 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank"><u>http://tsa.tsukuba.ac.jp/dance/</u></a></p>
@@ -92,7 +103,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>【MVメイキング映像】「回せ！」回せ！グルーヴ開発部</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/Zn46mk79o-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/Zn46mk79o-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2020.04 / 撮影・編集 / MakingMoive</p>
                 <p>セルフプロデュースアイドル「回せ！グルーヴ開発部」の1st Single「回せ！」の制作風景を追ったメイキング映像</p>
                 <p>企画：回せ！グルーヴ開発部 <a href="http://mawaguru.jp" target="_blank"><u>http://mawaguru.jp</u></a></p>
@@ -114,7 +127,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>うちで踊ろう</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/-ILnREA4aX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/-ILnREA4aX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2020.04 / 監督・撮影・編集 / TributeFilm</p>
                 <p>music:Gen Hoshino</p>
                 <p>星野源さんの「うちで踊ろう」に合わせてアニメ風実写MusicVideoを製作しました。撮影は全て自宅内で行い、自作のロトスコープ作成ソフトを用いて編集しました。</p>
@@ -136,7 +151,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>EXPRESS 筑波大学ダンス部</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/videoseries?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/videoseries?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2020.01 / 監督・撮影・編集 / Documentary Movie</p>
                 <p>2019年11月に開催された筑波大学ダンス部による自主公演「DANCE EXPRESS Vol.14」。その開催に至るまで、部員たちの二ヶ月間を追ったドキュメンタリー番組。</p>
 
@@ -162,7 +179,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>ゆらぎ</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/MgjNDQPaecU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/MgjNDQPaecU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2019.11 / 監督・撮影・編集 / Digest Movie</p>
                 <p>筑波大学学園祭 雙峰祭前夜祭パフォーマンス「ゆらぎ」のダイジェスト映像</p>
 
@@ -189,7 +208,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>Tparty Launch Party / Digest Video</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/uLGHA1VhZtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/uLGHA1VhZtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2019.06 / 監督・撮影・編集 / Digest Movie</p>
                 <p>制作：TParty <a href="https://twitter.com/tparty_tsukuba" target="_blank"><u>https://twitter.com/tparty_tsukuba</u></a></p>
                 <p>協力：Frog</p>
@@ -213,7 +234,9 @@
               <p>
                 <center><a class="js-modal-close" href=""><u>close</u></a></center>
                 <h1>モノシリトリ / MakingMoive</h1>
-                <iframe class="mov" src="https://www.youtube.com/embed/videoseries?list=PLODDdOOKFDnIpvey6zz47Af9-RZXRZjz5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="mov">
+                  <iframe src="https://www.youtube.com/embed/videoseries?list=PLODDdOOKFDnIpvey6zz47Af9-RZXRZjz5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <p>2017.10 / 監督・撮影・編集 / Digest Movie</p>
               </p>
             </div>
