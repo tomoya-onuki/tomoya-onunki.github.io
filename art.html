@@ -49,15 +49,12 @@
         </a>
         <div id="reel" class="modal js-modal">
           <div class="modal__bg js-modal-close"></div>
-            <div class="modal__content">
-              <div class="mov">
-                <iframe src="https://player.vimeo.com/video/450021560" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-              </div>
-              <p><a class="js-modal-close close" href=""></a></p>
-            </div>
+          <div class="modal__content">
+            <a class="js-modal-close close" href="" onclick="pause()"></a>
+            <iframe id="reel_player" src="https://player.vimeo.com/video/450021560?color=ffffff&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
         </div>
-
+        <script src="./js/vimeo.js"></script>
 
       <div class="wrap">
         <div class="half_gif">
