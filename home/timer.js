@@ -1,6 +1,6 @@
 
 var timer1; //タイマーを格納する変数（タイマーID）の宣言
-
+var audio = new Audio('./sound.mp3');
 
 //カウントダウン関数を1000ミリ秒毎に呼び出す関数
 function cntStart()
@@ -19,23 +19,13 @@ function cntStop()
 //カウントダウン関数
 function countDown()
 {
-  var min=document.timer.elements[0].value;
-  var sec=document.timer.elements[1].value;
+  var min = parseInt(document.timer.elements[0].value);
+  var sec = parseInt(document.timer.elements[1].value);
 
-  if( (min=="") && (sec=="") )
-  {
-    alert("時刻を設定してください！");
-    reSet();
-  }
-  else
-  {
-    if (min=="") min=0;
-    min=parseInt(min);
-
-    if (sec=="") sec=0;
-    sec=parseInt(sec);
-
+  if(Number.isInteger(min) && Number.isInteger(sec)) {
     tmWrite(min*60+sec-1);
+  } else {
+    alert("Please input integer.")
   }
 }
 
@@ -47,7 +37,10 @@ function tmWrite(int)
   if (int<=0)
   {
     reSet();
-    alert("時間です！");
+    audio.play();
+    if (!alert("Time's up !") ) {
+      audio.pause();
+    }
   }
   else
   {
@@ -66,4 +59,3 @@ function reSet()
   document.timer.elements[2].disabled=false;
   clearInterval(timer1);
 }
-  
