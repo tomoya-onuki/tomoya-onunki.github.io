@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>HOME</title>
+ <script src="./clock.js"></script>
+ <script src="./timer.js"></script>
+ <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Google  -->
+  <center class="google_logo">
+    <a href="http://www.google.co.jp/">
+      <strong>Google</strong>
+    </a>
+  </center>
+
+  <div class="searchArea" id="makeImg">
+    <form method=get action="http://www.google.co.jp/search" target="_blank">
+      <input type="text" name="q" id="inText" class="searchText">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="hidden" name="oe" value="UTF-8">
+      <input type="hidden" name="hl" value="ja">
+      <input class="searchButton" type="submit" name="btnG" value="Search">
+    </form>
+  </div>
+  <!-- Google -->
+
+  <!-- 時計 -->
+  <center id="clock_frame">
+    <div id="clock_date"></div>
+    <div id="clock_time"></div>
+  </center>
+  <!-- 時計 -->
+
+  <center>
+  <!-- ストップウォッチ -->
+  <div id="timer_frame">
+    <div id="timer">00:00:000</div>
+    <button class="btn" id="start">start</button>
+    <button class="btn" id="stop">stop</button>
+    <button class="btn" id="reset">reset</button>
+    <script src="./stopWatch.js"></script>
+  </div>
+  <!-- ストップウォッチ -->
+
+
+  <!-- タイマー -->
+  <div id="timer_frame">
+    <form name="timer" class="timeCounter">
+      <div style="margin-bottom:10px">
+        <input type="text" value="" class="box1"> 分
+        <input type="text" value="" class="box1"> 秒
+      </div>
+      <button class="btn" onclick="cntStart()">start</button>
+      <button class="btn" onclick="cntStop()">stop</button>
+      <input class="btn" type="reset" name="bt01" value="reset" autofocus>
+    </form>
+  </div>
+  <!-- タイマー -->
+  </center>
+</body>
+</html>

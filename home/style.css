@@ -1,0 +1,111 @@
+
+ /* --- 検索全体のBOX (サンプル用)--- */
+.searchArea{
+  width          : 50vw;              /* BOXの幅               */
+  height         : 50px;               /* BOXの高さ             */
+  margin         : auto;               /* サンプルを中心に寄せ  */
+  letter-spacing : 0.1em;              /* 文字間隔              */
+  font-weight    : bold;               /* 太字                  */
+  line-height    : 0;                  /* 標準の行高さ          */
+}
+
+ /* --- テキスト入力欄のSTYLE設定 --- */
+.searchArea .searchText {
+  display        : block;              /* ブロック化            */
+  float          : left;               /* 横並び                */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 50px;               /* 入力の高さ            */
+  width          : 40vw;              /* 入力の幅              */
+  margin         : 0;                  /* 外余白                */
+  padding        : 0 7px;             /* 内余白                */
+  border         : 2px solid #4d68d2;  /* 枠線　幅,実践,色      */
+  border-radius  : 7px 0 0 7px;      /* 左上下の角丸          */
+  color          : #333;               /* 文字色                */
+  outline        : 0;                  /* 入力の薄い枠を非表示  */
+  font-size      : 19px;               /* フォントサイズ        */
+}
+
+ /* --- 検索ボタン欄のSTYLE設定 --- */
+.searchArea .searchButton {
+  float          : left;               /* 横並び                */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 50px;               /* 入力の高さ            */
+  width          : 10vw;
+  margin         : 0;                  /* 外余白                */
+  padding        : 6px 10px;           /* 内余白                */
+  border         : none;               /* 枠線　幅,実践,色      */
+  border-radius  : 0 7px 7px 0;      /* 右上下の角丸          */
+  background     : #4d68d2;            /* ボタンの色            */
+  color          : #fff;               /* 文字色                */
+  cursor         : pointer;            /* カーソル設定          */
+  line-height    : 19px;               /* 1行の高さ             */
+  font-size      : 19px;               /* フォントサイズ        */
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 300%;
+  color: #4d68d2;
+}
+
+body {
+  color: #4d68d2;
+  font-family: "Helvetica Neue", Arial, sans-serif, 'ヒラギノ角ゴ Pro W3';
+}
+
+.google_logo {
+  margin-top:25px;
+  margin-bottom:15px;
+}
+
+#clock_frame {
+  margin-top:25px;
+  margin-bottom:25px;
+  color: #4d68d2;
+}
+#clock_date {
+  font-size: 300%;
+}
+#clock_time {
+  font-size: 460%;
+}
+
+
+#timer_frame {
+
+  margin-top:30px;
+  margin-bottom:30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+#timer{
+  font-size: 360%;
+}
+#timer_frame .btn {
+  height         : 40px;               /* 入力の高さ            */
+  width          : 80px;
+  margin         : 0;                  /* 外余白                */
+  padding        : 6px 10px;           /* 内余白                */
+  border         : none;               /* 枠線　幅,実践,色      */
+  border-radius  : 7px 7px 7px 7px;      /* 右上下の角丸          */
+  background     : #4d68d2;            /* ボタンの色            */
+  color          : #fff;               /* 文字色                */
+  cursor         : pointer;            /* カーソル設定          */
+  line-height    : 19px;               /* 1行の高さ             */
+  font-size      : 19px;               /* フォントサイズ        */
+}
+
+.timeCounter {
+  font-size: 150%;
+}
+.box1 {
+  height         : 30px;               /* 入力の高さ            */
+  width          : 65px;
+  margin         : 0;
+  padding        : 6px 10px;
+  font-size      : 100%;
+  border         : 2px solid #4d68d2;  /* 枠線　幅,実践,色      */
+  border-radius  : 7px 7px 7px 7px;      /* 右上下の角丸          */
+
+}
