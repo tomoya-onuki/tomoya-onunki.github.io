@@ -17,7 +17,8 @@ function clock() {
     if (mi < 10) mi = "0" + mi;
     if (s < 10) s = "0" + s;
 
-    document.getElementById("clock_date").innerHTML =  y + "/" + mo + "/" + d + " (" + w + ")";
+    document.getElementById("clock_date").innerHTML =  y + "年" + mo + "月" + d + "日 " + w + "曜日";
+    // document.getElementById("clock_date").innerHTML =  y + "/" + mo + "/" + d + " (" + w + ")";
     document.getElementById("clock_time").innerHTML = h + ":" + mi + ":" + s;
 }
 // 上記のclock関数を1000ミリ秒ごと(毎秒)に実行する
