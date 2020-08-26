@@ -1,9 +1,9 @@
 
  /* --- 検索全体のBOX (サンプル用)--- */
 .searchArea{
-  width          : 50vw;              /* BOXの幅               */
+  width          : 480px;              /* BOXの幅               */
   height         : 50px;               /* BOXの高さ             */
-  margin         : auto;               /* サンプルを中心に寄せ  */
+  margin         : 0px 0px 20px 0px;               /* サンプルを中心に寄せ  */
   letter-spacing : 0.1em;              /* 文字間隔              */
   font-weight    : bold;               /* 太字                  */
   line-height    : 0;                  /* 標準の行高さ          */
@@ -15,13 +15,14 @@
   float          : left;               /* 横並び                */
   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
   height         : 50px;               /* 入力の高さ            */
-  width          : 40vw;              /* 入力の幅              */
+  width          : 380px;              /* 入力の幅              */
   margin         : 0;                  /* 外余白                */
   padding        : 0 7px;             /* 内余白                */
   border         : 2px solid #4d68d2;  /* 枠線　幅,実践,色      */
   border-radius  : 7px 0 0 7px;      /* 左上下の角丸          */
   outline        : 0;                  /* 入力の薄い枠を非表示  */
   font-size      : 19px;               /* フォントサイズ        */
+  color          : #FFCC4E;
 }
 
  /* --- 検索ボタン欄のSTYLE設定 --- */
@@ -29,7 +30,7 @@
   float          : left;               /* 横並び                */
   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
   height         : 50px;               /* 入力の高さ            */
-  width          : 10vw;
+  width          : 100px;
   margin         : 0;                  /* 外余白                */
   padding        : 6px 10px;           /* 内余白                */
   border         : none;               /* 枠線　幅,実践,色      */
@@ -40,12 +41,20 @@
   line-height    : 19px;               /* 1行の高さ             */
   font-size      : 19px;               /* フォントサイズ        */
 }
-
+.searchArea .searchButton:hover{
+  /* opacity: 0.5; */
+  background: #fff;            /* ボタンの色            */
+  color: #4d68d2;               /* 文字色                */
+  border-top: 2px solid #4d68d2;  /* 枠線　幅,実践,色      */
+  border-bottom: 2px solid #4d68d2;  /* 枠線　幅,実践,色      */
+  border-right: 2px solid #4d68d2;  /* 枠線　幅,実践,色      */
+  border-left:none;
+}
 
 a {
   text-decoration: none;
-  font-size: 300%;
   color: #4d68d2;
+  font-family: "Futura";
 }
 
 body {
@@ -56,6 +65,13 @@ body {
 .google_logo {
   margin-top:25px;
   margin-bottom:15px;
+  font-size: 300%;
+  /* font-family: "Futura"; */
+}
+.google_logo:hover{
+  background: #fff;
+  color: #4d68d2;
+  /* border: 2px solid #4d68d2; */
 }
 
 #clock_frame {
@@ -64,10 +80,11 @@ body {
   color: #4d68d2;
 }
 #clock_date {
-  font-size: 300%;
+  font-size: 220%;
+  margin-bottom: -10px;
 }
 #clock_time {
-  font-size: 460%;
+  font-size: 480%;
 }
 
 
@@ -81,11 +98,11 @@ body {
 #timer{
   font-size: 360%;
 }
-#timer_frame .btn {
+.btn {
   height         : 40px;               /* 入力の高さ            */
   width          : 80px;
-  margin         : 0;                  /* 外余白                */
-  padding        : 6px 10px;           /* 内余白                */
+  margin         : 0px 5px 0px 5px;                  /* 外余白                */
+  padding        : 6px 10px 6px 10px;           /* 内余白                */
   border         : none;               /* 枠線　幅,実践,色      */
   border-radius  : 7px 7px 7px 7px;      /* 右上下の角丸          */
   background     : #4d68d2;            /* ボタンの色            */
@@ -93,6 +110,13 @@ body {
   cursor         : pointer;            /* カーソル設定          */
   line-height    : 19px;               /* 1行の高さ             */
   font-size      : 19px;               /* フォントサイズ        */
+  border: 2px solid #4d68d2;
+}
+.btn:hover{
+  /* opacity: 0.5; */
+  background: #fff;
+  color: #4d68d2;
+  border: 2px solid #4d68d2;
 }
 
 .timeCounter {
@@ -108,10 +132,10 @@ body {
   border-top     : none;
   border-left    : none;
   border-right   : none;
-  /* border-radius  : 7px 7px 7px 7px;      /* 右上下の角丸          */
+  color: #4d68d2;
 
 }
 
 input {
-  color: #4d68d2;
+  /* color: #4d68d2; */
 }

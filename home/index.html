@@ -9,59 +9,75 @@
 </head>
 
 <body>
-
-  <!-- Google  -->
-  <center class="google_logo">
-    <a href="http://www.google.co.jp/">
-      <strong>Google</strong>
-    </a>
-  </center>
-
-  <div class="searchArea" id="makeImg">
-    <form method=get action="http://www.google.co.jp/search" target="_blank">
-      <input type="text" name="q" id="inText" class="searchText">
-      <input type="hidden" name="ie" value="UTF-8">
-      <input type="hidden" name="oe" value="UTF-8">
-      <input type="hidden" name="hl" value="ja">
-      <input class="searchButton" type="submit" name="btnG" value="Search">
-    </form>
-  </div>
-  <!-- Google -->
-
-  <!-- 時計 -->
-  <center id="clock_frame">
-    <div id="clock_date"></div>
-    <div id="clock_time"></div>
-  </center>
-  <!-- 時計 -->
-
   <center>
-  <!-- ストップウォッチ -->
-  <div id="timer_frame">
-    <div id="timer">00:00:000</div>
-    <button class="btn" id="start">start</button>
-    <button class="btn" id="stop">stop</button>
-    <button class="btn" id="reset">reset</button>
-    <script src="./stopWatch.js"></script>
-  </div>
-  <!-- ストップウォッチ -->
+    <!-- Google  -->
+    <div class="google_logo">
+      <a href="http://www.google.co.jp/">
+        <strong>Google</strong>
+      </a>
+    </div>
+
+    <div class="searchArea">
+      <form method=get action="http://www.google.co.jp/search">
+        <input type="text" name="q" id="inText" class="searchText" autofocus>
+        <input type="hidden" name="ie" value="UTF-8">
+        <input type="hidden" name="oe" value="UTF-8">
+        <input type="hidden" name="hl" value="ja">
+        <input class="searchButton" type="submit" name="btnG" value="Search">
+      </form>
+    </div>
+    <!-- Google -->
+    <p>
+      <a href="https://drive.google.com/drive/u/0/my-drive" class="btn">
+        <strong>Google Drive</strong>
+      </a>
+      <a href="https://mail.google.com/mail/u/0/?tab=wm&ogbl#inbox" class="btn">
+        <strong>Gmail</strong>
+      </a>
+      <a href="https://www.youtube.com" class="btn">
+        <strong>Youtube</strong>
+      </a>
+      <a href="https://www.amazon.co.jp" class="btn">
+        <strong>amazon</strong>
+      </a>
+    </p>
+
+    <!-- 時計 -->
+    <div id="clock_frame">
+      <div id="clock_date"></div>
+      <strong><div id="clock_time"></div></strong>
+    </div>
+    <!-- 時計 -->
 
 
-  <!-- タイマー -->
-  <div id="timer_frame">
-    <form name="timer" class="timeCounter">
-      <div style="margin-bottom:10px">
-        <input type="text" value="0" class="box1"> min
-        <input type="text" value="0" class="box1"> sec
-      </div>
-      <button class="btn" onclick="cntStart()">start</button>
-      <button class="btn" onclick="cntStop()">stop</button>
-      <input class="btn" type="reset" name="bt01" value="reset" autofocus>
-    </form>
-  </div>
-  <!-- タイマー -->
+    <!-- ストップウォッチ -->
+    <div id="timer_frame">
+      <div id="timer">00:00:000</div>
+      <button class="btn" id="start">start</button>
+      <button class="btn" id="stop">stop</button>
+      <button class="btn" id="reset">reset</button>
+      <script src="./stopWatch.js"></script>
+    </div>
+    <!-- ストップウォッチ -->
+
+
+    <!-- タイマー -->
+    <div id="timer_frame">
+      <form name="timer" class="timeCounter">
+        <div style="margin-bottom:10px">
+          <input type="text" value="0" class="box1"> min
+          <input type="text" value="0" class="box1"> sec
+        </div>
+        <button class="btn" onclick="cntStart()">start</button>
+        <button class="btn" onclick="cntStop()">stop</button>
+        <input class="btn" type="reset" name="bt01" value="reset">
+      </form>
+    </div>
+    <!-- タイマー -->
+
+    <div style="font-size: 70%; margin-top:40px; margin-bottom:20px;">
+      <p>(C) 2017 - 2020 Tomoya Onuki</p>
+    </div>
   </center>
-
-  <script type="text/javascript" src="../js/footer.js"></script>
 </body>
 </html>
