@@ -12,8 +12,8 @@ function clock() {
     var s = now.getSeconds();
 
     // 日付時刻文字列のなかで常に2ケタにしておきたい部分はここで処理
-    if (mo < 10) mo = "0" + mo;
-    if (d < 10) d = "0" + d;
+    // if (mo < 10) mo = "0" + mo;
+    // if (d < 10) d = "0" + d;
     if (mi < 10) mi = "0" + mi;
     if (s < 10) s = "0" + s;
 
