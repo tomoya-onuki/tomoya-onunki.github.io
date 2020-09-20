@@ -1,0 +1,147 @@
+<!doctype html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" >
+ 	<title>WORKS -Video | TOMOYA ONUKI</title>
+  <link rel="stylesheet" type="text/css" href="../css/my.css">
+  <link rel="stylesheet" type="text/css" href="../css/flex_gif.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="../js/modal.js"></script>
+ </head>
+
+
+ <body class="body">
+
+   <div name="top" class="header">
+     <div class="head_text">
+       <a target="_self" class="head_logo" href="../">
+         <div class="head_font1">TOMOYAONUKI.</div>
+       </a>
+       <span class="head_menu">
+         <a id="works" target="_self" class ="highlight" href="../video/">WORKS</a>
+         <strong> / </strong>
+         <a id="about" target="_self" href="../profile.html">ABOUT</a>
+       </span>
+     </div>
+   </div>
+
+
+    <div class="first main">
+      <h1>
+          <span class="highlight">WORKS</span><br>-
+          <a href="../video/" class="highlight" style="cursor:pointer;">Movies</a> /
+          <a href="../art/" style="cursor:pointer;">Art</a> /
+          <a href="./app.html" style="cursor:pointer;">Application</a>
+      </h1>
+
+      <div class="works_contents">
+          <p>
+            <h1>うちで踊ろう</h1>
+            <div class="mov">
+              <iframe  src="https://www.youtube.com/embed/-ILnREA4aX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>2020.04 / 監督・撮影・編集 / TributeFilm</p>
+            <p>music:Gen Hoshino</p>
+            <p>星野源さんの「うちで踊ろう」に合わせてアニメ風実写MusicVideoを製作しました。撮影は全て自宅内で行い、自作のロトスコープ作成ソフトを用いて編集しました。</p>
+          </p>
+      </div>
+
+
+        <div id="video" class="position" style="margin-bottom:-36px;">
+          <a href="" class="no_link_decoration js-modal-open" data-target="reel">
+            <video class="reel_mov" loop autoplay muted playsinline>
+              <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel.mp4" type="video/mp4">
+              <p>動画を再生できません</p>
+            </video>
+          </a>
+        </div>
+        <div id="reel" class="modal-full js-modal">
+          <div id="reel_close" class="modal__bg js-modal-close" onclick="pause()"></div>
+          <div class="modal__content__full">
+            <a class="js-modal-close close" href="" onclick="pause()"></a>
+            <iframe id="reel_player" src="https://player.vimeo.com/video/450021560?color=ffffff&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+        </div>
+        <script src="../js/vimeo.js"></script>
+
+        <div class="wrap">
+          <div class="half_gif">
+            <a href="performing-arts-tamago.html" class="no_link_decoration">
+              <img src="../img/index2/tamago.png">
+              <div class="mask">
+                <div class="caption">Performing Arts Tamago Vol.22</div>
+              </div>
+            </a>
+          </div>
+
+
+
+          <div class="half_gif">
+            <a href="mawase-groove-making.html" class="no_link_decoration">
+              <img src="../img/index2/rotate.png">
+              <div class="mask">
+                <div class="caption">MakingMoive / 回せ!グルーヴ開発部</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="half_gif">
+            <a href="dancing-inside-tribute.html" class="no_link_decoration " data-target="dancing_inside">
+              <img src="../img/index2/dancing_inside.png">
+              <div class="mask">
+                <div class="caption">TributeFilm / うちで踊ろう</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="half_gif">
+            <a href="express.html" class="no_link_decoration " data-target="express">
+              <img src="../img/index2/express.png">
+              <div class="mask">
+                <div class="caption">EXPRESS 筑波大学ダンス部</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="half_gif">
+            <a href="yuragi.html" class="no_link_decoration " data-target="yuragi">
+              <img src="../img/index2/yuragi.png">
+              <div class="mask">
+                <div class="caption">DigestMovie / ゆらぎ</div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="half_gif">
+            <a href="tparty-launch.html" class="no_link_decoration " data-target="launch">
+              <img src="../img/index2/launch.png">
+              <div class="mask">
+                <div class="caption">DigestMovie / Launch party</div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="half_gif">
+            <a href="monoshiritori-making.html" class="no_link_decoration " data-target="monoshiritoris">
+              <img src="../img/index2/monoshiritori.png">
+              <div class="mask">
+                <div class="caption">MakingMovie / モノシリトリ</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="../js/footer.js"></script>
+ </body>
+ </html>
