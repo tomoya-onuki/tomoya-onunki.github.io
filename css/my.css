@@ -168,8 +168,14 @@ h3{
 .works_contents {
   margin-bottom: 50px;
 }
-.works_contents h3{
+.works_contents h2{
+  font-family:'Helvetica Neue Bold';
   color: #000;
+}
+.works_contents .info{
+  color:#000;
+  font-family:'Helvetica Neue Bold';
+  font-size: 120%;
 }
 
 
