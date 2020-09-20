@@ -1,9 +1,20 @@
-
-.half_gif{
-  width:50%;
-  position: relative;
-  z-index: 1;
+@media screen and (min-width:980px){
+  .half_gif{
+    width:50%;
+    position: relative;
+    z-index: 1;
+  }
 }
+@media screen and (max-width:980px){
+  .half_gif{
+    width:90vw;
+    height:24vw;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .wrap{
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +48,9 @@
 }
 .half_gif:hover .mask {
 	opacity:		1;	/* マスクを表示する */
+}
+.half_gif img {
+  /* object-fit: cover; */
 }
 
 
