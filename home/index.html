@@ -3,22 +3,22 @@
 <head>
  <meta charset="UTF-8">
  <title>HOME</title>
- <script src="./clock.js"></script>
- <script src="./timer.js"></script>
- <link rel="stylesheet" href="./style.css">
+ <script src="./res/clock.js"></script>
+ <!-- <script src="./res/timer.js"></script> -->
+ <link rel="stylesheet" href="./res/style.css">
 </head>
 
 <body>
   <center>
     <!-- Google  -->
     <div class="google_logo">
-      <a href="http://www.google.co.jp/">
+      <a href="http://www.google.co.jp/" target="_blank">
         <strong>Google</strong>
       </a>
     </div>
 
     <div class="searchArea">
-      <form method=get action="http://www.google.co.jp/search">
+      <form method=get action="http://www.google.co.jp/search" target="_blank">
         <input type="text" name="q" id="inText" class="searchText" autofocus>
         <input type="hidden" name="ie" value="UTF-8">
         <input type="hidden" name="oe" value="UTF-8">
@@ -27,20 +27,20 @@
       </form>
     </div>
     <!-- Google -->
-    <p>
-      <a href="https://drive.google.com/drive/u/0/my-drive" class="btn">
-        <strong>Google Drive</strong>
+    <div style="margin-top:25px; margin-bottom:25px;">
+      <a href="https://drive.google.com/drive/u/0/my-drive" class="btn" target="_blank">
+        <strong>GoogleDrive</strong>
       </a>
-      <a href="https://mail.google.com/mail/u/0/?tab=wm&ogbl#inbox" class="btn">
+      <a href="https://mail.google.com/mail/u/0/?tab=wm&ogbl#inbox" class="btn" target="_blank">
         <strong>Gmail</strong>
       </a>
-      <a href="https://www.youtube.com" class="btn">
+      <a href="https://www.youtube.com" class="btn" target="_blank">
         <strong>Youtube</strong>
       </a>
-      <a href="https://www.amazon.co.jp" class="btn">
+      <a href="https://www.amazon.co.jp" class="btn" target="_blank">
         <strong>amazon</strong>
       </a>
-    </p>
+    </div>
 
     <!-- 時計 -->
     <div id="clock_frame">
@@ -49,34 +49,49 @@
     </div>
     <!-- 時計 -->
 
+    <div>
+      <iframe width="448" height="252" src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
 
     <!-- ストップウォッチ -->
-    <div id="timer_frame">
-      <div id="timer">00:00:000</div>
+    <div class="frame" id="timer_frame">
+      <div id="timer">00:00:00</div>
       <button class="btn" id="start">start</button>
       <button class="btn" id="stop">stop</button>
       <button class="btn" id="reset">reset</button>
-      <script src="./stopWatch.js"></script>
+      <script src="./res/stopWatch.js"></script>
     </div>
-    <!-- ストップウォッチ -->
-
 
     <!-- タイマー -->
-    <div id="timer_frame">
-      <form name="timer" class="timeCounter">
-        <div style="margin-bottom:10px">
-          <input type="text" value="0" class="box1"> min
-          <input type="text" value="0" class="box1"> sec
-        </div>
-        <button class="btn" onclick="cntStart()">start</button>
-        <button class="btn" onclick="cntStop()">stop</button>
-        <input class="btn" type="reset" name="bt01" value="reset">
-      </form>
+    <div class="frame" class="timeCounter">
+      <div style="margin-bottom:10px">
+        <input id="min" type="text" value="0" class="box1" style="width:65px;"> min
+        <input id="sec" type="text" value="0" class="box1" style="width:65px;"> sec
+      </div>
+      <button class="btn" id="start1">start</button>
+      <button class="btn" id="stop1">stop</button>
+      <button class="btn" id="reset1">reset</button>
+      <script src="./res/timer.js"></script>
     </div>
-    <!-- タイマー -->
+
+    <!-- 計算機 -->
+    <div class="frame">
+      <input type="text" id="equation" value="" placeholder="式を入力" class="box1" style="width:240px;">
+      <br><button class="btn2" id="calculate" > = </button>
+      <input id="ans" class="box1" style="width:200px;" readonly="readonly"></input>
+      <script src="./res/calculator.js"></script>
+    </div>
+
+
+
+    <div>
+      <iframe src="https://fast.com/ja/" width="448" height="300" frameborder="0"></iframe>
+    </div>
+
 
     <div style="font-size: 70%; margin-top:40px; margin-bottom:20px;">
-      <p>(C) 2017 - 2020 Tomoya Onuki</p>
+      <p>(C) 2020 Tomoya Onuki</p>
     </div>
   </center>
 </body>
