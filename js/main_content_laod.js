@@ -126,9 +126,7 @@ html.set('monoshiritori-making',
 
 
 function roadContets(key) {
-  var main_contents = document.getElementById('main_contents');
-  main_contents.innerHTML = html.get(key);
-  scrollTo(0, 0);
+
 }
 
 
