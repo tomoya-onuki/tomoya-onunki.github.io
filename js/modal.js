@@ -3,11 +3,15 @@ $(function(){
         $(this).on('click',function(){
             scrollTo(0, 0);
             var href = $(this).attr('href').replace('#', '');
+            var modal;
 
-            var main_contents = document.getElementById('main_contents');
-            main_contents.innerHTML = html.get(href);
-
-            var modal = document.getElementById('modal');
+            if (href === 'reel') {
+              modal = document.getElementById('reel');
+            } else {
+              var main_contents = document.getElementById('main_contents');
+              main_contents.innerHTML = html.get(href);
+              modal = document.getElementById('modal');
+            }
             $(modal).fadeIn();
             return false;
         });
