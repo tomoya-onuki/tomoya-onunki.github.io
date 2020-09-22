@@ -17,6 +17,7 @@ $(function(){
             }
 
             scrollTo(0, 0);
+            window.location.hash = '#'+href;
             $(modal).fadeIn();
             return false;
         });
