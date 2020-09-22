@@ -1,9 +1,12 @@
+var id = 0;
+var y = 0;
+var modal;
+
 $(function(){
     $('.js-modal-open').each(function(){
         $(this).on('click',function(){
-            scrollTo(0, 0);
-            var href = $(this).attr('href').replace('#', '');
-            var modal;
+            y = window.pageYOffset;
+            href = $(this).attr('href').replace('#', '');
 
             if (href === 'reel') {
               modal = document.getElementById('reel');
@@ -12,6 +15,8 @@ $(function(){
               main_contents.innerHTML = html.get(href);
               modal = document.getElementById('modal');
             }
+
+            scrollTo(0, 0);
             $(modal).fadeIn();
             return false;
         });
@@ -19,7 +24,8 @@ $(function(){
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
         var main_contents = document.getElementById('main_contents');
-        main_contents.innerHTML = "";
+        main_contents.innerHTML = "undefined";
+        scrollTo(0, y);
         return false;
     });
 });
@@ -31,7 +37,7 @@ var html = new Map();
  *********************/
 html.set('performing-arts-tamago',
 `<div class="works_contents" name="performing-arts-tamago">
-    <h2 class="highlight">「つくば駅→筑波大学　4種のダンス共に」Performing Arts Tamago Vol.22</h2>
+    <h2>「つくば駅→筑波大学　4種のダンス共に」Performing Arts Tamago Vol.22</h2>
     <div class="info">
       2020.06 / Choreo Video<br>
       Cinematographer / Editor
@@ -57,7 +63,7 @@ html.set('performing-arts-tamago',
 
 html.set('mawase-groove-making',
 `<div class="works_contents" name="mawase-groove-making">
-    <h2 class="highlight"><span>【MVメイキング映像】「回せ！」回せ！グルーヴ開発部</span></h2>
+    <h2><span>【MVメイキング映像】「回せ！」回せ！グルーヴ開発部</span></h2>
     <div class="info">
       2020.04 / Making Moive <br>
       Director / Cinematographer / Editor
@@ -82,7 +88,7 @@ html.set('mawase-groove-making',
 
 // html.set('dancing-inside-tribute',
 // `<div class="works_contents" name="dancing-inside-tribute">
-//     <h2 class="highlight"><span>うちで踊ろう</span></h2>
+//     <h2><span>うちで踊ろう</span></h2>
 //     <div class="info">
 //       2020.04 / Tribute Film <br>
 //       Director / Cinematographer / Editor
@@ -101,7 +107,7 @@ html.set('mawase-groove-making',
 
 html.set('express',
 `<div class="works_contents" name="express">
-    <h2 class="highlight"><span>EXPRESS 筑波大学ダンス部</span></h2>
+    <h2><span>EXPRESS 筑波大学ダンス部</span></h2>
     <div class="info">
       2020.01 / Documentary Movie<br>
       Director / Cinematographer / Editor
@@ -130,7 +136,7 @@ html.set('express',
 html.set('yuragi',
 `<div class="works_contents" name="yuragi">
 
-    <h2 class="highlight"><span>雙峰祭前夜祭パフォーマンスショー「ゆらぎ」ダイジェスト版 </span></h2>
+    <h2><span>雙峰祭前夜祭パフォーマンスショー「ゆらぎ」ダイジェスト版 </span></h2>
     <div class="info">
       2019.11 / Digest Movie<br>
       Director / Cinematographer / Editor
@@ -158,7 +164,7 @@ html.set('yuragi',
 
 html.set('tparty-launch',
 `<div class="works_contents" name="tparty-launch">
-    <h2 class="highlight">Tparty / Launch Party / ダイジェスト映像 Digest Video</h2>
+    <h2>Tparty / Launch Party / ダイジェスト映像 Digest Video</h2>
     <div class="info">
       2019.06 / Digest Movie<br>
       Director / Cinematographer / Editor
@@ -182,7 +188,7 @@ html.set('tparty-launch',
 html.set('monoshiritori-making',
 `<div class="works_contents" name="monoshiritori-making">
 
-    <h2 class="highlight">モノシリトリ メイキング</h2>
+    <h2>モノシリトリ メイキング</h2>
     <div class="info">
       2017.10 / Digest Movie<br>
       Director / Cinematographer / Editor
@@ -206,7 +212,7 @@ html.set('monoshiritori-making',
  *********************/
 html.set('in-the-black-and-eternal',
 `<div class="works_contents">
-  <h2 class="highlight">暗転と永遠の中で。</h2>
+  <h2>暗転と永遠の中で。</h2>
   <div class="info">2019.12 / Video Art</div>
 
   <div class="mov">
@@ -224,7 +230,7 @@ html.set('in-the-black-and-eternal',
 
 html.set('lost-anima',
 `<div class="works_contents">
-  <h2 class="highlight">アニマの消失</h2>
+  <h2>アニマの消失</h2>
   <div class="info">2019.05 / Media Art</div>
 
   <div class="mov">
@@ -241,7 +247,7 @@ html.set('lost-anima',
 
 html.set('shape-of-monologue-aggregate',
 `<div class="works_contents">
-  <h2 class="highlight">ひとりごとのカタチ/ 集合体について</h2>
+  <h2>ひとりごとのカタチ/ 集合体について</h2>
   <div class="info">2019.04 / Media Art</div>
 
   <h3>Caption</h3>
@@ -257,7 +263,7 @@ html.set('shape-of-monologue-aggregate',
 
 html.set('somewhere-far-away',
 `<div class="works_contents">
-  <h2 class="highlight">どこか遠くの場所で</h2>
+  <h2>どこか遠くの場所で</h2>
   <div class="info">2018.10 / Exhibition</div>
 
   <p><i>旅先で撮った写真や描いた絵、買ったもの、拾ったもの... 私たちが持ち帰ってきた"お土産"です。</i></p>
@@ -282,7 +288,7 @@ html.set('somewhere-far-away',
 
 html.set('kalfos-box',
 `<div class="works_contents">
-  <h2 class="highlight">Kalfos Box</h2>
+  <h2>Kalfos Box</h2>
   <div class="info">2018.10 / Media Art</div>
 
   <div class="mov">
@@ -295,7 +301,7 @@ html.set('kalfos-box',
 
 html.set('silence',
 `<div class="works_contents">
-  <h2 class="highlight">沈黙</h2>
+  <h2>沈黙</h2>
   <div class="info">2017.10 / Media Art</div>
 
   <div class="mov">
@@ -311,7 +317,7 @@ html.set('silence',
  *********************/
 html.set('task-management-tool',
 `<div class="works_contents">
-  <h2 class="highlight">タスク管理ツール</h2>
+  <h2>タスク管理ツール</h2>
   <a href="https://three-do.herokuapp.com" target="_blank"><u>https://three-do.herokuapp.com</u></a>
   <p>アジャイル開発で使用するかんばんをコンセプトに制作したアプリケーション</p>
   <img style="width:100%" src="./img/task/home.png">
@@ -322,7 +328,7 @@ html.set('task-management-tool',
 
 html.set('color-selection',
 `<div class="works_contents">
-  <h2 class="highlight">COLOR SELECTION</h2>
+  <h2>COLOR SELECTION</h2>
   <a href="https://color-selection.herokuapp.com" target="_blank"><u>https://color-selection.herokuapp.com</u></a>
   <p>カラーデザインの支援ツール。色相を選び、明度と彩度を調整することで統一感のあるカラーデザインが可能となる。</p>
   <img style="width:100%" src="./img/color_selection/color_selection_web_ver3.gif">
@@ -331,7 +337,7 @@ html.set('color-selection',
 
 html.set('gohan-search',
 `<div class="works_contents">
-  <h2 class="highlight">ごっっはにゃさん</h2>
+  <h2>ごっっはにゃさん</h2>
   <a href="https://tapiome.herokuapp.com" target="_blank"><u>https://tapiome.herokuapp.com</u></a>
   <p>筑波大学情報学群の講義 enPitにて制作したアプリケーション。<br>
   つくば市内の飲食店の情報をまとめたwebサービス。ユーザーの投稿によって休業情報を収集することができる。</p>
@@ -343,7 +349,7 @@ html.set('gohan-search',
 
 html.set('cube',
 `<div class="works_contents">
-  <h2 class="highlight">CUBE</h2>
+  <h2>CUBE</h2>
   <p>筑波大学の講義 コンピュータアートIIの課題として制作し，その後リメイクしたゲーム作品。 MAD -創成x芸術合同展覧宴- にて展示。</p>
   <p>CUBEは全6ステージからなるアクションパズルゲームである。 各ステージをクリアするたびにキューブ状のコントローラーが1面ずつ点灯する。 点灯した面はタッチパネルとして機能しゲーム内で使用できるようになる。 ゲームの進行状況に応じてコントローラーの状態が変化し、操作が複雑になってゆくことで難易度が上がる仕組みになっている。</p>
   <p>製作 : 小貫 智弥 / 金子優香 / 町田樹</p>
@@ -356,7 +362,7 @@ html.set('cube',
 
 html.set('fruits-cut',
 `<div class="works_contents">
-  <h2 class="highlight">FRUITS CUT!</h2>
+  <h2>FRUITS CUT!</h2>
   <p>筑波大学の講義，コンピュータアートIIの課題として制作したゲーム。<br>
   ダンボールから飛び出すフルーツを切るゲームである. 操作は手をかざすジェスチャだけで行う。センサーを搭載した段ボール箱型のインターフェースだけで全ての入力が完結するようになっている。</p>
   <p>製作 : 小貫 智弥 / 金子優香 / 町田樹</p>
@@ -367,7 +373,7 @@ html.set('fruits-cut',
 
 html.set('megeilt-tweet-system',
 `<div class="works_contents">
-  <h2 class="highlight">ツイート共有システム</h2>
+  <h2>ツイート共有システム</h2>
   <p>筑波大学において開催された, 情報メディア創成学類と芸術専門学群による合同プレゼンテーション企画「メ芸LT」にて使用したTwitter連携システムである。</p>
   <p>"#メ芸LT"というハッシュタグを添えてプレゼンに対する意見や感想を呟くとリアルタイムでそのTweetが映し出されるというものである。観客の参加感を増幅させることを目的として導入した。</p>
   <img style="width:100%" src="./img/megeilt/megeiLT.gif">

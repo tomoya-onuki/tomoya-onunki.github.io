@@ -1,0 +1,288 @@
+<!doctype html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" >
+ 	<title>WORKS | TOMOYA ONUKI</title>
+  <link rel="stylesheet" type="text/css" href="./css/my.css">
+  <link rel="stylesheet" type="text/css" href="./css/flex_gif.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="./js/modal.js"></script>
+ </head>
+
+
+ <body class="body">
+
+   <div name="top" class="header">
+     <div class="head_text">
+       <a target="_self" class="head_logo" href="./">
+         <div class="head_font1">TOMOYAONUKI.</div>
+       </a>
+       <span class="head_menu">
+         <a id="works" target="_self" href=".">WORKS</a>
+         <strong> / </strong>
+         <a id="about" target="_self" href="./profile">ABOUT</a>
+       </span>
+     </div>
+   </div>
+
+
+    <div class="first main">
+      <center>
+        <h1>WORKS</h1>
+        <h2>
+          <a href="#movies" style="cursor:pointer;">Movies</a> /
+          <a href="#arts" style="cursor:pointer;">Arts</a> /
+          <a href="#apps" style="cursor:pointer;">Apps</a>
+        </h2>
+      </center>
+
+      <!-- <div id="main_contents"> -->
+
+      <div id="video" style="margin-bottom:-36px;">
+        <a href="#reel" class="no_link_decoration js-modal-open js-modal-open" data-target="reel">
+          <video class="reel_mov" loop autoplay muted playsinline>
+            <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel.mp4" type="video/mp4">
+            <p>動画を再生できません</p>
+          </video>
+        </a>
+      </div>
+      <div id="reel" class="modal-full js-modal">
+        <div id="reel_close" class="modal__bg js-modal-close" onclick="pause()"></div>
+        <div class="modal__content__full">
+          <a class="js-modal-close close" href="" onclick="pause()"></a>
+          <iframe id="reel_player" src="https://player.vimeo.com/video/450021560?color=ffffff&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+      <script src="./js/vimeo.js"></script>
+
+      <!-- </div> -->
+
+      <div id="modal" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+          <a class="js-modal-close close" href=""></a>
+          <div id="main_contents"></div>
+          <script type="text/javascript" src="./js/footer.js"></script>
+        </div>
+      </div>
+
+
+      <h3 id="movies" class="header_margin">MOVIES</h3>
+      <div class="wrap">
+        <div class="half_gif">
+          <a href="#performing-arts-tamago" class="no_link_decoration js-modal-open">
+            <img src="./img/index2/tamago.png">
+            <div class="mask">
+              <div class="caption">「つくば駅→筑波大学　4種のダンス共に」<br>Performing Arts Tamago Vol.22</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="half_gif">
+          <a href="#mawase-groove-making" class="no_link_decoration js-modal-open">
+            <img src="./img/index2/rotate.png">
+            <div class="mask">
+              <div class="caption">【MVメイキング映像】「回せ！」<br>回せ！グルーヴ開発部</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- <div class="half_gif">
+          <a href="#dancing-inside-tribute" class="no_link_decoration js-modal-open " data-target="dancing_inside">
+            <img src="./img/index2/dancing_inside.png">
+            <div class="mask">
+              <div class="caption">うちで踊ろう</div>
+            </div>
+          </a>
+        </div> -->
+
+        <div class="half_gif">
+          <a href="#express" class="no_link_decoration js-modal-open " data-target="express">
+            <img src="./img/index2/express.png">
+            <div class="mask">
+              <div class="caption">EXPRESS 筑波大学ダンス部</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="half_gif">
+          <a href="#yuragi" class="no_link_decoration js-modal-open " data-target="yuragi">
+            <img src="./img/index2/yuragi.png">
+            <div class="mask">
+              <div class="caption">雙峰祭前夜祭パフォーマンスショー「ゆらぎ」<br>ダイジェスト版</div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="half_gif">
+          <a href="#tparty-launch" class="no_link_decoration js-modal-open " data-target="launch">
+            <img src="./img/index2/launch.png">
+            <div class="mask">
+              <div class="caption">Tparty / Launch Party / <br>ダイジェスト映像 Digest Video</div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="half_gif">
+          <a href="#monoshiritori-making" class="no_link_decoration js-modal-open " data-target="monoshiritoris">
+            <img src="./img/index2/monoshiritori.png">
+            <div class="mask">
+              <div class="caption">モノシリトリ メイキング</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <h3 id="arts" class="header_margin">ARTS</h3>
+      <div class="wrap">
+        <div class="half_gif">
+          <a href="#in-the-black-and-eternal" class="no_link_decoration js-modal-open" data-target="black">
+            <img src="./img/index2/black.png">
+            <div class="mask">
+              <div class="caption">暗転と永遠の中で。</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="half_gif">
+          <a href="#lost-anima" class="no_link_decoration js-modal-open" data-target="lost_anima">
+            <img src="./img/index2/lostanima.png">
+            <div class="mask">
+              <div class="caption">アニマの消失</div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="half_gif">
+          <a href="#shape-of-monologue-aggregate" class="no_link_decoration js-modal-open" data-target="aggregation">
+            <img src="./img/index2/aggregation.png">
+            <div class="mask">
+              <div class="caption">ひとりごとのカタチ/ 集合体について</div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="half_gif">
+          <a href="#somewhere-far-away" class="no_link_decoration js-modal-open" data-target="somewhere">
+            <img src="./img/index2/somewhere.png">
+            <div class="mask">
+              <div class="caption">どこか遠くの場所で</div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="half_gif">
+          <a href="#kalfos-box" class="no_link_decoration js-modal-open" data-target="kalfosbox">
+            <img src="./img/index2/kalfosbox.png">
+            <div class="mask">
+              <div class="caption">Kalfos Box</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="half_gif">
+          <a href="#silence" class="no_link_decoration js-modal-open" data-target="silence">
+            <img src="./img/index2/silence.png">
+            <div class="mask">
+              <div class="caption">沈黙</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <h3 id="apps" class="header_margin">APPLICATIONS</h3>
+      <div>
+        <div class="contents">
+          <!-- <a href="https://three-do.herokuapp.com/" target="_blank" class="no_link_decoration"> -->
+          <a href="#task-management-tool" class="js-modal-open" data-target="task">
+          <div>
+            <name>タスク管理ツール</name>
+            <date>2019.12</date>
+            <category>Application</category>
+            <info>[ PHP / PostgreSQL / JavaScript / jQuery ]</info>
+            <div><stmt>アジャイル開発のかんばんやTODOリストとして活用できるタスク管理ツール</stmt></div>
+          </div>
+          </a>
+        </div>
+
+
+        <div class="contents">
+          <!-- <a href="https://color-selection.herokuapp.com/" target="_blank" class="no_link_decoration"> -->
+          <a href="#color-selection" class="no_link_decoration js-modal-open" data-target="color">
+          <div>
+            <name>COLOR SELECTION</name>
+            <date>2020.10</date>
+            <category>Application</category>
+            <info>[ JavaScript / PHP / PostgreSQL]</info>
+            <div><stmt>非デザイナーのカラーデザインを支援するためのアプリケーション</stmt></div>
+          </div>
+          </a>
+        </div>
+
+        <div class="contents">
+          <!-- <a href="https://tapiome.herokuapp.com" target="_blank" class="no_link_decoration"> -->
+          <a href="#gohan-search" class="no_link_decoration js-modal-open" data-target="gohan">
+          <div>
+            <name>ごっっはにゃさん</name>
+            <date>2019.08</date>
+            <category>Application</category>
+            <info>[ PHP / PostgreSQL ]</info>
+            <div><stmt>つくば市内の飲食店の開店情報をクラウドソーシングで集めるwebサービス</stmt></div>
+          </div>
+          </a>
+        </div>
+
+        <div class="contents">
+          <a href="#cube" class="no_link_decoration js-modal-open" data-target="cube">
+          <div>
+            <name>CUBE</name>
+            <date>2019.04</date>
+            <category>Game</category>
+            <info>[ Processing / Arduino ]</info>
+            <div><stmt>キューブ状のコントローラーを操作することでパズルを解きゲームを進めていくアクションパズルゲーム</stmt></div>
+          </div>
+          </a>
+        </div>
+
+        <div class="contents">
+          <a href="#fruits-cut" class="no_link_decoration js-modal-open" data-target="fruitscut">
+          <div>
+            <name>FRUITS CUT!</name>
+            <date>2018.12</date>
+            <category>Game</category>
+            <info>[ Processing / Arduino ]</info>
+            <div><stmt>フルーツナイフ型のコントローラーを駆使し、飛んでくる果物をカットするゲーム</stmt></div>
+          </div>
+          </a>
+        </div>
+
+        <div class="contents">
+          <a href="#megeilt-tweet-system" class="no_link_decoration js-modal-open" data-target="megeilt">
+          <div>
+            <name>ツイート共有システム</name>
+            <date>2018.05</date>
+            <category>Application</category>
+            <info>[ Processing / TwitterAPI ]</info>
+            <div><stmt>学生によるプレゼンテーション企画「メ芸LT」のために開発したTwitter連携システム</stmt></div>
+          </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="./js/footer.js"></script>
+ </body>
+ </html>

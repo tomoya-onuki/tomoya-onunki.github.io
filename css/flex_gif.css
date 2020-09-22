@@ -8,7 +8,8 @@
 @media screen and (max-width:980px){
   .half_gif{
     width:90vw;
-    height:24vw;
+    height:30vw;
+    /* height:24vw; */
     object-fit: cover;
     position: relative;
     z-index: 1;
@@ -43,7 +44,6 @@
     position: absolute;
     left:50%;
     top:50%;
-    /* bottom:0; */
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 80%;
     transform: translate(-50%,-50%);
@@ -64,18 +64,19 @@
   	top:0;
   	left:0;
   	opacity:1;
-  	background-color:	rgba(0,0,0,0.2);
+  	background-color:	rgba(0,0,0,0.0);
   	-webkit-transition:	all 0.2s ease;
   	transition:		all 0.2s ease;
   }
   .half_gif .caption{
     color:#ffffff;
     position: absolute;
-    left:50%;
-    top:50%;
+    left:10px;
+    bottom:10px;
+    /* transform: translate(-50%,-50%); */
+    opacity: 1;
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 80%;
-    transform: translate(-50%,-50%);
     display: block;
     white-space: nowrap;
   }

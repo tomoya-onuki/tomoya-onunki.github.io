@@ -3,8 +3,8 @@ html{
 }
 
 hr{
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .l {
@@ -61,7 +61,7 @@ a {
 	color:#000000;
 	/* color:#1f1f1f; */
 }
-h1 a:hover {
+h2 a:hover {
   opacity:0.4;
 }
 
@@ -96,7 +96,10 @@ video {
 .first{
 	padding-top: 62px;
 }
-
+.header_margin {
+  padding-top: 120px;
+  margin-top: -62px;
+}
 
 .img_size{
 	width:100%;
@@ -110,12 +113,14 @@ h1{
 	/* margin-bottom: 40px; */
 }
 h2{
-  margin-top:30px;
-  margin-bottom: 5px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  color: #000000;
 }
 h3{
   margin-top:30px;
   margin-bottom: 5px;
+  color: #000000;
 }
 
 
