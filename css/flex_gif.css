@@ -20,49 +20,63 @@
   flex-wrap: wrap;
 }
 
-.half_gif .caption{
-  color:#ffffff;
-  position: absolute;
-  left:50%;
-  top:50%;
-  /* bottom:0; */
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 80%;
-  transform: translate(-50%,-50%);
-  display: none;
-}
-.half_gif:hover .caption{
-  display: block;
-  opacity: 1;
-}
-.half_gif .mask {
-	width:			100%;
-	height:			100%;
-	position:		absolute;	/* 絶対位置指定 */
-	top:			0;
-	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,72,100,0.4);
-	-webkit-transition:	all 0.2s ease;
-	transition:		all 0.2s ease;
-}
-.half_gif:hover .mask {
-	opacity:		1;	/* マスクを表示する */
-}
-.half_gif img {
-  /* object-fit: cover; */
-}
 
 
-.black{
-  color:#000000;
+@media screen and (min-width:980px){
+  .half_gif .mask {
+  	width:			100%;
+  	height:			100%;
+  	position:		absolute;	/* 絶対位置指定 */
+  	top:			0;
+  	left:			0;
+  	opacity:		0;	/* マスクを表示しない */
+  	background-color:	rgba(0,72,100,0.4);
+  	-webkit-transition:	all 0.2s ease;
+  	transition:		all 0.2s ease;
+  }
+  .half_gif:hover .mask {
+  	opacity:		1;	/* マスクを表示する */
+  }
+
+  .half_gif .caption{
+    color:#ffffff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    /* bottom:0; */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 80%;
+    transform: translate(-50%,-50%);
+    display: none;
+    white-space: nowrap;
+  }
+  .half_gif:hover .caption{
+    display: block;
+    opacity: 1;
+  }
 }
-.white{
-  color:#ffffff;
-}
-.gray{
-  color:#808080;
-}
-.caption .stmt{
-  font-size: 50%;
+
+@media screen and (max-width:980px){
+  .half_gif .mask {
+  	width:			100%;
+  	height:			100%;
+  	position:		absolute;	/* 絶対位置指定 */
+  	top:0;
+  	left:0;
+  	opacity:1;
+  	background-color:	rgba(0,0,0,0.2);
+  	-webkit-transition:	all 0.2s ease;
+  	transition:		all 0.2s ease;
+  }
+  .half_gif .caption{
+    color:#ffffff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 80%;
+    transform: translate(-50%,-50%);
+    display: block;
+    white-space: nowrap;
+  }
 }

@@ -147,6 +147,7 @@ h3{
 
 .highlight{
   background:linear-gradient(transparent 50%, #ffff66 50%);
+  display: inline;
 }
 
 .mov {
@@ -165,20 +166,7 @@ h3{
   height: 100%;
 }
 
-.works_contents {
-  margin-bottom: 50px;
-}
-.works_contents h2{
-  font-family:'Helvetica Neue Bold', Arial, sans-serif;
-  font-weight: bold;
-  color: #000;
-}
-.works_contents .info{
-  color:#000;
-  font-family:'Helvetica Neue Bold', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 120%;
-}
+
 
 
 @media screen and (min-width:980px){
