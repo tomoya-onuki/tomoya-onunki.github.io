@@ -379,3 +379,7 @@ h3{
   } */
 
 }
+
+.photo_gallery {
+  cursor: pointer;
+}

@@ -80,24 +80,24 @@ html.set('mawase-groove-making',
 </div>
 `);
 
-html.set('dancing-inside-tribute',
-`<div class="works_contents" name="dancing-inside-tribute">
-    <h2 class="highlight"><span>うちで踊ろう</span></h2>
-    <div class="info">
-      2020.04 / Tribute Film <br>
-      Director / Cinematographer / Editor
-    </div>
-
-    <div class="mov">
-      <iframe  src="https://www.youtube.com/embed/-ILnREA4aX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <p>
-      <strong>Credits</strong><br>
-      Director : Tomoya Onuki <br>
-    </p>
-</div>
-`);
+// html.set('dancing-inside-tribute',
+// `<div class="works_contents" name="dancing-inside-tribute">
+//     <h2 class="highlight"><span>うちで踊ろう</span></h2>
+//     <div class="info">
+//       2020.04 / Tribute Film <br>
+//       Director / Cinematographer / Editor
+//     </div>
+//
+//     <div class="mov">
+//       <iframe  src="https://www.youtube.com/embed/-ILnREA4aX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//     </div>
+//
+//     <p>
+//       <strong>Credits</strong><br>
+//       Director : Tomoya Onuki <br>
+//     </p>
+// </div>
+// `);
 
 html.set('express',
 `<div class="works_contents" name="express">

@@ -17,10 +17,8 @@ var fname = [
 "./img/index/DSC02632.JPG",
 "./img/index/DSC03531.JPG",
 "./img/index/LRG_DSC01238.JPG",
-"./img/index/LRG_DSC01267.JPG",
 "./img/index/LRG_DSC01666.JPG",
 "./img/index/LRG_DSC02160.JPG",
 "./img/index/LRG_DSC02459.JPG",
-"./img/index/LRG_DSC03816.JPG",
 "./img/index/LRG_DSC03913.JPG",
 ];

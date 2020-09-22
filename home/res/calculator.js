@@ -24,9 +24,7 @@ function calculator(equation) {
 
   ans = parseFloat(values[0]);
 
-  // for (var i = 0; i < values.length; i++) {
-  //
-  // }
+  // foq
 
   // 計算する
   for (var i = 0; i < values.length; i++) {
