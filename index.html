@@ -36,12 +36,23 @@
 
       <center>
           <!-- <a href="photo"><img id="image_place" src="./img/index/0.JPG" class="index_img_size"></a> -->
-          <video class="index_img_size" loop autoplay muted playsinline>
-            <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel.mp4" type="video/mp4">
-            <p>動画を再生できません</p>
-          </video>
+          <a href="#reel" class="no_link_decoration js-modal-open js-modal-open" data-target="reel">
+            <video class="index_img_size" loop autoplay muted playsinline>
+              <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel.mp4" type="video/mp4">
+              <p>動画を再生できません</p>
+            </video>
+          </a>
           <!-- <script type="text/javascript" src="./js/index_img.js"></script> -->
       </center>
+      
+      <div id="reel" class="modal-full js-modal">
+        <div id="reel_close" class="modal__bg js-modal-close" onclick="pause()"></div>
+        <div class="modal__content__full">
+          <a class="js-modal-close close" href="" onclick="pause()"></a>
+          <iframe id="reel_player" src="https://player.vimeo.com/video/450021560?color=ffffff&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+      <script src="./js/vimeo.js"></script>
 
     </div>
  		<!-- <hr> -->
