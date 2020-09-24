@@ -287,17 +287,7 @@
 
 
     <script type="text/javascript">
-      var url = location.href;
-      console.log(url);
-
-      var tmp = url.split('#');
-      console.log(tmp);
-
-      var main_contents = document.getElementById('main_contents');
-      main_contents.innerHTML = html.get(tmp[1]);
-      modal = document.getElementById('modal');
-      scrollTo(0, 0);
-      $(modal).fadeIn();
+    checkUrl();
     </script>
  </body>
  </html>

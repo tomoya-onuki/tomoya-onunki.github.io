@@ -11,12 +11,15 @@ $(function(){
 
             if (href === 'reel') {
               modal = document.getElementById('reel');
-            } else {
+            } else if(html.has(href)) {
               var main_contents = document.getElementById('main_contents');
               main_contents.innerHTML = html.get(href);
               modal = document.getElementById('modal');
               // window.location.hash = href;
               history.replaceState(null,null,'/works/'+href);
+              // window.location.replace('./works');
+            } else {
+              return false;
             }
 
             scrollTo(0, 0);
@@ -33,6 +36,18 @@ $(function(){
     });
 });
 
+function checkUrl() {
+  var url = location.href;
+  tmp = url.split('/');
+  if( tmp[tmp.length-1] != '' && html.has(tmp[tmp.length-1]) ) {
+    var main_contents = document.getElementById('main_contents');
+    main_contents.innerHTML = html.get(tmp[tmp.length-1]);
+    modal = document.getElementById('modal');
+    scrollTo(0, 0);
+    $(modal).fadeIn();
+  } else {
+  }
+}
 
 var html = new Map();
 /*********************
