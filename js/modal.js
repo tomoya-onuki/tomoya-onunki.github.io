@@ -27,7 +27,7 @@ $(function(){
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
         // window.location.hash = '';
-        history.replace(null,null,'/works');
+        history.replaceState(null,null,'/works');
         scrollTo(0, y);
         return false;
     });
