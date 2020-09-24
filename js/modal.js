@@ -16,7 +16,7 @@ $(function(){
               main_contents.innerHTML = html.get(href);
               modal = document.getElementById('modal');
               // window.location.hash = href;
-              history.replaceState(null,null,'/'+href);
+              history.replaceState(null,null,'/works/'+href);
             }
 
             scrollTo(0, 0);
@@ -27,7 +27,7 @@ $(function(){
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
         // window.location.hash = '';
-        history.pushState(null,null,"");
+        history.replace(null,null,'/works');
         scrollTo(0, y);
         return false;
     });
