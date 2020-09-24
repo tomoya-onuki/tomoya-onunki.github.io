@@ -6,6 +6,7 @@ $(function(){
     $('.js-modal-open').each(function(){
         $(this).on('click',function(){
             y = window.pageYOffset;
+            // href = $(this).attr('target').replace('#', '');
             href = $(this).attr('href').replace('#', '');
 
             if (href === 'reel') {
@@ -14,18 +15,18 @@ $(function(){
               var main_contents = document.getElementById('main_contents');
               main_contents.innerHTML = html.get(href);
               modal = document.getElementById('modal');
+              // window.location.hash = href;
+              history.pushState(null,null,'/'+href);
             }
 
             scrollTo(0, 0);
-            window.location.hash = '#'+href;
             $(modal).fadeIn();
             return false;
         });
     });
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
-        var main_contents = document.getElementById('main_contents');
-        main_contents.innerHTML = "undefined";
+        // window.location.hash = '';
         scrollTo(0, y);
         return false;
     });
