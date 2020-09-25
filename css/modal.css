@@ -24,7 +24,7 @@
     z-index: 5;
 }
 .modal__content__full {
-    background: #ffffff;
+    background: rgba(255,255,255,0);
     position: fixed;
     left: 50%;
     top: 50%;
