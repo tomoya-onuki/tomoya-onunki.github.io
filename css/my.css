@@ -223,7 +223,7 @@ h3{
 	.head_menu{
 		position:absolute;
 		right:20%;
-    font-size: 150%;
+    /* font-size: 100%; */
 		font-family: HelveticaNeue-light, "sans-serif";
     margin-top: 20px;
     font-weight: bold;
@@ -340,7 +340,7 @@ h3{
 		right:5%;
 		font-family: HelveticaNeue-light, "sans-serif";
     margin-top: 20px;
-    font-size: 110%;
+    font-size: 80%;
     font-weight: bold;
 	}
 
