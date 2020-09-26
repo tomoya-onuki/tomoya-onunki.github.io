@@ -36,18 +36,24 @@ $(function() {
 
 
 function loadPage(url, title, addres) {
-  $.ajax({
-    url: url,
-    dataType: 'html',
-    success: function(data) {
-      $('#main').html(data);
-    },
-    error: function(data) {
-      alert('error');
-    }
-  });
-  console.log(url+","+title+","+addres);
-  // $('#main').load(url);
+  // $.ajax({
+  //   url: url,
+  //   dataType: 'html',
+  //   success: function(data) {
+  //     $('#main').html(data);
+  //   },
+  //   error: function(data) {
+  //     alert('error');
+  //   }
+  // });
+
+  try {
+    $('#main').load(url);
+  } catch (e) {
+    console.log(e);
+  } finally {
+    console.log(url+","+title+","+addres);
+  }
   document.title = title;
   history.pushState(null,null,url);
 }
