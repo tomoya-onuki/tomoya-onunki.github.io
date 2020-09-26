@@ -9,11 +9,8 @@
  	<link rel="stylesheet" type="text/css" href="./css/main.css">
  	<link rel="stylesheet" type="text/css" href="./css/modal.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-  <script src="https://player.vimeo.com/api/player.js"></script>
 	<script src="./js/modal.js"></script>
 	<script src="./js/img_file_name.js"></script>
-	<script src="./js/load.js"></script>
  </head>
 
 
@@ -21,17 +18,20 @@
 
   <div name="top" class="header">
     <div class="head_text">
-      <a id="top" class="head_logo head_font1" href="">TOMOYAONUKI.</a>
+      <a target="_self" class="head_logo" href=".">
+        <div class="head_font1">TOMOYAONUKI.</div>
+        <!-- <div class="head_font2">Videographer / MediaArtist / Engineer</div> -->
+      </a>
       <span class="head_menu">
-        <a id="works" href="./works">WORKS</a>
+        <a id="works" target="_self" href="./works">WORKS</a>
         <strong> / </strong>
-        <a id="profile" href="./profile">PROFILE</a>
+        <a id="about" target="_self" href="./profile">ABOUT</a>
       </span>
     </div>
   </div>
 
 
- 	<div id="main" class="first main">
+ 	<div class="first main">
     <div id="top" class="position">
 
       <center>
@@ -55,12 +55,7 @@
       <script src="./js/vimeo.js"></script>
 
     </div>
-  </div>
-
-  <center>
-    <div style="font-size: 70%; margin-top:40px; margin-bottom:20px;">
-      <p>(C) 2017 - 2020 Tomoya Onuki</p>
-    </div>
-  </center>
+ 		<!-- <hr> -->
+ 			<script type="text/javascript" src="./js/footer.js"></script>
  </body>
  </html>
