@@ -1,17 +1,34 @@
 $(function() {
+  $('top').click(
+    function() {
+      loadPage(
+        'https://tomoya-onuki.github.io/index.html',
+        'TOMOYA ONUKI',
+        './'
+      )
+    }
+  );
+
   $('#works').click(
     function() {
       loadPage(
         'https://tomoya-onuki.github.io/works.html',
         'WORKS | TOMOYA ONUKI',
         './works'
-      );
+      )
     }
   );
 
   $('#profile').click(
-    // loadPage('https://tomoya-onuki.github.io/profile.html')
+    function() {
+      loadPage(
+        'https://tomoya-onuki.github.io/profile.html',
+        'PROFILE | TOMOAY ONUKI',
+        './profile'
+      )
+    }
   );
+
 });
 
 
