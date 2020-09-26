@@ -45,5 +45,5 @@ function loadPage(url, title, addres) {
     }
    });
   document.title = title;
-  // window.location.replace(addres);
+  window.location.replace(addres);
 }
