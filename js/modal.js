@@ -30,13 +30,14 @@ $(function(){
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
         // window.location.hash = '';
-        history.replaceState(null,null,'/works');
+        // history.replaceState(null,null,'/works');
         scrollTo(0, y);
         return false;
     });
 });
 
 function checkUrl() {
+
   var url = location.href;
   tmp = url.split('#');
   if( tmp.length == 2 && tmp[1] != '' && html.has(tmp[1]) ) {
@@ -47,7 +48,56 @@ function checkUrl() {
     $(modal).fadeIn();
   } else {
   }
+
+  // insertHtml();
 }
+
+// function insertHtml() {
+//   var jsonObj = JSON.parse(works);
+//
+//   for (var i = 0; i < jsonObj.length; i++) {
+//     var id = '<div class="works_contents" name="' + jsonObj[i].id + '">';
+//     var title = '<h2>' + jsonObj[i].title + '</h2>';
+//
+//     var info = '<div class="info">' + jsonObj[i].info.date + ' / ' + jsonObj[i].info.genre+'<br>'
+//     for (var j = 0; j < jsonObj[i].info.role.length; j++) {
+//       info += ( " / " + jsonObj[i].info.role[j] );
+//     }
+//     info += '</div>';
+//
+//     var mov = '<div class="mov">';
+//     for (var j = 0; j < jsonObj[i].contents.mov.length; j++) {
+//       mov += '<iframe src="' + jsonObj[i].contents.mov[j] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+//     }
+//     mov += '</div>';
+//
+//     // console.log(jsonObj[i].contents);
+//
+//     var paragraph = '<div>';
+//     for (var k = 0; k < jsonObj[i].contents.paragraph.length; k++) {
+//
+//       paragraph += '<p>';
+//       if(jsonObj[i].contents.paragraph[k].title) paragraph += ('<strong>'+jsonObj[i].contents.paragraph[k].title+'</strong><br>');
+//       for (var l = 0; l < jsonObj[i].contents.paragraph[k].text.length; l++) {
+//         paragraph += jsonObj[i].contents.paragraph[k].text[l]+'<br>';
+//       }
+//       paragraph += '</p>';
+//     }
+//
+//     var img = '<div>';
+//     for (var j = 0; j < jsonObj[i].contents.img.length; j++) {
+//       mov += '<img style="width:49%;" src="' + jsonObj[i].contents.img[j] + '">';
+//     }
+//     img += '</div>';
+//
+//     html.set(jsonObj[i].id , id+title+info+mov+paragraph+img+'</div>');
+//
+//     console.log(html.get(jsonObj[i].id));
+//     // jsonObj[i]
+//
+//   }
+//
+// }
 
 var html = new Map();
 /*********************
