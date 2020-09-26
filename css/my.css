@@ -89,7 +89,7 @@ a:hover u{
   font-size: 200%;
   font-weight: bold;
   z-index:4;
-  background-color: #ff00ff; 
+  background-color: #ff00ff;
 }
 .top_menu a:hover {
   opacity: 0.4
@@ -223,6 +223,7 @@ h3{
 	.head_menu{
 		position:absolute;
 		right:20%;
+    font-size: 150%;
 		font-family: HelveticaNeue-light, "sans-serif";
     margin-top: 20px;
     font-weight: bold;
@@ -339,6 +340,7 @@ h3{
 		right:5%;
 		font-family: HelveticaNeue-light, "sans-serif";
     margin-top: 20px;
+    font-size: 110%;
     font-weight: bold;
 	}
 
