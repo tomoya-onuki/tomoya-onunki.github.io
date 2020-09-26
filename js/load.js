@@ -1,14 +1,14 @@
 $(function() {
-  $('top').click(
-    function() {
-      loadPage(
-        // './index.html',
-        'https://tomoya-onuki.github.io/index.html',
-        'TOMOYA ONUKI',
-        './'
-      )
-    }
-  );
+  // $('#top').click(
+  //   function() {
+  //     loadPage(
+  //       // './index.html',
+  //       'https://tomoya-onuki.github.io/index.html',
+  //       'TOMOYA ONUKI',
+  //       './'
+  //     )
+  //   }
+  // );
 
   $('#works').click(
     function() {
@@ -45,9 +45,9 @@ function loadPage(url, title, addres) {
     error: function(data) {
       alert('error');
     }
-   });
-
-   // $('#main').load(url);
-   document.title = title;
-   // history.pushState(null,null,url);
+  });
+  console.log(url+","+title+","+addres);
+  // $('#main').load(url);
+  document.title = title;
+  history.pushState(null,null,url);
 }
