@@ -339,7 +339,7 @@ h3{
 		position:absolute;
 		right:5%;
 		font-family: HelveticaNeue-light, "sans-serif";
-    margin-top: 20px;
+    margin-top: 27px;
     font-size: 60%;
     font-weight: bold;
 	}
@@ -410,4 +410,21 @@ h3{
 
 .photo_gallery {
   cursor: pointer;
+}
+
+.footer {
+  font-size: 70%;
+}
+.footer center {
+  color:#4f4f4f;
+  margin-top:40px;
+  margin-bottom:20px;
+}
+.footer .fix {
+  color:#fff;
+  position:fixed;
+  top:95vh;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index:4;
 }
