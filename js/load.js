@@ -55,6 +55,6 @@ function loadPage(url, title, addres) {
   //   console.log(url+","+title+","+addres);
   // }
 
-  // document.title = title;
-  // history.pushState(null,null,url);
+  document.title = title;
+  history.pushState(null,null,url);
 }
