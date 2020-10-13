@@ -193,7 +193,11 @@ html.set('express',
     <p>
       <strong>Credits</strong><br>
       Producer : Sta2one <a href="https://www.instagram.com/sta2one" target="_blank"><u>https://www.instagram.com/sta2one</u></a><br>
-      Cinematographer, Editor : Tomoya Onuki / Kaito Shidaraku / Shinnosuke Ando / Yuich Kato<br>
+      Cinematographer : Tomoya Onuki / Kaito Shidaraku / Shinnosuke Ando / Yuich Kato<br>
+      Editor : <br>
+      - Part1, Kaito Shidaraku / Tomoya Onuki<br>
+      - Part2, Tomoya Onuki / Yuich Kato<br>
+      - Part3, Shinnosuke Ando / Kaito Shidaraku / Tomoya Onuki<br>
       Cast : 筑波大学ダンス部 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank"><u>http://tsa.tsukuba.ac.jp/dance/</u></a><br>
       Narrator : Gaku Matsumura<br>
       Special Thanks : 筑波大学舞踊研究室 / 筑波大学情報メディア創成学類 クリラボ管理チーム

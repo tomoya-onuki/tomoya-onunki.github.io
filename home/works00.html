@@ -1,0 +1,394 @@
+<!doctype html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" >
+ 	<title>WORKS | TOMOYA ONUKI</title>
+  <link rel="stylesheet" type="text/css" href="./css/my.css">
+  <link rel="stylesheet" type="text/css" href="./css/flex_gif.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery.kinetic/jquery.kinetic.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+	<script src="./js/modal.js"></script>
+	<!-- <script src="./js/draggedScroll.js"></script> -->
+  <!-- <script src="./js/load.js"></script> -->
+  <script type="text/javascript">
+  var w = 8;
+  var h = 4.5;
+  var scale = 10;
+  var x_offset = 150;
+  var y_offset = 10;
+
+  function changeSize() {
+    $('.contents_box').each(function(){
+      $(this).css('width', w*scale+'px');
+      $(this).children('iframe').css('width', w*scale+'px');
+      $(this).children('img').css('width', w*scale+'px');
+      $(this).children('img').css('height', h*scale+'px');
+      $(this).children('iframe').css('height', h*scale+'px');
+      $(this).children('div').css('font-size', scale/6+'px');
+    });
+  }
+
+  window.onmousewheel = function(event){
+    if(10 <= scale && scale <= 80) {
+      scale += (event.wheelDelta * 0.1);
+      if (80 < scale) scale = 80;
+      else if (scale < 10) scale = 10;
+      changeSize();
+    }
+  }
+
+  $(function () {
+    $('#work_list').draggable();
+    changeSize();
+    $( "#slider").slider({
+      min: 10,
+      max: 100,
+      step: 10,
+      value: scale,
+      change: function(e, ui) {
+        // $('#num').val(ui.value);
+        scale = ui.value;
+        changeSize();
+        changePos();
+      },
+      create: function(e, ui) {}
+    });
+  });
+  </script>
+
+  <style>
+  td {
+    vertical-align: top;
+    padding: 60px 120px 60px 0px;
+    /* padding: 20px 40px 20px 0px; */
+  }
+  .contents_box {
+    width: 80px;
+    word-wrap: break-word;
+  }
+  .contents_box iframe {
+    width: 320px;
+    height: 180px;
+  }
+  .contents_box img {
+    width: 320px;
+    height: 120px;
+    /* width: 100%; */
+    /* height: 100%; */
+  }
+  .contents_box .caption {
+    font-weight: bold;
+    color: #000;
+    /* font-size: 120%; */
+  }
+  .contents_box .info {
+    font-weight: bold;
+    color: #000;
+  }
+  html {
+    overflow: hidden;
+    cursor: move;
+    user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select: none;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-drag:none;
+    -khtml-user-drag:none;
+    /* height:100%;
+    min-height:100%; */
+  }
+  </style>
+ </head>
+
+ 	<!-- <script src="./js/draggedScroll.js"></script> -->
+ <body id="main" class="body">
+
+   <div class="header2 head_font1">
+     <a id="top" class="head_logo" style="color:#000;" href="./">TOMOYAONUKI.</a>
+     <span class="head_menu">
+       <a id="works" style="color:#000;" href=".">WORKS</a>
+       <strong style="color:#000;"> / </strong>
+       <a id="profile" style="color:#000;" href="./about">ABOUT</a>
+     </span>
+   </div>
+
+
+    <div id="body" class="main first">
+      <h1 style="margin-bottom:-5px;">WORKS</h1>
+      <div id="slider"> </div>
+
+
+
+      <table id="work_list">
+
+      <tr>
+        <td id="reel" class="contents_box" xpos="0" ypos="0">
+            <iframe id="reel_player" src="https://player.vimeo.com/video/450021560?color=ffffff&byline=0&portrait=0&title=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </td>
+      </tr>
+
+      <tr>
+        <td id="performing-arts-tamago" class="contents_box" xpos="5" ypos="0">
+          <iframe src="https://www.youtube.com/embed/32P2vfq96-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="caption">「つくば駅→筑波大学　4種のダンス共に」Performing Arts Tamago Vol.22</div>
+          <div class="info">2020.06 / Choreo Video</div>
+          <div>
+            Cinematographer, Editor : Tomoya Onuki <br>
+            Producer : 筑波大学舞踊研究室 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank"><u>http://tsa.tsukuba.ac.jp/dance/</u></a><br>
+            Cast : Risako Shibata / Asuki Nakanishi / Chiharu Hayami / Yui Miyakawa / Mei Yamamoto
+          </div>
+        </td>
+
+        <td id="mawase-groove-making" class="contents_box" xpos="5" ypos="10">
+            <iframe id="youtbe_player" src="https://www.youtube.com/embed/Zn46mk79o-E?rel=0&enablejsapi=1&origin=https://tomoya-onuki.github.io" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="caption">【MVメイキング映像】「回せ！」回せ！グルーヴ開発部</div>
+            <div class="info">2020.04 / Making Moive</div>
+            <div>
+              Producer : 回せ！グルーヴ開発部 <a href="http://mawaguru.jp" target="_blank"><u>http://mawaguru.jp</u></a><br>
+              Director, Cinematographer : Tomoya Onuki<br>
+              Camera : Aomi Nowatari<br>
+              Cast : Bon Kumono / Yuni Okota / Anzu Tamaki / Ryoma Suizu / Ryosuke Tsuzuki<br>
+              Staff : Sakai<br>
+            </div>
+        </td>
+
+        <td id="express" class="contents_box" xpos="5" ypos="20">
+            <iframe  src="https://www.youtube.com/embed/videoseries?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="caption">EXPRESS 筑波大学ダンス部</div>
+            <div class="info">2020.01 / Documentary Movie</div>
+            <div>
+              Producer : Sta2one <a href="https://www.instagram.com/sta2one" target="_blank"><u>https://www.instagram.com/sta2one</u></a><br>
+              Cinematographer, Editor : Tomoya Onuki / Kaito Shidaraku / Shinnosuke Ando / Yuich Kato<br>
+              Cast : 筑波大学ダンス部 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank"><u>http://tsa.tsukuba.ac.jp/dance/</u></a><br>
+              Narrator : Gaku Matsumura<br>
+              Special Thanks : 筑波大学舞踊研究室 / 筑波大学情報メディア創成学類 クリラボ管理チーム
+            </div>
+        </td>
+
+
+
+        <td id="yuragi" class="contents_box" xpos="5" ypos="30">
+            <iframe  src="https://www.youtube.com/embed/MgjNDQPaecU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            <div class="caption">雙峰祭前夜祭パフォーマンスショー「ゆらぎ」ダイジェスト版</div>
+            <div class="info">2019.11 / Digest Movie</div>
+            <div>
+              Director, Cinematographer, Editor : Tomoya Onuki <br>
+              Cinematographer : Yui Atarashi<br>
+              Producer : TParty <a href="https://twitter.com/tparty_tsukuba" target="_blank"><u>https://twitter.com/tparty_tsukuba</u></a><br>
+              Cast : 筑波大学ダンス部 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank"><u>http://tsa.tsukuba.ac.jp/dance/</u></a><br>
+              Music : Shion Kaneko<br>
+              Special Thanks : リコージャパン / CTJ株式会社 / 筑波大学 学園祭実行委員会 <a href="https://sohosai.com" target="_blank"><u>https://sohosai.com</u></a>
+            </div>
+
+
+        </td>
+
+
+        <td id="tparty-launch" class="contents_box" xpos="5" ypos="40">
+            <iframe  src="https://www.youtube.com/embed/uLGHA1VhZtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="caption">Tparty / Launch Party / ダイジェスト映像 Digest Video</div>
+            <div class="info">2019.06 / Digest Movie</div>
+            <div>
+              Director, Cinematographer, Editor : Tomoya Onuki <br>
+              Producer : TParty <a href="https://twitter.com/tparty_tsukuba" target="_blank"><u>https://twitter.com/tparty_tsukuba</u></a><br>
+              Special Thanks : Frog<br>
+            </div>
+        </td>
+
+
+        <td id="monoshiritori-making'" class="contents_box" xpos="5" ypos="50">
+            <iframe  src="https://www.youtube.com/embed/videoseries?list=PLODDdOOKFDnIpvey6zz47Af9-RZXRZjz5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="caption">モノシリトリ メイキング</div>
+            <div class="info">2017.10 / Digest Movie</div>
+            <div>
+              Producer : Ryosuke Tsuzuki<br>
+              Cast : Kazumi Inada / Minatatsu / Wikemasa / Syunpei Saito / Keita Kobayashi / Ryoma Suizu / Ryosuke Tsuzuki / Tsukumo99 / Yusuke Sei / Tomoya Onuki / Sakura Aikawa<br>
+              Cinematographer, Director : Keita Kanai / Tomoya Onuki / Yuichi Kato / Momono Sakomura<br>
+            </div>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td id="in-the-black-and-eternal" class="contents_box" xpos="15" ypos="0">
+
+          <iframe src="https://www.youtube.com/embed/DdYMoKtYVlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="caption">暗転と永遠の中で。</div>
+          <div class="info">2019.12 / Video Art</div>
+          <div>
+            筑波大学 情報メディア創成学類の講義「ディジタルコンテンツ表現実習」の成果物として制作したビデオインスタレーション。同授業の最終成果発表会である「1/100展」にて展示した。東京の河川を通して、文明によって消え去った都市の暗闇と、日常でふと感じる永遠に続くかのような瞬間を表現した。
+          </div>
+          <div class="info">Caption</div>
+          <div>山手線の外側にある街。石神井川は深く冷たいコンクリートの堤防の下に静かに流れる。川に沿って葉の落ちた枝垂れ桜の並木道が伸び、住宅が立ち並ぶ。僕たちは眠る必要がある。眠らないネオンと都市の明かり。東京の端っこに追いやられた暗闇。<br>電車に乗る。女の子とのデートの朝。乗車口のあたりに立って、寄りかかる。やることもないのでイヤホンをつけて、外の景色に目をやる。音楽が流れてくる。電車が高架線に差し掛かると、隅田川が煌いて、僕はこの景色がいつまでも続くと思う。スカイツリーが見えた。</div>
+          <div>
+            映像：小貫 智弥<br>
+            音楽：金子紫苑<br>
+            1/100展：<a href="https://twitter.com/dgexpo2019" target="_blank"><u>https://twitter.com/dgexpo2019</u></a>
+          </div>
+        </td>
+
+        <td id="lost-anima" class="contents_box" xpos="15" ypos="10">
+
+          <iframe src="https://www.youtube.com/embed/aMkhraO-NBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <div class="caption">アニマの消失</div>
+          <div class="info">2019.05 / Media Art</div>
+          <div>
+            <p>
+              廃墟に残された道具たち。アニマを失くし、個性を失った道具を手にとることでそこに残された「気配」を聞く作品である。筑波大学内にある廃墟となった学生宿舎「平砂9号棟」を舞台に開催された展覧会「平砂アートムーヴメント展示企画2019」にて展示。<br>
+              平砂アートムーヴメント：<a href="https://hirasunaart2019.myportfolio.com" target="_blank"><u>https://hirasunaart2019.myportfolio.com</u></a>
+            </p>
+
+            <div class="info">作品解説</div>
+            <p>
+              この平砂 9 号棟は人が住まなくなり住居ではなくなってしまった。しかしながら私が初めてここへ立ち入った時，その見た目に反し，密かに漂う住居としての気配を確かに感じた。そこで道具に宿る魂 (アニマ) とその消失をテーマに表現を行うことに決めた。<br>机の上に並んだオブジェクトは道具のメタファーである。道具には用途があり，道具はその用途のための形状をしている。人に使われなくなり，魂が失われた道具には形が必要ないはずだ。<br>そこでここでは道具たちを 基本的な形状である立方体のオブジェクトとして表現している。道具は人が手に持って使うものであるので，人と道具の間に「手に持つ」 というインタラクションが必要であった。<br>人間は道具に限らずあらゆるものに名前をつけてきた。それは対象を「分ける」ためである。私たちは「分ける」ことで初めて対象を「分かる」 ことができる。均一な形になってしまった道具たちは 自身の名前を叫ぶことで鑑賞者に「分かる」ことを求める。オブジェクトから再生される音には，道具の名前を呼ぶ作者の声を引き延ばした音声を用いることとした。人が捨てられた道具の声に耳を傾けることは少ないだろう。彼らの声はとても小さく，また不気味である必要があった。<br>そして道具たちの見た目から魅力を最大限に削ぎ落とす必要もあった。魂や精霊のような表現に視覚情報を用いることは極力避けたかった。一見すると意味もないような箱から音が聞こえ，微かな震えを感じる。見ただけではわからない要素で，不可思議を感じてもらいたいと思う。
+            </p>
+          </div>
+        </td>
+
+        <td id="" class="contents_box" xpos="15" ypos="20">
+          <img src="./img/aggregation/aggregation01.jpg">
+          <img src="./img/aggregation/aggregation04.jpg">
+          <div class="caption">ひとりごとのカタチ/ 集合体について</div>
+          <div class="info">2019.04 / Media Art</div>
+          <div>
+            <div class="info">Caption</div>
+            <p>昨日のことすらもはや原型をとどめることはなく，ましてや1年も前のことなど手にとって見ることは叶わない。ぼんやりとした印象として眺めることしかできない。過去とはそういうものなのだと思う。</p>
+
+            <div class="info">作品解説</div>
+            <p>筑波大学 情報メディア創成学類有志による展示会mAstivalにて展示した作品。自身の1年分のTwitterの投稿を抽出し、ある規則に基づき生成した幾何学図形を時系列順に並べた。ひとつひとつの記憶は朧げな印象でしかなく、またそれらは混じり合うことで別の印象として蓄積される。</p>
+            <p>mAstival：<a href="https://mastival.netlify.app" target="_blank"><u>https://mastival.netlify.app</u></a></p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="15" ypos="30">
+          <img src="./img/somewhere/001.jpg">
+          <img src="./img/somewhere/002.JPG">
+          <div class="caption">どこか遠くの場所で</div>
+          <div class="info">2018.10 / Exhibition</div>
+          <div>
+            <p><i>旅先で撮った写真や描いた絵、買ったもの、拾ったもの... 私たちが持ち帰ってきた"お土産"です。</i></p>
+            <p>筑波大学 情報メディア創成学類の2年生の有志による展示会。<br>
+            「旅先で手に入れたおみやげ」というテーマで制作。CG，油絵，インスタレーション，メディアアートなど様々な分野の7つの作品を展示した。</p>
+            <p>企画：小貫智弥<br>
+              展示：安斎彩季，稲田和巳，小貫智弥，加藤優一，金子紫苑，種村優佑，松浦一輝<br>
+              サウンド：金子紫苑<br>
+              協力：岡本太久斗,筑波大学アートギャラリーT+</p>
+            <p>場所：筑波大学アートギャラリーT+<br>
+              日時：2018年10月1日(月)〜10月5日(金)<br>
+              リンク：<a href="http://www.geijutsu.tsukuba.ac.jp/t-tasu/info/10554"><u>http://www.geijutsu.tsukuba.ac.jp/t-tasu/info/10554</u></a>
+            </p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="15" ypos="40">
+          <iframe src="https://www.youtube.com/embed/w3JQKhHGePs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="caption">Kalfos Box</div>
+          <div class="info">2018.10 / Media Art</div>
+          <div>
+            立体万華鏡のアニメーションを再生するためのメディア装置。展示企画「どこか遠くの場所で」にて展示した。
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="15" ypos="50">
+          <iframe src="https://www.youtube.com/embed/2QbPcb0nLDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="caption">沈黙</div>
+          <div class="info">2017.10 / Media Art</div>
+          <div>静止」通して「伝える」ことを思索した</div>
+        </td>
+      </tr>
+
+      <tr>
+        <td id="" class="contents_box" xpos="35" ypos="0">
+          <img src="./img/task/home.png">
+          <div class="caption">タスク管理ツール</div>
+          <div>
+            <a href="https://three-do.herokuapp.com" target="_blank"><u>https://three-do.herokuapp.com</u></a>
+            <p>アジャイル開発で使用するかんばんをコンセプトに制作したアプリケーション</p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="35" ypos="10">
+          <img src="./img/color_selection/color_selection_web_ver3.gif">
+          <div class="caption">COLOR SELECTION</div>
+          <div>
+            <a href="https://color-selection.herokuapp.com" target="_blank"><u>https://color-selection.herokuapp.com</u></a>
+            <p>カラーデザインの支援ツール。色相を選び、明度と彩度を調整することで統一感のあるカラーデザインが可能となる。</p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="35" ypos="20">
+          <img src="./img/gohan/home.png">
+          <div class="caption">ごっっはにゃさん</div>
+          <div>
+            <a href="https://tapiome.herokuapp.com" target="_blank"><u>https://tapiome.herokuapp.com</u></a>
+            <p>筑波大学情報学群の講義 enPitにて制作したアプリケーション。<br>
+            つくば市内の飲食店の情報をまとめたwebサービス。ユーザーの投稿によって休業情報を収集することができる。</p>
+            <p>制作：新貝力哉 / 田之頭吾音 / 小貫智弥 / 末吉里帆 / 安斎彩季 / 古川栞</p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="35" ypos="30">
+          <img src="./img/cube/cube.gif">
+          <div class="caption">CUBE</div>
+          <div>
+            <p>筑波大学の講義 コンピュータアートIIの課題として制作し，その後リメイクしたゲーム作品。 MAD -創成x芸術合同展覧宴- にて展示。</p>
+            <p>CUBEは全6ステージからなるアクションパズルゲームである。 各ステージをクリアするたびにキューブ状のコントローラーが1面ずつ点灯する。 点灯した面はタッチパネルとして機能しゲーム内で使用できるようになる。 ゲームの進行状況に応じてコントローラーの状態が変化し、操作が複雑になってゆくことで難易度が上がる仕組みになっている。</p>
+            <p>製作 : 小貫 智弥 / 金子優香 / 町田樹</p>
+            <p><a href="https://youtu.be/uMoFYdtHZxE" target="_blank"><u>Youtube</a></u></p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="35" ypos="40">
+          <img src="./img/fruitscut/fruitscut.gif">
+          <div class="caption">FRUITS CUT!</div>
+          <div>
+            <p>筑波大学の講義，コンピュータアートIIの課題として制作したゲーム。<br>
+            ダンボールから飛び出すフルーツを切るゲームである. 操作は手をかざすジェスチャだけで行う。センサーを搭載した段ボール箱型のインターフェースだけで全ての入力が完結するようになっている。</p>
+            <p>製作 : 小貫 智弥 / 金子優香 / 町田樹</p>
+            <p><a href="https://youtu.be/CzBQsBcDG3g" target="_blank"><u>Youtube</a></u></p>
+          </div>
+        </td>
+
+
+        <td id="" class="contents_box" xpos="35" ypos="50">
+          <img src="./img/megeilt/megeiLT.gif">
+          <div class="caption">ツイート共有システム</div>
+          <div>
+            <p>筑波大学において開催された, 情報メディア創成学類と芸術専門学群による合同プレゼンテーション企画「メ芸LT」にて使用したTwitter連携システムである。</p>
+            <p>"#メ芸LT"というハッシュタグを添えてプレゼンに対する意見や感想を呟くとリアルタイムでそのTweetが映し出されるというものである。観客の参加感を増幅させることを目的として導入した。</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="footer">
+      <center>
+        <script type="text/javascript" src="./js/footer.js"></script>
+      </center>
+    </div>
+
+
+    <script type="text/javascript">
+    checkUrl();
+    </script>
+ </body>
+ </html>
