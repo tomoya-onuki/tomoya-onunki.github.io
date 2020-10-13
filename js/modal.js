@@ -6,7 +6,6 @@ $(function(){
     $('.js-modal-open').each(function(){
         $(this).on('click',function(){
             y = window.pageYOffset;
-            // href = $(this).attr('target').replace('#', '');
             href = $(this).attr('href').replace('#', '');
 
             if (href === 'reel') {
@@ -29,6 +28,8 @@ $(function(){
     });
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
+        var main_contents = document.getElementById('main_contents');
+        main_contents.innerHTML = '';
         // window.location.hash = '';
         history.replaceState(null,null,'/works');
         scrollTo(0, y);
