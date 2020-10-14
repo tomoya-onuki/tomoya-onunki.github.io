@@ -1,20 +1,17 @@
 html{
 	scroll-behavior: smooth;
+  /* overflow: hidden; */
+  font-family: 'ヒラギノ角ゴ Pro';
+  color: #4f4f4f;
+  font-size: 80%;
 }
 
-hr{
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.l {
-	padding-top: 150px;
-	margin-top: -150px;
-}
-ul{
-  list-style-position: inside;
-  padding-left: 5px;
-  list-style-type: circle;
+#main{
+  padding-top: 62px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  width:90%;
 }
 
 
@@ -24,35 +21,41 @@ ul{
 	height:17px;
 	margin-right: 3px;
 }
-.logo_img2{
-	width:15px;
-	height:15px;
-	margin-right: 3px;
-}
 
-.contact{
-	align-items: center;
+.profile {
   display: flex;
-	margin-bottom: 10px;
-  color:#4f4f4f;
+  flex-wrap: wrap;
+  color: #8f8f8f;
 }
-.contact2{
-	/* align-items: center;
-  display: flex; */
-	margin-bottom: 10px;
-  color:#4f4f4f;
-  border:solid 1px;
-  padding: 2px 6px 2px 6px;
-  /* font-size: 70%; */
+.profile a{
+  color: #8f8f8f;
+}
+.profile a:hover{
+  opacity:0.4;
+}
+.profile img{
+		width:300px;
+		height:300px;
+		margin-right:20px;
+		padding-bottom:40px;
+}
+.profile p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.profile h1 {
+  font-size: 120%;
+  color: #000;
+  font-weight: bold;
+  margin: 0 0 0 0;
+}
+.profile .block {
+  margin-bottom: 20px;
+  margin-right:20px;
+  /* width:400px; */
 }
 
-.profile_img{
-		width:200px;
-		height:200px;
-		margin-top:20px;
-		margin-right:20px;
-		padding-bottom:0px;
-}
+
 
 
 a {
@@ -74,49 +77,21 @@ a:hover u{
 .head_menu a:hover {
   opacity:0.4;
 }
-.contact a{
-  color: #4f4f4f;
-}
-.contact a:hover{
-  opacity:0.4;
-}
 
-.top_menu {
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  font-size: 200%;
-  font-weight: bold;
-  z-index:4;
-  background-color: #ff00ff;
-}
-.top_menu a:hover {
-  opacity: 0.4
-}
 
 
 video {
-  /* pointer-events: no ne; */
   object-fit: cover;
 }
 
 
 /*ヘッダのフォント設定*/
 
-.first{
-	padding-top: 62px;
-}
 .header_margin {
   padding-top: 120px;
   margin-top: -62px;
-
 }
 
-.img_size{
-	width:100%;
-	margin-bottom: 20px;
-}
 
 h1{
 	font-family: "Helvetica Neue", Arial, sans-serif;
@@ -148,7 +123,6 @@ h3{
 
 .head_font1{
   font-family: "Helvetica Neue", Arial, sans-serif;
-  /* color: #ffffff; */
   font-size: 150%;
   text-decoration: none;
   font-weight: bold;
@@ -159,7 +133,7 @@ h3{
   display: inline;
 }
 
-.mov {
+/* .mov {
   position: relative;
   height: 0;
   padding-top: 30px;
@@ -173,245 +147,55 @@ h3{
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
-.reel_bg {
+
+.header1{
+  height: 65px;
+  width: 100%;
+  background: rgba(255,255,255,0.0);
   position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width:110vw;
-  height:100vh;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.header2{
+  height: 65px;
+  width: 100%;
+  background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.8));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.head_logo{
+  position:absolute;
+  left:5%;
+  top: 20px;
+  /* margin-top: 20px; */
+}
+.head_menu {
+  position:absolute;
+  right:5%;
+  font-family: HelveticaNeue-light, "sans-serif";
+  top: 26px;
+  /* margin-top: 20px; */
+  font-size: 60%;
+  font-weight: bold;
+}
+.head_menu a {
+  color:#000;
+}
+.head_menu a :hover{
+  opacity: 0.4;
+}
+.reel_mov {
+  width:100%;
+  height:24vw;
+  margin-bottom:2vw;
   object-fit: cover;
 }
 
-
-
-@media screen and (min-width:980px){
-	.index_img_size{
-		width:100%;
-		height:80vh;
-		object-fit: cover;
-	}
-
-	.header1{
-		height: 65px; /* 高さ */
-		width: 100%; /* 長さ */
-    background: rgba(255,255,255,0.0);
-		position: fixed; /* ヘッダーを固定(これが重要) */
-		top: 0; /* 固定する位置 */
-		left: 0; /* 固定する位置 */
-		position:　absolute;
-		z-index: 4;
-	}
-	.header2{
-		height: 65px; /* 高さ */
-		width: 100%; /* 長さ */
-    background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.8));
-		position: fixed; /* ヘッダーを固定(これが重要) */
-		top: 0; /* 固定する位置 */
-		left: 0; /* 固定する位置 */
-		position:　absolute;
-		z-index: 4;
-	}
-
-  .head_logo{
-    position:absolute;
-		left:20%;
-    margin-top: 20px;
-  }
-	.head_menu{
-		position:absolute;
-		right:20%;
-    /* font-size: 100%; */
-		font-family: HelveticaNeue-light, "sans-serif";
-    margin-top: 20px;
-    font-weight: bold;
-	}
-
-
-	/*本文のフォント指定*/
-	.main{
-		font-family: 'ヒラギノ角ゴ Pro';
-		font-size: 80%;
-	}
-
-	.mini-fot{
-	    font-size:70%;
-	}
-
-	/*各タイトルの設定*/
-	.title{
-		font-family: "Helvetica Neue", Arial, sans-serif;
-
-		/*margin-top: 80px;*/
-		color: #000000;
-		font-size: 200%;
-		margin-bottom: 50px;
-	}
-
-	/*本文のレイアウト指定*/
-	.body{
-		margin-left: 20%;
-		margin-right: 20%;
-		margin-bottom: 50px;
-		color: #4f4f4f;
-		font-family: 'ヒラギノ角ゴ Pro';
-
-	}
-
-
-
-	.works_img_size{
-		width:160px;
-		height:160px;
-		/* width: 15vw; */
-		/* height: 15vw; */
-		/* width: 200px; */
-	}
-
-	.img_size{
-		/*width:  48vw;
-		height: 36vw;*/
-	    width:100%;
-	    /* height:100%; */
-	}
-
-
-	.mov_size{
-		width:  60vw;
-		height: 33.75vw;
-	}
-
-	.photo_img_size{
-		width:30%;
-	}
-
-  .reel_mov{
-    width:100%;
-    height:26vw;
-    margin-bottom:30px;
-    object-fit: cover;
-  }
-  /* .mov {
-    width:60vw;
-    height:33.75vw;
-  } */
-
-}
-
-
-
-@media screen and (max-width:980px){
-
-	.index_img_size{
-		width:100%;
-		height:80vmin;
-		object-fit: cover;
-	}
-
-	.header1{
-		height: 65px; /* 高さ */
-		width: 100%; /* 長さ */
-    background: rgba(255,255,255,0.0);
-		position: fixed; /* ヘッダーを固定(これが重要) */
-		top: 0; /* 固定する位置 */
-		left: 0%; /* 固定する位置 */
-		position:　absolute;
-		z-index: 4;
-	}
-	.header2{
-		height: 65px; /* 高さ */
-		width: 100%; /* 長さ */
-    background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.95));
-		position: fixed; /* ヘッダーを固定(これが重要) */
-		top: 0; /* 固定する位置 */
-		left: 0%; /* 固定する位置 */
-		position:　absolute;
-		z-index: 4;
-	}
-
-  .head_logo{
-    position:absolute;
-		left:5%;
-    margin-top: 20px;
-  }
-	.head_menu{
-		position:absolute;
-		right:5%;
-		font-family: HelveticaNeue-light, "sans-serif";
-    margin-top: 27px;
-    font-size: 60%;
-    font-weight: bold;
-	}
-
-		/*本文のフォント指定*/
-	.main{
-		font-family: 'ヒラギノ角ゴ Pro';
-		font-size: 80%;
-	}
-	.mini-font{
-	    font-size:1.8vh;
-	}
-
-	/*各タイトルの設定*/
-	.title{
-		font-family: "Helvetica Neue", Arial, sans-serif;
-		color: #000000;
-		font-size: 4vh;
-	}
-
-	/*本文のレイアウト指定*/
-	.body{
-		margin-left: 5%;
-		margin-right: 5%;
-		margin-bottom: 50px;
-		color: #4f4f4f;
-		font-family: 'ヒラギノ角ゴ Pro';
-		/* font-size: 2.4vh; */
-	}
-
-
-	.photo_img_size{
-		width:50%;
-		height:100%;
-	}
-
-	.mov_size{
-		width:  90vw;
-		height: 50.625vw;
-	}
-	/* .works_img_size{
-		width: 30vw;
-		height: 30vw;
-	} */
-
-	.works_img_size{
-		width:140px;
-		height:140px;
-	}
-	/* .caption {
-		text-decoration: none;
-		font-family: 'ヒラギノ角ゴ Pro';
-		color: #4f4f4f;
-		font-size: 50%;
-	} */
-  .reel_mov {
-    width:100%;
-    height:38vw;
-    margin-bottom:30px;
-    object-fit: cover;
-  }
-  /* .mov {
-    width:90vw;
-    height:50.625vw;
-  } */
-
-}
-
-.photo_gallery {
-  cursor: pointer;
-}
 
 .footer {
   font-size: 70%;

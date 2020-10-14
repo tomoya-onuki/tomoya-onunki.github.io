@@ -1,34 +1,19 @@
-@media screen and (min-width:980px){
-  .half_gif{
-    width:49%;
-    margin-bottom: 2%;
-    position: relative;
-    z-index: 1;
-  }
-  .padding {
-    width: 2%;
-  }
-}
-@media screen and (max-width:980px){
-  .half_gif{
-    width:44vw;
-    height:30vw;
-    margin-bottom: 2vw;
-    position: relative;
-    z-index: 1;
-    /* background: rgba(0,72,100,0.4); */
-  }
 
-  .padding {
-    width: 2vw;
-  }
+
+.flex_box{
+  flex-grow: 1;
+  flex-shrink: 10;
+  flex-basis: 400px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 .wrap{
   display: flex;
   flex-wrap: wrap;
 }
-.half_gif img{
+.flex_box img{
   width:100%;
   height:100%;
   object-fit: cover;
@@ -36,7 +21,7 @@
 
 
 @media screen and (min-width:980px){
-  .half_gif .mask {
+  .flex_box .mask {
   	width:			100%;
   	height:			100%;
   	position:		absolute;	/* 絶対位置指定 */
@@ -47,11 +32,11 @@
   	-webkit-transition:	all 0.2s ease;
   	transition:		all 0.2s ease;
   }
-  .half_gif:hover .mask {
+  .flex_box:hover .mask {
   	opacity:		1;	/* マスクを表示する */
   }
 
-  .half_gif .caption{
+  .flex_box .caption{
     color:#ffffff;
     position: absolute;
     left:50%;
@@ -62,14 +47,14 @@
     display: none;
     white-space: nowrap;
   }
-  .half_gif:hover .caption{
+  .flex_box:hover .caption{
     display: block;
     opacity: 1;
   }
 }
 
 @media screen and (max-width:980px){
-  .half_gif .mask {
+  .flex_box .mask {
   	width:			100%;
   	height:			100%;
   	position:		absolute;	/* 絶対位置指定 */
@@ -80,7 +65,7 @@
   	-webkit-transition:	all 0.2s ease;
   	transition:		all 0.2s ease;
   }
-  .half_gif .caption{
+  .flex_box .caption{
     color:#ffffff;
     position: absolute;
     left:10px;

@@ -4,16 +4,17 @@
     top: 0;
     margin-bottom: 30px;
     z-index: 2;
-
+    left: 5%;
+    /* overflow:scroll; */
 }
 .modal__bg{
   background: #ffffff;
   opacity:0.95;
+  position: fixed;
   top: 0px;
   left: 0px;
-  position: fixed;
   width: 100%;
-  height:150vh;
+  height:100%;
   z-index: 2;
 }
 .modal-full {
@@ -39,13 +40,15 @@
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-  position: absolute;
-  top: 0px;
-	right: 0px;
+  position: fixed;
+  top: 65px;
+  right:5%;
+  /* left:5%; */
   border-radius:5px;
   background-color: #ffffff;
 	cursor: pointer;
   opacity: 0.8;
+  z-index: 6;
 }
 .close::before,
 .close::after {
@@ -75,7 +78,7 @@
 	background: #ffffff;
 }
 
-@media screen and (min-width:980px){
+/* @media screen and (min-width:980px){
   .modal__content{
       background: rgba(255,255,255,0);
       color: #6f6f6f;
@@ -87,8 +90,8 @@
       overflow: auto;
       z-index: 3;
   }
-}
-@media screen and (max-width:980px){
+} */
+/* @media screen and (max-width:980px){ */
 
   .modal__content{
       background: rgba(255,255,255,0);
@@ -102,21 +105,72 @@
       overflow: auto;
       z-index: 3;
   }
-}
+/* } */
 
 
 .works_contents {
   margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.works_contents h2{
+.works_contents h2 {
   font-family:'Helvetica Neue Bold', Arial, sans-serif;
   font-weight: bold;
   color: #000;
   /* display: inline-block; */
 }
 .works_contents .info{
-  color:#000;
+  color:#4f4f4f;
   font-family:'Helvetica Neue Bold', Arial, sans-serif;
   font-weight: bold;
   font-size: 120%;
+}
+@media screen and (max-width:1000px){
+  .works_contents .block_r {
+    width: 600px;
+  }
+}
+@media screen and (min-width:1000px){
+  .works_contents .block_r {
+    width: calc(90vw - 630px);
+    margin-left: 30px;
+    margin-bottom: 50px;
+  }
+}
+.works_contents .block_r h3 {
+  color:#4f4f4f;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.works_contents .block_l {
+  width: 600px;
+  /* margin-right: 40px; */
+}
+.works_contents .block_l img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.works_contents .block_l .mov {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.works_contents .block_l .mov iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.works_contents .block_b {
+  display: block;
+  width: 100%;
+}
+.works_contents .block_b img {
+  /* width: 50%; */
+  width:600px;
 }

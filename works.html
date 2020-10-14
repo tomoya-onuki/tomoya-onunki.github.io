@@ -2,7 +2,8 @@
  <html>
  <head>
  	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" >
+  <!-- <meta name="viewport" content="width=device-width" > -->
+  <meta name="viewport" content="width=360,initial-scale=1">
  	<title>WORKS | TOMOYA ONUKI</title>
   <link rel="stylesheet" type="text/css" href="./css/my.css">
   <link rel="stylesheet" type="text/css" href="./css/flex_gif.css">
@@ -16,19 +17,34 @@
  </head>
 
 
- <body id="main" class="body">
+ <body>
 
    <div class="header2 head_font1">
      <a id="top" class="head_logo" style="color:#000;" href="./">TOMOYAONUKI.</a>
      <span class="head_menu">
-       <a id="works" style="color:#000;" href=".">WORKS</a>
+       <a id="works" href=".">WORKS</a>
        <strong style="color:#000;"> / </strong>
-       <a id="profile" style="color:#000;" href="./about">ABOUT</a>
+       <a id="profile" href="./about">ABOUT</a>
      </span>
    </div>
 
 
-    <div class="main first">
+
+    <div id="modal" class="modal js-modal">
+     <a class="js-modal-close close" href=""></a>
+     <div class="modal__bg js-modal-close"></div>
+     <div class="modal__content">
+       <div id="main_contents"></div>
+       <div class="footer">
+         <center>
+           <script type="text/javascript" src="./js/footer.js"></script>
+         </center>
+       </div>
+     </div>
+   </div>
+
+
+    <div id="main">
       <h1 style="margin-bottom:-5px;">WORKS</h1>
       <h2 style="font-weight:bold;">
         <a href="#movies" style="color:#000;">Movies</a> /
@@ -55,25 +71,10 @@
       </div>
       <script src="./js/vimeo.js"></script>
 
-      <!-- </div> -->
-
-      <div id="modal" class="modal js-modal">
-        <div class="modal__bg js-modal-close"></div>
-        <div class="modal__content">
-          <a class="js-modal-close close" href=""></a>
-          <div id="main_contents"></div>
-          <div class="footer">
-            <center>
-              <script type="text/javascript" src="./js/footer.js"></script>
-            </center>
-          </div>
-        </div>
-      </div>
-
 
       <h3 id="movies" class="header_margin">MOVIES</h3>
       <div class="wrap">
-        <div class="half_gif">
+        <div class="flex_box">
           <a href="#performing-arts-tamago" class="no_link_decoration js-modal-open">
             <img src="./img/index2/tamago.png">
             <div class="mask">
@@ -82,9 +83,9 @@
           </a>
         </div>
 
-        <div class="padding"></div>
 
-        <div class="half_gif">
+
+        <div class="flex_box">
           <a href="#mawase-groove-making" class="no_link_decoration js-modal-open">
             <img src="./img/index2/rotate.png">
             <div class="mask">
@@ -93,7 +94,7 @@
           </a>
         </div>
 
-        <!-- <div class="half_gif">
+        <!-- <div class="flex_box">
           <a href="#dancing-inside-tribute" class="no_link_decoration js-modal-open " data-target="dancing_inside">
             <img src="./img/index2/dancing_inside.png">
             <div class="mask">
@@ -102,7 +103,7 @@
           </a>
         </div> -->
 
-        <div class="half_gif">
+        <div class="flex_box">
           <a href="#express" class="no_link_decoration js-modal-open " data-target="express">
             <img src="./img/index2/express.png">
             <div class="mask">
@@ -111,9 +112,9 @@
           </a>
         </div>
 
-        <div class="padding"></div>
 
-        <div class="half_gif">
+
+        <div class="flex_box">
           <a href="#yuragi" class="no_link_decoration js-modal-open " data-target="yuragi">
             <img src="./img/index2/yuragi.png">
             <div class="mask">
@@ -123,7 +124,7 @@
         </div>
 
 
-        <div class="half_gif">
+        <div class="flex_box">
           <a href="#tparty-launch" class="no_link_decoration js-modal-open " data-target="launch">
             <img src="./img/index2/launch.png">
             <div class="mask">
@@ -132,9 +133,9 @@
           </a>
         </div>
 
-        <div class="padding"></div>
 
-        <div class="half_gif">
+
+        <div class="flex_box">
           <a href="#monoshiritori-making" class="no_link_decoration js-modal-open " data-target="monoshiritoris">
             <img src="./img/index2/monoshiritori.png">
             <div class="mask">
@@ -147,7 +148,7 @@
 
       <h3 id="arts" class="header_margin">ARTS</h3>
       <div class="wrap">
-        <div class="half_gif">
+        <div class="flex_box">
           <a href="#in-the-black-and-eternal" class="no_link_decoration js-modal-open" data-target="black">
             <img src="./img/index2/black.png">
             <div class="mask">
@@ -156,9 +157,9 @@
           </a>
         </div>
 
-        <div class="padding"></div>
 
-        <div class="half_gif">
+
+        <div class="flex_box">
           <a href="#lost-anima" class="no_link_decoration js-modal-open" data-target="lost_anima">
             <img src="./img/index2/lostanima.png">
             <div class="mask">
@@ -168,7 +169,7 @@
         </div>
 
 
-        <div class="half_gif">
+        <div class="flex_box">
           <a href="#shape-of-monologue-aggregate" class="no_link_decoration js-modal-open" data-target="aggregation">
             <img src="./img/index2/aggregation.png">
             <div class="mask">
@@ -177,9 +178,9 @@
           </a>
         </div>
 
-        <div class="padding"></div>
 
-        <div class="half_gif">
+
+        <div class="flex_box">
           <a href="#somewhere-far-away" class="no_link_decoration js-modal-open" data-target="somewhere">
             <img src="./img/index2/somewhere.png">
             <div class="mask">
@@ -189,7 +190,7 @@
         </div>
 
 
-        <div class="half_gif">
+        <div class="flex_box">
           <a href="#kalfos-box" class="no_link_decoration js-modal-open" data-target="kalfosbox">
             <img src="./img/index2/kalfosbox.png">
             <div class="mask">
@@ -198,9 +199,9 @@
           </a>
         </div>
 
-        <div class="padding"></div>
 
-        <div class="half_gif">
+
+        <div class="flex_box">
           <a href="#silence" class="no_link_decoration js-modal-open" data-target="silence">
             <img src="./img/index2/silence.png">
             <div class="mask">
@@ -290,13 +291,15 @@
         </div>
       </div>
 
+      <div class="footer">
+        <center>
+          <script type="text/javascript" src="./js/footer.js"></script>
+        </center>
+      </div>
+
     </div>
 
-    <div class="footer">
-      <center>
-        <script type="text/javascript" src="./js/footer.js"></script>
-      </center>
-    </div>
+
 
 
     <script type="text/javascript">
