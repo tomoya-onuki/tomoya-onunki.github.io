@@ -54,11 +54,15 @@ function checkUrl() {
   var url = location.href;
   tmp = url.split('#');
   if( tmp.length == 2 && tmp[1] != '' && html.has(tmp[1]) ) {
-    var main_contents = document.getElementById('main_contents');
-    main_contents.innerHTML = html.get(tmp[tmp.length-1]);
-    modal = document.getElementById('modal');
-    scrollTo(0, 0);
-    $(modal).fadeIn();
+    var href = tmp[tmp.length-1];
+    $('#main_contents').html(`
+    <h2>`+html.get(href)[0]+`</h2>
+    <div class="works_contents">
+      <div class="block_l">`+html.get(href)[1]+`</div>
+      <div class="block_r">`+html.get(href)[2]+`</div>
+    </div>`);
+
+    $('#modal').fadeIn();
   } else {
   }
 

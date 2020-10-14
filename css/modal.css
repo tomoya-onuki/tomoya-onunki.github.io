@@ -44,7 +44,7 @@
   top: 65px;
   right:5%;
   /* left:5%; */
-  border-radius:5px;
+  /* border-radius:5px; */
   background-color: #ffffff;
 	cursor: pointer;
   opacity: 0.8;
@@ -68,44 +68,31 @@
 .close::after {
 	transform: rotate(45deg);
 }
-.close:hover {
-  background: #4f4f4f;
-}
-.close:hover::before {
-	background: #ffffff;
-}
-.close:hover::after {
-	background: #ffffff;
+@media screen and (min-width:980px){
+  .close:hover {
+    background: #4f4f4f;
+  }
+  .close:hover::before {
+  	background: #ffffff;
+  }
+  .close:hover::after {
+  	background: #ffffff;
+  }
 }
 
-/* @media screen and (min-width:980px){
-  .modal__content{
-      background: rgba(255,255,255,0);
-      color: #6f6f6f;
-      left: 50vw;
-      transform: translate(-50vw,0%);
-      top: 70px;
-      position: absolute;
-      width: 60vw;
-      overflow: auto;
-      z-index: 3;
-  }
-} */
-/* @media screen and (max-width:980px){ */
 
-  .modal__content{
-      background: rgba(255,255,255,0);
-      color: #6f6f6f;
-      font-size: 80%;
-      left: 50vw;
-      transform: translate(-50vw,0%);
-      top: 70px;
-      position: absolute;
-      width: 90vw;
-      overflow: auto;
-      z-index: 3;
-  }
-/* } */
+.modal__content{
+    background: rgba(255,255,255,0);
+    color: #6f6f6f;
+    font-size: 80%;
+    left: 50vw;
+    transform: translate(-50vw,0%);
+    top: 70px;
+    position: absolute;
+    width: 90vw;
+    overflow: auto;
+    z-index: 3;
+}
 
 
 .works_contents {
