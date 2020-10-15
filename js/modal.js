@@ -4,15 +4,17 @@ var modal;
 
 $(function(){
 
-  $(window).scroll(function() {
-    var modal_h = $('.works_contents').height()+500;
-    var window_h = $(this).height();
-    var top_y = window.pageYOffset;
-    console.log(modal_h+", "+top_y+", "+(window_h+top_y) +" , "+ window_h);
-    if ($('.works_contents').height() != null && window_h+top_y > modal_h) {
-      scrollTo(0, modal_h - window_h);
-    }
-  });
+    $(window).scroll(function() {
+        var modal_h = $('.works_contents').height()+500;
+        var window_h = $(this).height();
+        var top_y = window.pageYOffset;
+        console.log(modal_h+", "+top_y+", "+(window_h+top_y) +" , "+ window_h);
+        if ($('.works_contents').height() != null && window_h+top_y > modal_h) {
+          scrollTo(0, modal_h - window_h);
+        }
+    });
+
+    
 
     $('.js-modal-open').each(function(){
         $(this).on('click',function(){
