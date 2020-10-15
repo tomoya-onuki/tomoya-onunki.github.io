@@ -101,7 +101,7 @@
   flex-wrap: wrap;
 }
 .works_contents h2 {
-  font-family:'Helvetica Neue Bold', Arial, sans-serif;
+  font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   font-weight: bold;
   color: #000;
   /* display: inline-block; */
