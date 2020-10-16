@@ -55,11 +55,16 @@ html{
 }
 .profile .head {
   float:left;
-  width:75px;
+  width:70px;
   /* color:#bbb; */
 }
 .profile .item {
-  margin-left:80px
+  margin-left:70px
+}
+.profile .word {
+  /* word-wrap: keep-all; */
+  /* overflow-wrap: break-word; */
+  display: inline-block;
 }
 
 
