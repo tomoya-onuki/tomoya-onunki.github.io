@@ -76,6 +76,26 @@ var html = new Map();
 /*********************
  ******  VIDEO  ******
  *********************/
+html.set('anzenkaihatsu-making',[
+  '【MVメイキング映像】「安全開発ソング」回せ！グルーヴ開発部',
+  `<div class="mov">
+    
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `  <div class="info">
+      2020.04 / Making Moive <br>
+      Director / Editor
+    </div>
+    <p>セルフプロデュースアイドル「回せ!グルーヴ開発部」の2ndSingle「開発者M」収録曲「安全開発ソング」のMV制作の様子を納めたメイキングムービー</p>
+    <p>
+      <strong>Credits</strong><br>
+      Producer : 回せ！グルーヴ開発部 <a href="http://mawaguru.jp" target="_blank">http://mawaguru.jp</a><br>
+      Director, Editor : Tomoya Onuki<br>
+      Cast : Bon Kumono / Yuni Okota / Anzu Tamaki<br>
+    </p>`,
+]);
+
+
 html.set('performing-arts-tamago',[
   '「つくば駅→筑波大学　4種のダンス共に」Performing Arts Tamago Vol.22',
   `<div class="mov">
@@ -97,7 +117,7 @@ html.set('performing-arts-tamago',[
   </p>`
 ]);
 
-html.set('mawase-groove-making',[
+html.set('mawase-making',[
   '【MVメイキング映像】「回せ！」回せ！グルーヴ開発部',
   `<div class="mov">
     <iframe id="youtbe_player" src="https://www.youtube.com/embed/Zn46mk79o-E?rel=0&enablejsapi=1&origin=https://tomoya-onuki.github.io" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
