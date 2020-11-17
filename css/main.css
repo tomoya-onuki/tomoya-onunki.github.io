@@ -13,10 +13,9 @@ date{
   display: inline-block;
 }
 category{
-  /* height: 100px; */
-  padding: 2px 4px 2px 4px;
+  padding: 0px 4px 0px 4px;
   border: #afafaf solid 1px;
-  font-size:80%;
+  font-size:60%;
   color:#4f4f4f;
   display: inline-block;
 }

@@ -79,7 +79,7 @@ var html = new Map();
 html.set('anzenkaihatsu-making',[
   '【MVメイキング映像】「安全開発ソング」回せ！グルーヴ開発部',
   `<div class="mov">
-    
+
     <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>`,
   `  <div class="info">
@@ -384,4 +384,14 @@ html.set('megeilt-tweet-system',[
   `<img src="./img/megeilt/megeiLT.gif">`,
   `<p>筑波大学において開催された, 情報メディア創成学類と芸術専門学群による合同プレゼンテーション企画「メ芸LT」にて使用したTwitter連携システムである。</p>
   <p>"#メ芸LT"というハッシュタグを添えてプレゼンに対する意見や感想を呟くとリアルタイムでそのTweetが映し出されるというものである。観客の参加感を増幅させることを目的として導入した。</p>`
+]);
+
+html.set('tokuen',[
+  `特演：圧力センサーを用いた体重計とそのデータ管理システムの制作`,
+  `<div class="mov">
+    <iframe  src="https://www.youtube.com/embed/GCOoUg_GwHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `<p>筑波大学情報メディア創成学類の講義 情報メディア特別演習 にて取り組んだ。データ通信可能な体重計の制作と，計測した体重データを保存し閲覧できるアプリケーションの制作を行った。</p>
+  <p> 玄関マットなどのマット状の体重計を作り体重を管理することで，日常生活に溶け込んだ形で自然に健康管理を行うことができるシステムを作ることが目的である。</p>
+  <p> また，学習目標としてはArduinoを用いた組み込み系デバイスを制作する手法やセンサーを 用いたフィジカルコンピューティングを学習することである。</p>`
 ]);
