@@ -76,54 +76,7 @@ var html = new Map();
 /*********************
  ******  VIDEO  ******
  *********************/
-// html.set('important-thing',[
-//   '大切なこと',
-//   `<div class="mov">
-//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   </div>`,
-//   `  <div class="info">
-//       2020.12 / Choreo Video <br>
-//       Cinematographer / Editor
-//     </div>
-//     <p>筑波大学ダンス部が新型コロナウイルスに伴う公演中止に際して制作した映像作品</p>
-//     <p>
-//       <strong>Credits</strong><br>
-//       Cinematographer, Editor : Tomoya Onuki<br>
-//       Choreograher : Saki Ozawa<br>
-//     </p>`,
-// ]);
-// html.set('who',[
-//   '何者',
-//   `<div class="mov">
-//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   </div>`,
-//   `  <div class="info">
-//       2020.12 / Choreo Video <br>
-//       Cinematographer / Editor
-//     </div>
-//     <p>筑波大学ダンス部が新型コロナウイルスに伴う公演中止に際して制作した映像作品</p>
-//     <p>
-//       <strong>Credits</strong><br>
-//       Cinematographer, Editor : Tomoya Onuki<br>
-//       Choreograher : Kana Yamaguchi, Saki Ozawa<br>
-//     </p>`,
-// ]);
-// html.set('rush',[
-//   '迸る',
-//   `<div class="mov">
-//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   </div>`,
-//   `  <div class="info">
-//       2020.12 / Choreo Video <br>
-//       Cinematographer / Editor
-//     </div>
-//     <p>筑波大学ダンス部が新型コロナウイルスに伴う公演中止に際して制作した映像作品</p>
-//     <p>
-//       <strong>Credits</strong><br>
-//       Cinematographer, Editor : Tomoya Onuki<br>
-//       Choreograher : Ayumi Moteki<br>
-//     </p>`,
-// ]);
+
 
 html.set('anzenkaihatsu-making',[
   '【MVメイキング映像】「安全開発ソング」回せ！グルーヴ開発部',
@@ -145,26 +98,26 @@ html.set('anzenkaihatsu-making',[
 ]);
 
 
-html.set('performing-arts-tamago',[
-  '「つくば駅→筑波大学　4種のダンス共に」Performing Arts Tamago Vol.22',
-  `<div class="mov">
-    <iframe src="https://www.youtube.com/embed/32P2vfq96-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;   picture-in-picture" allowfullscreen></iframe>
-  </div>`,
-  `<div class="info">
-    2020.06 / Choreo Video<br>
-    Cinematographer / Editor
-  </div>
-  <p>
-  「Performing Arts Tamago」は、ダンス部を引退した大学院生が自由に踊ったり、作品を発表する場が少ない背景から自主的に始まった企画です。毎年形を変えて継続的に身体表現の魅力を伝え続けています。
-  22回目である2020年は「つくば駅→筑波大学　4種のダンスと共に」をコンセプトに映像作品として進化。つくば駅から始まり、道中で異なるスタイルのダンスパフォーマンスと出会いながら筑波大学までガイドしていきます。
-  </p>
-  <p>
-    <strong>Credits</strong><br>
-    Cinematographer, Editor : Tomoya Onuki <br>
-    Producer : 筑波大学舞踊研究室 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank">http://tsa.tsukuba.ac.jp/dance/</a><br>
-    Cast : Risako Shibata / Asuki Nakanishi / Chiharu Hayami / Yui Miyakawa / Mei Yamamoto
-  </p>`
-]);
+// html.set('performing-arts-tamago',[
+//   '「つくば駅→筑波大学　4種のダンス共に」Performing Arts Tamago Vol.22',
+//   `<div class="mov">
+//     <iframe src="https://www.youtube.com/embed/32P2vfq96-I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;   picture-in-picture" allowfullscreen></iframe>
+//   </div>`,
+//   `<div class="info">
+//     2020.06 / Choreo Video<br>
+//     Cinematographer / Editor
+//   </div>
+//   <p>
+//   「Performing Arts Tamago」は、ダンス部を引退した大学院生が自由に踊ったり、作品を発表する場が少ない背景から自主的に始まった企画です。毎年形を変えて継続的に身体表現の魅力を伝え続けています。
+//   22回目である2020年は「つくば駅→筑波大学　4種のダンスと共に」をコンセプトに映像作品として進化。つくば駅から始まり、道中で異なるスタイルのダンスパフォーマンスと出会いながら筑波大学までガイドしていきます。
+//   </p>
+//   <p>
+//     <strong>Credits</strong><br>
+//     Cinematographer, Editor : Tomoya Onuki <br>
+//     Producer : 筑波大学舞踊研究室 <a href="http://tsa.tsukuba.ac.jp/dance/" target="_blank">http://tsa.tsukuba.ac.jp/dance/</a><br>
+//     Cast : Risako Shibata / Asuki Nakanishi / Chiharu Hayami / Yui Miyakawa / Mei Yamamoto
+//   </p>`
+// ]);
 
 html.set('mawase-making',[
   '【MVメイキング映像】「回せ！」回せ！グルーヴ開発部',
