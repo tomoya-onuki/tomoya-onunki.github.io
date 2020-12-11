@@ -76,7 +76,54 @@ var html = new Map();
 /*********************
  ******  VIDEO  ******
  *********************/
-
+html.set('important-thing',[
+  '大切なこと',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `  <div class="info">
+      2020.12 / Choreo Video <br>
+      Cinematographer / Editor
+    </div>
+    <p>筑波大学ダンス部が新型コロナウイルスに伴う公演中止に際して制作した映像作品</p>
+    <p>
+      <strong>Credits</strong><br>
+      Cinematographer, Editor : Tomoya Onuki<br>
+      Choreograher : Saki Ozawa<br>
+    </p>`,
+]);
+html.set('who',[
+  '何者',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `  <div class="info">
+      2020.12 / Choreo Video <br>
+      Cinematographer / Editor
+    </div>
+    <p>筑波大学ダンス部が新型コロナウイルスに伴う公演中止に際して制作した映像作品</p>
+    <p>
+      <strong>Credits</strong><br>
+      Cinematographer, Editor : Tomoya Onuki<br>
+      Choreograher : Kana Yamaguchi, Saki Ozawa<br>
+    </p>`,
+]);
+html.set('rush',[
+  '迸る',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `  <div class="info">
+      2020.12 / Choreo Video <br>
+      Cinematographer / Editor
+    </div>
+    <p>筑波大学ダンス部が新型コロナウイルスに伴う公演中止に際して制作した映像作品</p>
+    <p>
+      <strong>Credits</strong><br>
+      Cinematographer, Editor : Tomoya Onuki<br>
+      Choreograher : Ayumi Moteki<br>
+    </p>`,
+]);
 
 html.set('anzenkaihatsu-making',[
   '【MVメイキング映像】「安全開発ソング」回せ！グルーヴ開発部',
