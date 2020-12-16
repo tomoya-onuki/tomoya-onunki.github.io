@@ -26,7 +26,7 @@ $(function(){
             return false;
         });
     });
-    
+
     $('#prev,#next').each(function() {
       $(this).mouseup(function() {
           addNextPrevBtn(href);
@@ -72,23 +72,28 @@ function insertContents(href) {
 
     $('#main_contents').html( ret );
     $('.js-modal').fadeIn();
+
+    // next / prevの表示or非表示
+    if( html.get(href)[3] == null ) {
+      $('#next').hide();
+    } else {
+      $('#next').show();
+    }
+    if( html.get(href)[2] == null ) {
+      $('#prev').hide();
+    } else {
+      $('#prev').show();
+    }
 }
 
 function addNextPrevBtn(href) {
   if( html.get(href)[2] != null ) {
-    $('#prev').show();
     $('#prev').attr('href', '#'+html.get(href)[2]);
-  } else {
-    $('#prev').attr('href', '');
   }
   if( html.get(href)[3] != null ) {
-    $('#next').show();
     $('#next').attr('href', '#'+html.get(href)[3]);
-  } else {
-    $('#next').attr('href', '');
   }
 }
-
 
 var html = new Map();
 /*********************
