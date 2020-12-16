@@ -41,11 +41,9 @@
 	width: 30px;
 	height: 30px;
   position: fixed;
-  top: 65px;
+  top: 75px;
   right:5%;
-  /* left:5%; */
-  /* border-radius:5px; */
-  background-color: rgba(255, 255, 255, 0);
+  background: #eee;
 	cursor: pointer;
   opacity: 0.8;
   z-index: 6;
@@ -68,15 +66,78 @@
 .close::after {
 	transform: rotate(45deg);
 }
+
+
+#next,
+#prev {
+    display: inline-block;
+    padding-left: 22px;
+    background-color: rgba(255, 255, 255, 0);
+  	cursor: pointer;
+    opacity: 0.8;
+    z-index: 6;
+    position: fixed;
+    top: 75px;
+    right:5%;
+}
+#prev{
+  margin-right: 80px;
+}
+#next{
+  margin-right: 45px;
+}
+#next::before,
+#prev::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 30px;
+    height:30px;
+    left: 0;
+    background: #eee;
+}
+
+#prev::after,
+#next::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px #4f4f4f;
+    border-right: solid 2px #4f4f4f;
+    top: 10px;
+}
+#prev::after {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    right: -1px;
+}
+#next::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: 7px;
+}
+
+
+
+
 @media screen and (min-width:980px){
   .close:hover {
     background: #4f4f4f;
   }
-  .close:hover::before {
-  	background: #ffffff;
-  }
+  .close:hover::before,
   .close:hover::after {
   	background: #ffffff;
+  }
+  #prev:hover::before,
+  #next:hover::before {
+    background: #4f4f4f
+  }
+  #prev:hover::after,
+  #next:hover::after {
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
   }
 }
 
@@ -94,6 +155,16 @@
     z-index: 3;
 }
 
+#main_contents h2{
+  margin-bottom: 5px;
+}
+#main_contents .info{
+  color: #111;
+  font-family:'Helvetica Neue', Arial, sans-serif;
+  font-weight:bold;
+  font-size: 100%;
+  margin-bottom: 5px;
+}
 
 .works_contents {
   margin-bottom: 50px;
@@ -112,16 +183,14 @@
   font-weight: bold;
   color: #000;
 }
-.works_contents .info{
-  color:#4f4f4f;
-  font-family:'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 120%;
-  margin-bottom: 15px;
+.works_contents h3 {
+  margin-top: 0px;
+  font-size: 105%;
 }
 @media screen and (max-width:1000px){
   .works_contents .block_r {
     width: 600px;
+    margin-right: 5vw;
   }
 }
 @media screen and (min-width:1000px){
