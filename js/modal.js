@@ -20,20 +20,17 @@ $(function(){
 
             href = $(this).attr('href').replace('#', '');
             if(html.has(href)) {
-              $('#main_contents').html( insertContents(href) );
-              $('.js-modal').fadeIn();
-              // addNextPrevBtn(href);
+              insertContents(href);
               scrollTo(0, 0).delay(800);
             }
             return false;
         });
     });
-
-    $('#prev').mouseup(function() {
-        addNextPrevBtn(href);
-    });
-    $('#next').mouseup(function() {
-        addNextPrevBtn(href);
+    
+    $('#prev,#next').each(function() {
+      $(this).mouseup(function() {
+          addNextPrevBtn(href);
+      });
     });
 
     $('.js-modal-close').on('click',function(){
@@ -46,14 +43,12 @@ $(function(){
 });
 
 function checkUrl() {
-
   var url = location.href;
   tmp = url.split('#');
   if( tmp.length == 2 && tmp[1] != '' && html.has(tmp[1]) ) {
     var href = tmp[tmp.length-1];
-    $('#main_contents').html( insertContents(href) );
+    insertContents(href);
     addNextPrevBtn(href);
-    $('.js-modal').fadeIn();
   } else {
   }
 }
@@ -75,7 +70,8 @@ function insertContents(href) {
   if( html.get(href)[5] != null )
     ret += '<div class="block_r">' + html.get(href)[5] + '</div></div>';
 
-  return ret;
+    $('#main_contents').html( ret );
+    $('.js-modal').fadeIn();
 }
 
 function addNextPrevBtn(href) {
@@ -83,25 +79,15 @@ function addNextPrevBtn(href) {
     $('#prev').show();
     $('#prev').attr('href', '#'+html.get(href)[2]);
   } else {
-    $('#prev').hide();
+    $('#prev').attr('href', '');
   }
   if( html.get(href)[3] != null ) {
     $('#next').show();
     $('#next').attr('href', '#'+html.get(href)[3]);
   } else {
-    $('#next').hide();
+    $('#next').attr('href', '');
   }
 }
-
-// function insertContoloer(href) {
-//   var ret = "";
-//   if( html.get(href)[2] != null )
-//     ret += '<a id=prev href="#'+html.get(href)[2]+'" class="js-modal-open"></a>';
-//   if( html.get(href)[3] != null )
-//     ret += '<a id=next href="#'+html.get(href)[3]+'" class="js-modal-open"></a>';
-//
-//   return ret;
-// }
 
 
 var html = new Map();
