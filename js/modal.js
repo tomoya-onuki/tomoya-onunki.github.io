@@ -20,13 +20,24 @@ $(function(){
             href = $(this).attr('href').replace('#', '');
 
             if(html.has(href)) {
-              $('#main_contents').html( insertHtml(href) );
-              $('#modal').fadeIn();
-              addNextPrevBtn(href);
+              window.location.hash = "hoge";
+
+              $('#main_contents').html( insertContents(href) );
+              $('.js-modal').fadeIn();
+
               scrollTo(0, 0).delay(800);
+
+              // addNextPrevBtn(href);
             }
-            return;
+
         });
+    });
+
+    $('#prev').hover(function() {
+        addNextPrevBtn(href);
+    });
+    $('#next').hover(function() {
+        addNextPrevBtn(href);
     });
 
     $('.js-modal-close').on('click',function(){
@@ -44,18 +55,16 @@ function checkUrl() {
   tmp = url.split('#');
   if( tmp.length == 2 && tmp[1] != '' && html.has(tmp[1]) ) {
     var href = tmp[tmp.length-1];
-    $('#main_contents').html( insertHtml(href) );
+    $('#main_contents').html( insertContents(href) );
     addNextPrevBtn(href);
-    $('#modal').fadeIn();
+    $('.js-modal').fadeIn();
   } else {
   }
-
-  // insertHtml();
 }
 
 
 
-function insertHtml(href) {
+function insertContents(href) {
   var ret = '';
 
   if( html.get(href)[0] != null )
@@ -87,6 +96,16 @@ function addNextPrevBtn(href) {
     $('#next').hide();
   }
 }
+
+// function insertContoloer(href) {
+//   var ret = "";
+//   if( html.get(href)[2] != null )
+//     ret += '<a id=prev href="#'+html.get(href)[2]+'" class="js-modal-open"></a>';
+//   if( html.get(href)[3] != null )
+//     ret += '<a id=next href="#'+html.get(href)[3]+'" class="js-modal-open"></a>';
+//
+//   return ret;
+// }
 
 
 var html = new Map();
