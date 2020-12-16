@@ -17,26 +17,22 @@ $(function(){
 
         $(this).on('click',function(){
             y = window.pageYOffset;
+
             href = $(this).attr('href').replace('#', '');
-
             if(html.has(href)) {
-              window.location.hash = "hoge";
-
               $('#main_contents').html( insertContents(href) );
               $('.js-modal').fadeIn();
-
-              scrollTo(0, 0).delay(800);
-
               // addNextPrevBtn(href);
+              scrollTo(0, 0).delay(800);
             }
-
+            return false;
         });
     });
 
-    $('#prev').hover(function() {
+    $('#prev').mouseup(function() {
         addNextPrevBtn(href);
     });
-    $('#next').hover(function() {
+    $('#next').mouseup(function() {
         addNextPrevBtn(href);
     });
 
@@ -151,7 +147,8 @@ var html = new Map();
 html.set('rush',[
   '迸る',
   '2020.12 / Choreo Video / Cinematographer & Editor',
-  'who',
+  null,
+  // 'who',
   'dance-ut-teaser',
   `<div class="mov">
     <iframe id="youtbe_player" src="https://www.youtube.com/embed/tTupddG3zk4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
