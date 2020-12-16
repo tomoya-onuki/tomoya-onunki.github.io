@@ -112,41 +112,41 @@ var html = new Map();
 /*********************
  ******  VIDEO  ******
  *********************/
-html.set('important-thing',[
-  '大切なこと',
-  '2020.12 / Choreo Video / Cinematographer & Editor',
-  null,
-  'who',
-  `<div class="mov">
-    <iframe id="youtbe_player" src="https://www.youtube.com/embed/QbmW76Cp4s8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  `,
-  `<p>筑波大学ダンス部と共に制作した映像作品</p>
-  <h3>Caption</h3>
-  <p>一休みすること、心楽しむこと、泣くこと、信じること、人と出会うこと、その道を行くこと、下を向かないこと、忘れないこと</p>
-
-  <h3>Credits</h3>
-  <p>
-    Cinematographer, Editor : Tomoya Onuki<br>
-    Choreograher : Saki Ozawa<br>
-  </p>`,
-]);
-html.set('who',[
-  '何者',
-  '2020.12 / Choreo Video / Cinematographer & Editor',
-  'important-thing',
-  'rush',
-  `<div class="mov">
-    <iframe id="youtbe_player" src="https://www.youtube.com/embed/QbmW76Cp4s8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>`,
-  `<p>筑波大学ダンス部と共に制作した映像作品</p>
-  <h3>Caption</h3>
-  <p>表の顔に躍らされ</p>
-
-  <h3>Credits</h3>
-  <p>Cinematographer, Editor : Tomoya Onuki<br>
-  Choreograher : Kana Yamaguchi, Saki Ozawa<br></p>`,
-]);
+// html.set('important-thing',[
+//   '大切なこと',
+//   '2020.12 / Choreo Video / Cinematographer & Editor',
+//   null,
+//   'who',
+//   `<div class="mov">
+//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/QbmW76Cp4s8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   </div>
+//   `,
+//   `<p>筑波大学ダンス部と共に制作した映像作品</p>
+//   <h3>Caption</h3>
+//   <p>一休みすること、心楽しむこと、泣くこと、信じること、人と出会うこと、その道を行くこと、下を向かないこと、忘れないこと</p>
+//
+//   <h3>Credits</h3>
+//   <p>
+//     Cinematographer, Editor : Tomoya Onuki<br>
+//     Choreograher : Saki Ozawa<br>
+//   </p>`,
+// ]);
+// html.set('who',[
+//   '何者',
+//   '2020.12 / Choreo Video / Cinematographer & Editor',
+//   'important-thing',
+//   'rush',
+//   `<div class="mov">
+//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/QbmW76Cp4s8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   </div>`,
+//   `<p>筑波大学ダンス部と共に制作した映像作品</p>
+//   <h3>Caption</h3>
+//   <p>表の顔に躍らされ</p>
+//
+//   <h3>Credits</h3>
+//   <p>Cinematographer, Editor : Tomoya Onuki<br>
+//   Choreograher : Kana Yamaguchi, Saki Ozawa<br></p>`,
+// ]);
 
 html.set('rush',[
   '迸る',
