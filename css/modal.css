@@ -240,17 +240,26 @@
 }
 .works_contents .block_l img{
   width: 100%;
-  margin-bottom: 3%;
+  margin-bottom: 3.5%;
 }
-.works_contents .block_l .half_img{
+.works_contents .block_l .half_img_l,
+.works_contents .block_l .half_img_r{
   width: 48%;
-  margin-bottom: 3%;
+  margin-bottom: 3.5%;
+  position:relative;
+}
+.works_contents .block_l .half_img_l{
+  left:0%;
+}
+.works_contents .block_l .half_img_r{
+  right:-3.5%;
+  /* left:3.5%; */
 }
 .works_contents .block_l .mov {
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
-  margin-bottom: 3%;
+  margin-bottom: 3.5%;
   overflow: hidden;
 }
 .works_contents .block_l .mov iframe {
