@@ -45,13 +45,15 @@ html{
 }
 .profile h1 {
   font-size: 130%;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #000;
   font-weight: bold;
   margin: 0 0 0 0;
 }
 .profile h2 {
   font-size: 100%;
-  color: #000;©
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+  color: #000;
   /* color: #4f4f4f; */
   font-weight: lighter;
   margin-top: 0px;

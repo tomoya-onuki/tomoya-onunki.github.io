@@ -99,51 +99,61 @@ var html = new Map();
 /*********************
  ******  VIDEO  ******
  *********************/
-// html.set('important-thing',[
-//   '大切なこと',
-//   '2020.12 / Choreo Video / Cinematographer & Editor',
-//   null,
-//   'who',
-//   `<div class="mov">
-//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/QbmW76Cp4s8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   </div>
-//   `,
-//   `<p>筑波大学ダンス部と共に制作した映像作品</p>
-//   <h3>Caption</h3>
-//   <p>一休みすること、心楽しむこと、泣くこと、信じること、人と出会うこと、その道を行くこと、下を向かないこと、忘れないこと</p>
-//
-//   <h3>Credits</h3>
-//   <p>
-//     Cinematographer, Editor : Tomoya Onuki<br>
-//     Choreograher : Saki Ozawa<br>
-//   </p>`,
-// ]);
-// html.set('who',[
-//   '何者',
-//   '2020.12 / Choreo Video / Cinematographer & Editor',
-//   'important-thing',
-//   'rush',
-//   `<div class="mov">
-//     <iframe id="youtbe_player" src="https://www.youtube.com/embed/QbmW76Cp4s8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-//   </div>`,
-//   `<p>筑波大学ダンス部と共に制作した映像作品</p>
-//   <h3>Caption</h3>
-//   <p>表の顔に躍らされ</p>
-//
-//   <h3>Credits</h3>
-//   <p>Cinematographer, Editor : Tomoya Onuki<br>
-//   Choreograher : Kana Yamaguchi, Saki Ozawa<br></p>`,
-// ]);
+html.set('important-things',[
+  '大切なこと',
+  '2020.12 / Choreo Video / Cinematographer & Editor',
+  null,
+  'who',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/XLKi4B8SGLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <img class="half_img" src="./img/important-things/001.png" style="margin-right:3%;">
+  <img class="half_img" src="./img/important-things/002.png">
+  <img class="half_img" src="./img/important-things/003.png" style="margin-right:3%;">
+  <img class="half_img" src="./img/important-things/004.png">`,
+  `<p>筑波大学ダンス部と共に制作した映像作品</p>
+  <h3>Caption</h3>
+  <p>一休みすること、心楽しむこと、泣くこと、信じること、人と出会うこと、その道を行くこと、下を向かないこと、忘れないこと</p>
+
+  <h3>Credits</h3>
+  <p>
+    Cinematographer, Editor : Tomoya Onuki<br>
+    Choreograher : Saki Ozawa<br>
+  </p>`,
+]);
+html.set('who',[
+  '何者',
+  '2020.12 / Choreo Video / Cinematographer & Editor',
+  'important-things',
+  'rush',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/ZkFfIVqSuUI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <img class="half_img" src="./img/who/001.png" style="margin-right:3%;">
+  <img class="half_img" src="./img/who/002.png">
+  <img class="half_img" src="./img/who/003.png" style="margin-right:3%;">
+  <img class="half_img" src="./img/who/004.png">`,
+  `<p>筑波大学ダンス部と共に制作した映像作品</p>
+  <h3>Caption</h3>
+  <p>表の顔に躍らされ</p>
+
+  <h3>Credits</h3>
+  <p>Cinematographer, Editor : Tomoya Onuki<br>
+  Choreograher : Kana Yamaguchi, Saki Ozawa<br></p>`,
+]);
 
 html.set('rush',[
   '迸る',
   '2020.12 / Choreo Video / Cinematographer & Editor',
-  null,
-  // 'who',
+  'who',
   'dance-ut-teaser',
   `<div class="mov">
     <iframe id="youtbe_player" src="https://www.youtube.com/embed/tTupddG3zk4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>`,
+  </div>
+  <img class="half_img" src="./img/rush/001.png" style="margin-right:3%;">
+  <img class="half_img" src="./img/rush/002.png">
+  <img class="half_img" src="./img/rush/003.png" style="margin-right:3%;">
+  <img class="half_img" src="./img/rush/004.png">`,
   `<p>筑波大学ダンス部と共に制作した映像作品</p>
   <h3>Caption</h3>
   <p>血によって動かされている</p>
@@ -347,18 +357,21 @@ html.set('lost-anima',[
 
   `<div class="mov">
     <iframe src="https://www.youtube.com/embed/aMkhraO-NBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>`,
+  </div>
+  <img class="half_img" style="margin-right:3%;" src="./img/lost_anima/HAM２-1-27.jpg">
+  <img class="half_img" src="./img/lost_anima/HAM２-1-29.jpg">
+  `,
   `<p>
     廃墟に残された道具たち。アニマを失くし、個性を失った道具を手にとることでそこに残された「気配」を聞く作品である。筑波大学内にある廃墟となった学生宿舎「平砂9号棟」を舞台に開催された展覧会「平砂アートムーヴメント展示企画2019」にて展示。
   </p>
 
+  <p><h3>作品解説</h3>
+  この平砂 9 号棟は人が住まなくなり住居ではなくなってしまった。しかしながら私が初めてここへ立ち入った時、その見た目に反し、密かに漂う住居としての気配を確かに感じた。そこで道具に宿る魂 (アニマ) とその消失をテーマに表現を行うことに決めた。<br>机の上に並んだオブジェクトは道具のメタファーである。道具には用途があり、道具はその用途のための形状をしている。人に使われなくなり、魂が失われた道具には形が必要ないはずだ。<br>そこでここでは道具たちを 基本的な形状である立方体のオブジェクトとして表現している。道具は人が手に持って使うものであるので、人と道具の間に「手に持つ」 というインタラクションが必要であった。<br>人間は道具に限らずあらゆるものに名前をつけてきた。それは対象を「分ける」ためである。私たちは「分ける」ことで初めて対象を「分かる」 ことができる。均一な形になってしまった道具たちは 自身の名前を叫ぶことで鑑賞者に「分かる」ことを求める。オブジェクトから再生される音には、道具の名前を呼ぶ作者の声を引き延ばした音声を用いることとした。人が捨てられた道具の声に耳を傾けることは少ないだろう。彼らの声はとても小さく、また不気味である必要があった。<br>そして道具たちの見た目から魅力を最大限に削ぎ落とす必要もあった。魂や精霊のような表現に視覚情報を用いることは極力避けたかった。一見すると意味もないような箱から音が聞こえ、微かな震えを感じる。見ただけではわからない要素で、不可思議を感じてもらいたいと思う。</p>
+  <p>-</p>
   <p>
     平砂アートムーヴメント：<a href="https://hirasunaart2019.myportfolio.com" target="_blank">https://hirasunaart2019.myportfolio.com</a><br>
     写真：松岡麻実
-  </p>
-
-  <p><h3>作品解説</h3>
-  この平砂 9 号棟は人が住まなくなり住居ではなくなってしまった。しかしながら私が初めてここへ立ち入った時、その見た目に反し、密かに漂う住居としての気配を確かに感じた。そこで道具に宿る魂 (アニマ) とその消失をテーマに表現を行うことに決めた。<br>机の上に並んだオブジェクトは道具のメタファーである。道具には用途があり、道具はその用途のための形状をしている。人に使われなくなり、魂が失われた道具には形が必要ないはずだ。<br>そこでここでは道具たちを 基本的な形状である立方体のオブジェクトとして表現している。道具は人が手に持って使うものであるので、人と道具の間に「手に持つ」 というインタラクションが必要であった。<br>人間は道具に限らずあらゆるものに名前をつけてきた。それは対象を「分ける」ためである。私たちは「分ける」ことで初めて対象を「分かる」 ことができる。均一な形になってしまった道具たちは 自身の名前を叫ぶことで鑑賞者に「分かる」ことを求める。オブジェクトから再生される音には、道具の名前を呼ぶ作者の声を引き延ばした音声を用いることとした。人が捨てられた道具の声に耳を傾けることは少ないだろう。彼らの声はとても小さく、また不気味である必要があった。<br>そして道具たちの見た目から魅力を最大限に削ぎ落とす必要もあった。魂や精霊のような表現に視覚情報を用いることは極力避けたかった。一見すると意味もないような箱から音が聞こえ、微かな震えを感じる。見ただけではわからない要素で、不可思議を感じてもらいたいと思う。</p>`
+  </p>`
 ]);
 
 html.set('shape-of-monologue-aggregate',[
@@ -384,11 +397,11 @@ html.set('somewhere-far-away',[
   'shape-of-monologue-aggregate',
   'kalfos-box',
   `<img src="./img/somewhere/001.jpg">
-  <img src="./img/somewhere/002.JPG">
-  <img src="./img/somewhere/004.JPG">
-  <img src="./img/somewhere/hoge.JPG">
-  <img src="./img/somewhere/006.JPG">
-  <img src="./img/somewhere/T+_image_sq.png">`,
+  <img class="half_img" src="./img/somewhere/002.JPG" style="margin-right:3%;">
+  <img class="half_img" src="./img/somewhere/004.JPG">
+  <img class="half_img" src="./img/somewhere/hoge.JPG" style="margin-right:3%;">
+  <img class="half_img" src="./img/somewhere/006.JPG">
+  <img class="half_img" src="./img/somewhere/T+_image_sq.png">`,
 
   `<p>筑波大学 情報メディア創成学類の2年生の有志による展示会。「旅先で手に入れたおみやげ」というテーマで制作。CG、油絵、インスタレーション、メディアアートなど様々な分野の7つの作品を展示した。</p>
   <h3>Theme</h3>
@@ -470,9 +483,9 @@ html.set('cube',[
 '2019.04 / Game',
 'gohan-search',
 'tokuen',
-`<img src="./img/cube/pc_cube.JPG">
-  <img src="./img/cube/display.JPG">
-  <img src="./img/cube/cube.gif">`,
+`<img src="./img/cube/cube.gif">
+  <img class="half_img" src="./img/cube/pc_cube.JPG" style="margin-right:3%;">
+  <img class="half_img" src="./img/cube/display.JPG">`,
 `<p>筑波大学の講義 コンピュータアートIIの課題として制作し、その後リメイクしたゲーム作品。 MAD -創成x芸術合同展覧宴- にて展示。</p>
 <p>CUBEは全6ステージからなるアクションパズルゲームである。 各ステージをクリアするたびにキューブ状のコントローラーが1面ずつ点灯する。 点灯した面はタッチパネルとして機能しゲーム内で使用できるようになる。 ゲームの進行状況に応じてコントローラーの状態が変化し、操作が複雑になってゆくことで難易度が上がる仕組みになっている。</p>
 <p>製作 : 小貫 智弥 / 金子優香 / 町田樹</p>

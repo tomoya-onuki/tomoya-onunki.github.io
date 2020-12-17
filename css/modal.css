@@ -237,17 +237,20 @@
 
 .works_contents .block_l {
   width: 600px;
-  /* margin-right: 40px; */
 }
-.works_contents .block_l img {
+.works_contents .block_l img{
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 3%;
+}
+.works_contents .block_l .half_img{
+  width: 48%;
+  margin-bottom: 3%;
 }
 .works_contents .block_l .mov {
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
-  margin-bottom: 30px;
+  margin-bottom: 3%;
   overflow: hidden;
 }
 .works_contents .block_l .mov iframe {
@@ -256,13 +259,4 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.works_contents .block_b {
-  display: block;
-  width: 100%;
-}
-.works_contents .block_b img {
-  /* width: 50%; */
-  width:600px;
 }
