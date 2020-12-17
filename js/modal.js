@@ -484,8 +484,8 @@ html.set('cube',[
 'gohan-search',
 'tokuen',
 `<img src="./img/cube/cube.gif">
-  <img class="half_img" src="./img/cube/pc_cube.JPG">
-  <img class="half_img" src="./img/cube/display.JPG">`,
+  <img class="half_img_l" src="./img/cube/pc_cube.JPG">
+  <img class="half_img_r" src="./img/cube/display.JPG">`,
 `<p>筑波大学の講義 コンピュータアートIIの課題として制作し、その後リメイクしたゲーム作品。 MAD -創成x芸術合同展覧宴- にて展示。</p>
 <p>CUBEは全6ステージからなるアクションパズルゲームである。 各ステージをクリアするたびにキューブ状のコントローラーが1面ずつ点灯する。 点灯した面はタッチパネルとして機能しゲーム内で使用できるようになる。 ゲームの進行状況に応じてコントローラーの状態が変化し、操作が複雑になってゆくことで難易度が上がる仕組みになっている。</p>
 <p>製作 : 小貫 智弥 / 金子優香 / 町田樹</p>
