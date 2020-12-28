@@ -258,8 +258,10 @@ p {
   }
   .header2 .head_menu a {
     margin: 20px 20px 20px 20px;
+    color:#000;
   }
   .header2 .head_menu a :hover{
+    color:#000;
     opacity: 1;
   }
   #hamb_menu {
