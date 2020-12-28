@@ -443,16 +443,7 @@ html.set('silence',[
 /*********************
  ******  APP  ********
  *********************/
- html.set('umidori',[
-   `Umidori`,
-   '2021.02 / Visualization',
-   null,
-   null,
-   `<img src="./img/umidori/demo.gif">
-   <img src="./img/umidori/tool0.png">
-   <img src="./img/umidori/tool1.png">`,
-   `<p>卒業研究で開発した可視化ツール。海鳥の行動の比較分析の支援を目的とする。</p>`
- ]);
+
 
 
 html.set('task-management-tool',[

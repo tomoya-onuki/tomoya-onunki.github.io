@@ -184,14 +184,31 @@ p {
 
 
 .header1{
-  height: 65px;
   width: 100%;
-  background: rgba(255,255,255,0.0);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 4;
 }
+.header1 .head_logo{
+  position:absolute;
+  left:5%;
+  top: 20px;
+  color:#fff;
+}
+.header1 .head_menu{
+  position:absolute;
+  left:5%;
+  top: 80px;
+  color:#fff;
+}
+.header1 .head_menu a {
+  color:#fff;
+}
+.header1 .head_menu div {
+  margin-bottom: 10px;
+}
+
 .header2{
   height: 65px;
   width: 100%;
@@ -200,14 +217,16 @@ p {
   top: 0;
   left: 0;
   z-index: 4;
+  color:#000;
 }
-.head_logo{
+.header2 .head_logo{
   position:absolute;
   left:5%;
   top: 20px;
+  color:#000;
 }
 @media screen and (min-width:980px){
-  .head_menu {
+  .header2 .head_menu {
     position:absolute;
     right:5%;
     font-family: HelveticaNeue-light, "sans-serif";
@@ -216,15 +235,15 @@ p {
     color: #000;
     display: block;
   }
-  .head_menu a {
+  .header2 .head_menu a {
     color:#000;
   }
-  .head_menu a :hover{
+  .header2 .head_menu a :hover{
     opacity: 0.4;
   }
 }
 @media screen and (max-width:980px){
-  .head_menu {
+  .header2 .head_menu {
     position:absolute;
     top:65px;
     left:calc(5% - 20px);
@@ -237,10 +256,10 @@ p {
     background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.0));
     display: none;
   }
-  .head_menu a {
+  .header2 .head_menu a {
     margin: 20px 20px 20px 20px;
   }
-  .head_menu a :hover{
+  .header2 .head_menu a :hover{
     opacity: 1;
   }
   #hamb_menu {
