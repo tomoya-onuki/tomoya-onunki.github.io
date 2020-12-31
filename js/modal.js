@@ -99,10 +99,23 @@ var html = new Map();
 /*********************
  ******  VIDEO  ******
  *********************/
+html.set('life-is-coming-back',[
+  'Life is coming back...',
+  '2020.12 / Film / Cinematographer & Editor',
+  null,
+  'important-things',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/rfE5TKHcNLw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `<h3>Caption</h3>
+  <p>悲しいことがある。辛いことがある。逃げ出したいことがある。<br>
+  影が強く深いということは、光が強く明るく照らしているということでもある。<br>
+  Lifeとは生活であり人生であり生命である。</p>`,
+]);
 html.set('important-things',[
   '大切なこと',
   '2020.12 / Choreo Video / Cinematographer & Editor',
-  null,
+  'life-is-coming-back',
   'who',
   `<div class="mov">
     <iframe id="youtbe_player" src="https://www.youtube.com/embed/XLKi4B8SGLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -183,7 +196,7 @@ html.set('anzenkaihatsu-making',[
   '【MVメイキング映像】「安全開発ソング」回せ！グルーヴ開発部',
   '2020.11 / Making Moive / Director & Editor',
   'dance-ut-teaser',
-  'mawase-making',
+  'dancing-inside',
 
   `<div class="mov">
     <iframe id="youtbe_player" src="https://www.youtube.com/embed/yfbeukjqiDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -220,13 +233,25 @@ html.set('anzenkaihatsu-making',[
 //   </p>`
 // ]);
 
+html.set('dancing-inside',[
+  'うちで踊ろう',
+  '2020.04 / Tribute Moive / Director , Cinematographer & Editor',
+  'anzenkaihatsu-making',
+  'mawase-making',
+  `<div class="mov">
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/-ILnREA4aX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>`,
+  `<p>うちで踊ろうに合わせて作成したオリジナルムービー</p>`,
+  ''
+]);
+
 html.set('mawase-making',[
   '【MVメイキング映像】「回せ！」回せ！グルーヴ開発部',
   '2020.04 / Making Moive / Director , Cinematographer & Editor',
-  'anzenkaihatsu-making',
+  'dancing-inside',
   'express',
   `<div class="mov">
-    <iframe id="youtbe_player" src="https://www.youtube.com/embed/Zn46mk79o-E?rel=0&enablejsapi=1&origin=https://tomoya-onuki.github.io" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="youtbe_player" src="https://www.youtube.com/embed/Zn46mk79o-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>`,
   `<p>セルフプロデュースアイドル「回せ!グルーヴ開発部」の1st Single「回せ！」のMV制作の様子を納めたメイキングムービー</p>
 
