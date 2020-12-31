@@ -101,7 +101,7 @@ var html = new Map();
  *********************/
 html.set('life-is-coming-back',[
   'Life is coming back...',
-  '2020.12 / Film / Cinematographer & Editor',
+  '2020.12 / Film / Director, Cinematographer & Editor',
   null,
   'important-things',
   `<div class="mov">
