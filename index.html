@@ -11,10 +11,23 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 	<script src="./js/modal.js"></script>
   <script type="text/javascript" src="./js/touch_nonhover.js"></script>
+  <style>
+    .triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 0 15px 26.0px;
+      border-color: transparent transparent transparent #ffffff;
+      position:fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
  </head>
 
 
- <body>
+ <body style="background-color:#000;">
   <div class="header1 head_font1">
     <div><a class="head_logo" style="color:#ffffff;" href="./">TOMOYAONUKI.</a></div>
     <!-- <span class="head_menu" style="color:#fff; background:rgba(0,0,0,0);">
@@ -36,16 +49,16 @@
 
 
   <div id="content">
-    <center>
       <!-- <a class="reel_text" href="http://vimeo.com/450021560" target="_blank">
         SHOWREEL >>
       </a> -->
-      <video class="reel_bg" loop autoplay muted playsinline>
-        <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel_index.mp4" type="video/mp4">
-        <p>動画を再生できません</p>
-      </video>
-    </center>
+    <a href="http://vimeo.com/450021560" target="_blank"><div class="triangle"></div></a>
+    <video class="reel_bg" loop autoplay muted playsinline>
+      <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel_index.mp4" type="video/mp4">
+      <p>動画を再生できません</p>
+    </video>
   </div>
+
 
  		<!-- <hr> -->
   <div class="footer">
