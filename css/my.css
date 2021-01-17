@@ -25,10 +25,10 @@ html{
 .profile {
   display: flex;
   flex-wrap: wrap;
-  color: #888;
+  color: #666;
 }
 .profile a{
-  color: #8f8f8f;
+  color: #666;
 }
 .profile a:hover{
   opacity:0.4;
@@ -58,6 +58,12 @@ html{
   font-weight: lighter;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.profile ol {
+  margin-left:-20px;
+}
+.profile ol li div{
+  margin-left:5px;
 }
 @media screen and (min-width:750px){
   .profile .block {
