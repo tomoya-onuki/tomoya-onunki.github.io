@@ -519,7 +519,7 @@ html.set('cube',[
 `CUBE`,
 '2019.04 / Game',
 'gohan-search',
-'tokuen',
+'fruits-cut',
 `<img src="./img/cube/cube.gif">
   <img class="half_img_l" src="./img/cube/pc_cube.JPG">
   <img class="half_img_r" src="./img/cube/display.JPG">`,
@@ -530,22 +530,22 @@ html.set('cube',[
 `
 ]);
 
-html.set('tokuen',[
-  `圧力センサーを用いた体重計とそのデータ管理システムの制作`,
-  '2018.12 / IoT',
-  'cube','fruits-cut',
-  `<div class="mov">
-    <iframe  src="https://www.youtube.com/embed/GCOoUg_GwHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>`,
-  `<p>筑波大学情報メディア創成学類の講義 情報メディア特別演習 にて取り組んだ。データ通信可能な体重計の制作と，計測した体重データを保存し閲覧できるアプリケーションの制作を行った。</p>
-  <p> 玄関マットなどのマット状の体重計を作り体重を管理することで，日常生活に溶け込んだ形で自然に健康管理を行うことができるシステムを作ることが目的である。</p>
-  <p> また，学習目標としてはArduinoを用いた組み込み系デバイスを制作する手法やセンサーを 用いたフィジカルコンピューティングを学習することである。</p>`
-]);
+// html.set('tokuen',[
+//   `圧力センサーを用いた体重計とそのデータ管理システムの制作`,
+//   '2018.12 / IoT',
+//   'cube','fruits-cut',
+//   `<div class="mov">
+//     <iframe  src="https://www.youtube.com/embed/GCOoUg_GwHI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//   </div>`,
+//   `<p>筑波大学情報メディア創成学類の講義 情報メディア特別演習 にて取り組んだ。データ通信可能な体重計の制作と，計測した体重データを保存し閲覧できるアプリケーションの制作を行った。</p>
+//   <p> 玄関マットなどのマット状の体重計を作り体重を管理することで，日常生活に溶け込んだ形で自然に健康管理を行うことができるシステムを作ることが目的である。</p>
+//   <p> また，学習目標としてはArduinoを用いた組み込み系デバイスを制作する手法やセンサーを 用いたフィジカルコンピューティングを学習することである。</p>`
+// ]);
 
 html.set('fruits-cut',[
   `FRUITS CUT!`,
   '2018.12 / Game',
-  'tokuen','megeilt-tweet-system',
+  'cube','megeilt-tweet-system',
   `<img src="./img/fruitscut/fruitscut.gif">`,
   `<p>筑波大学の講義、コンピュータアートIIの課題として制作したゲーム。<br>
   ダンボールから飛び出すフルーツを切るゲームである. 操作は手をかざすジェスチャだけで行う。センサーを搭載した段ボール箱型のインターフェースだけで全ての入力が完結するようになっている。</p>
