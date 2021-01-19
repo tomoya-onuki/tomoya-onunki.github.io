@@ -37,7 +37,7 @@ html{
 .profile img{
 		width:300px;
 		height:300px;
-		margin-right:20px;
+		margin-right:50px;
 		padding-bottom:20px;
 }
 .profile p {
@@ -52,11 +52,10 @@ html{
   margin: 0 0 0 0;
 }
 .profile h2 {
-  font-size: 110%;
+  font-size: 100%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
-  color: #000;
-  font-weight:normal;
-  /* border-bottom: solid 0.5px; */
+  /* color: #666; font-weight:bold; */
+  color: #000; font-weight:normal;
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -76,7 +75,7 @@ html{
     margin-bottom: 30px;
     margin-right:16px;
     max-width: 700px;
-    width:calc(90vw - 350px);
+    width:calc(90vw - 380px);
   }
 }
 @media screen and (max-width:750px){
