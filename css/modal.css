@@ -74,10 +74,12 @@
     z-index: 6;
 }
 #prev{
-  margin-right: 80px;
+  /* margin-right: 80px; */
+  /* position: fixed; */
+  /* right:0px; */
 }
 #next{
-  margin-right: 45px;
+  /* margin-right: 45px; */
 }
 #next::before,
 #prev::before {
@@ -121,14 +123,14 @@
   }
   #next {
     position: fixed;
-    top: 106px;
-    right:5%;
+    top: 75px;
+    right:0%;
     margin: 8px;
   }
   #prev {
     position: fixed;
-    top: 145px;
-    right:5%;
+    top: 110px;
+    right:0%;
     margin: 8px;
   }
 }
@@ -142,14 +144,14 @@
   #prev{
     position: fixed;
     top: 75px;
-    right:5%;
-    margin-right: 80px;
+    right:1%;
+    margin-right: 35px;
   }
   #next{
     position: fixed;
     top: 75px;
-    right:5%;
-    margin-right: 45px;
+    right:1%;
+    /* margin-right: 45px; */
   }
 
   .close:hover {
