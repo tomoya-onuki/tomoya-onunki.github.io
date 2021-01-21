@@ -1,6 +1,5 @@
-var id = 0;
+// var id = 0;
 var y = 0;
-var modal;
 
 $(function(){
     $(window).scroll(function() {
@@ -14,13 +13,12 @@ $(function(){
     });
 
     $('.js-modal-open').each(function(){
-
         $(this).on('click',function(){
             y = window.pageYOffset;
 
-            href = $(this).attr('href').replace('#', '');
-            if(html.has(href)) {
-              insertContents(href);
+            id = $(this).attr('id');
+            if(html.has(id)) {
+              insertContents(id);
               scrollTo(0, 0).delay(800);
             }
             return false;
@@ -29,7 +27,7 @@ $(function(){
 
     $('#prev,#next').each(function() {
       $(this).mouseup(function() {
-          addNextPrevBtn(href);
+          addNextPrevBtn(id);
       });
     });
 
@@ -44,11 +42,11 @@ $(function(){
 
 function checkUrl() {
   var url = location.href;
-  tmp = url.split('#');
-  if( tmp.length == 2 && tmp[1] != '' && html.has(tmp[1]) ) {
-    var href = tmp[tmp.length-1];
-    insertContents(href);
-    addNextPrevBtn(href);
+  tmp = url.split('/');
+  var id = tmp[tmp.length-1];
+  if( html.has(id) ) {
+    insertContents(id);
+    addNextPrevBtn(id);
   } else {
   }
 }
@@ -72,6 +70,7 @@ function insertContents(href) {
 
     $('#main_contents').html( ret );
     $('.js-modal').fadeIn();
+    history.replaceState(null,null,'/works/'+id);
 
     // next / prevの表示or非表示
     if( html.get(href)[3] == null ) {
