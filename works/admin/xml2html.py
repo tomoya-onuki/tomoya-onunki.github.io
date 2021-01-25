@@ -112,7 +112,7 @@ if len(args) == 2:
 
 
         # テンプレートファイルを取得
-        tempFp = open('./markdown/template.html','r')
+        tempFp = open('./template.html','r')
         tempStr = ''
         for line in tempFp:
             tempStr += line
