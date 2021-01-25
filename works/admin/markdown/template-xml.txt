@@ -1,0 +1,12 @@
+<title></title>
+<info></info>
+<prev></prev>
+<next></next>
+<mov></mov>
+<imgl0></imgl0>
+<imgr0></imgr0>
+<imgl1></imgl1>
+<imgr1></imgr1>
+
+<right>
+</right>
