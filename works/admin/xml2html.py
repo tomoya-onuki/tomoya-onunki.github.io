@@ -9,7 +9,7 @@ from html.parser import HTMLParser
 ###############
 ## HTML解析
 ###############
-class MyHTMLParser(HTMLParser):
+class xmlParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.found_tag = False
@@ -24,6 +24,9 @@ class MyHTMLParser(HTMLParser):
         if self.found_tag:
             self.texts[self.tag] = data
             self.found_tag = False
+
+    def getXmlList(self):
+        return self.texts
 
 ###############
 ## HTML整形
@@ -87,6 +90,101 @@ def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブ
 ###############
 ## メインの処理
 ###############
+def generateHTML(tempStr, xmlList):
+    # 左側のコンテンツの分析と整形
+    leftContents = ''
+    rightContents = ''
+    for tag, value in xmlList.items():
+        value = value.strip()
+        # TitleとInfoのとき
+        if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
+            tempStr = tempStr.replace('<!-- '+tag+' -->', value)
+
+        # リンクのとき
+        # if re.fullmatch(tag, 'prev') or re.fullmatch(tag, 'next'):
+        #     str = '<a id="'+tag+'" href="'+value+'.html"></a>'
+        #     tempStr = tempStr.replace('<!-- '+tag+' -->', str)
+
+        # 右側コンテンツ
+        if re.fullmatch(tag, 'right'):
+            rightContents = '<div class="block_r">' + md.convert(value) + '</div>'
+
+        # 左側コンテンツ
+        if re.fullmatch(tag, 'mov'):
+            leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + value + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+        if re.search('img\d', tag):
+            leftContents += '<img src="' + value + '">\n'
+        if re.search('imgr\d', tag):
+            leftContents += '<img class="half_img_r" src="' + value + '">\n'
+        if re.search('imgl\d', tag):
+            leftContents += '<img class="half_img_l" src="' + value + '">\n'
+
+
+    # コンテンツの整形
+    leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
+    contents = leftContents + '\n' + rightContents
+    tempStr = tempStr.replace('<!-- contents -->', md.convert(contents))
+    tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
+
+    return tempStr
+
+
+###############
+## コンテンツのリンクを生成
+###############
+def generateLinks(tempStr, contentsName, cTree):
+    next = cTree.nextContentsName(contentsName)
+    if next is not None:
+        str = '<a id="next" href="'+next+'.html"></a>'
+        tempStr = tempStr.replace('<!-- next -->', str)
+
+    prev = cTree.prevContentsName(contentsName)
+    if prev is not None:
+        str = '<a id="prev" href="'+prev+'.html"></a>'
+        tempStr = tempStr.replace('<!-- prev -->', str)
+
+    return tempStr
+
+
+###############
+## コンテンツのリンクを取得
+###############
+class contentsTree(object):
+    def __init__(self):
+        super(contentsTree, self).__init__()
+
+    def fileOpen(self):
+        fp = open('contentsTree.csv','r')
+        buf = ''
+        for line in fp:
+            buf += line
+        fp.close()
+        buf = buf.replace('\n', '')
+        self.contentsList = buf.split(',')
+        # print(self.contentsList)
+
+
+    def prevContentsName(self, contentsName):
+        for i, name in enumerate(self.contentsList):
+            # print(name)
+            if contentsName == name:
+                if i > 0:
+                    return self.contentsList[i-1]
+        return None
+
+    def nextContentsName(self, contentsName):
+        for i, name in enumerate(self.contentsList):
+            if contentsName == name:
+                if i < len(self.contentsList) - 1:
+                    return self.contentsList[i+1]
+        return None
+
+
+
+
+###############
+## メインの処理
+###############
 args = sys.argv
 md = markdown.Markdown()
 
@@ -96,10 +194,14 @@ if len(args) == 2:
     if not re.findall('.*/', args[1]):
         dirname = args[1]+'/'
 
-    i = 0
+    cTree = contentsTree()
+    cTree.fileOpen()
+
     for inFile in glob.glob(dirname+'*.xml'):
         outFile = inFile.replace('.xml', '.html').replace('markdown', '..') # 入力ファイル名を出力ファイル名に変換
 
+        token = inFile.split('/')
+        contentsName = token[len(token)-1].replace('.xml', '')
         print('In : '+inFile+',  Out: '+outFile)
 
         # 入力ファイルの内容を文字列として取得
@@ -110,7 +212,6 @@ if len(args) == 2:
             inStr += line
         inFp.close()
 
-
         # テンプレートファイルを取得
         tempFp = open('./template.html','r')
         tempStr = ''
@@ -119,52 +220,24 @@ if len(args) == 2:
         tempFp.close()
 
         # XML解析
-        parser = MyHTMLParser()
+        parser = xmlParser()
         parser.feed(inStr)
-        # 左側のコンテンツの分析と整形
-        leftContents = ''
-        rightContents = ''
-        for tag, value in parser.texts.items():
-            value = value.strip()
-            # TitleとInfoのとき
-            if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
-                tempStr = tempStr.replace('<!-- '+tag+' -->', value)
+        xmlList = parser.getXmlList()
 
-            # リンクのとき
-            if re.fullmatch(tag, 'prev') or re.fullmatch(tag, 'next'):
-                str = '<a id="'+tag+'" href="'+value+'.html"></a>'
-                tempStr = tempStr.replace('<!-- '+tag+' -->', str)
+        # XML to HTML
+        tempStr = generateHTML(tempStr, xmlList)
 
-            # 右側コンテンツ
-            if re.fullmatch(tag, 'right'):
-                rightContents = '<div class="block_r">' + md.convert(value) + '</div>'
-
-            # 左側コンテンツ
-            if re.fullmatch(tag, 'mov'):
-                leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + value + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
-            if re.search('img\d', tag):
-                leftContents += '<img src="' + value + '">\n'
-            if re.search('imgr\d', tag):
-                leftContents += '<img class="half_img_r" src="' + value + '">\n'
-            if re.search('imgl\d', tag):
-                leftContents += '<img class="half_img_l" src="' + value + '">\n'
-
-
-        # コンテンツの整形
-        leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
-        contents = leftContents + '\n' + rightContents
-        tempStr = tempStr.replace('<!-- contents -->', md.convert(contents))
-        tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
+        # コンテンツのリンクを生成
+        tempStr = generateLinks(tempStr, contentsName, cTree)
 
         # 全体の整形
         tempStr = formatHTML(tempStr)
-
 
         # 新しいファイルに書き出す
         outFp = open(outFile,'w')
         outFp.write(tempStr)
         outFp.close()
 
-        i+=1
+
 else:
     print('Please Input Dir Name.')
