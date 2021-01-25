@@ -1,0 +1,13 @@
+<title>タスク管理ツール</title>
+<info>2019.12 / WebApplication</info>
+<prev>silence</prev>
+<next>color-selection</next>
+<img0>../img/task/home.png</img0>
+<img1>../img/task/edit.png</img1>
+<img2>../img/task/mobile.png</img2>
+
+<right>
+[https://three-do.herokuapp.com](https://three-do.herokuapp.com)
+
+アジャイル開発で使用するかんばんをコンセプトに制作したアプリケーション
+</right>

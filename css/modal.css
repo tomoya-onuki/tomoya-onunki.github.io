@@ -35,7 +35,7 @@
   width:90vw;
   height:56.6vw;
 }
-.close{
+#close{
 	display: inline-block;
 	width: 30px;
 	height: 30px;
@@ -44,8 +44,8 @@
   opacity: 0.8;
   z-index: 6;
 }
-.close::before,
-.close::after {
+#close::before,
+#close::after {
 	display: block;
 	content: "";
 	position: absolute;
@@ -56,10 +56,10 @@
 	margin: -1px 0 0 -10px;
 	background: #4f4f4f;
 }
-.close::before {
+#close::before {
 	transform: rotate(-45deg);
 }
-.close::after {
+#close::after {
 	transform: rotate(45deg);
 }
 
@@ -74,10 +74,12 @@
     z-index: 6;
 }
 #prev{
-  margin-right: 80px;
+  /* margin-right: 80px; */
+  /* position: fixed; */
+  /* right:0px; */
 }
 #next{
-  margin-right: 45px;
+  /* margin-right: 45px; */
 }
 #next::before,
 #prev::before {
@@ -114,49 +116,49 @@
 
 
 @media screen and (max-width:980px){
-  .close{
+  #close{
     position: fixed;
     top: 75px;
-    right:5%;
+    right:0%;
   }
   #next {
-    position: fixed;
-    top: 106px;
-    right:5%;
-    margin: 8px;
+   position: fixed;
+   top: 106px;
+   right:0%;
+   margin: 8px;
   }
   #prev {
-    position: fixed;
-    top: 145px;
-    right:5%;
-    margin: 8px;
+   position: fixed;
+   top: 145px;
+   right:0%;
+   margin: 8px;
   }
 }
 
 @media screen and (min-width:980px){
-  .close{
+  #close{
     position: fixed;
     top: 75px;
-    right:5%;
+    right:0%;
   }
   #prev{
-    position: fixed;
-    top: 75px;
-    right:5%;
-    margin-right: 80px;
-  }
-  #next{
-    position: fixed;
-    top: 75px;
-    right:5%;
-    margin-right: 45px;
-  }
+     position: fixed;
+     top: 75px;
+     right:0%;
+     margin-right: 80px;
+   }
+   #next{
+     position: fixed;
+     top: 75px;
+     right:0%;
+     margin-right: 45px;
+   }
 
-  .close:hover {
+  #close:hover {
     background: #4f4f4f;
   }
-  .close:hover::before,
-  .close:hover::after {
+  #close:hover::before,
+  #close:hover::after {
   	background: #ffffff;
   }
   #prev:hover::before,
@@ -200,9 +202,12 @@
   display: flex;
   flex-wrap: wrap;
 }
+.works_contents div {
+  margin-bottom: 10px;
+}
 .works_contents a {
-  color: #666;
-  /* text-decoration:underline; */
+  color: #888;
+  text-decoration:underline;
 }
 .works_contents a:hover {
   opacity:0.4;
@@ -212,10 +217,7 @@
   font-weight: bold;
   color: #000;
 }
-.works_contents h3 {
-  margin-top: 0px;
-  font-size: 105%;
-}
+
 @media screen and (max-width:1000px){
   .works_contents .block_r {
     width: 600px;
@@ -231,6 +233,7 @@
 }
 .works_contents .block_r h3 {
   color:#4f4f4f;
+  font-size: 105%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -268,4 +271,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.works_contents ul {
+  list-style: none;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
 }

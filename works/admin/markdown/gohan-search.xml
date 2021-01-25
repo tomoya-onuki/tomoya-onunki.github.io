@@ -1,0 +1,15 @@
+<title>ごっっはにゃさん</title>
+<info>2019.8 / WebApplication</info>
+<prev>color-selection</prev>
+<next>cube</next>
+<img0>../img/gohan/home.png</img0>
+<img1>../img/gohan/content.png</img1>
+
+<right>
+[https://tapiome.herokuapp.com](https://tapiome.herokuapp.com)
+
+筑波大学情報学群の講義 enPitにて制作したアプリケーション。
+つくば市内の飲食店の情報をまとめたwebサービス。ユーザーの投稿によって休業情報を収集することができる。
+
+制作：新貝力哉 / 田之頭吾音 / 小貫智弥 / 末吉里帆 / 安斎彩季 / 古川栞
+</right>
