@@ -1,0 +1,11 @@
+<title>COLOR SELECTION</title>
+<info>2019.10 / WebApplication</info>
+<prev>task-management-tool</prev>
+<next>gohan-search</next>
+<img0>../img/color_selection/color_selection_web_ver3.gif</img0>
+
+<right>
+[https://color-selection.herokuapp.com](https://color-selection.herokuapp.com)
+
+カラーデザインの支援ツール。色相を選び、明度と彩度を調整することで統一感のあるカラーデザインが可能となる。
+</right>
