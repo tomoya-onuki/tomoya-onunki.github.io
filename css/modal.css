@@ -202,6 +202,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.works_contents div {
+  margin-bottom: 10px;
+}
 .works_contents a {
   color: #666;
   /* text-decoration:underline; */
@@ -214,10 +217,7 @@
   font-weight: bold;
   color: #000;
 }
-.works_contents h3 {
-  margin-top: 0px;
-  font-size: 105%;
-}
+
 @media screen and (max-width:1000px){
   .works_contents .block_r {
     width: 600px;
@@ -233,8 +233,9 @@
 }
 .works_contents .block_r h3 {
   color:#4f4f4f;
+  font-size: 105%;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .works_contents .block_l {
