@@ -28,11 +28,11 @@ info{
   color:#4f4f4f;
   display: inline-block;
 }
-.contents{
+.contents_box{
   margin-bottom: 20px;
   padding-bottom: 5px;
 }
-.contents:hover{
+.contents_box:hover{
   background-color: #efefef;
   opacity: 0.9;
 }
