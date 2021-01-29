@@ -68,10 +68,10 @@
 }
 .profile .head {
   float:left;
-  width:85px;
+  width:90px;
 }
 .profile .item {
-  margin-left:85px
+  margin-left:90px
 }
 .profile word-wrap {
   word-wrap: keep-all;
