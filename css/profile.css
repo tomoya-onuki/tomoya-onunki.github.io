@@ -1,0 +1,108 @@
+
+@media screen and (min-width:620px){
+  .profile {
+    color: #666;
+    width: calc(620*0.9px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+  }
+}
+@media screen and (max-width:620px){
+  .profile {
+    color: #666;
+    width:100%;
+    margin-left: 0%;
+  }
+}
+
+.profile a{
+  color: #666;
+}
+.profile a:hover{
+  opacity:0.4;
+}
+.profile img{
+		width:100%;
+    /* height:400px; */
+		margin-right:35px;
+		padding-bottom:20px;
+    /* object-fit: cover; */
+    /* object-position: top left; */
+}
+.profile p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.profile h1 {
+  font-size: 130%;
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #000;
+  font-weight: bold;
+  margin: 0 0 0 0;
+}
+.profile h2 {
+  font-size: 100%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+  /* color: #666; font-weight:bold; */
+  color: #000; font-weight:normal;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.profile ol {
+  margin-left:-20px;
+}
+.profile ol li a div{
+  margin-left:5px;
+}
+.profile ol li:hover{
+  background: #eee;
+}
+
+
+.profile .block {
+  margin-bottom: 30px;
+  margin-right:16px;
+  width:100%;
+}
+.profile .head {
+  float:left;
+  width:85px;
+}
+.profile .item {
+  margin-left:85px
+}
+.profile word-wrap {
+  word-wrap: keep-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+.profile .border{
+  width: 20px;
+  text-align:left;
+  margin-left:20px;
+  color: #aaa;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile .sub-item{
+  color: #bbb;
+}
+
+.lang_menu {
+  position:absolute;
+  right:0;
+  top:80px;
+}
+.lang_menu p{
+
+}
+.lang_menu a{
+  color: #4f4f4f;
+}
+.lang_menu a:hover {
+  opacity:0.4;
+}

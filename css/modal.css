@@ -73,14 +73,7 @@
     opacity: 0.8;
     z-index: 6;
 }
-#prev{
-  /* margin-right: 80px; */
-  /* position: fixed; */
-  /* right:0px; */
-}
-#next{
-  /* margin-right: 45px; */
-}
+
 #next::before,
 #prev::before {
     display: block;

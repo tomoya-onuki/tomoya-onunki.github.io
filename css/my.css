@@ -23,7 +23,7 @@ html{
 	margin-right: 3px;
 }
 
-.profile {
+/* .profile {
   display: flex;
   flex-wrap: wrap;
   color: #666;
@@ -54,7 +54,7 @@ html{
 .profile h2 {
   font-size: 100%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
-  /* color: #666; font-weight:bold; */
+
   color: #000; font-weight:normal;
   display: inline-block;
   margin-top: 0px;
@@ -88,14 +88,11 @@ html{
 .profile .head {
   float:left;
   width:95px;
-  /* color:#bbb; */
 }
 .profile .item {
   margin-left:95px
 }
 .profile .word {
-  /* word-wrap: keep-all; */
-  /* overflow-wrap: break-word; */
   display: inline-block;
 }
 .profile .border{
@@ -121,7 +118,7 @@ html{
 }
 .lang_menu a:hover {
   opacity:0.4;
-}
+} */
 
 
 
