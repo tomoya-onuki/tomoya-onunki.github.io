@@ -202,7 +202,8 @@ if len(args) == 2:
 
         token = inFile.split('/')
         contentsName = token[len(token)-1].replace('.xml', '')
-        print('In : '+inFile+',  Out: '+outFile)
+        print('Out: '+outFile)
+        # print('In : '+inFile+',  Out: '+outFile)
 
         # 入力ファイルの内容を文字列として取得
         inFp = open(inFile,'r')
