@@ -110,18 +110,18 @@
 
 @media screen and (max-width:980px){
   #close{
-    position: fixed;
+    position: absolute;
     top: 75px;
     right:0%;
   }
   #next {
-   position: fixed;
+   position: absolute;
    top: 106px;
    right:0%;
    margin: 8px;
   }
   #prev {
-   position: fixed;
+   position: absolute;
    top: 145px;
    right:0%;
    margin: 8px;
@@ -130,18 +130,18 @@
 
 @media screen and (min-width:980px){
   #close{
-    position: fixed;
+    position: absolute;
     top: 75px;
     right:0%;
   }
   #prev{
-     position: fixed;
+     position: absolute;
      top: 75px;
      right:0%;
      margin-right: 80px;
    }
    #next{
-     position: fixed;
+     position: absolute;
      top: 75px;
      right:0%;
      margin-right: 45px;
@@ -184,7 +184,6 @@
 }
 #main_contents .info{
   color: #111;
-  font-family:'Helvetica Neue', Arial, sans-serif;
   font-weight:bold;
   font-size: 100%;
   margin-bottom: 5px;
@@ -194,6 +193,7 @@
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 }
 .works_contents div {
   margin-bottom: 10px;

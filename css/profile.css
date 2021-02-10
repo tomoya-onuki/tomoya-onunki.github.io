@@ -6,6 +6,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%,0%);
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   }
 }
 @media screen and (max-width:620px){
@@ -13,6 +14,7 @@
     color: #666;
     width:100%;
     margin-left: 0%;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   }
 }
 
