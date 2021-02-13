@@ -6,4 +6,7 @@
 <right>
 卒業研究で開発した可視化ツール。海鳥の行動データを可視化することで比較分析の支援を目的とする。
 自由度の高いSmall Multiplesを用いた視覚表現と、その編集が可能なUIを持つ。
+
+###Development
+Java, JavaFX
 </right>
