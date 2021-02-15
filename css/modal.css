@@ -187,13 +187,13 @@
   font-weight:bold;
   font-size: 100%;
   margin-bottom: 5px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 }
 
 .works_contents {
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 }
 .works_contents div {
   margin-bottom: 10px;
@@ -206,7 +206,6 @@
   opacity:0.4;
 }
 .works_contents h2 {
-  font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   font-weight: bold;
   color: #000;
 }
