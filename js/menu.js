@@ -6,12 +6,7 @@ $(function(){
 
   // リサイズした時の処理
   $(window).resize(function() {
-      // mobile -> pc
-      if ( $(this).width() > 980 ) {
-        $('.pc > .head_menu').fadeIn();
-
-      // pc -> mobile
-      } else if ( $(this).width() < 980 ) {
+      if ( $('.pc > .head_menu').css('display') !== 'none' ) {
         $('.mobile > .head_menu').css('display', 'none');
         $('#hamb_menu').removeClass('active');
       }
