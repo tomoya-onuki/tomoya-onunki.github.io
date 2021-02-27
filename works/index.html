@@ -12,21 +12,21 @@
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script type="text/javascript" src="../js/header.js"></script>
-<script type="text/javascript" src="../js/session.js"></script>
 </head>
 
 
 <body>
     <script type="text/javascript">
-    printHeader('./','../about');
+    printHeader('./','../about', '../reel');
     </script>
     <script type="text/javascript" src="../js/menu.js"></script>
 
     <div id="main">
+
       <h1>MOVIES</h1>
       <div class="wrap">
 
-        <div class="contents flex_box movie">
+        <div id="life-is-coming-back" class="contents flex_box movie">
           <a href="./life-is-coming-back">
             <img src="../img/index2/life-is-coming-back.png">
             <div class="mask">
@@ -35,7 +35,7 @@
           </a>
         </div>
 
-        <div class="contents flex_box movie">
+        <div id="important-things" class="contents flex_box movie">
           <a href="./important-things">
             <img src="../img/index2/important_thing.png">
             <div class="mask">
@@ -44,7 +44,7 @@
           </a>
         </div>
 
-        <div class="contents flex_box movie">
+        <div id="who" class="contents flex_box movie">
           <a href="./who">
             <img src="../img/index2/who.png">
             <div class="mask">
@@ -53,7 +53,7 @@
           </a>
         </div>
 
-        <div class="contents flex_box movie">
+        <div id="rush" class="contents flex_box movie">
           <a href="./rush">
             <img src="../img/index2/rush2.png">
             <div class="mask">
@@ -62,7 +62,7 @@
           </a>
         </div>
 
-        <div class="contents flex_box movie">
+        <div id="dance-ut-teaser" class="contents flex_box movie">
           <a href="./dance-ut-teaser">
             <img src="../img/index2/dance-ut-teaser.png">
             <div class="mask">
@@ -72,7 +72,7 @@
         </div>
 
 
-        <div class="contents flex_box movie">
+        <div id="anzenkaihatsu-making" class="contents flex_box movie">
           <a href="./anzenkaihatsu-making">
             <img src="../img/index2/anzenkaihatsu.png">
             <div class="mask">
@@ -81,25 +81,9 @@
           </a>
         </div>
 
-        <!-- <div class="contents flex_box">
-          <a href="./performing-arts-tamago">
-            <img src="../img/index2/tamago.png">
-            <div class="mask">
-              <div class="caption">「つくば駅→筑波大学　4種のダンス共に」<br>Performing Arts Tamago Vol.22</div>
-            </div>
-          </a>
-        </div> -->
 
-        <!-- <div class="contents flex_box movie">
-          <a href="./dancing-inside">
-            <img src="../img/index2/dancing_inside.png">
-            <div class="mask">
-              <div class="caption">うちで踊ろう</div>
-            </div>
-          </a>
-        </div> -->
 
-        <div class="contents flex_box movie">
+        <div id="mawase-making" class="contents flex_box movie">
           <a href="./mawase-making">
             <img src="../img/index2/mawase.png">
             <div class="mask">
@@ -109,8 +93,8 @@
         </div>
 
 
-        <div class="contents flex_box movie">
-          <a href="./express" class=" js-modal-open " data-target="express">
+        <div id="express" class="contents flex_box movie">
+          <a href="./express">
             <img src="../img/index2/express.png">
             <div class="mask">
               <div class="caption">EXPRESS 筑波大学ダンス部</div>
@@ -121,8 +105,8 @@
 
 
 
-        <div class="contents flex_box movie">
-          <a href="./yuragi" class=" js-modal-open " data-target="yuragi">
+        <div id="yuragi" class="contents flex_box movie">
+          <a href="./yuragi">
             <img src="../img/index2/yuragi.png">
             <div class="mask">
               <div class="caption">雙峰祭前夜祭パフォーマンスショー「ゆらぎ」<br>ダイジェスト版</div>
@@ -132,8 +116,8 @@
 
 
 
-        <div class="contents flex_box movie">
-          <a href="./tparty-launch" class=" js-modal-open " data-target="launch">
+        <div id="tparty-launch" class="contents flex_box movie">
+          <a href="./tparty-launch">
             <img src="../img/index2/launch.png">
             <div class="mask">
               <div class="caption">Tparty / Launch Party / <br>ダイジェスト映像 Digest Video</div>
@@ -142,7 +126,7 @@
         </div>
 
 
-        <div class="contents flex_box movie">
+        <div id="monoshiritori-making" class="contents flex_box movie">
           <a href="./monoshiritori-making">
             <img src="../img/index2/monoshiritori.png">
             <div class="mask">
@@ -161,8 +145,8 @@
       <h1 class="header_margin">MEDIA ARTS</h1>
       <div class="wrap">
 
-        <div class="contents flex_box art">
-          <a href="./in-the-black-and-eternal" data-target="black">
+        <div id="in-the-black-and-eternal" class="contents flex_box art">
+          <a href="./in-the-black-and-eternal">
             <img src="../img/index2/black.png">
             <div class="mask">
               <div class="caption">暗転と永遠の中で。</div>
@@ -171,8 +155,8 @@
         </div>
 
 
-        <div class="contents flex_box art">
-          <a href="./lost-anima" data-target="lost_anima">
+        <div id="lost-anima" class="contents flex_box art">
+          <a href="./lost-anima">
             <img src="../img/index2/lostanima.png">
             <div class="mask">
               <div class="caption">アニマの消失</div>
@@ -181,8 +165,8 @@
         </div>
 
 
-        <div class="contents flex_box art">
-          <a href="./shape-of-monologue-aggregate" data-target="aggregation">
+        <div id="shape-of-monologue-aggregate" class="contents flex_box art">
+          <a href="./shape-of-monologue-aggregate">
             <img src="../img/index2/aggregation.png">
             <div class="mask">
               <div class="caption">ひとりごとのカタチ/ 集合体について</div>
@@ -192,8 +176,8 @@
 
 
 
-        <div class="contents flex_box art">
-          <a href="./somewhere-far-away" data-target="somewhere">
+        <div id="somewhere-far-away" class="contents flex_box art">
+          <a href="./somewhere-far-away">
             <img src="../img/index2/somewhere.png">
             <div class="mask">
               <div class="caption">どこか遠くの場所で</div>
@@ -202,8 +186,8 @@
         </div>
 
 
-        <div class="contents flex_box art">
-          <a href="./kalfos-box" data-target="kalfosbox">
+        <div id="kalfos-box" class="contents flex_box art">
+          <a href="./kalfos-box">
             <img src="../img/index2/kalfosbox.png">
             <div class="mask">
               <div class="caption">Kalfos Box</div>
@@ -213,8 +197,8 @@
 
 
 
-        <div class="contents flex_box art">
-          <a href="./silence" data-target="silence">
+        <div id="silence" class="contents flex_box art">
+          <a href="./silence">
             <img src="../img/index2/silence.png">
             <div class="mask">
               <div class="caption">沈黙</div>
@@ -229,9 +213,11 @@
         <div class="contents flex_box"></div>
       </div>
 
+
       <h1 class="header_margin">APPLICATIONS</h1>
       <div class="wrap">
-        <div class="contents flex_box app">
+
+        <div id="umidori" class="contents flex_box app">
           <a href="./umidori">
             <img src="../img/index2/umidori.png">
             <div class="mask">
@@ -241,7 +227,7 @@
         </div>
 
 
-        <div class="contents flex_box app">
+        <div id="task-management-tool" class="contents flex_box app">
           <a href="./task-management-tool">
             <img src="../img/index2/task-management-tool.png">
             <div class="mask">
@@ -252,7 +238,7 @@
 
 
 
-        <div class="contents flex_box app">
+        <div id="color-selection" class="contents flex_box app">
           <a href="./color-selection">
             <img src="../img/index2/color-selection.png">
             <div class="mask">
@@ -262,7 +248,7 @@
         </div>
 
 
-        <div class="contents flex_box app">
+        <div id="gohan-search" class="contents flex_box app">
           <a href="./gohan-search">
             <img src="../img/index2/gohan-search.png">
             <div class="mask">
@@ -273,7 +259,7 @@
 
 
 
-        <div class="contents flex_box app">
+        <div id="cube" class="contents flex_box app">
           <a href="./cube">
             <img src="../img/index2/cube.png">
             <div class="mask">
@@ -285,7 +271,7 @@
 
 
 
-        <div class="contents flex_box app">
+        <div id="fruits-cut" class="contents flex_box app">
           <a href="./fruits-cut">
             <img src="../img/index2/fruits-cut.png">
             <div class="mask">
@@ -294,7 +280,7 @@
           </a>
         </div>
 
-        <div class="contents flex_box app">
+        <div id="megeilt-tweet-system" class="contents flex_box app">
           <a href="./megeilt-tweet-system">
             <img src="../img/index2/megeilt-tweet-system.png">
             <div class="mask">

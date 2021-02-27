@@ -143,6 +143,8 @@ def generateLinks(tempStr, contentsName, cTree):
         str = '<a id="prev" href="'+prev+'.html"></a>'
         tempStr = tempStr.replace('<!-- prev -->', str)
 
+    str = '<a id="close" href="https://tomoya-onuki.github.io/works#'+contentsName+'"></a>'
+    tempStr = tempStr.replace('<!-- close -->', str)
     return tempStr
 
 
