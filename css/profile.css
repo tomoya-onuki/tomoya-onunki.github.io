@@ -32,9 +32,9 @@
     /* object-fit: cover; */
     /* object-position: top left; */
 }
-.profile p {
-  margin-top: 5px;
-  margin-bottom: 5px;
+.profile .bullet {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .profile h1 {
   font-size: 130%;
@@ -50,13 +50,17 @@
   color: #000; font-weight:normal;
   display: inline-block;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 3px;
 }
 .profile ol {
   margin-left:-20px;
+  margin-top: 0;
 }
-.profile ol li a div{
+.profile ol li div {
   margin-left:5px;
+}
+.profile ol li {
+  margin: 0px;
 }
 .profile ol li:hover{
   background: #eee;
@@ -92,6 +96,7 @@
 
 .profile .sub-item{
   color: #bbb;
+  /* padding-right:10px; */
 }
 
 .lang_menu {
