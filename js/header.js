@@ -1,4 +1,4 @@
-function printHeader(worksUrl, aboutUrl) {
+function printHeader(worksUrl, aboutUrl, reelUrl) {
   var header_str = `
   <div class="header2 head_font1">
     <a id="top" class="head_logo" href="https://tomoya-onuki.github.io">TOMOYAONUKI.</a>
@@ -15,7 +15,7 @@ function printHeader(worksUrl, aboutUrl) {
         <div><a href="https://tomoya-onuki.github.io">TOP</a></div>
         <div><a href="`+worksUrl+`">WORKS</a></div>
         <div><a href="`+aboutUrl+`">ABOUT</a></div>
-        <div><a href="http://vimeo.com/450021560" target="_blank">SHOWREEL</a></div>
+        <div><a href="`+reelUrl+`">SHOWREEL</a></div>
       </div>
     </div>
 
