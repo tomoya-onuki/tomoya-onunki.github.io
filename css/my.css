@@ -29,14 +29,37 @@ a {
 }
 p a,
 h2 a,
+.works_menu a,
+.reel_menu a,
 h1 a {
   color: #000;
 }
 .head_menu a:hover,
 h2 a:hover,
 h1 a:hover,
+.works_menu a:hover,
+.reel_menu a:hover,
 p a:hover {
   opacity:0.4;
+}
+
+
+
+.works_menu {
+  position: fixed;
+  left: 5%;
+  top: 72px;
+  font-size: 120%;
+  z-index: 5;
+  color: #000;
+}
+.reel_menu {
+  position: fixed;
+  right: 5%;
+  top: 72px;
+  font-size: 120%;
+  z-index: 5;
+  color: #000;
 }
 
 
