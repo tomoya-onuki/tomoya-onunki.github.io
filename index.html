@@ -8,20 +8,22 @@
  	<link rel="stylesheet" type="text/css" href="./css/flex_gif.css">
  	<link rel="stylesheet" type="text/css" href="./css/main.css">
  	<link rel="stylesheet" type="text/css" href="./css/modal.css">
+  <script type="text/javascript" src="./js/footer.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-	<script src="./js/modal.js"></script>
-  <script type="text/javascript" src="./js/touch_nonhover.js"></script>
   <style>
-    .triangle {
+    .reel_caption {
+      position:fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      /* z-index: 5; */
+    }
+    .reel_caption .triangle {
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 15px 0 15px 26.0px;
       border-color: transparent transparent transparent #ffffff;
-      position:fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
     }
   </style>
  </head>
@@ -33,7 +35,7 @@
     <div class="head_menu">
       <div><a href="./works">- WORKS</a></div>
       <div><a href="./about">- ABOUT</a></div>
-      <div><a href="http://vimeo.com/450021560" target="_blank">- SHOWREEL</a></div>
+      <div><a href="./reel">- SHOWREEL</a></div>
     </div>
   </div>
 
@@ -42,9 +44,10 @@
       <!-- <a class="reel_text" href="http://vimeo.com/450021560" target="_blank">
         SHOWREEL >>
       </a> -->
-    <a href="http://vimeo.com/450021560" target="_blank"><div class="triangle"></div></a>
+    <div class="triangle"></div>
     <video class="reel_bg" loop autoplay muted playsinline>
-      <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel_index.mp4" type="video/mp4">
+      <source src="./mov/reel2020_1080p.mp4" type="video/mp4">
+      <!-- <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel_index.mp4" type="video/mp4"> -->
       <p>動画を再生できません</p>
     </video>
   </div>
@@ -53,7 +56,7 @@
  		<!-- <hr> -->
   <div class="footer">
     <div class="fix">
-  			<script type="text/javascript" src="./js/footer.js"></script>
+        <script type="text/javascript"> printFooter(); </script>
     </div>
   </div>
 

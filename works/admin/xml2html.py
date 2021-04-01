@@ -111,7 +111,9 @@ def generateHTML(tempStr, xmlList):
 
         # 左側コンテンツ
         if re.fullmatch(tag, 'mov'):
-            leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + value + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+            token = value.split('/')
+            url = 'https://www.youtube.com/embed/' + token[-1]
+            leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
         if re.search('img\d', tag):
             leftContents += '<img src="' + value + '">\n'
         if re.search('imgr\d', tag):

@@ -5,7 +5,9 @@
 <right>
 [https://color-selection.herokuapp.com](https://color-selection.herokuapp.com)
 
-カラーデザインの支援ツール。色相を選び、明度と彩度を調整することで統一感のあるカラーデザインが可能となる。
+
+非デザイナーのカラーデザインを支援することを目的としたツール。色相を選び、明度と彩度を調整することで統一感のあるカラーデザインが可能となる。
+デザインの基本はセンスではない。デザインの方法論が市民権を得る未来を目指した。
 
 ###Development
 PHP, PostgreSQL, JavaScript, jQuery
