@@ -94,6 +94,8 @@ def generateHTML(tempStr, xmlList):
     # 左側のコンテンツの分析と整形
     leftContents = ''
     rightContents = ''
+    
+    # タグの処理
     for tag, value in xmlList.items():
         value = value.strip()
         # TitleとInfoのとき
@@ -121,11 +123,14 @@ def generateHTML(tempStr, xmlList):
         if re.search('imgl\d', tag):
             leftContents += '<img class="half_img_l" src="' + value + '">\n'
 
+    # 箇条書きリストの
+    if 
 
     # コンテンツの整形
     leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
     contents = leftContents + '\n' + rightContents
-    tempStr = tempStr.replace('<!-- contents -->', md.convert(contents))
+    htmlContents = md.convert(contents)
+    tempStr = tempStr.replace('<!-- contents -->', htmlContents)
     tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
 
     return tempStr
