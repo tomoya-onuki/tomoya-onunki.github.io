@@ -123,8 +123,6 @@ def generateHTML(tempStr, xmlList):
         if re.search('imgl\d', tag):
             leftContents += '<img class="half_img_l" src="' + value + '">\n'
 
-    # 箇条書きリストの
-    if 
 
     # コンテンツの整形
     leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'

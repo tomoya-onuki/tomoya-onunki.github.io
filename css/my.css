@@ -142,6 +142,24 @@ p {
   margin-bottom: 10px;
 }
 
+.header1 .featured_works {
+  position:absolute;
+  left:5%;
+  top: 250px;
+}
+.header1 .featured_works div ,
+.header1 .featured_works div a {
+  color:#fff;
+  font-size: 85%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* font-weight:300; */
+  margin-top: 5px;  
+  font-style: italic;
+}
+.header1 .featured_works div a:hover {
+  opacity: 0.4;
+}
+
 .header2{
   height: 65px;
   width: 100%;
