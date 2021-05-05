@@ -4,6 +4,7 @@ import sys
 import re
 import json
 import html
+from os import path
 from html.parser import HTMLParser
 
 ###############
@@ -118,8 +119,8 @@ def generateHTML(tempStr, xmlList):
                 token = value.split('/')
                 url = 'https://www.youtube.com/embed/' + token[-1]
                 leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
-            elif :
-                left +=  '<div class="mov">\n'+value+'</div>'
+            else:
+                leftContents +=  '<div class="mov">\n'+value+'</div>'
         elif re.search('img\d', tag):
             leftContents += '<img src="' + value + '">\n'
         elif re.search('imgr\d', tag):
@@ -169,14 +170,23 @@ class contentsTree(object):
         super(contentsTree, self).__init__()
 
     def fileOpen(self):
-        fp = open('contentsTree.csv','r')
+        # fp = open('contentsTree.csv','r')
+        # buf = ''
+        # for line in fp:
+        #     buf += line
+        # fp.close()
+        # buf = buf.replace('\n', '')
+        # self.contentsList = buf.split(',')
+        # print(self.contentsList)
+        contentsTree = path.join(path.dirname(__file__), 'contentsTree.csv')
         buf = ''
-        for line in fp:
+        with open(contentsTree, 'r') as fp:
+            lines = fp.read().splitlines()
+        for line in lines:
             buf += line
-        fp.close()
         buf = buf.replace('\n', '')
         self.contentsList = buf.split(',')
-        # print(self.contentsList)
+        print(self.contentsList)
 
 
     def prevContentsName(self, contentsName):
@@ -229,9 +239,11 @@ if len(args) == 2:
         inFp.close()
 
         # テンプレートファイルを取得
-        tempFp = open('./template.html','r')
+        # tempFp = open('./template.html','r')
+        with open(path.join(path.dirname(__file__), 'template.html'), 'r') as tempFp:
+            lines = tempFp.read().splitlines()
         tempStr = ''
-        for line in tempFp:
+        for line in lines:
             tempStr += line
         tempFp.close()
 
