@@ -186,7 +186,7 @@ class contentsTree(object):
             buf += line
         buf = buf.replace('\n', '')
         self.contentsList = buf.split(',')
-        print(self.contentsList)
+        # print(self.contentsList)
 
 
     def prevContentsName(self, contentsName):
