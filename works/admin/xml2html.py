@@ -97,6 +97,7 @@ def generateHTML(tempStr, xmlList):
     
     # タグの処理
     for tag, value in xmlList.items():
+        # print(xmlList)
         value = value.strip()
         # TitleとInfoのとき
         if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
@@ -108,26 +109,33 @@ def generateHTML(tempStr, xmlList):
         #     tempStr = tempStr.replace('<!-- '+tag+' -->', str)
 
         # 右側コンテンツ
-        if re.fullmatch(tag, 'right'):
+        elif re.fullmatch(tag, 'right'):
             rightContents = '<div class="block_r">' + md.convert(value) + '</div>'
 
         # 左側コンテンツ
-        if re.fullmatch(tag, 'mov'):
-            token = value.split('/')
-            url = 'https://www.youtube.com/embed/' + token[-1]
-            leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
-        if re.search('img\d', tag):
+        elif re.fullmatch(tag, 'mov'):
+            if re.search('youtube', value):
+                token = value.split('/')
+                url = 'https://www.youtube.com/embed/' + token[-1]
+                leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+            elif :
+                left +=  '<div class="mov">\n'+value+'</div>'
+        elif re.search('img\d', tag):
             leftContents += '<img src="' + value + '">\n'
-        if re.search('imgr\d', tag):
+        elif re.search('imgr\d', tag):
             leftContents += '<img class="half_img_r" src="' + value + '">\n'
-        if re.search('imgl\d', tag):
+        elif re.search('imgl\d', tag):
             leftContents += '<img class="half_img_l" src="' + value + '">\n'
+        elif re.fullmatch(tag, 'left'):
+            leftContents += md.convert(value)
+            # leftContents += '<div>'+ value +'</div>\n'
 
 
     # コンテンツの整形
     leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
     contents = leftContents + '\n' + rightContents
-    htmlContents = md.convert(contents)
+    htmlContents = contents
+    # htmlContents = md.convert(contents)
     tempStr = tempStr.replace('<!-- contents -->', htmlContents)
     tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
 
