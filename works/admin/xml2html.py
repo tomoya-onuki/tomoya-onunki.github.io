@@ -115,7 +115,7 @@ def generateHTML(tempStr, xmlList):
 
         # 左側コンテンツ
         elif re.fullmatch(tag, 'mov'):
-            if re.search('youtube', value):
+            if re.search('youtu', value):
                 token = value.split('/')
                 url = 'https://www.youtube.com/embed/' + token[-1]
                 leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
