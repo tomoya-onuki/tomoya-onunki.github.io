@@ -6,6 +6,7 @@ import json
 import html
 from os import path
 from html.parser import HTMLParser
+import xml.etree.ElementTree as et
 
 ###############
 ## HTML解析
@@ -91,53 +92,59 @@ def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブ
 ###############
 ## メインの処理
 ###############
-def generateHTML(tempStr, xmlList):
+def generateHTML(tempStr, file):
+    # xml解析
+    tree = et.parse(file)
+    root = tree.getroot()
+
+    print(root.tag,root.attrib)
+
     # 左側のコンテンツの分析と整形
     leftContents = ''
     rightContents = ''
     
     # タグの処理
-    for tag, value in xmlList.items():
-        value = value.strip()
-        # TitleとInfoのとき
-        if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
-            tempStr = tempStr.replace('<!-- '+tag+' -->', value)
+    # for tag, value in xmlList.items():
+    #     value = value.strip()
+    #     # TitleとInfoのとき
+    #     if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
+    #         tempStr = tempStr.replace('<!-- '+tag+' -->', value)
 
-        # リンクのとき
-        # if re.fullmatch(tag, 'prev') or re.fullmatch(tag, 'next'):
-        #     str = '<a id="'+tag+'" href="'+value+'.html"></a>'
-        #     tempStr = tempStr.replace('<!-- '+tag+' -->', str)
+    #     # リンクのとき
+    #     # if re.fullmatch(tag, 'prev') or re.fullmatch(tag, 'next'):
+    #     #     str = '<a id="'+tag+'" href="'+value+'.html"></a>'
+    #     #     tempStr = tempStr.replace('<!-- '+tag+' -->', str)
 
-        # 右側コンテンツ
-        elif re.fullmatch(tag, 'right'):
-            rightContents = '<div class="block_r">' + md.convert(value) + '</div>'
+    #     # 右側コンテンツ
+    #     elif re.fullmatch(tag, 'right'):
+    #         rightContents = '<div class="block_r">' + md.convert(value) + '</div>'
 
-        # 左側コンテンツ
-        elif re.fullmatch(tag, 'mov'):
-            if re.search('youtu', value):
-                token = value.split('/')
-                url = 'https://www.youtube.com/embed/' + token[-1]
-                leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
-            else:
-                leftContents +=  '<div class="mov">\n'+value+'</div>'
-        elif re.search('img\d', tag):
-            leftContents += '<img src="' + value + '">\n'
-        elif re.search('imgr\d', tag):
-            leftContents += '<img class="half_img_r" src="' + value + '">\n'
-        elif re.search('imgl\d', tag):
-            leftContents += '<img class="half_img_l" src="' + value + '">\n'
-        elif re.fullmatch(tag, 'left'):
-            leftContents += md.convert(value)
-            # leftContents += '<div>'+ value +'</div>\n'
+    #     # 左側コンテンツ
+    #     elif re.fullmatch(tag, 'mov'):
+    #         if re.search('youtu', value):
+    #             token = value.split('/')
+    #             url = 'https://www.youtube.com/embed/' + token[-1]
+    #             leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+    #         else:
+    #             leftContents +=  '<div class="mov">\n'+value+'</div>'
+    #     elif re.search('img\d', tag):
+    #         leftContents += '<img src="' + value + '">\n'
+    #     elif re.search('imgr\d', tag):
+    #         leftContents += '<img class="half_img_r" src="' + value + '">\n'
+    #     elif re.search('imgl\d', tag):
+    #         leftContents += '<img class="half_img_l" src="' + value + '">\n'
+    #     elif re.fullmatch(tag, 'left'):
+    #         leftContents += md.convert(value)
+    #         # leftContents += '<div>'+ value +'</div>\n'
 
 
-    # コンテンツの整形
-    leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
-    contents = leftContents + '\n' + rightContents
-    htmlContents = contents
-    # htmlContents = md.convert(contents)
-    tempStr = tempStr.replace('<!-- contents -->', htmlContents)
-    tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
+    # # コンテンツの整形
+    # leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
+    # contents = leftContents + '\n' + rightContents
+    # htmlContents = contents
+    # # htmlContents = md.convert(contents)
+    # tempStr = tempStr.replace('<!-- contents -->', htmlContents)
+    # tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
 
     return tempStr
 
@@ -230,15 +237,14 @@ if len(args) == 2:
         # print('In : '+inFile+',  Out: '+outFile)
 
         # 入力ファイルの内容を文字列として取得
-        inFp = open(inFile,'r')
-        inStr = ''
-        mdText = {}
-        for line in inFp:
-            inStr += line
-        inFp.close()
+        # inFp = open(inFile,'r')
+        # inStr = ''
+        # mdText = {}
+        # for line in inFp:
+        #     inStr += line
+        # inFp.close()
 
         # テンプレートファイルを取得
-        # tempFp = open('./template.html','r')
         with open(path.join(path.dirname(__file__), 'template.html'), 'r') as tempFp:
             lines = tempFp.read().splitlines()
         tempStr = ''
@@ -247,13 +253,13 @@ if len(args) == 2:
         tempFp.close()
 
         # XML解析
-        parser = xmlParser()
-        parser.feed(inStr)
-        xmlList = parser.getXmlList()
+        # parser = xmlParser()
+        # parser.feed(inStr)
+        # xmlList = parser.getXmlList()
 
         # XML to HTML
         # print(xmlList)
-        tempStr = generateHTML(tempStr, xmlList)
+        tempStr = generateHTML(tempStr, inFile)
 
         # コンテンツのリンクを生成
         tempStr = generateLinks(tempStr, contentsName, cTree)
