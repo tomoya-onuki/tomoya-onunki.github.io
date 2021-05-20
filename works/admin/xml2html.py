@@ -222,7 +222,7 @@ if len(args) == 2:
     cTree.fileOpen()
 
     for inFile in glob.glob(dirname+'*.xml'):
-        outFile = inFile.replace('.xml', '.html').replace('markdown', '..') # 入力ファイル名を出力ファイル名に変換
+        outFile = inFile.replace('.xml', '.html').replace('xml', '..') # 入力ファイル名を出力ファイル名に変換
 
         token = inFile.split('/')
         contentsName = token[len(token)-1].replace('.xml', '')
