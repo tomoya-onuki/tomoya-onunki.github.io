@@ -4,7 +4,7 @@ function printHeader(worksUrl, aboutUrl, reelUrl) {
     <a id="top" class="head_logo" href="https://tomoya-onuki.github.io">TOMOYAONUKI.</a>
     <div class="pc">
       <span class="head_menu">
-          <a href="`+worksUrl+`">WORKS</a> / <a href="`+aboutUrl+`">ABOUT</a>
+          <a href="`+worksUrl+`">WORKS</a> / <a href="`+aboutUrl+`">PROFILE</a>
       </span>
     </div>
 
