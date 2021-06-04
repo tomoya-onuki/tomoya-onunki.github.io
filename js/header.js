@@ -14,7 +14,7 @@ function printHeader(worksUrl, aboutUrl, reelUrl) {
         <hr>
         <div><a href="https://tomoya-onuki.github.io">TOP</a></div>
         <div><a href="`+worksUrl+`">WORKS</a></div>
-        <div><a href="`+aboutUrl+`">ABOUT</a></div>
+        <div><a href="`+aboutUrl+`">PROFILE</a></div>
         <div><a href="`+reelUrl+`">SHOWREEL</a></div>
       </div>
     </div>
