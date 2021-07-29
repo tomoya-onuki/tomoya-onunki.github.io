@@ -27,10 +27,13 @@ html{
 a {
 	text-decoration: none;
 }
+.works_menu a{
+  color: #000;
+  font-weight:900;
+}
+
 p a,
 h2 a,
-.works_menu a,
-.reel_menu a,
 h1 a {
   color: #000;
 }

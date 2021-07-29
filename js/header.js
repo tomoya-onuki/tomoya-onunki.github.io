@@ -1,7 +1,7 @@
 function printHeader(worksUrl, aboutUrl, reelUrl) {
   var header_str = `
   <div class="header2 head_font1">
-    <a id="top" class="head_logo" href="https://tomoya-onuki.github.io">TOMOYAONUKI.</a>
+    <a id="top" class="head_logo" href="https://tomoya-onuki.github.io">ONUKITOMOYA.</a>
     <div class="pc">
       <span class="head_menu">
           <a href="`+worksUrl+`">WORKS</a> / <a href="`+aboutUrl+`">PROFILE</a>
@@ -15,7 +15,6 @@ function printHeader(worksUrl, aboutUrl, reelUrl) {
         <div><a href="https://tomoya-onuki.github.io">TOP</a></div>
         <div><a href="`+worksUrl+`">WORKS</a></div>
         <div><a href="`+aboutUrl+`">PROFILE</a></div>
-        <div><a href="`+reelUrl+`">SHOWREEL</a></div>
       </div>
     </div>
 
