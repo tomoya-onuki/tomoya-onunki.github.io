@@ -28,8 +28,14 @@ a {
 	text-decoration: none;
 }
 .works_menu a{
+  font-family: "Helvetica Neue", Arial, sans-serif;
   color: #000;
   font-weight:900;
+  display: inline-block;
+  /* border-bottom: #000 solid 0.5px; */
+  margin-left: 0px;
+  width:30px;
+  transform: rotate(60deg)
 }
 
 p a,
@@ -75,7 +81,7 @@ video {
 /*ヘッダのフォント設定*/
 
 .header_margin {
-  padding-top: 120px;
+  padding-top: 130px;
   margin-top: -62px;
 }
 
@@ -310,6 +316,9 @@ p {
 
 .footer {
   font-size: 70%;
+  font-weight: normal;
+  color: #4f4f4f;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 }
 /* .head_menu .footer {
   font-size: 20%;
