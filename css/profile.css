@@ -1,39 +1,43 @@
-
-@media screen and (min-width:620px){
+@media screen and (min-width:620px) {
   .profile {
     color: #666;
     width: calc(620*0.9px);
     position: absolute;
     left: 50%;
-    transform: translate(-50%,0%);
+    transform: translate(-50%, 0%);
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   }
 }
-@media screen and (max-width:620px){
+
+@media screen and (max-width:620px) {
   .profile {
     color: #666;
-    width:100%;
+    width: 100%;
     margin-left: 0%;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   }
 }
 
-.profile a{
+.profile a {
   color: #666;
 }
-.profile a:hover{
-  opacity:0.4;
+
+.profile a:hover {
+  opacity: 0.4;
 }
-.profile img{
-		width:100%;
-		/* width:50%; */
-		margin-right:35px;
-		padding-bottom:20px;
+
+.profile img {
+  width: 100%;
+  /* width:50%; */
+  margin-right: 35px;
+  padding-bottom: 20px;
 }
+
 .profile .bullet {
   padding-top: 4px;
   padding-bottom: 4px;
 }
+
 .profile h1 {
   font-size: 130%;
   font-family: "Helvetica", Arial, sans-serif;
@@ -41,70 +45,87 @@
   font-weight: bold;
   margin: 0 0 0 0;
 }
+
 .profile h2 {
   font-size: 100%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   /* color: #666; font-weight:bold; */
-  color: #000; font-weight:normal;
+  color: #000;
+  font-weight: normal;
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 3px;
 }
+
 .profile ol {
-  margin-left:-20px;
+  margin-left: -20px;
   margin-top: 0;
 }
+
 .profile ol li div {
-  margin-left:5px;
+  margin-left: 5px;
 }
+
 .profile ol li {
   margin: 0px;
 }
-.profile ol li:hover{
+
+.profile ol li:hover {
   background: #eee;
 }
 
-
 .profile .block {
   margin-bottom: 30px;
-  margin-right:16px;
-  width:100%;
+  margin-right: 16px;
+  width: 100%;
 }
+
 .profile .head {
-  float:left;
-  width:90px;
+  float: left;
+  width: 90px;
 }
+
 .profile .item {
-  margin-left:90px
+  margin-left: 90px
 }
+
 .profile word-wrap {
   word-wrap: keep-all;
   overflow-wrap: break-word;
   display: inline-block;
 }
-.profile .border{
+
+.profile .border {
   width: 20px;
-  text-align:left;
-  margin-left:20px;
+  text-align: left;
+  margin-left: 20px;
   color: #aaa;
   border-bottom: 1px solid;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.profile .sub-item{
+.profile .sub-item {
   color: #999;
   /* padding-right:10px; */
 }
 
 .lang_menu {
-  position:absolute;
-  right:0;
-  top:80px;
+  position: absolute;
+  right: 0;
+  top: 80px;
 }
-.lang_menu a{
+
+.lang_menu a {
   color: #4f4f4f;
 }
+
 .lang_menu a:hover {
-  opacity:0.4;
+  opacity: 0.4;
+}
+
+.profile .reel {
+  width: 100%;
+  margin-right: 35px;
+  padding-bottom: 20px;
 }

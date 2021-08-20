@@ -3,7 +3,7 @@
 .flex_box{
   flex-shrink: 1;
   flex-grow: 1;
-  flex-basis: 300px;
+  flex-basis: 400px;
   position: relative;
   z-index: 1;
 }

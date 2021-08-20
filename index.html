@@ -1,75 +1,319 @@
 <!doctype html>
- <html>
- <head>
- 	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" >
- 	<title>onukitomoya.</title>
- 	<link rel="stylesheet" type="text/css" href="./css/my.css">
- 	<link rel="stylesheet" type="text/css" href="./css/flex_gif.css">
- 	<link rel="stylesheet" type="text/css" href="./css/main.css">
- 	<link rel="stylesheet" type="text/css" href="./css/modal.css">
-  <script type="text/javascript" src="./js/footer.js"></script>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=360,initial-scale=1">
+  <title>works - onukitomoya.</title>
+  <link rel="stylesheet" type="text/css" href="./css/my.css">
+  <link rel="stylesheet" type="text/css" href="./css/flex.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/modal.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <style>
-    .reel_caption {
-      position:fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      /* z-index: 5; */
-    }
-    .reel_caption .triangle {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 15px 0 15px 26.0px;
-      border-color: transparent transparent transparent #ffffff;
-    }
-  </style>
- </head>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script type="text/javascript" src="./js/header.js"></script>
+  <script type="text/javascript" src="./js/footer.js"></script>
+</head>
 
 
- <body style="background-color:#000;">
-  <div class="header1 head_font1">
-    <div><a class="head_logo" style="color:#ffffff;" href="./">ONUKITOMOYA.</a></div>
-    <div class="head_menu">
-      <div><a href="./works">- WORKS</a></div>
-      <div style="margin-left:20px;"><a href="./works/#mov">- movie</a></div>
-      <div style="margin-left:20px;"><a href="./works/#art">- art</a></div>
-      <div style="margin-left:20px;"><a href="./works/#app">- app</a></div>
-      <div style="margin-left:20px;"><a href="./reel">- reel</a></div>
-      <div><a href="./profile">- PROFILE</a></div>
-    </div>      
-    <!-- <div class="featured_works">
-      <div>Featured works</div>
-      <div><a href="./works/live-and-let-live">  >> live and let live / Dance Movie</a></div>
-      <div><a href="./works/mawase-making"> >> 回せ！MVメイキング映像 / Making Movie</a></div>
-      <div><a href="./works/express"> >> EXPRESS 筑波大学ダンス部 / Documentary Movie</a></div>
-      <div><a href="./works/in-the-black-and-eternal"> >> 暗転と永遠の中で。 / Media Art</a></div>
-      <div><a href="./works/umidori"> >> Umidori / Application</a></div>
-    </div> -->
-  </div>
+<body>
+  <script type="text/javascript">
+    printHeader('./', './profile', './reel');
+  </script>
+  <script type="text/javascript" src="./js/menu.js"></script>
 
 
-  <div id="content">
-      <!-- <a class="reel_text" href="http://vimeo.com/450021560" target="_blank">
-        SHOWREEL >>
-      </a> -->
-    <div class="triangle"></div>
-    <video class="reel_bg" loop autoplay muted playsinline>
-      <source src="./mov/reel.mp4" type="video/mp4">
-      <!-- <source src="https://www.u.tsukuba.ac.jp/~s1711441/portfolio/reel_index.mp4" type="video/mp4"> -->
-      <p>動画を再生できません</p>
-    </video>
-  </div>
+  <div id="main">
+
+    <!-- <h1 id="mov" class="header_margin">MOVIES</h1> -->
+    <div class="wrap">
+
+      <div id="live-and-let-live" class="contents flex_box movie">
+        <a href="./live-and-let-live">
+          <img src="./img/index2/live-and-let-live.png">
+          <div class="mask">
+            <div class="caption">live and let live</div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div id="express" class="contents flex_box movie">
+        <a href="./express">
+          <img src="./img/index2/express.png">
+          <div class="mask">
+            <div class="caption">EXPRESS 筑波大学ダンス部</div>
+          </div>
+        </a>
+      </div>
 
 
- 		<!-- <hr> -->
-  <div class="footer">
-    <div class="fix2">
-        <script type="text/javascript"> printFooter(); </script>
+      <div id="mawase-making" class="contents flex_box movie">
+        <a href="./mawase-making">
+          <img src="./img/index2/mawase.png">
+          <div class="mask">
+            <div class="caption">【MVメイキング映像】「回せ！」<br>回せ！グルーヴ開発部</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div id="in-the-black-and-eternal" class="contents flex_box art">
+        <a href="./in-the-black-and-eternal">
+          <img src="./img/index2/black.png">
+          <div class="mask">
+            <div class="caption">暗転と永遠の中で。</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="lost-anima" class="contents flex_box art">
+        <a href="./lost-anima">
+          <img src="./img/index2/lostanima.png">
+          <div class="mask">
+            <div class="caption">アニマの消失</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="umidori" class="contents flex_box app">
+        <a href="./umidori-intelligence">
+          <img src="./img/index2/umidori-intelligence.png">
+          <div class="mask">
+            <div class="caption">Umidori Intelligence</div>
+          </div>
+        </a>
+      </div>
+      
+
+      <div id="important-things" class="contents flex_box movie">
+        <a href="./important-things">
+          <img src="./img/index2/important_thing.png">
+          <div class="mask">
+            <div class="caption">大切なこと</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="who" class="contents flex_box movie">
+        <a href="./who">
+          <img src="./img/index2/who.png">
+          <div class="mask">
+            <div class="caption">何者</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="rush" class="contents flex_box movie">
+        <a href="./rush">
+          <img src="./img/index2/rush2.png">
+          <div class="mask">
+            <div class="caption">迸る</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="dance-ut-teaser" class="contents flex_box movie">
+        <a href="./dance-ut-teaser">
+          <img src="./img/index2/dance-ut-teaser.png">
+          <div class="mask">
+            <div class="caption">筑波大学ダンス部 - "迸る" / "何者" / "大切なこと"<br>Dance Video Teaser</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div id="life-is-coming-back" class="contents flex_box movie">
+        <a href="./life-is-coming-back">
+          <img src="./img/index2/life-is-coming-back.png">
+          <div class="mask">
+            <div class="caption">Life is coming back...</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="anzenkaihatsu-making" class="contents flex_box movie">
+        <a href="./anzenkaihatsu-making">
+          <img src="./img/index2/anzenkaihatsu.png">
+          <div class="mask">
+            <div class="caption">【MVメイキング映像】「安全開発ソング」<br>回せ！グルーヴ開発部</div>
+          </div>
+        </a>
+      </div>
+
+
+
+
+      
+
+      <div id="yuragi" class="contents flex_box movie">
+        <a href="./yuragi">
+          <img src="./img/index2/yuragi.png">
+          <div class="mask">
+            <div class="caption">雙峰祭前夜祭パフォーマンスショー「ゆらぎ」<br>ダイジェスト版</div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div id="tparty-launch" class="contents flex_box movie">
+        <a href="./tparty-launch">
+          <img src="./img/index2/launch.png">
+          <div class="mask">
+            <div class="caption">Tparty / Launch Party / <br>ダイジェスト映像 Digest Video</div>
+          </div>
+        </a>
+      </div>
+
+
+
+      
+
+
+      <div id="shape-of-monologue-aggregate" class="contents flex_box art">
+        <a href="./shape-of-monologue-aggregate">
+          <img src="./img/index2/aggregation.png">
+          <div class="mask">
+            <div class="caption">ひとりごとのカタチ/ 集合体について</div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div id="somewhere-far-away" class="contents flex_box art">
+        <a href="./somewhere-far-away">
+          <img src="./img/index2/somewhere.png">
+          <div class="mask">
+            <div class="caption">どこか遠くの場所で</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div id="kalfos-box" class="contents flex_box art">
+        <a href="./kalfos-box">
+          <img src="./img/index2/kalfosbox.png">
+          <div class="mask">
+            <div class="caption">Kalfos Box</div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div id="silence" class="contents flex_box art">
+        <a href="./silence">
+          <img src="./img/index2/silence.png">
+          <div class="mask">
+            <div class="caption">沈黙</div>
+          </div>
+        </a>
+      </div>
+
+
+      
+
+      <div id="umidori" class="contents flex_box app">
+        <a href="./umidori">
+          <img src="./img/index2/umidori.png">
+          <div class="mask">
+            <div class="caption">Umidori</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div id="visual-k" class="contents flex_box app">
+        <a href="./visual-k">
+          <img src="./img/index2/visual-k.png">
+          <div class="mask">
+            <div class="caption">Visual K</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div id="task-management-tool" class="contents flex_box app">
+        <a href="./task-management-tool">
+          <img src="./img/index2/task-management-tool.png">
+          <div class="mask">
+            <div class="caption">タスク管理ツール DO3</div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div id="color-selection" class="contents flex_box app">
+        <a href="./color-selection">
+          <img src="./img/index2/color-selection.png">
+          <div class="mask">
+            <div class="caption">COLOR SELECTION</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div id="gohan-search" class="contents flex_box app">
+        <a href="./gohan-search">
+          <img src="./img/index2/gohan-search.png">
+          <div class="mask">
+            <div class="caption">ごっっはにゃさん</div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div id="cube" class="contents flex_box app">
+        <a href="./cube">
+          <img src="./img/index2/cube.png">
+          <div class="mask">
+            <div class="caption">CUBE</div>
+          </div>
+        </a>
+      </div>
+
+
+
+
+      <div id="fruits-cut" class="contents flex_box app">
+        <a href="./fruits-cut">
+          <img src="./img/index2/fruits-cut.png">
+          <div class="mask">
+            <div class="caption">FRUITS CUT!</div>
+          </div>
+        </a>
+      </div>
+
+      <div id="megeilt-tweet-system" class="contents flex_box app">
+        <a href="./megeilt-tweet-system">
+          <img src="./img/index2/megeilt-tweet-system.png">
+          <div class="mask">
+            <div class="caption">ツイート共有システム</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="contents flex_box"></div>
+      <div class="contents flex_box"></div>
+      <div class="contents flex_box"></div>
+      <div class="contents flex_box"></div>
     </div>
-  </div>
 
- </body>
- </html>
+
+
+    <div class="footer">
+      <center>
+        <script type="text/javascript"> printFooter();</script>
+      </center>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -18,14 +18,17 @@
 
 <body>
   <script type="text/javascript">
-    printHeader('./works', '', './reel');
+    printHeader('./', '', './reel');
   </script>
   <script type="text/javascript" src="./js/menu.js"></script>
 
   <div id="main">
     <div class="profile">
       <div>
-        <img src="./img/me.png">
+        <video class="reel" loop autoplay muted playsinline>
+          <source src="./mov/reel.mp4" type="video/mp4">
+          <p>動画を再生できません</p>
+        </video>
       </div>
 
       <div>
