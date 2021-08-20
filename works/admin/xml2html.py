@@ -160,7 +160,7 @@ def generateLinks(tempStr, contentsName, cTree):
         str = '<a id="prev" href="'+prev+'.html"></a>'
         tempStr = tempStr.replace('<!-- prev -->', str)
 
-    str = '<a id="close" href="./#'+contentsName+'"></a>'
+    str = '<a id="close" href="../#'+contentsName+'"></a>'
     tempStr = tempStr.replace('<!-- close -->', str)
     return tempStr
 
