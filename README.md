@@ -42,3 +42,11 @@ works内のコンテンツはxmlとマークダウンが混じった独自の形
 ```
 python3 xml2html.py markdown/
 ```
+
+
+
+## 画像のリサイズ
+```
+sh resize.sh [dirname] [width px]
+```
+同ディレクトリ下にarchiveディレクトリが生成されて、オリジナル画像を自動的にアーカイブします。
