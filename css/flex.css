@@ -3,9 +3,19 @@
 .flex_box{
   flex-shrink: 1;
   flex-grow: 1;
-  flex-basis: 400px;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (min-width:980px){
+  .contents {
+    flex-basis: 400px;
+  }
+}
+@media screen and (max-width:980px){
+  .contents {
+    flex-basis: 320px;
+  }
 }
 
 .wrap{
@@ -13,6 +23,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+  margin-bottom: 50px;
 }
 .flex_box img{
   width:100%;

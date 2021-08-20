@@ -14,10 +14,8 @@ function printHeader(worksUrl, aboutUrl, reelUrl) {
         <hr>
         <div><a href="https://tomoya-onuki.github.io">TOP</a></div>
         <div><a href="`+worksUrl+`">WORKS</a></div>
-        <div style="font-size:80%; margin-top:-30px;">
-          <a href="`+worksUrl+`#mov">movie</a> / <a href="`+worksUrl+`#art">art</a> / <a href="`+worksUrl+`#app">app</a> / <a href="https://tomoya-onuki.github.io/reel">reel</a>
-        </div>
         <div><a href="`+aboutUrl+`">PROFILE</a></div>
+        <div><a href="https://tomoya-onuki.github.io/reel">REEL</a></div>
         <hr>
 
         <div class="footer" style="font-size:20%;">
