@@ -202,8 +202,8 @@
 
 .works_contents {
   margin-bottom: 50px;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  display: flex;
+  flex-wrap: wrap;
 }
 .works_contents div {
   margin-bottom: 10px;
@@ -234,7 +234,7 @@
     margin-left: 30px;
     /* height: 90vh; */
     min-height: 50vh;
-    float: right;
+    /* float: right; */
   }
 }
 .works_contents .block_r h3 {

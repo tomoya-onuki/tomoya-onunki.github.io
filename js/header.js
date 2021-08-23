@@ -12,11 +12,7 @@ function printHeader(worksUrl, aboutUrl, reelUrl) {
       <div class="head_menu">
         <div>ONUKITOMOYA.</div>
         <hr>
-        <div><a href="https://tomoya-onuki.github.io">TOP</a></div>
-        <div><a href="`+worksUrl+`">WORKS</a></div>
-        <div><a href="`+aboutUrl+`">PROFILE</a></div>
-        <div><a href="https://tomoya-onuki.github.io/reel">REEL</a></div>
-        <hr>
+        <div><a href="`+worksUrl+`">WORKS</a> / <a href="`+aboutUrl+`">PROFILE</a></div>
 
         <div class="footer" style="font-size:20%;">
               <script type="text/javascript"> printFooter(); </script>
