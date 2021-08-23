@@ -232,8 +232,8 @@
   .works_contents .block_r {
     width: calc(100% - 630px);
     margin-left: 30px;
-    /* height: 90vh; */
-    min-height: 50vh;
+    height: 330px;
+    /* min-height: 50vh; */
     /* float: right; */
   }
 }
