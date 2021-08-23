@@ -78,6 +78,7 @@ video {
 }
 
 
+
 /*ヘッダのフォント設定*/
 
 .header_margin {
@@ -111,63 +112,11 @@ p {
 
 
 
-
-.head_font1{
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 160%;
-  text-decoration: none;
-  font-weight: bold;
+.underbar {
+  border-bottom: solid 1px #000;
+  padding-bottom: 3px;
 }
 
-.highlight{
-  background:linear-gradient(transparent 50%, #ffff66 50%);
-  display: inline;
-}
-
-
-.header1{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 4;
-}
-.header1 .head_logo{
-  position:absolute;
-  left:5%;
-  top: 20px;
-  color:#fff;
-}
-.header1 .head_menu{
-  position:absolute;
-  left:5%;
-  top: 80px;
-  color:#fff;
-}
-.header1 .head_menu a {
-  color:#fff;
-}
-.header1 .head_menu div {
-  margin-bottom: 10px;
-}
-
-.header1 .featured_works {
-  position:absolute;
-  left:5%;
-  top: 250px;
-}
-.header1 .featured_works div ,
-.header1 .featured_works div a {
-  color:#fff;
-  font-size: 85%;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  /* font-weight:300; */
-  margin-top: 5px;  
-  font-style: italic;
-}
-.header1 .featured_works div a:hover {
-  opacity: 0.4;
-}
 
 .header2{
   height: 65px;
@@ -179,21 +128,25 @@ p {
   z-index: 4;
   color:#000;
 }
-.header2 .head_logo{
+.header2 .head_font{
+  font-size: 160%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  font-weight: normal;
+  color:#000; 
+}
+
+.header2 .title {
   position:absolute;
   left:5%;
   top: 20px;
-  color:#000;
 }
 
 @media screen and (min-width:980px){
   .header2 .pc .head_menu {
     position:absolute;
     right:5%;
-    font-family: HelveticaNeue-light, "sans-serif";
     top: 26px;
-    font-weight: bold;
-    color: #000;
     display: block;
   }
   .header2 .pc .head_menu a {
@@ -210,12 +163,12 @@ p {
 
   .header2 .mobile .head_menu {
     font-size:120%;
-    font-family: HelveticaNeue-light, "sans-serif";
-    font-weight: bold;
     background: #fff;
+
     position: absolute;
     width: 100%;
     height: 150vh;
+    
     display: none;
     opacity: 0.9;
     text-align:center;
@@ -224,11 +177,6 @@ p {
   .header2 .mobile .head_menu div {
     margin-top:50px;
     margin-bottom:50px;
-  }
-  .header2 .mobile .head_menu hr {
-    color:#000;
-    width:30px;
-    border:solid 0.1px;
   }
   .header2 .mobile .head_menu a {
     color:#000;
@@ -325,12 +273,6 @@ p {
   color: #4f4f4f;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 }
-/* .head_menu .footer {
-  font-size: 20%;
-  font-weight: normal;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
-  color: #4f4f4f;
-} */
 .footer .fix2 {
   color:#fff;
   position:fixed;
@@ -338,13 +280,4 @@ p {
   left: 50%;
   transform: translate(-50%,0);
   z-index:4;
-}
-.footer .fix {
-  /* color:#4f4f4f; */
-  /* position:absolute; */
-  /* top:98%; */
-  /* position: relative;
-  left: 50%;
-  transform: translate(-50%,0);
-  z-index:4; */
 }

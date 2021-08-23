@@ -18,20 +18,21 @@
 
 <body>
   <script type="text/javascript">
-    printHeader('./', '', './reel');
+    printHeader('./', '');
   </script>
   <script type="text/javascript" src="./js/menu.js"></script>
 
   <div id="main">
     <div class="profile">
-      <div>
-        <a href="./reel.html">
-          <video class="reel" loop autoplay muted playsinline>
-            <source src="./mov/reel.mp4" type="video/mp4">
-            <p>動画を再生できません</p>
-          </video>
-        </a>
-      </div>
+      <div class="reel">
+        <video loop autoplay muted playsinline>
+          <source src="./mov/reel.mp4" type="video/mp4">
+          <p>動画を再生できません</p>
+        </video>
+        <div class="reel_link">
+          <a href="./reel.html">ShowReel >></a>
+        </div>
+    </div>
 
       <div>
         <div class="block">
