@@ -11,7 +11,7 @@ function printHeader(worksUrl, profUrl) {
 
   var header_str = `
   <div class="header2">
-    <a id="top" class="head_font title" href="`+worksUrl+`">onukitomoya.</a>
+    <a id="top" class="head_font title" href="`+worksUrl+`">onukitomoya</a>
     <div class="pc">
       <span class="head_menu head_font">`+worksLink+` / `+profLink+`</span>
     </div>
