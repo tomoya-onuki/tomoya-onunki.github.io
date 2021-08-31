@@ -233,16 +233,20 @@
     width: calc(100% - 630px);
     margin-left: 30px;
     height: 330px;
-    /* min-height: 50vh; */
-    /* float: right; */
   }
 }
 .works_contents .block_r h3 {
   color:#4f4f4f;
   font-size: 105%;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 0px;
 }
+
+/* .works_contents .block_r ul,
+.works_contents .block_r div {
+  margin-top: 0px;
+  margin-bottom: 40px;
+} */
 .works_contents .block_l {
   width: 600px;
   float: left;

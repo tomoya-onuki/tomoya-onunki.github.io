@@ -263,21 +263,23 @@ p {
 
 
 .footer {
-  /* clear: left; */
-  float: left;
-  margin-bottom: 30px;
-  width: 100%;
-  text-align: center;
   font-size: 70%;
   font-weight: normal;
   color: #4f4f4f;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
-}
-.footer .fix2 {
-  color:#fff;
-  position:fixed;
-  top:95vh;
+
+  position:absolute;
+  bottom: -20px;
   left: 50%;
   transform: translate(-50%,0);
-  z-index:4;
+  padding-bottom: 20px;
+}
+.footer .fix2 {
+  /* color:#4f4f4f;
+  position:absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%,0);
+  padding-bottom: 10px;
+  z-index:4; */
 }
