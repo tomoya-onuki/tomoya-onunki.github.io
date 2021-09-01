@@ -135,9 +135,9 @@ def generateHTML(tempStr, xmlList):
 
 
     # コンテンツの整形
-    leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
+    leftContents = '<div class="block_l">\n' + leftContents + leftSubContents + '\n</div>'
     leftSubContents = '<div class="block_l">\n' + leftSubContents + '\n</div>'
-    contents = leftContents + '\n' + rightContents + '\n' + leftSubContents
+    contents = leftContents + '\n' + rightContents 
     contents = contents.replace('\\', '<br>')
     htmlContents = contents
     # htmlContents = md.convert(contents)

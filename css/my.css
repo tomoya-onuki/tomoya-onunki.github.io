@@ -269,7 +269,7 @@ p {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 
   position:absolute;
-  bottom: -20px;
+  top: 100%;
   left: 50%;
   transform: translate(-50%,0);
   padding-bottom: 20px;
