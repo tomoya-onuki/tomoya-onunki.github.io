@@ -8,10 +8,15 @@
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
     margin-bottom: 50px;
   }
-  .profile .reel video{
+  .profile .reel video {
     width: calc(620*0.9px);
     height: calc(620px*0.9/3);
-    /* height: 200px; */
+    object-fit: cover;
+  }
+  .profile .reel_link {
+    position: relative;
+    top: calc(-620px * 0.9 / 3 / 2);
+    left: calc(620px * 0.9 / 2);
   }
 }
 
@@ -23,11 +28,15 @@
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
     margin-bottom: 50px;
   }
-
-  .profile .reel video{
+  .profile .reel video {
     width: 100%;
     height: calc(90vw / 3);
-    /* height: 200px; */
+    object-fit: cover;
+  }
+  .profile .reel_link {
+    position: relative;
+    top: calc(-90vw / 3 / 2);
+    left: 50%;
   }
 }
 
@@ -138,19 +147,27 @@
   opacity: 0.4;
 }
 
-.profile .reel {
-  margin-bottom: -30px;
-}
-.profile .reel video{
-  margin-right: 35px;
-  padding-bottom: 20px;
-  object-fit: cover;
-}
 
-.profile .reel_link a{
+/* 
+.profile .reel_link a {
   color: #fff;
   font-weight: bold;
   position: relative;
   top: -50px;
   left: 10px;
+} */
+
+.profile .reel_link {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 34.6px;
+  border-color: transparent transparent transparent #fff;
+  margin-top: -20px;
+  margin-left: -20px;
+  opacity: 0.6;
+}
+
+.profile .reel_link:hover {
+  opacity: 1.0;
 }
