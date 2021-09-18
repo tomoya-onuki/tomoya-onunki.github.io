@@ -80,16 +80,19 @@
   margin-bottom: 3px;
 }
 
-.profile ol {
+.profile ol,
+.profile ul {
   margin-left: -20px;
   margin-top: 0;
 }
 
-.profile ol li div {
+.profile ol li div,
+.profile ul li div {
   margin-left: 5px;
 }
 
-.profile ol li {
+.profile ol li,
+.profile ul li {
   margin: 0px;
 }
 
