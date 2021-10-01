@@ -242,6 +242,13 @@
   margin-top: 25px;
   margin-bottom: 5px;
 }
+.works_contents .block_r h4 {
+  color:#4f4f4f;
+  font-weight: 600;
+  font-size: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
 
 /* .works_contents .block_r ul,
 .works_contents .block_r div {
