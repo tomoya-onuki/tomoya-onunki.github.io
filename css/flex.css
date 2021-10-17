@@ -1,22 +1,3 @@
-.flex_box {
-  flex-shrink: 1;
-  flex-grow: 1;
-  position: relative;
-  z-index: 1;
-}
-
-@media screen and (min-width:980px) {
-  .contents {
-    flex-basis: 400px;
-  }
-}
-
-@media screen and (max-width:980px) {
-  .contents {
-    flex-basis: 320px;
-  }
-}
-
 .wrap {
   display: flex;
   flex-wrap: wrap;
@@ -25,13 +6,40 @@
   margin-bottom: 50px;
 }
 
+.flex_box {
+  flex-shrink: 1;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  height: calc(400px/2.35);
+}
+
+/* @media screen and (min-width:980px) {
+  .flex_box {
+    flex-basis: 400px;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .flex_box {
+    flex-basis: 320px;
+  }
+} */
+
 .flex_box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* @media screen and (min-width:980px){ */
+.flex_box video {
+  width: 102%;
+  height: 102%;
+  object-fit: cover;
+}
+
+
 
 .flex_box .mask {
   width: 100%;
@@ -40,7 +48,7 @@
   top: 0;
   left: 0;
   opacity: 0;
-  background-color:	rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   /* background-color: rgba(0, 72, 100, 0.4); */
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -50,7 +58,6 @@
   opacity: 1;
   /* マスクを表示する */
 }
-
 
 .flex_box .caption {
   color: #ffffff;
@@ -70,7 +77,6 @@
   margin-bottom: 8px;
   font-weight: 800;
 }
-
 
 .flex_box .caption .info {
   font-family: "Helvetica Neue", Arial, sans-serif;
