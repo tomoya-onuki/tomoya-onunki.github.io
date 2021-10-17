@@ -8,35 +8,16 @@
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
     margin-bottom: 50px;
   }
-  .profile .reel video {
-    width: calc(620*0.9px);
-    height: calc(620px*0.9/3);
-    object-fit: cover;
-  }
-  .profile .reel_link {
-    position: relative;
-    top: calc(-620px * 0.9 / 3 / 2);
-    left: calc(620px * 0.9 / 2);
-  }
 }
 
 @media screen and (max-width:620px) {
   .profile {
     color: #666;
-    width: 100%;
-    margin-left: 0%;
+    width: 90vw;
+    position: absolute;
+    left: 5%;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
     margin-bottom: 50px;
-  }
-  .profile .reel video {
-    width: 100%;
-    height: calc(90vw / 3);
-    object-fit: cover;
-  }
-  .profile .reel_link {
-    position: relative;
-    top: calc(-90vw / 3 / 2);
-    left: 50%;
   }
 }
 
