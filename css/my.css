@@ -4,14 +4,16 @@ html{
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   color: #4f4f4f;
   font-size: 80%;
+  max-width: fit-content;
 }
 
 #main{
   padding-top: 62px;
+  /* position: relative; */
   position: absolute;
   left: 50%;
   transform: translate(-50%,0);
-  width:90%;
+  width:100%;
   /* line-height: 1.1em; */
 }
 
