@@ -18,7 +18,7 @@ function printHeader(worksUrl, profUrl) {
 
     <div class="mobile">
       <div class="head_menu">
-        <div>onukitomoya.</div>
+        <div>onukitomoya</div>
         <div class="head_font">`+worksLink+` / `+profLink+`</div>
         <div class="footer" style="font-size:20%;">
               <script type="text/javascript"> printFooter(); </script>

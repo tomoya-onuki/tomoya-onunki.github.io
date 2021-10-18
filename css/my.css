@@ -9,12 +9,8 @@ html{
 
 #main{
   padding-top: 62px;
-  /* position: relative; */
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,0);
-  width:100%;
-  /* line-height: 1.1em; */
+  width:90%;
+  margin-left: 5%;
 }
 
 
@@ -263,9 +259,14 @@ p {
   color: #4f4f4f;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 
-  position:absolute;
+  /* position:absolute;
   top: 100%;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%,0); */
+  /* width: 90%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
   padding-bottom: 20px;
 }
