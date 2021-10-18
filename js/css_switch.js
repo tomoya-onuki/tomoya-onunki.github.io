@@ -7,15 +7,17 @@ $(function () {
 
         $('#main').css({
             'width': '104%',
-            'margin-left': '-2%'
+            'margin-left': '-2%',
+            'overflow':'hidden'
         });
 
         device = -1;
     } else {
-        $('#main').css({
-            'width': '90%',
-            'margin-left': '5%'
-        });
+        // $('#main').css({
+        //     'width': '90%',
+        //     'margin-left': '5%',
+        //     'overflow':'hidden'
+        // });
         device = 1;
     }
 });
