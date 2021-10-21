@@ -290,9 +290,9 @@
 }
 
 .works_contents ul {
-  list-style: none;
-  /* list-style-type: disc; */
+  /* list-style:armenian; */
+  list-style-type: circle;
   margin-top: 0px;
-  margin-left: 0px;
-  padding-left: 0px;
+  margin-left: 10px;
+  padding-left: 10px;
 }
