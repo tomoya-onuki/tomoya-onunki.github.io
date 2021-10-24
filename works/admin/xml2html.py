@@ -119,24 +119,25 @@ def generateHTML(tempStr, xmlList):
                 token = value.split('/')
                 url = 'https://www.youtube.com/embed/' + token[-1]
                 leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+            elif re.search('drive', value):
+                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             else:
-                leftContents +=  '<div class="mov">\n'+value+'</div>'
+                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
         elif re.search('img\d', tag):
             leftContents += '<img src="' + value + '">\n'
 
         # 左側コンテンツ(サブ)
         elif re.search('imgr\d', tag):
-            leftSubContents += '<img class="half_img_r" src="' + value + '">\n'
+            leftContents += '<img class="half_img_r" src="' + value + '">\n'
         elif re.search('imgl\d', tag):
-            leftSubContents += '<img class="half_img_l" src="' + value + '">\n'
+            leftContents += '<img class="half_img_l" src="' + value + '">\n'
         elif re.fullmatch(tag, 'left'):
-            leftSubContents += md.convert(value)
-            # leftContents += '<div>'+ value +'</div>\n'
+            leftContents += md.convert(value)
+       
 
 
     # コンテンツの整形
-    leftContents = '<div class="block_l">\n' + leftContents + leftSubContents + '\n</div>'
-    leftSubContents = '<div class="block_l">\n' + leftSubContents + '\n</div>'
+    leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
     contents = leftContents + '\n' + rightContents 
     contents = contents.replace('\\', '<br>')
     htmlContents = contents
@@ -152,14 +153,14 @@ def generateHTML(tempStr, xmlList):
 ###############
 def generateLinks(tempStr, contentsName, cTree):
     next = cTree.nextContentsName(contentsName)
-    if next is not None:
-        str = '<a id="next" href="'+next+'.html"></a>'
-        tempStr = tempStr.replace('<!-- next -->', str)
+    # if next is not None:
+    #     str = '<a id="next" href="'+next+'.html"></a>'
+    #     tempStr = tempStr.replace('<!-- next -->', str)
 
-    prev = cTree.prevContentsName(contentsName)
-    if prev is not None:
-        str = '<a id="prev" href="'+prev+'.html"></a>'
-        tempStr = tempStr.replace('<!-- prev -->', str)
+    # prev = cTree.prevContentsName(contentsName)
+    # if prev is not None:
+    #     str = '<a id="prev" href="'+prev+'.html"></a>'
+    #     tempStr = tempStr.replace('<!-- prev -->', str)
 
     str = '<a id="close" href="../#'+contentsName+'"></a>'
     tempStr = tempStr.replace('<!-- close -->', str)
