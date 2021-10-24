@@ -153,14 +153,14 @@ def generateHTML(tempStr, xmlList):
 ###############
 def generateLinks(tempStr, contentsName, cTree):
     next = cTree.nextContentsName(contentsName)
-    # if next is not None:
-    #     str = '<a id="next" href="'+next+'.html"></a>'
-    #     tempStr = tempStr.replace('<!-- next -->', str)
+    if next is not None:
+        str = '<a id="next" href="'+next+'.html"></a>'
+        tempStr = tempStr.replace('<!-- next -->', str)
 
-    # prev = cTree.prevContentsName(contentsName)
-    # if prev is not None:
-    #     str = '<a id="prev" href="'+prev+'.html"></a>'
-    #     tempStr = tempStr.replace('<!-- prev -->', str)
+    prev = cTree.prevContentsName(contentsName)
+    if prev is not None:
+        str = '<a id="prev" href="'+prev+'.html"></a>'
+        tempStr = tempStr.replace('<!-- prev -->', str)
 
     str = '<a id="close" href="../#'+contentsName+'"></a>'
     tempStr = tempStr.replace('<!-- close -->', str)
