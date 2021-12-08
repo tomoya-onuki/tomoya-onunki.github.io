@@ -175,23 +175,16 @@ class contentsTree(object):
         super(contentsTree, self).__init__()
 
     def fileOpen(self):
-        # fp = open('contentsTree.csv','r')
-        # buf = ''
-        # for line in fp:
-        #     buf += line
-        # fp.close()
-        # buf = buf.replace('\n', '')
-        # self.contentsList = buf.split(',')
-        # print(self.contentsList)
         contentsTree = path.join(path.dirname(__file__), 'contentsTree.csv')
-        buf = ''
+        self.contentsList = []
+        self.metadataList = []
         with open(contentsTree, 'r') as fp:
             lines = fp.read().splitlines()
         for line in lines:
-            buf += line
-        buf = buf.replace('\n', '')
-        self.contentsList = buf.split(',')
-        # print(self.contentsList)
+            token = line.split(',')
+            self.metadataList.append(token) # メタデータ
+            self.contentsList.append(token[0]) # ID
+        # print(seÚlf.contentsList)
 
 
     def prevContentsName(self, contentsName):
@@ -209,7 +202,8 @@ class contentsTree(object):
                     return self.contentsList[i+1]
         return None
 
-
+    def getMetadataList(self):
+        return self.metadataList
 
 
 ###############
@@ -226,7 +220,53 @@ if len(args) == 2:
 
     cTree = contentsTree()
     cTree.fileOpen()
+    metadataList = cTree.getMetadataList()
 
+    ###########################
+    # index.htmlを作成
+    htmlText = ''
+    for metadata in metadataList:
+        # タイトルとdivを生成
+        id = metadata[0]
+        title = metadata[1]
+        tag0 = '<div id="'+id+'" class="flex_box">'
+        tag1 = '<a href="./works/'+id+'">'
+        tag2 = '<img src="./img/index2/'+id+'.png">'
+        tag3 = '<div class="title">'+title+'</div>'
+
+        # infoタグの生成
+        idx = 0
+        tag4 = ''
+        for info in metadata:
+            if idx > 1:
+                tag4 += '<div class="info">'+info+'</div>'
+            idx+=1
+
+        tmp = tag0 + tag1 + tag2 + '<div class="mask"><div class="caption">' + tag3 + tag4 + '</div></div></a></div>\n'
+        htmlText += tmp
+
+    # テンプレートファイルを取得
+    with open(path.join(path.dirname(__file__), 'templateIndex.html'), 'r') as tempIdxFp:
+        lines = tempIdxFp.read().splitlines()
+    tempIdxStr = ''
+    for line in lines:
+        tempIdxStr += line
+    tempIdxFp.close()
+
+    indexStr = tempIdxStr.replace('<!--CONTENTS-->', htmlText)
+
+    outFp = open('index.html','w')
+    indexStr = formatHTML(indexStr)
+    outFp.write(indexStr)
+    outFp.close()
+    print("Out: ./index.html")
+    ###########################
+
+
+
+
+    ###########################
+    # workディレクトリの内容物の生成
     for inFile in glob.glob(dirname+'*.xml'):
         outFile = inFile.replace('.xml', '.html').replace('xml', '..') # 入力ファイル名を出力ファイル名に変換
 
@@ -265,8 +305,8 @@ if len(args) == 2:
         tempStr = generateLinks(tempStr, contentsName, cTree)
 
         # 全体の整形
-        # tempStr = formatHTML(tempStr)
-        tempStr = tempStr.replace('\n', '')
+        tempStr = formatHTML(tempStr)
+        # tempStr = tempStr.replace('\n', '')
 
         # 新しいファイルに書き出す
         outFp = open(outFile,'w')
