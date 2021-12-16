@@ -1,8 +1,8 @@
 #!/bin/sh
-if [ "$1" == "--build" -a $# = 1 ]; then
+if [ "$1" == "-b" -a $# = 1 ]; then
     echo 'python3 ./works/admin/xml2html.py ./works/admin/xml/'
     python3 ./works/admin/xml2html.py ./works/admin/xml/
-elif [ "$1" == "--push" -a $# = 2 ]; then
+elif [ "$1" == "-p" -a $# = 2 ]; then
     echo '$ git add .'
     git add .
 
