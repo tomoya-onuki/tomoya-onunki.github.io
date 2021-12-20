@@ -13,7 +13,7 @@ $(function() {
             <div class="fill flex_box"></div>
             <div class="fill flex_box"></div>
             <div class="fill flex_box"></div>
-            <h2><a id="allView" style="text-align: center;cursor:pointer"> All view</a></h2>`);
+            <h2><a id="allView" style="text-align: center;cursor:pointer"> show more</a></h2>`);
         }
         i++;
     });
