@@ -91,7 +91,7 @@ def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブ
 ###############
 ## メインの処理
 ###############
-def generateHTML(tempStr, xmlList):
+def generateHTML(tempStr, xmlList, metadataList):
     # 左側のコンテンツの分析と整形
     leftContents = ''
     leftSubContents = ''
@@ -100,6 +100,9 @@ def generateHTML(tempStr, xmlList):
     # タグの処理
     for tag, value in xmlList.items():
         value = value.strip()
+        # # Titleのとき
+        # if re.fullmatch(tag, 'title'):
+        #     tempStr = tempStr.replace('<!-- '+tag+' -->', value)
         # TitleとInfoのとき
         if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
             tempStr = tempStr.replace('<!-- '+tag+' -->', value)
@@ -133,8 +136,23 @@ def generateHTML(tempStr, xmlList):
             leftContents += '<img class="half_img_l" src="' + value + '">\n'
         elif re.fullmatch(tag, 'left'):
             leftContents += md.convert(value)
-       
+    
+    
+    # コンテンツツリーのメタデータを埋め込む
+    # for metadata in metadataList:
+    #     # infoの生成
+    #     infoStr = ''
+    #     size = len(metadata)
+    #     for idx in range(2, size):
+    #         infoStr += metadata[idx]
+            
+    #         if idx != size-1:
+    #             infoStr += ' , '
+            
+    #         if idx == 4:
+    #             infoStr += '<br>'
 
+    #     tempStr = tempStr.replace('<!-- info -->', infoStr)
 
     # コンテンツの整形
     leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
@@ -299,7 +317,7 @@ if len(args) == 2:
 
         # XML to HTML
         # print(xmlList)
-        tempStr = generateHTML(tempStr, xmlList)
+        tempStr = generateHTML(tempStr, xmlList, metadataList)
 
         # コンテンツのリンクを生成
         tempStr = generateLinks(tempStr, contentsName, cTree)
