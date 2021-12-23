@@ -6,8 +6,10 @@ $(function () {
         || navigator.userAgent.indexOf('iPod') > 0
         || navigator.userAgent.indexOf('Android') > 0) {
 
-        $('.flex_box .mask').css('opacity', '0.9');
-        $('.flex_box .info').css('opacity', '0.5');
+        // $('.flex_box .mask').css('opacity', '0.9');
+        // $('.flex_box .info').css('opacity', '0.5');
+        $('.flex_box .info').css('font-size', '60%');
+        $('.flex_box .title').css('font-size', '90%');
 
     }
     // PC
