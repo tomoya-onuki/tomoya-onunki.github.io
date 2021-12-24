@@ -27,9 +27,13 @@ $(function () {
     }
     // PC
     else {
-        $('.flex_box .mask').hover(function () {
-            $(this).css('opacity', '1.0');
-        });
+        $('.flex_box .mask').hover(
+            function () {
+                $(this).css('opacity', '1.0');
+            },
+            function () {
+                $(this).css('opacity', '0.0');
+            });
     }
 
 
