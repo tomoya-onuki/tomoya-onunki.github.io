@@ -1,0 +1,284 @@
+html{
+	scroll-behavior: smooth;
+  /* overflow: hidden; */
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+  color: #4f4f4f;
+  font-size: 80%;
+  max-width: fit-content;
+}
+
+#main{
+  padding-top: 62px;
+  width:90%;
+  margin-left: 5%;
+  overflow: hidden;
+}
+
+
+
+.logo_img{
+	width:17px;
+	height:17px;
+	margin-right: 3px;
+}
+
+
+a {
+	text-decoration: none;
+}
+.works_menu a{
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #000;
+  font-weight:900;
+  display: inline-block;
+  /* border-bottom: #000 solid 0.5px; */
+  margin-left: 0px;
+  width:30px;
+  transform: rotate(60deg)
+}
+
+p a,
+h2 a,
+h1 a {
+  color: #000;
+}
+.head_menu a:hover,
+h2 a:hover,
+h1 a:hover,
+.works_menu a:hover,
+.reel_menu a:hover,
+.sub_menu a:hover,
+p a:hover {
+  opacity:0.4;
+}
+
+.sub_menu {
+  margin-bottom: 20px;
+}
+.sub_menu a {
+  font-size: 120%;
+  /* font-weight: bold; */
+  color: #000;
+}
+
+
+.works_menu {
+  position: fixed;
+  left: 5%;
+  top: 72px;
+  font-size: 120%;
+  z-index: 3;
+  color: #000;
+}
+
+
+
+
+/* video {
+  object-fit: cover;
+} */
+
+
+
+/*ヘッダのフォント設定*/
+
+.header_margin {
+  padding-top: 130px;
+  margin-top: -62px;
+}
+
+
+h1{
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: #000000;
+  margin-top:10px;
+  margin-bottom: 5px;
+  /* font-size: 300% */
+	/* margin-bottom: 40px; */
+}
+h2{
+  margin-top:10px;
+  margin-bottom: 5px;
+  /* font-size: 100%; */
+  color: #000000;
+}
+h3{
+  margin-top:10px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.underbar {
+  border-bottom: solid 1px #000;
+  padding-bottom: 3px;
+}
+
+
+.header2{
+  height: 65px;
+  width: 100%;
+  background: linear-gradient(rgba(255,255,255,1.0), rgba(255,255,255,0.8));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  color:#000;
+}
+.header2 .head_font{
+  font-size: 160%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  font-weight: normal;
+  color:#000; 
+}
+
+.header2 .title {
+  position:absolute;
+  left:5%;
+  top: 20px;
+}
+
+@media screen and (min-width:980px){
+  .header2 .pc .head_menu {
+    position:absolute;
+    right:5%;
+    top: 20px;
+    display: block;
+  }
+  .header2 .pc .head_menu a {
+    color:#000;
+  }
+  .header2 .pc .head_menu a :hover{
+    opacity: 0.4;
+  }
+  .header2 .mobile .head_menu {
+    display: none;
+  }
+}
+@media screen and (max-width:980px){
+
+  .header2 .mobile .head_menu {
+    font-size:120%;
+    background: #fff;
+
+    position: absolute;
+    width: 100%;
+    height: 150vh;
+    
+    display: none;
+    opacity: 0.9;
+    text-align:center;
+    padding-top: 0%;
+  }
+  .header2 .mobile .head_menu div {
+    margin-top:50px;
+    margin-bottom:50px;
+  }
+  .header2 .mobile .head_menu a {
+    color:#000;
+  }
+  .header2 .mobile .head_menu a :hover{
+    color:#000;
+    opacity: 1;
+  }
+  .header2 .pc .head_menu {
+    display: none;
+  }
+  #hamb_menu {
+    position:absolute;
+    right:5%;
+    top: 26px;
+    color: #000;
+    display: block;
+    cursor: pointer;
+  }
+  #hamb_menu div {
+    width: 30px;
+    height: 2px;
+    background: black;
+    transition: all .5s;
+  }
+  #hamb_menu div:nth-of-type(1){
+    margin-top: 0px;
+  }
+  #hamb_menu div:nth-of-type(2){
+    margin-top: 6px;
+  }
+  #hamb_menu div:nth-of-type(3){
+    margin-top:6px;
+  }
+  #hamb_menu.active div:nth-of-type(1) {
+    -webkit-transform: translateY(8px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
+  }
+  #hamb_menu.active div:nth-of-type(2) {
+    opacity: 0;
+  }
+  #hamb_menu.active div:nth-of-type(3) {
+    -webkit-transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
+  }
+}
+
+.reel_mov {
+  width:100%;
+  height:24vw;
+  margin-bottom:2vw;
+  object-fit: cover;
+}
+.reel_bg {
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width:100vw;
+  height:100vh;
+  object-fit: cover;
+ }
+ .reel_text {
+   position:fixed;
+   left: 50%;
+   transform: translate(-50%,0%);
+   top: 80%;
+   z-index: 4;
+
+   font-size: 200%;
+   font-family: "Helvetica Neue", Arial, sans-serif;
+   font-weight: bold;
+   color: #fff;
+   border: solid 3px #fff;
+   padding-top:5px;
+   padding-bottom: 4px;
+   padding-right:20px;
+   padding-left:20px;
+ }
+ .reel_text:hover {
+   opacity: 0.6;
+ }
+
+
+
+.footer {
+  font-size: 70%;
+  font-weight: normal;
+  color: #4f4f4f;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+
+  /* position:absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,0); */
+  /* width: 90%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding-bottom: 20px;
+}
