@@ -45,16 +45,16 @@
   top: 0;
   left: 0;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.flex_box .mask:hover {
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.4);
+/* .flex_box .mask:hover { */
+  /* opacity: 1; */
+  /* background-color: rgba(0, 0, 0, 0.4); */
   /* マスクを表示する */
-}
+/* } */
 .flex_box .caption {
   position: absolute;
   color: #fff;
