@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>profile - onukitomoya.</title>
+    <title>featured works - onukitomoya.</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" type="text/css" href="./css/my.css">
     <link rel="stylesheet" type="text/css" href="./css/profile.css">
@@ -14,62 +14,273 @@
     <script type="text/javascript" src="./js/header.js"></script>
     <script type="text/javascript" src="./js/footer.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+    <style>
+        .featured {
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            margin-left: 0;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (min-width:620px) {
+            .featured {
+                width: calc(620*0.9px);
+            }
+        }
+
+        @media screen and (max-width:620px) {
+            .featured {
+                width: 90%;
+                overflow: hidden;
+            }
+        }
+
+        .featured a {
+            color: #888;
+        }
+
+        .featured a:hover {
+            color: #4f4f4f;
+        }
+
+        .f_category {
+            margin-top: 50px;
+        }
+
+        .f_category h2 {
+            /* text-align: center; */
+            /* border-top: solid 1px; */
+            border-bottom: solid 1px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .f_contents {
+            clear: both;
+        }
+
+        .f_contents h3 {
+            margin: 0;
+        }
+
+        .f_contents .figure {
+            margin-right: 2%;
+            margin-bottom: 5px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+
+        .f_contents img {
+            margin-right: 2%;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        .f_contents .figure iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .f_contents .stmt {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .f_contents .stmt div {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 
 <body>
     <script type="text/javascript">
-        printHeader('./', '', 'prof');
+        printHeader('./', './profile.html', '');
     </script>
     <script type="text/javascript" src="./js/menu.js"></script>
 
-    <div id="main" style="width:90vw">
-        <h1>Featured Works</h1>
+    <div id="main">
+        <div class="featured">
+            <h1>Featured Works</h1>
 
-        <div style="padding:56.25% 0 0 0;position:relative;">
-            <iframe
-                src="https://player.vimeo.com/video/450021560?h=0780b414e1&color=ffffff&byline=0&portrait=0"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
 
-        <div>
-            <h2>Movie</h2>
-            <div>
-                <h3>live and let live</h3>
+            <div class="f_category">
+                <h2>reel</h2>
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/450021560?h=0780b414e1&color=ffffff&byline=0&portrait=0"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
-            <div>
-                <h3>EXPRESS 筑波大学ダンス部</h3>
-            </div>
-        </div>
 
-        <div>
-            <h2>Media Art</h2>
-            <div>
-                <h3>暗転と永遠の中で</h3>
-            </div>
-            <div>
-                <h3>アニマの消失</h3>
-            </div>
-        </div>
 
-        <div>
-            <h2>Application</h2>
-            <div>
-                <h3>Umidori</h3>
+            <div class="f_category">
+                <div class="f_contents">
+                    <div class="stmt">
+                        <h2>about</h2>
+                        <div>小貫智弥</div>
+                        <div>1999年 東京都生まれ。映像表現・メディアアート・情報可視化・HCIといった分野に興味があり制作を行う。</div>
+                        <div><a href="./">*全ての作品はこちらから</a></div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Color Selection</h3>
-            </div>
-            <div>
-                <h3>Game</h3>
-            </div>
-        </div>
 
-        <div class="footer">
-            <div class="fix">
-                <script type="text/javascript"> printFooter();</script>
+            <div class="f_category">
+                <h2>movie</h2>
+                <div class="f_contents">
+                    <div class="figure">
+                        <iframe src="https://www.youtube.com/embed/xX1B7_VSFo0" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="stmt">
+                        <h3>live and let live</h3>
+                        <div class="info">2021.03</div>
+                        <div>
+                            筑波大学ダンス部と共に製作したダンス映像作品。
+                        </div>
+                        <div>
+                            筑波大学ダンス部は大学コンテンポラリーダンスの強豪校であり、全国大会の常連校である。しかし新型コロナウイルス感染症の拡大によって大会・公演の中止を余儀なくされた。
+                        </div>
+                        <div>
+                            表現することを諦めず、さらに舞台芸術としてのダンスを映像作品に落とし込むという新たな目標を掲げる彼女らと、1年をかけて作品を作り上げた。
+                        </div>
+
+                        <div><a href="./works/live-and-let-live.html">詳細</a></div>
+                    </div>
+                </div>
+
+
+                <div class="f_contents">
+                    <div class="figure">
+                        <iframe id="youtbe_player"
+                            src="https://www.youtube.com/embed/videoseries?list=PL3o8pj9CICbPc5WQVUiTmUfTnWGDP6n2t"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="stmt">
+                        <h3>EXPRESS 筑波大学ダンス部</h3>
+                        <div>2020.01</div>
+                        <div>
+                            筑波大学ダンス部のドキュメンタリー。
+                        </div>
+                        <div>
+                            毎年夏に行われる創作ダンスの全国大会、全日本高校・大学ダンスフェスティバル神戸にて三連覇を果たした強豪・筑波大学ダンス部。
+                            激動の夏を過ごした彼女たちは11月に開催される自主公演「DANCE
+                            EXPRESS Vol.14」に向けて作品作りに邁進していた。
+                        </div>
+                        <div>
+                            彼女たちを突き動かすものはなにか。彼女たちはなぜ踊るのか。部員たちの2ヶ月間を追った。
+                        </div>
+
+                        <div><a href="./works/express.html">詳細</a></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="f_category">
+                <h2>media art</h2>
+
+                <div class="f_contents">
+                    <div class="figure">
+                        <iframe id="youtbe_player" src="https://www.youtube.com/embed/DdYMoKtYVlc" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="stmt">
+                        <h3>暗転と永遠の中で</h3>
+                        <div>2019.12</div>
+                        <div>
+                            1つの黒い正方形のスクリーンに朝・夜それぞれの河面の映像が交互に投影される。映像内の河は全て東京都内で撮影した。
+                        </div>
+                        <div>
+                            筑波大学 情報メディア創成学類の講義 ディジタルコンテンツ表現実習 最終成果発表会「1/100展」にて展示。
+                        </div>
+
+                        <div><a href="./works/in-the-black-and-eternal.html">詳細</a></div>
+                    </div>
+                </div>
+
+
+                <div class="f_contents">
+                    <div class="figure">
+                        <iframe id="youtbe_player" src="https://www.youtube.com/embed/aMkhraO-NBQ" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="stmt">
+                        <h3>アニマの消失</h3>
+                        <div>2019.05</div>
+                        <div>
+                            廃墟に残された道具たち。アニマを失くし、個性を失った道具を手にとることでそこに残された「気配」を聞く作品である。 平砂アートムーヴメント展示企画2019にて展示。
+                        </div>
+                        <div>
+                            整列した立方体のオブジェクトを手に取ると、ノイズのような唸り声のような音が聞こえる。
+                        </div>
+
+                        <div><a href="./works/lost-anima.html">詳細</a></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="f_category">
+                <h2>application</h2>
+
+                <div class="f_contents">
+                    <div class="figure">
+                        <img src="./img/umidori/case4.gif">
+                    </div>
+                    <div class="stmt">
+                        <h3>Umidori</h3>
+                        <div>2021.02</div>
+                        <div>
+                            卒業研究で開発した可視化ツール。海鳥の行動データを可視化することで比較分析の支援を目的とする。
+                        </div>
+                        <div>
+                            自由度の高いSmall Multiplesを用いた視覚表現と、対話的な編集が可能なUIを備えた統合的ツールを開発した。
+                        </div>
+
+                        <div><a href="./works/umidori.html">詳細</a></div>
+                    </div>
+                </div>
+
+                <div class="f_contents">
+                    <div class="figure">
+                        <img src="./img/color_selection/color_selection_web_ver4.gif">
+                    </div>
+                    <div class="stmt">
+                        <h3>Color Selection</h3>
+                        <div>2019.10</div>
+                        <div><a href="https://color-selection.herokuapp.com">https://color-selection.herokuapp.com</a>
+                        </div>
+                        <div>
+                            コンピュータが当たり前になった現代では誰もがデザインを行う機会を持っている。そしてその際に重要になるのが配色である。
+                        </div>
+                        <div>
+                            デザインの知識が不足しているユーザーにとって重要なことは、独自のカラーデザインをすることではなく、良いカラーデザインを模倣することだという仮定のもと、「同系色の選択」「補色によるハイライト」「少ない色数」を重視したツール設計を行なった。
+                        </div>
+
+                        <div><a href="./works/color-selection.html">詳細</a></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer" style="clear: both;">
+                <div class="fix">
+                    <script type="text/javascript"> printFooter();</script>
+                </div>
             </div>
         </div>
     </div>
