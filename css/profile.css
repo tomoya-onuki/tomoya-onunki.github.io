@@ -1,6 +1,6 @@
 .profile {
   color: #666;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro', sans-serif;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -49,9 +49,9 @@
 }
 
 .profile h2 {
-  font-size: 100%;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
-  color: #000;
+  font-size: 110%;
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #222;
   font-weight: normal;
   display: inline-block;
   margin-top: 0px;
@@ -60,10 +60,10 @@
 
 .profile h3 {
   font-size: 100%;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
-  color: #000;
-  font-weight: bold;
-  margin-top: 0px;
+  /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro'; */
+  color: #444;
+  font-weight: normal;
+  margin-top: 10px;
   margin-bottom: 3px;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .profile .item {
-  margin-left: 90px
+  margin-left: 120px
 }
 
 .profile word-wrap {

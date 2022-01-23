@@ -1,15 +1,17 @@
-html{
+body {
 	scroll-behavior: smooth;
-  /* overflow: hidden; */
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro', sans-serif;
   color: #4f4f4f;
   font-size: 80%;
-  max-width: fit-content;
+
+  width:100vw;
+  margin: 0 0 0 0;
 }
 
 #main{
   padding-top: 62px;
   width:90%;
+  min-width:90%;
   margin-left: 5%;
   overflow: hidden;
 }

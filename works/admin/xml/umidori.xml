@@ -15,8 +15,9 @@
 ###アプローチ
 自由度の高いSmall Multiplesを用いた視覚表現と、対話的な編集が可能なUIを備えた統合的ツールを開発した。
 
-[卒業論文PDF](http://www.mast.tsukuba.ac.jp/intra/thesis/fy2021/pdf/201711441.pdf) (*筑波大学学内ネットワークからのみアクセス可能)
-
 ###Development
 Java, JavaFX
+
+###Publication
+小貫智弥, 三末和男. 海鳥の移動データの比較分析のための可視化ツールの開発, 情報処理学会研究報告, Vol.2022-HCI-196, No.6, 2022.
 </right>
