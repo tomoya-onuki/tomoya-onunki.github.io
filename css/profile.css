@@ -51,7 +51,8 @@
 .profile h2 {
   font-size: 110%;
   font-family: "Helvetica", Arial, sans-serif;
-  color: #222;
+  color: #000;
+  /* color: #222; */
   font-weight: normal;
   display: inline-block;
   margin-top: 0px;
@@ -84,6 +85,7 @@
   margin: 0px;
 }
 
+
 /* .profile ol li:hover {
   background: #eee;
 } */
@@ -100,8 +102,21 @@
 }
 
 .profile .item {
-  margin-left: 120px
+  margin-left: 110px
 }
+
+
+.profile .sub-item {
+  color: #999;
+  /* padding-right:10px; */
+}
+.profile .sub-item a {
+  color: #999;
+}
+.profile .link {
+  text-decoration: underline;
+}
+
 
 .profile word-wrap {
   word-wrap: keep-all;
@@ -117,11 +132,6 @@
   border-bottom: 1px solid;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.profile .sub-item {
-  color: #999;
-  /* padding-right:10px; */
 }
 
 .lang_menu {
