@@ -72,7 +72,8 @@
   margin-bottom: 5px;
 }
 
-.profile ol, .profile ul {
+.profile ol,
+.profile ul {
   margin-left: -20px;
   margin-top: 0;
 }
@@ -170,4 +171,10 @@
 
 .profile .reel_link:hover {
   opacity: 1.0;
+}
+
+.profile .in_menu {
+  color: #666;
+  border: #999 solid 1px;
+  padding: 3px 10px 2px 10px;
 }
