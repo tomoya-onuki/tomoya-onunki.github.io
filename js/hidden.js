@@ -10,7 +10,9 @@ $(function() {
 
         if (i == 9) {
             $(this).after(`
-            <h2><a id="allView" style="text-align: center;cursor:pointer"> show more</a></h2>
+            <div class="fill flex_box">
+                <h2><a id="allView" style="text-align: center;cursor:pointer"> show more</a></h2>
+            </div>
             <div class="fill flex_box"></div>
             <div class="fill flex_box"></div>
             <div class="fill flex_box"></div>
