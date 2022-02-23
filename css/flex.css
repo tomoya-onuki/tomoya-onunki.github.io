@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  padding: 0 0 0 0;
 }
 
 .flex_box {
@@ -90,4 +91,15 @@
 
 .flex_box:hover .caption {
   opacity: 1;
+}
+
+
+#allView {
+  /* text-align: center; */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 150%;
+}
+#allView:hover {
+  opacity: 0.6;
 }

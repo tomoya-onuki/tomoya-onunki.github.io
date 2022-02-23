@@ -14,7 +14,6 @@ $(function() {
             <div class="fill flex_box"></div>
             <div class="fill flex_box"></div>
             `);
-            $('#wrap').after('<h2><a id="allView" style="text-align: center;cursor:pointer"> show more</a></h2>');
         }
         i++;
     });
