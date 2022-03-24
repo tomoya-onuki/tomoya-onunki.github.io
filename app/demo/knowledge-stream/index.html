@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>知の河</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
 <body>
+    <!-- <img src="./bg.JPG"> -->
     <div class="ui">
-        <input type="text" name="text" id="text" placeholder="入力">
-        <button id="submit">送信</button>
+        <textarea name="in_text" id="in_text" cols="30" rows="3" placeholder="知を入力"></textarea>
+        <button id="submit">放流</button>
     </div>
-    <canvas id="main_cvs"></canvas>
+    <canvas id="main_cvs" width="600" height="400"></canvas>
+    <div id="main"></div>
 </body>
 </html>
