@@ -68,12 +68,21 @@
             font-family: Helvetica, Arial, sans-serif;
         }
 
+        /* ol {
+            margin: 10px 0 0 0;
+        } */
+        /* li {
+            margin-bottom: 8px;
+            margin-left: -22px;
+        } */
+
         .f_contents {
             clear: both;
         }
 
         .f_contents h3 {
-            margin: 0;
+            color: #444;
+            margin: 0px 0px 0px 0px;
         }
 
         .f_contents h4 {
@@ -122,6 +131,27 @@
         .featured highlight {
             background: linear-gradient(transparent 40%, #ff6 40%);
         }
+
+        .featured ol,
+        .featured ul {
+            margin: 5px 0px 40px -20px;
+        }
+
+        .featured ol li div,
+        .featured ul li div {
+            margin: 0px 0px 0px 5px;
+            font-weight: bold;
+        }
+
+        .featured ol li .sub-item,
+        .featured ul li .sub-item {
+            font-weight: normal;
+        }
+
+        .featured ol li,
+        .featured ul li {
+            margin: 0px 0px 10px 0px;
+        }
     </style>
 </head>
 
@@ -139,25 +169,61 @@
                 <h2>About</h2>
                 <div class="stmt">
                     <div>
-                        私は大学でコンピュータサイエンスを学ぶ傍ら、<highlight>映像表現</highlight>・<highlight>メディアアート</highlight>・<highlight>情報可視化・HCI</highlight>といった分野に興味があり制作を行なっています。<highlight>主に人の視覚情報に重きを置いた制作物を好みます。</highlight>
+                        私は大学でコンピュータサイエンスを学ぶ傍ら、<highlight>映像表現</highlight>・<highlight>メディアアート</highlight>・<highlight>
+                            情報可視化・HCI</highlight>といった分野に興味があり制作を行なっています。<highlight>主に人の視覚情報に重きを置いた制作物を好みます。</highlight>
                     </div>
                     <div>
                         *ここでは一部の作品を紹介しています。全ての作品は<a href="./">works</a>から閲覧できます。
                     </div>
                 </div>
+                <h3>なにをつくるか？</h3>
+                <ol>
+                    <li class="bullet">
+                        <div><highlight>プログラム</highlight></div>
+                        <div class="sub-item">webアプリケーション, ビジュアリゼーション, 装置, ゲーム, シミュレーション</div>
+                    </li>
+                    <li class="bullet">
+                        <div><highlight>実写映像</highlight></div>
+                        <div class="sub-item">ドキュメンタリー, ダンスムービー, メイキング, プロモーション, ウェディング</div>
+                    </li>
+                </ol>
+
+
+                <h3>どうつくるか？</h3>
+                <div class="stmt">
+                    <div><highlight><strong>まずは、手を動かす。</strong></highlight></div>
+                    <div>
+                        「プロトタイプを作る→レビュー→修正→レビュー→...→完成」というサイクルを回す、いわゆるアジャイル開発のようなスタイルで制作をしている。
+                        実際に動いているものを作ってみることで、自分の作りたい完成像が明確になっていく。
+                        また、制作段階でユーザーや視聴者からのフィードバックをもらうことで、完成度を上げる。
+                    </div>
+                </div>
+
+                <h3>なぜつくるか？</h3>
+                <div class="stmt">
+                    <div><highlight><strong>見えないものを、見えるようにしたいから！</strong></highlight></div>
+                    
+                    <div>情報可視化とは、データを視覚的に表現する分野だ。よく対比される科学的可視化があるが、これは実際に物理的な形状を持つものをコンピュータ上で可視化することである。例えば、CTを使って体内の画像を見たり、Google Earthで地球を見たりする。対して、<highlight>情報可視化では実体の無いデータに形を与え、個々の情報によって構成される大局的な情報を見せることができる。</highlight>SNSのフォロー関係をネットワーク図で表すことで、人間関係のクラスタが見える。気象情報を散布図で表すことで相関が見える。</div>
+
+                    <div>映像は2次元情報だ。カメラを通して、現実が平面になる。しかし、明暗や彩度、色相、被写界深度を調整することでレイヤーを作ることができる。人間の目とは違う画角で世界を切り取ることができる。現実では起こり得ない時系列や場面の転換ができる。<highlight>映像によって物語を"見る"ことができるようになる。</highlight></div>
+                </div>
+
             </div>
             <div class="f_category f_contents">
                 <h2>concept</h2>
                 <div class="stmt">
                     <!-- <h3 style="margin: 5px 0px 5px 0px;">concept</h3> -->
                     <div>
-                        映像では、<highlight>明暗や色彩による雰囲気の表現</highlight>を目指しており、また映像体験特有の<highlight>時空間を超越する表現によって人間の関係性に関する物語を描く</highlight>ことに挑戦している。
+                        映像では、<highlight>明暗や色彩による雰囲気の表現</highlight>を目指しており、また映像体験特有の<highlight>
+                            時空間を超越する表現によって人間の関係性に関する物語を描く</highlight>ことに挑戦している。
                     </div>
                     <div>
-                        メディアアート作品では、主に空間を利用したインスタレーション形式を好む。<highlight>非科学的で感覚的なものを、テクノロジーを用いていかに表現するか</highlight>に挑戦している。
+                        メディアアート作品では、主に空間を利用したインスタレーション形式を好む。<highlight>非科学的で感覚的なものを、テクノロジーを用いていかに表現するか</highlight>
+                        に挑戦している。
                     </div>
                     <div>
-                        アプリケーション等では、<highlight>人間の作業の支援を目的とした制作を中心に行っている</highlight>。コンピュータサイエンスの最大の強みの一つは<highlight>他分野に働きかけることで人の生活を便利にでき、さらには新たな価値を生み出せること</highlight>
+                        アプリケーション等では、<highlight>人間の作業の支援を目的とした制作を中心に行っている</highlight>。コンピュータサイエンスの最大の強みの一つは<highlight>
+                            他分野に働きかけることで人の生活を便利にでき、さらには新たな価値を生み出せること</highlight>
                         だと考えており、動物学やデザイン・スポーツ・ビジネスといった広い分野のユーザーに対して支援を行うアプリケーションの開発を続けている。
                     </div>
                 </div>
