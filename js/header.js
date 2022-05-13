@@ -30,7 +30,7 @@ function printHeader(worksUrl, profUrl, id) {
 
   var header_str = `
   <div class="header2">
-    <a id="top" class="head_font title" href="`+worksUrl+`">onukitomoya</a>
+    <a id="top" class="head_font title" href="`+worksUrl+`">onk</a>
 
 
     <div class="pc">
@@ -45,7 +45,7 @@ function printHeader(worksUrl, profUrl, id) {
 
     <div class="mobile">
       <div class="head_menu">
-        <div>onukitomoya</div>
+        <div>onk</div>
         <div class="head_font">
           <div>`+artLink+`</div>
           <div>`+filmLink+`</div>
