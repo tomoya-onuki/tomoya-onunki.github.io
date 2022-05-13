@@ -1,0 +1,43 @@
+.top_stmt {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top_stmt .box0 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.top_stmt .box {
+    width: 100vw;
+    height: auto;
+    /* background: rgb(0, 0, 0); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.top_stmt .box .block {
+    color: #fff;
+    padding: 100px 20% 30px 20%;
+    font-size: 100%;
+}
+
+.top_stmt .box .block .text {
+    margin: 0px 0px 60px 0px;
+}
+
+.top_stmt .box .block .text h1 {
+    font-size: 160%;
+    margin: 0px 0px 15px 0px;
+}
+
+.top_stmt .box .block .text h2 {
+    font-size: 120%;
+    margin: 0px 0px 8px 0px;
+    font-style: italic;
+}
+
+.top_stmt .box .block .text div {
+    margin: 0px 0px 20px 0px;
+    color: #eee;
+}
