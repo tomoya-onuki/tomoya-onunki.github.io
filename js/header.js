@@ -1,28 +1,28 @@
-function printHeader(worksUrl, profUrl, id) {
-  var worksLink = '<a href="'+worksUrl+'">works</a>';
-  var profLink = '<a href="'+profUrl+'">profile</a>';
+function printHeader(topUrl, profUrl, id) {
+  // var worksLink = '<a href="'+topUrl+'">works</a>';
+  var profLink = '<a href="'+topUrl+'">profile</a>';
 
-  var artLink = '<a href="'+worksUrl+'art/">art</a>';
-  var filmLink = '<a href="'+worksUrl+'film/">film</a>';
-  var productLink = '<a href="'+worksUrl+'product/">product</a>';
+  var artLink = '<a href="'+topUrl+'art/">art</a>';
+  var filmLink = '<a href="'+topUrl+'film/">film</a>';
+  var productLink = '<a href="'+topUrl+'product/">product</a>';
 
   if (id === 'works') {
-    worksLink = '<a href="'+worksUrl+'" class="underbar">works</a>';
+    // worksLink = '<a href="'+topUrl+'" class="underbar">works</a>';
   }
   else if (id === 'prof') {
     var profLink = '<a href="'+profUrl+'" class="underbar">profile</a>';
   }
   else if (id === 'art') {
-    var artLink = '<a href="'+worksUrl+'art/" class="underbar">art</a>';
+    var artLink = '<a href="'+topUrl+'art/" class="underbar">art</a>';
   }
   else if (id === 'film') {
-    var filmLink = '<a href="'+worksUrl+'film/" class="underbar">film</a>';
+    var filmLink = '<a href="'+topUrl+'film/" class="underbar">film</a>';
   }
   else if (id === 'product') {
-    var productLink = '<a href="'+worksUrl+'product/" class="underbar">product</a>';
+    var productLink = '<a href="'+topUrl+'product/" class="underbar">product</a>';
   }
-  // if (!worksUrl || worksUrl === './') {
-  //   worksLink = '<a href="'+worksUrl+'" class="underbar">works</a>';
+  // if (!topUrl || topUrl === './') {
+  //   worksLink = '<a href="'+topUrl+'" class="underbar">works</a>';
   // }
   if (!profUrl) {
     var profLink = '<a href="'+profUrl+'" class="underbar">profile</a>';
@@ -30,7 +30,7 @@ function printHeader(worksUrl, profUrl, id) {
 
   var header_str = `
   <div class="header2">
-    <a id="top" class="head_font title" href="`+worksUrl+`">onk</a>
+    <a id="top" class="head_font title" href="`+topUrl+`">onk</a>
 
 
     <div class="pc">
@@ -67,7 +67,7 @@ function printHeader(worksUrl, profUrl, id) {
   
   // var header_str = `
   // <div class="header2">
-  //   <a id="top" class="head_font title" href="`+worksUrl+`">onukitomoya</a>
+  //   <a id="top" class="head_font title" href="`+topUrl+`">onukitomoya</a>
 
 
   //   <div class="pc">

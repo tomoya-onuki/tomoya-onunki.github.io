@@ -3,39 +3,185 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=360,initial-scale=1">
-	<title>onukitomoya</title>
+	<meta name="viewport" content="width=device-width">
+	<title>profile - onukitomoya.</title>
 	<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-	<link rel="stylesheet" type="text/css" href="./css/reel.css">
-	<link rel="stylesheet" type="text/css" href="./css/top.css">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-	<script src="https://player.vimeo.com/api/player.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/my.css">
+	<link rel="stylesheet" type="text/css" href="./css/profile.css">
+	<link rel="stylesheet" type="text/css" href="./css/flex_gif.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/modal.css">
 	<script type="text/javascript" src="./js/header.js"></script>
 	<script type="text/javascript" src="./js/footer.js"></script>
-	<script type="text/javascript" src="./js/hidden.js"></script>
-	<script type="text/javascript" src="./js/css_switch.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
+
 
 <body>
 	<script type="text/javascript">
-		printHeader('./', './profile', 'top');
+		printHeader('./', '', 'prof');
 	</script>
 	<script type="text/javascript" src="./js/menu.js"></script>
 
+	<div id="main">
+		<div class="profile">
+			<div>
+				<img src="./img/me.JPG" alt="">
+				<!-- <img src="./img/me_202251321329.png" alt=""> -->
+			</div>
+			<div class="block">
+				<h1>小貫智弥 / Onuki Tomoya</h1>
+				<div style="margin-top:10px;">
+					1999年 東京都生まれ。<br>
+					映像表現・メディアアート・情報可視化・HCIといった分野に興味がある。
+				</div>
+			</div>
 
-	<div class="video_box">
-		<video class="video" muted autoplay loop playsinline>
-			<source src="./mov/reel_540p.mp4" type="video/mp4">
-		</video>
-	</div>
 
-	<div class="footer">
-		<div class="fix">
-			<script type="text/javascript"> printFooter();</script>
+			<div class="block">
+				<h2>Biography</h2>
+				<div class="bullet">
+					<div class="head">2021 -</div>
+					<div class="item">
+						<div>
+							<a href="https://www.cs.tsukuba.ac.jp" target="_blank">
+								<word-wrap>筑波大学 大学院</word-wrap>
+								<word-wrap>理工情報生命学術院</word-wrap>
+								<word-wrap>システム情報工学研究群</word-wrap>
+								<word-wrap>情報理工学位プログラム</word-wrap>
+							</a>
+						</div>
+						<div>
+							<div class="sub-item">
+								<word-wrap>
+									<a href="http://www.vislab.cs.tsukuba.ac.jp/japanese/index.php" target="_blank">VisLab</a>, 修士 (工学)
+								</word-wrap>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="bullet">
+					<div class="head">2018 - </div>
+					<div class="item">
+						<div>ビデオグラファー (フリーランス)</div>
+						<div class="sub-item">ブライダル, プロモーションなど</div>
+					</div>
+				</div>
+
+				<div class="bullet">
+					<div class="head">2017 - 2021</div>
+					<div class="item">
+						<div>
+							<a href="https://www.mast.tsukuba.ac.jp">
+								<word-wrap>筑波大学</word-wrap>
+								<word-wrap>情報学群 情報メディア創成学類</word-wrap>
+							</a>
+						</div>
+						<div>
+							<div class="sub-item">
+								<word-wrap>
+									<a href="http://www.vislab.cs.tsukuba.ac.jp/japanese/index.php" target="_blank">VisLab</a>, 学士 (情報メディア科学)
+								</word-wrap>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+	
+
+			<div class="block">
+				<h2>Awards</h2>
+				<ol>
+					<li class="bullet">
+						<div>学生奨励賞</div>
+						<div class="sub-item"><u>小貫智弥</u>, 三末和男. 海鳥の移動データの比較分析のための可視化ツールの開発.</div>
+						<div class="sub-item"><a href="http://www.sighci.jp/events/sig/196" target="_blank">一般社団法人 情報処理学会, 第196回HCI研究会</a>, 2022-1.</div>
+					</li>
+					<li class="bullet">
+						<div>茗溪会賞</div>
+						<div class="sub-item"><u>小貫智弥</u>. 卒業研究および在学時の活動に対して</div>
+						<div class="sub-item">
+							<a href="https://www.meikei.or.jp" target="_blank">一般社団法人 茗溪会</a>, 2021-3.</div>
+					</li>
+				</ol>
+			</div>
+
+			<!-- <div class="block">
+				<h2>Skills</h2>
+				<div class="bullet">
+					<div class="head">Moive</div>
+					<div class="item">DaVinci Resolve, Premiere Pro, Final Cut Pro X, Shooting</div>
+				</div>
+				<div class="bullet">
+					<div class="head">Programming</div>
+					<div class="item">Java, Processing, HTML, TypeScript, PHP</div>
+				</div>
+				<div class="bullet">
+					<div class="head">Others</div>
+					<div class="item">Adobe Illustrator, SketchUP, Arduino</div>
+				</div>
+			</div> -->
+
+
+			<div class="block">
+				<h2>Exhibition</h2>
+				<ul>
+					<li class="bullet">
+						<div><a href="./works/in-the-black-and-eternal.html">暗転と永遠の中で。</a></div>
+						<div class="sub-item">1/100展, 筑波大学春日エリア(つくば市, 日本), 2019-12.</div>
+					</li>
+					<li class="bullet">
+						<div><a href="./works/lost-anima.html">アニマの消失</a></div>
+						<div class="sub-item">平砂アートムーヴメント展示企画「ここにおいて みせる/みる」, 筑波大学 学生宿舎平砂9号棟(つくば市, 日本), 2019-5.</div>
+					</li>
+					<li class="bullet">
+						<div><a href="./works/shape-of-monologue-aggregate.html">ひとりごとのカタチ/集合体について</a></div>
+						<div class="sub-item">mAstival, 筑波大学 総合交流会館, 2019-4.</div>
+					</li>
+					<li class="bullet">
+						<div><a href="./works/cube.html">CUBE</a></div>
+						<div class="sub-item">MAD -創成x芸術合同展覧宴-, カフェヨン(つくば市, 日本), 2019-4.</div>
+					</li>
+					<li class="bullet">
+						<div><a href="./works/kalfos-box.html">KalfosBox</a></div>
+						<div class="sub-item">どこか遠くの場所で, 筑波大学アートギャラリーT+(つくば市, 日本), 2018-10.</div>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="block">
+				<h2>Publication</h2>
+				<ol>
+					<li class="bullet">
+						<div><u>小貫智弥</u>, 三末和男. 海鳥の移動データの比較分析のための可視化ツールの開発, 情報処理学会研究報告, Vol.2022-HCI-196, No.6, 2022.</div>
+						<div class="sub-item">国内会議(査読なし), 口頭発表. 2022-1. <a href="https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=214584&item_no=1&page_id=13&block_id=8" class="link">link</a></div>
+					</li>
+					<li class="bullet">
+						<div><u>小貫智弥</u>. 海鳥の移動軌跡の比較分析を支援するための可視化ツールの研究, 筑波大学 情報学群 情報メディア創成学類 卒業研究論文, 2021.</div>
+						<div class="sub-item">学位論文,  学士(情報メディア科学). 2021-2.</div>
+					</li>
+				</ol>
+			</div>
+
+			<div>
+				<a href="./"><u>Ja</u></a> / <a href="./profile_en">En</a>
+			</div>
+
+			<div style="height: 60px;"></div>
+
+
+			<div class="footer">
+				<script type="text/javascript"> printFooter();</script>
+			</div>
+
 		</div>
 	</div>
-
 </body>
 
 </html>
