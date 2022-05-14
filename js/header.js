@@ -1,6 +1,6 @@
 function printHeader(topUrl, profUrl, id) {
   // var worksLink = '<a href="'+topUrl+'">works</a>';
-  var profLink = '<a href="'+topUrl+'">profile</a>';
+  var profLink = '<a href="'+profUrl+'">profile</a>';
 
   var artLink = '<a href="'+topUrl+'art/">art</a>';
   var filmLink = '<a href="'+topUrl+'film/">film</a>';
