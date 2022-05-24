@@ -40,7 +40,9 @@ def formatHTML(s, reset=None):  # HTMLを整形する。第2引数があると�
     replTag = repltagCreator(indentunit)  # マッチオブジェクトを処理する関数を取得。
     s = html.unescape(s)  # HTMLの文字参照をユニコードに戻す。
     s = tagregex.sub(replTag, s)  # script要素とstyle要素以外インデントを付けて整形する。
+    s.replace('\n', '')
     return s.lstrip("\n")  # 先頭の改行を削除して返す。
+
 def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブジェクトを処理する関数を返す。
     starttagregex = re.compile(r'<\w+.*?>')  # 開始タグ。
     endendtagregex = re.compile(r'<\/\w+>$')  # 終了タグで終わっているか。
