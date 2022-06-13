@@ -1,4 +1,8 @@
 # 静的ポートフォリオ
+## メモ
+- index.html: Reel動画の埋め込み
+- works(art, film, product)
+- profile
 
 ## worksコンテンツの生成
 works内のコンテンツはxmlとマークダウンが混じった独自の形式で記述し、コマンドライン上からpythonスクリプトでhtmlに変換する  
