@@ -2,9 +2,9 @@ function printHeader(topUrl, profUrl, id) {
   // var worksLink = '<a href="'+topUrl+'">works</a>';
   var profLink = '<a href="'+profUrl+'">profile</a>';
 
-  var artLink = '<a href="'+topUrl+'art/">art</a>';
+  var otherLink = '<a href="'+topUrl+'other/">other</a>';
   var filmLink = '<a href="'+topUrl+'film/">film</a>';
-  var productLink = '<a href="'+topUrl+'product/">product</a>';
+  var softwareLink = '<a href="'+topUrl+'software/">software</a>';
 
   if (id === 'works') {
     // worksLink = '<a href="'+topUrl+'" class="underbar">works</a>';
@@ -12,14 +12,14 @@ function printHeader(topUrl, profUrl, id) {
   else if (id === 'prof') {
     var profLink = '<a href="'+profUrl+'" class="underbar">profile</a>';
   }
-  else if (id === 'art') {
-    var artLink = '<a href="'+topUrl+'art/" class="underbar">art</a>';
+  else if (id === 'other') {
+    var otherLink = '<a href="'+topUrl+'other/" class="underbar">other</a>';
   }
   else if (id === 'film') {
     var filmLink = '<a href="'+topUrl+'film/" class="underbar">film</a>';
   }
-  else if (id === 'product') {
-    var productLink = '<a href="'+topUrl+'product/" class="underbar">product</a>';
+  else if (id === 'software') {
+    var softwareLink = '<a href="'+topUrl+'software/" class="underbar">software</a>';
   }
   // if (!topUrl || topUrl === './') {
   //   worksLink = '<a href="'+topUrl+'" class="underbar">works</a>';
@@ -35,9 +35,9 @@ function printHeader(topUrl, profUrl, id) {
 
     <div class="pc">
       <div class="head_menu head_font">
-        <span style="margin-left:15px;">`+artLink+`</span>
-        <span style="margin-left:15px;">`+filmLink+`</span>
-        <span style="margin-left:15px;">`+productLink+`</span>
+      <span style="margin-left:15px;">`+filmLink+`</span>
+      <span style="margin-left:15px;">`+softwareLink+`</span>
+      <span style="margin-left:15px;">`+otherLink+`</span>
         <span style="margin-left:15px;">/</span>
         <span style="margin-left:15px;">`+profLink+`</span>
       </div>
@@ -47,9 +47,9 @@ function printHeader(topUrl, profUrl, id) {
       <div class="head_menu">
         <div>onk</div>
         <div class="head_font">
-          <div>`+artLink+`</div>
+          <div>`+otherLink+`</div>
           <div>`+filmLink+`</div>
-          <div>`+productLink+`</div>
+          <div>`+softwareLink+`</div>
           <hr>
           <div>`+profLink+`</div>
         </div>

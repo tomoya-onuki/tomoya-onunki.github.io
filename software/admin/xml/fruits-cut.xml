@@ -1,0 +1,16 @@
+<title>FRUITS CUT!</title>
+<info>2018.12 / Game</info>
+
+<img0>../img/fruitscut/fruitscut.gif</img0>
+
+<right>
+筑波大学の講義、コンピュータアートIIの課題として制作したゲーム。
+ダンボールから飛び出すフルーツを切るゲームである. 操作は手をかざすジェスチャだけで行う。センサーを搭載した段ボール箱型のインターフェースだけで全ての入力が完結するようになっている。
+
+製作 : 小貫 智弥 / 金子優香 / 町田樹
+
+[Youtube](https://youtu.be/CzBQsBcDG3g)
+
+###Development
+Processing, Arduino
+</right>
