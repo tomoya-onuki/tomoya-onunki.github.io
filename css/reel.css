@@ -31,7 +31,7 @@ a {
 
 .works_menu a {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
+  color: #000;
   font-weight: 900;
   display: inline-block;
   /* border-bottom: #000 solid 0.5px; */
@@ -43,7 +43,7 @@ a {
 p a,
 h2 a,
 h1 a {
-  color: #fff;
+  color: #000;
 }
 
 .head_menu a:hover,
@@ -63,7 +63,7 @@ p a:hover {
 .sub_menu a {
   font-size: 120%;
   /* font-weight: bold; */
-  color: #fff;
+  color: #000;
 }
 
 
@@ -73,7 +73,7 @@ p a:hover {
   top: 72px;
   font-size: 120%;
   z-index: 3;
-  color: #fff;
+  color: #000;
 }
 
 
@@ -95,7 +95,7 @@ p a:hover {
 
 h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
+  color: #000;
   margin-top: 10px;
   margin-bottom: 5px;
   /* font-size: 300% */
@@ -106,13 +106,13 @@ h2 {
   margin-top: 10px;
   margin-bottom: 5px;
   /* font-size: 100%; */
-  color: #fff;
+  color: #000;
 }
 
 h3 {
   margin-top: 10px;
   margin-bottom: 5px;
-  color: #fff;
+  color: #000;
 }
 
 p {
@@ -123,7 +123,7 @@ p {
 
 
 .underbar {
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px #000;
   padding-bottom: 3px;
 }
 
@@ -136,7 +136,7 @@ p {
   top: 0;
   left: 0;
   z-index: 4;
-  color: #fff;
+  color: #000;
 }
 
 .header2 .head_font {
@@ -144,7 +144,7 @@ p {
   font-family: "Helvetica Neue", Arial, sans-serif;
   text-decoration: none;
   font-weight: normal;
-  color: #fff;
+  color: #000;
 }
 
 .header2 .title {
@@ -155,7 +155,7 @@ p {
 
 .head_menu hr {
   width: 30px;
-  border-top: #fff solid 1px;
+  border-top: #000 solid 1px;
   border-bottom: none;
   border-right: none;
   border-left: none;
@@ -170,7 +170,7 @@ p {
   }
 
   .header2 .pc .head_menu a {
-    color: #fff;
+    color: #000;
   }
 
   .header2 .pc .head_menu a :hover {
@@ -186,14 +186,13 @@ p {
 
   .header2 .mobile .head_menu {
     font-size: 120%;
-    background: #000;
+    background: rgba(255, 255, 255, 0.5);
 
     position: absolute;
     width: 100%;
     height: 150vh;
 
     display: none;
-    opacity: 0.9;
     text-align: center;
     padding-top: 0%;
   }
@@ -204,11 +203,11 @@ p {
   }
 
   .header2 .mobile .head_menu a {
-    color: #fff;
+    color: #000;
   }
 
   .header2 .mobile .head_menu a :hover {
-    color: #fff;
+    color: #000;
     opacity: 1;
   }
 
@@ -220,7 +219,7 @@ p {
     position: absolute;
     right: 5%;
     top: 26px;
-    color: #fff;
+    color: #000;
     display: block;
     cursor: pointer;
   }
@@ -228,7 +227,7 @@ p {
   #hamb_menu div {
     width: 30px;
     height: 2px;
-    background: #fff;
+    background: #000;
     transition: all .5s;
   }
 
@@ -284,7 +283,7 @@ p {
 .footer {
   font-size: 70%;
   font-weight: normal;
-  color: #fff;
+  color: #000;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
 
   /* position:absolute;
