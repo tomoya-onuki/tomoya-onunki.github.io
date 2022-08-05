@@ -6,8 +6,10 @@
 <right>
 Drawing with particles は集合と解散を繰り返す300の粒子をマウスで操作し、思いのままの形状を描く新たな表現ツールである。
 
+[https://tomoya-onuki.github.io/drawing_with_particles/](https://tomoya-onuki.github.io/drawing_with_particles/)
+
 ###Development
-Processing
+Processing, TypeScript
 
 ###GitHub
 [https://github.com/tomoya-onuki/drawing_with_particles](https://github.com/tomoya-onuki/drawing_with_particles)

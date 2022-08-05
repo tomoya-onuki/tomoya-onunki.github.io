@@ -89,7 +89,6 @@ def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブ
         return txt
     return replTag
 
-
 ###############
 ## メインの処理
 ###############
@@ -138,7 +137,6 @@ def generateHTML(tempStr, xmlList, metadataList):
             leftContents += '<img class="half_img_l" src="' + value + '">\n'
         elif re.fullmatch(tag, 'left'):
             leftContents += md.convert(value)
-    
     
     # コンテンツツリーのメタデータを埋め込む
     # for metadata in metadataList:
