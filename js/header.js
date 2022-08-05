@@ -1,7 +1,6 @@
 function printHeader(topUrl, profUrl, id) {
   // var worksLink = '<a href="'+topUrl+'">works</a>';
   var profLink = '<a href="'+profUrl+'">profile</a>';
-
   var otherLink = '<a href="'+topUrl+'other/">other</a>';
   var filmLink = '<a href="'+topUrl+'film/">film</a>';
   var softwareLink = '<a href="'+topUrl+'software/">software</a>';
@@ -45,16 +44,12 @@ function printHeader(topUrl, profUrl, id) {
 
     <div class="mobile">
       <div class="head_menu">
-        <div>onk</div>
         <div class="head_font">
-          <div>`+otherLink+`</div>
-          <div>`+filmLink+`</div>
-          <div>`+softwareLink+`</div>
+        <div>`+filmLink+`</div>
+        <div>`+softwareLink+`</div>
+        <div>`+otherLink+`</div>
           <hr>
           <div>`+profLink+`</div>
-        </div>
-        <div class="footer" style="font-size:20%;">
-          <script type="text/javascript"> printFooter(); </script>
         </div>
       </div>
     </div>
