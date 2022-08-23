@@ -1,7 +1,7 @@
 function printHeader(topUrl, profUrl, id) {
   // var worksLink = '<a href="'+topUrl+'">works</a>';
   var profLink = '<a href="'+profUrl+'">profile</a>';
-  var otherLink = '<a href="'+topUrl+'other/">other</a>';
+  var otherLink = '<a href="'+topUrl+'media_art/">media art</a>';
   var filmLink = '<a href="'+topUrl+'film/">film</a>';
   var softwareLink = '<a href="'+topUrl+'software/">software</a>';
 
@@ -11,8 +11,8 @@ function printHeader(topUrl, profUrl, id) {
   else if (id === 'prof') {
     var profLink = '<a href="'+profUrl+'" class="underbar">profile</a>';
   }
-  else if (id === 'other') {
-    var otherLink = '<a href="'+topUrl+'other/" class="underbar">other</a>';
+  else if (id === 'art') {
+    var otherLink = '<a href="'+topUrl+'other/" class="underbar">media art</a>';
   }
   else if (id === 'film') {
     var filmLink = '<a href="'+topUrl+'film/" class="underbar">film</a>';
