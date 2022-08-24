@@ -9,6 +9,9 @@ $(function () {
         $('.flex_box .info').css('font-size', '60%');
         $('.flex_box .title').css('font-size', '90%');
 
+        let relativePath = $('#menucss').attr('href')
+        $('#menucss').attr('href', `${relativePath}menu_mobile.css`)
+
 
         var timer = false;
         $(window).scroll(function () {
@@ -27,6 +30,9 @@ $(function () {
     }
     // PC
     else {
+        let relativePath = $('#menucss').attr('href')
+        $('#menucss').attr('href', `${relativePath}menu_pc.css`)
+
         $('.flex_box .mask').hover(
             function () {
                 $(this).css('opacity', '1.0');

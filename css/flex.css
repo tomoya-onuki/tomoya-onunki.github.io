@@ -20,7 +20,7 @@
 
 @media screen and (min-width:980px) {
   .flex_box {
-    flex-basis: 400px;
+    flex-basis: 320px;
   }
 }
 
@@ -63,22 +63,17 @@
 .flex_box .caption {
   position: absolute;
   color: #fff;
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  top: 10%;
-  left: 5%;
+  padding: 12px 20px 12px 20px;
   display: none;
   white-space: nowrap;
   opacity: 1;
   display: block;
-  /* mix-blend-mode: difference; */
 }
 
 .flex_box .caption .title {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro';
   font-size: 120%;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   font-weight: 800;
 }
 
