@@ -1,94 +1,82 @@
+// $(function () {
 function printHeader(topUrl, profUrl, id) {
-  // var worksLink = '<a href="'+topUrl+'">works</a>';
-  var profLink = '<a href="'+profUrl+'">profile</a>';
-  var otherLink = '<a href="'+topUrl+'media_art/">media art</a>';
-  var filmLink = '<a href="'+topUrl+'film/">film</a>';
-  var softwareLink = '<a href="'+topUrl+'software/">software</a>';
+  let profLink = $('<a></a>')
+    .attr('href', profUrl)
+    .text('profile')
 
-  if (id === 'works') {
-    // worksLink = '<a href="'+topUrl+'" class="underbar">works</a>';
-  }
-  else if (id === 'prof') {
-    var profLink = '<a href="'+profUrl+'" class="underbar">profile</a>';
+  let artLink = $('<a></a>')
+    .attr('href', `${topUrl}media_art/`)
+    .text('media art')
+
+  let filmLink = $('<a></a>')
+    .attr('href', `${topUrl}film/`)
+    .text('film')
+
+  let softwareLink = $('<a></a>')
+    .attr('href', `${topUrl}software/`)
+    .text('software')
+
+
+  if (id === 'prof') {
+    profLink.addClass('underbar')
   }
   else if (id === 'art') {
-    var otherLink = '<a href="'+topUrl+'other/" class="underbar">media art</a>';
+    artLink.addClass('underbar')
   }
   else if (id === 'film') {
-    var filmLink = '<a href="'+topUrl+'film/" class="underbar">film</a>';
+    filmLink.addClass('underbar')
   }
   else if (id === 'software') {
-    var softwareLink = '<a href="'+topUrl+'software/" class="underbar">software</a>';
+    softwareLink.addClass('underbar')
   }
-  // if (!topUrl || topUrl === './') {
-  //   worksLink = '<a href="'+topUrl+'" class="underbar">works</a>';
-  // }
+
   if (!profUrl) {
-    var profLink = '<a href="'+profUrl+'" class="underbar">profile</a>';
+    profLink.addClass('underbar')
   }
 
-  var header_str = `
-  <div class="header2">
-    <a id="top" class="head_font title" href="`+topUrl+`">onk</a>
 
 
-    <div class="pc">
-      <div class="head_menu head_font">
-      <span style="margin-left:15px;">`+filmLink+`</span>
-      <span style="margin-left:15px;">`+softwareLink+`</span>
-      <span style="margin-left:15px;">`+otherLink+`</span>
-        <span style="margin-left:15px;">/</span>
-        <span style="margin-left:15px;">`+profLink+`</span>
-      </div>
-    </div>
+  const topLink = $('<a></a>')
+    .attr('id', 'top')
+    .attr('href', topUrl)
+    .text('onk')
+    .addClass('head_font')
+    .addClass('title')
 
-    <div class="mobile">
-      <div class="head_menu">
-        <div class="head_font">
-        <div>`+filmLink+`</div>
-        <div>`+softwareLink+`</div>
-        <div>`+otherLink+`</div>
-          <hr>
-          <div>`+profLink+`</div>
-        </div>
-      </div>
-    </div>
-  
+  console.log(filmLink)
 
-    <span id="hamb_menu">
-      <div></div><div></div><div></div>
-    </span>
-  </div>`;
-  
-  // var header_str = `
-  // <div class="header2">
-  //   <a id="top" class="head_font title" href="`+topUrl+`">onukitomoya</a>
+  const pcMenu = $('<div></div>')
+    .addClass('head_menu')
+    .addClass('head_font')
+    .append($('<span></span>').attr('style', 'margin-left:15px').append(filmLink.clone()))
+    .append($('<span></span>').attr('style', 'margin-left:15px').append(softwareLink.clone()))
+    .append($('<span></span>').attr('style', 'margin-left:15px').append(artLink.clone()))
+    .append($('<span></span>').attr('style', 'margin-left:15px').text('/'))
+    .append($('<span></span>').attr('style', 'margin-left:15px').append(profLink.clone()))
 
 
-  //   <div class="pc">
-  //     <div class="head_menu head_font">
-  //       <span style="margin-left:15px;">`+worksLink+`</span>
-  //       <span style="margin-left:15px;">/</span>
-  //       <span style="margin-left:15px;">`+profLink+`</span>
-  //     </div>
-  //   </div>
+  const mobileMenu = $('<div></div>')
+    .addClass('head_menu')
+    .addClass('head_font')
+    .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(filmLink))
+    .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(softwareLink))
+    .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(artLink))
+    .append($('<hr>'))
+    .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(profLink))
 
-  //   <div class="mobile">
-  //     <div class="head_menu">
-  //       <div>onukitomoya</div>
-  //       <div class="head_font">`
-  //         +worksLink+` / `+profLink+`
-  //       </div>
-  //       <div class="footer" style="font-size:20%;">
-  //         <script type="text/javascript"> printFooter(); </script>
-  //       </div>
-  //     </div>
-  //   </div>
-  
+  const hamb = $('<span></span>')
+    .attr('id', 'hamb_menu')
+    .append($('<div></div>'))
+    .append($('<div></div>'))
+    .append($('<div></div>'))
 
-  //   <span id="hamb_menu">
-  //     <div></div><div></div><div></div>
-  //   </span>
-  // </div>`;
-  document.write(header_str);
+  const header = $('<div></div>')
+    .addClass('header2')
+    .append(topLink)
+    .append($('<div></div>').addClass('pc').append(pcMenu))
+    .append($('<div></div>').addClass('mobile').append(mobileMenu))
+    .append(hamb)
+
+  $('body').prepend(header)
 }
+// })
