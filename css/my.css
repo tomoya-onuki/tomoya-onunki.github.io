@@ -24,6 +24,12 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
+ul, ol {
+  margin-left: -24px;
+}
+li {
+  padding-left: 10px;
+}
 
 
 .logo_img{

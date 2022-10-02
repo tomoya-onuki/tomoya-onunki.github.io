@@ -1,7 +1,8 @@
 <title>Umidori</title>
 <info>2021.02 / Visualization</info>
-<img0>../img/umidori/case4.gif</img0>
-<img2>../img/umidori/usage.gif</img2>
+<img0>../img/umidori/umidori.png</img0>
+<!-- <img0>../img/umidori/case4.gif</img0> -->
+<!-- <img2>../img/umidori/usage.gif</img2> -->
 
 <right>
 卒業研究で開発した可視化ツール。海鳥の行動データを可視化することで比較分析の支援を目的とする。
@@ -20,5 +21,5 @@ Java, JavaFX
 
 ###Publication
 1. Tomoya Onuki, Kazuo Misue. Visualization tool for comparative analysis of seabird movement data. In Proceedings of 2022 26th International Conference on Information Visualisation, pp. 286–292, 2022.
-1. 小貫智弥, 三末和男. 海鳥の移動データの比較分析のための可視化ツールの開発, 情報処理学会研究報告, Vol.2022-HCI-196, No.6, 2022.
+1. 小貫智弥, 三末和男. 海鳥の移動データの比較分析のための可視化ツールの開発, 情報処理学会研究報告, Vol.2022-HCI-196, No.6, 2022. [link](https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&page_id=13&block_id=8&item_id=214584&item_no=1)
 </right>
