@@ -65,7 +65,7 @@ function printHeader(topUrl, profUrl, id) {
     .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(filmLink))
     .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(softwareLink))
     .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(artLink))
-    .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(vlogLink))
+    // .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(vlogLink))
     .append($('<hr>'))
     .append($('<div></div>').attr('style', 'margin:50px 0 50px 0').append(profLink))
 
