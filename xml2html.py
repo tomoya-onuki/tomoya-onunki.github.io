@@ -122,11 +122,11 @@ def generateHTML(tempStr, xmlList, metadataList):
             if re.search('youtu', value):
                 token = value.split('/')
                 url = 'https://www.youtube.com/embed/' + token[-1]
-                leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             elif re.search('drive', value):
-                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             else:
-                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
         elif re.search('img\d', tag):
             leftContents += '<img src="' + value + '">\n'
 
