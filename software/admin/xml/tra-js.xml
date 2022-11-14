@@ -1,0 +1,26 @@
+<title>Tra.js</title>
+<info>2022.11 / JavaScript Liblary</info>
+<img0>../img/tra-js/demo.gif</img0>
+
+<right>
+[https://tomoya-onuki.github.io/tra.js/](https://tomoya-onuki.github.io/tra.js/)
+
+
+###概要
+Tra.jsは時系列位置データの軌跡をWebブラウザで可視化するためのJavaScriptライブラリです。
+
+わずか数行で静的な軌跡を表示することができるだけでなく、TopoJSON形式の地理データの可視化や、アニメーションによる動的な表現を簡単に実装できます。また、軌跡の可視化に欠かせない軌跡の視覚変数（太さ・色・目盛り）を調整することも可能です。
+
+Canvas要素によるラスタ表現とD3.jsを用いたSVGによるベクタ表現の両方をサポートしています。
+
+###特徴
+- 時系列位置データの軌跡の可視化
+- 時系列位置データの軌跡のアニメーション表現
+- TopoJSON形式の地図の可視化
+
+###Development
+JavaScript
+
+###GitHub
+[https://github.com/tomoya-onuki/tra.js](https://github.com/tomoya-onuki/tra.js)
+</right>
