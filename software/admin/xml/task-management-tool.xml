@@ -1,12 +1,13 @@
 <title>タスク管理ツール DO3</title>
 <info>2019.12 / WebApplication</info>
-<img0>../img/task/home.png</img0>
-<img1>../img/task/edit.png</img1>
-<img2>../img/task/mobile.png</img2>
+<img0>../img/task/000.png</img0>
+<img1>../img/task/001.png</img1>
+<img2>../img/task/002.png</img2>
+<img3>../img/task/003.png</img3>
+<img4>../img/task/004.png</img4>
+<img5>../img/task/005.png</img5>
 
 <right>
-[https://do-three.herokuapp.com](https://do-three.herokuapp.com)
-
 アジャイル開発で使用するかんばんをコンセプトに制作したアプリケーション
 
 ###Development
