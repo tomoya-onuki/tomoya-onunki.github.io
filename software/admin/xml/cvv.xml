@@ -23,7 +23,7 @@ CVViewerはサイクリックボルタンメトリー (cyclic voltammetry, CV) �
 - 集約されたデータは再利用可能な形で書き出すことができる。
 
 ###Development
-TypeScript
+TypeScript, D3.js, chroma.js
 
 ###GitHub
 [https://github.com/tomoya-onuki/CVViewer](https://github.com/tomoya-onuki/CVViewer)
