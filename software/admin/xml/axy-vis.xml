@@ -1,20 +1,19 @@
 <title>Axy Visualizer</title>
-<info>2023.02 / Visualization</info>
-<img0>../img/</img0>
-<img1>../img/</img1>
-<img2>../img/</img2>
+<info>2023.03 / Visualization</info>
+<img1>../img/axy-vis/00.png</img1>
 
 <right>
-修士研究で開発した可視化ツール。海鳥の行動分析作業の支援を目的とした可視化ツール。
+修士研究で開発した海鳥の行動分析作業の支援を目的とした可視化ツール。
 
 ###課題
-
+- データが大規模であるため視覚表現な煩雑さやインタラクションの遅延が発生する。
+- 複数の作業工程を全て支援できる既存のツールが少ない。
 
 ###アプローチ
-
+大規模なデータの視覚的探索の支援のために、データの概要と詳細をスムーズに探索できるビューや自動的な行動分類機能、海鳥の行動を時空間的かつ視覚的に分析するための視覚表現を設計し、統合的なツールとした開発する。
 
 ###Development
-Java, JavaFX
+TypeScript, Three.js, jQuery, chroma.js, Day.js
 
 ###Publication
 1. 
