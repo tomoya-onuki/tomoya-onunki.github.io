@@ -1,4 +1,3 @@
-// $(function () {
 function printHeader(topUrl, profUrl, id) {
   let profLink = $('<a></a>')
     .attr('href', profUrl)
@@ -84,4 +83,3 @@ function printHeader(topUrl, profUrl, id) {
 
   $('body').prepend(header)
 }
-// })
