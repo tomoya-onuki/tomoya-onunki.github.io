@@ -251,7 +251,7 @@ if len(args) == 2:
         title = metadata[1]
         tag0 = '<div id="'+id+'" class="flex_box">'
         tag1 = '<a href="./'+id+'">'
-        tag2 = '<img src="../img/index2/'+id+'.png">'
+        tag2 = '<img src="../img/index/'+id+'.jpeg">'
         tag3 = '<div class="title">'+title+'</div>'
 
         # infoタグの生成

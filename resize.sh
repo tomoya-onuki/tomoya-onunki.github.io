@@ -5,7 +5,7 @@ if [ $# = 2 ]; then
   mkdir $acv
   for file in $1*; do
     # echo $file
-    if [ `echo $file | grep '.png'` ] || [ `echo $file | grep '.jpg'` ] || [ `echo $file | grep '.JPG'` ] ; then
+    if [ `echo $file | grep '.png'` ] || [ `echo $file | grep '.jpg'` ] || [ `echo $file | grep '.jpeg'` ] || [ `echo $file | grep '.JPG'` ] ; then
       cp $file $acv
       sips -Z $2 $file
     fi
