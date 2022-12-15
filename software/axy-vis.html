@@ -5,7 +5,7 @@
 		
 		<meta name="viewport" content="width=360,initial-scale=1">
 		
-		<title>    Tra.js - onukitomoya.  </title>
+		<title>    Axy Visualizer - onukitomoya.  </title>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 		
@@ -38,60 +38,51 @@
 		
 		<div id="buttons">
 			<a id="close" href="./"></a>
-			
-			<a id="next" href="fishue.html"></a>
-			
-			<a id="prev" href="emavis.html"></a>
+			<!-- next -->
+			<!-- prev -->
 			
 		</div>
 		
 		<div id="main">
 			<div class="works_header">
-				<h2>Tra.js</h2>
+				<h2>Axy Visualizer</h2>
 				
-				<div class="info">2022.11 / JavaScript Liblary</div>
+				<div class="info">2023.03 / Visualization</div>
 				
 			</div>
 			
 			<div class="works_contents">
 				<div class="block_l">
-					<img src="../img/tra-js/demo.gif">
+					<img src="../img/axy-vis/00.png">
 					
 				</div>
 				
 				<div class="block_r">
-					<div>
-						<a href="https://tomoya-onuki.github.io/tra.js/">https://tomoya-onuki.github.io/tra.js/</a>
-					</div>
+					<div>修士研究で開発した海鳥の行動分析作業の支援を目的とした可視化ツール。</div>
 					
-					<h3>概要</h3>
-					
-					<div>Tra.jsは時系列位置データの軌跡をWebブラウザで可視化するためのJavaScriptライブラリです。</div>
-					
-					<div>わずか数行で静的な軌跡を表示することができるだけでなく、TopoJSON形式の地理データの可視化や、アニメーションによる動的な表現を簡単に実装できます。また、軌跡の可視化に欠かせない軌跡の視覚変数（太さ・色・目盛り）を調整することも可能です。</div>
-					
-					<div>Canvas要素によるラスタ表現とD3.jsを用いたSVGによるベクタ表現の両方をサポートしています。</div>
-					
-					<h3>特徴</h3>
+					<h3>課題</h3>
 					
 					<ul>
-						<li>時系列位置データの軌跡の可視化</li>
+						<li>データが大規模であるため視覚表現な煩雑さやインタラクションの遅延が発生する。</li>
 						
-						<li>時系列位置データの軌跡のアニメーション表現</li>
-						
-						<li>TopoJSON形式の地図の可視化</li>
+						<li>複数の作業工程を全て支援できる既存のツールが少ない。</li>
 						
 					</ul>
 					
+					<h3>アプローチ</h3>
+					
+					<div>大規模なデータの視覚的探索の支援のために、データの概要と詳細をスムーズに探索できるビューや自動的な行動分類機能、海鳥の行動を時空間的かつ視覚的に分析するための視覚表現を設計し、統合的なツールとした開発する。</div>
+					
 					<h3>Development</h3>
 					
-					<div>JavaScript</div>
+					<div>TypeScript, Three.js, jQuery, chroma.js, Day.js</div>
 					
-					<h3>GitHub</h3>
+					<h3>Publication</h3>
 					
-					<div>
-						<a href="https://github.com/tomoya-onuki/tra.js">https://github.com/tomoya-onuki/tra.js</a>
-					</div>
+					<ol>
+						<li>小貫智弥, 庄子晶子, 三末和男. 海鳥の行動分析作業の支援を目的とした可視化ツールの開発, 第15回データ工学と情報マネジメントに関するフォーラム(DEIM), , 2022.</li>
+						
+					</ol>
 				</div>
 			</div>
 			
