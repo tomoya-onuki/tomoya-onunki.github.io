@@ -1,9 +1,26 @@
 <title>Emavis</title>
 <info>2022.12 / Visualization</info>
-<img0>../img/emavis/00.png</img0>
-<img1>../img/emavis/01.png</img1>
-<img2>../img/emavis/02.png</img2>
-<img3>../img/emavis/03.png</img3>
+<img0>../img/emavis/07.png</img0>
+<img1>../img/emavis/15.png</img1>
+<img2>../img/emavis/19.png</img2>
+<imgl1>../img/emavis/01.png</imgl1>
+<imgr1>../img/emavis/02.png</imgr1>
+<imgl2>../img/emavis/03.png</imgl2>
+<imgr2>../img/emavis/04.png</imgr2>
+<imgl3>../img/emavis/05.png</imgl3>
+<imgr3>../img/emavis/06.png</imgr3>
+<imgl4>../img/emavis/08.png</imgl4>
+<imgr4>../img/emavis/20.png</imgr4>
+<imgl5>../img/emavis/09.png</imgl5>
+<imgr5>../img/emavis/10.png</imgr5>
+<imgl6>../img/emavis/11.png</imgl6>
+<imgr6>../img/emavis/12.png</imgr6>
+<imgl7>../img/emavis/13.png</imgl7>
+<imgr7>../img/emavis/14.png</imgr7>
+<imgl8>../img/emavis/16.png</imgl8>
+<imgr8>../img/emavis/17.png</imgr8>
+<imgl9>../img/emavis/18.png</imgl9>
+<imgr9>../img/emavis/21.png</imgr9>
 
 <right>
 [https://tomoya-onuki.github.io/emavis/](https://tomoya-onuki.github.io/emavis/)
@@ -12,7 +29,7 @@
 ###概要
 Emavisは絵馬に書かれた願い事を可視化するプロジェクトである。
 
-私たちは日本各地の寺社仏閣を訪れ絵馬を調査し、"絵馬データベース"を作成した。 現在は7つの寺社仏閣で収集した223の願い事を可視化した。
+私たちは日本各地の寺社仏閣を訪れ絵馬を調査し、"絵馬データベース"を作成した。 現在は9つの寺社仏閣で収集した223の願い事を可視化した。
 
 ワードクラウドや棒グラフを基本とした視覚表現を表示することで、どの神社で誰に向けてどんな願いを書いたかを分析することが可能である。
 
