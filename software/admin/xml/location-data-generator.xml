@@ -1,0 +1,27 @@
+<title>Location Data Generator</title>
+<info>2023.02 / Web Application</info>
+<img0>../img/location-data-generator/00.png</img0>
+<imgl0>../img/location-data-generator/01.png</imgl0>
+<imgr0>../img/location-data-generator/04.png</imgr0>
+<imgl1>../img/location-data-generator/03.png</imgl1>
+<imgr1>../img/location-data-generator/05.png</imgr1>
+<imgl2>../img/location-data-generator/02.png</imgl2>
+
+<right>
+[https://tomoya-onuki.github.io/locationDataGenerator/](https://tomoya-onuki.github.io/locationDataGenerator/)
+
+時系列位置データを生成するためのツール
+
+CSVをはじめKMLやGPXといったGPSログデータ形式での書き出しが可能
+
+生成したデータはGoogle MapやGoogle Earth、作者の[Umidoriツール](./umidori)などで使用することができる。
+
+
+
+###Development
+TypeScript, Mapbox-gl-js
+
+###GitHub
+[https://github.com/tomoya-onuki/locationDataGenerator](https://github.com/tomoya-onuki/locationDataGenerator)
+
+</right>
