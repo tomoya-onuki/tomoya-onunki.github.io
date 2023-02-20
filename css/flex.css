@@ -16,6 +16,7 @@
 
   margin-right: 2%;
   margin-bottom: 2%;
+  overflow: hidden;
 }
 
 @media screen and (min-width:980px) {
@@ -31,10 +32,11 @@
 }
 
 .flex_box img {
-  width: 100%;
+  width: calc(100% + 4px);
   height: 100%;
+  margin-top: 2px;
   object-fit: cover;
-  /* filter: saturate(90%); */
+  filter: blur(2px) grayscale(40%);
 }
 
 .flex_box video {
@@ -49,20 +51,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 1.0;
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
-/* .flex_box .mask:hover { */
-  /* opacity: 1; */
-  /* background-color: rgba(0, 0, 0, 0.4); */
-  /* マスクを表示する */
-/* } */
 .flex_box .caption {
   position: absolute;
-  color: #fff;
+  color: #f4f4f4;
   padding: 12px 20px 12px 20px;
   display: none;
   white-space: nowrap;
@@ -84,9 +79,7 @@
   font-weight: 300;
 }
 
-.flex_box:hover .caption {
-  opacity: 1;
-}
+
 
 
 #allView {
@@ -95,6 +88,7 @@
   font-weight: bold;
   font-size: 150%;
 }
+
 #allView:hover {
   opacity: 0.6;
 }
