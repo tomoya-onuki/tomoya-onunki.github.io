@@ -5,7 +5,7 @@
 		
 		<meta name="viewport" content="width=360,initial-scale=1">
 		
-		<title>    ごっっはにゃさん - onukitomoya.  </title>
+		<title>    Axy Visualizer - onukitomoya.  </title>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 		
@@ -39,43 +39,54 @@
 		<div id="buttons">
 			<a id="close" href="./"></a>
 			
-			<a id="next" href="visual-k.html"></a>
-			
-			<a id="prev" href="task-management-tool.html"></a>
+			<a id="next" href="umidori.html"></a>
+			<!-- prev -->
 			
 		</div>
 		
 		<div id="main">
 			<div class="works_header">
-				<h2>ごっっはにゃさん</h2>
+				<h2>Axy Visualizer</h2>
 				
-				<div class="info">2019.08 / WebApplication</div>
+				<div class="info">2023.03 / Visualization</div>
 				
 			</div>
 			
 			<div class="works_contents">
 				<div class="block_l">
-					<img src="../img/gohan/home.png">
-					
-					<img src="../img/gohan/content.png">
+					<img src="../img/axy-vis/00.png">
 					
 				</div>
 				
 				<div class="block_r">
-					<div>筑波大学情報学群の講義 enPitにて制作したアプリケーション。</div>
+					<div>修士研究で開発した海鳥の行動分析作業の支援を目的とした可視化ツール。</div>
 					
-					<div>
-						筑波大学周辺は学生街となっており、飲食店も学生をターゲットとした個人営業の店舗が多い。
-						よってきちんとした情報発信がなされないことも多く、学生は臨時休業などの情報を入手しづらい状況にある。
-					</div>
+					<h3>課題</h3>
 					
-					<div>お店を訪れたユーザーが店舗が開店しているか否かを簡単なUIを通して入力することでリアルタイムな店舗の開店情報を共有することが可能なシステムを考案・実装した。</div>
+					<ul>
+						<li>データが大規模であるため視覚表現な煩雑さやインタラクションの遅延が発生する。</li>
+						
+						<li>複数の作業工程を全て支援できる既存のツールが少ない。</li>
+						
+					</ul>
 					
-					<div>制作：安斎彩季 / 小貫智弥 / 新貝力哉 / 末吉里帆 / 田之頭吾音 / 古川栞</div>
+					<h3>アプローチ</h3>
+					
+					<div>大規模なデータの視覚的探索の支援のために、データの概要と詳細をスムーズに探索できるビューや自動的な行動分類機能、海鳥の行動を時空間的かつ視覚的に分析するための視覚表現を設計し、統合的なツールとした開発する。</div>
 					
 					<h3>Development</h3>
 					
-					<div>PHP, PostgreSQL</div>
+					<div>TypeScript, Three.js, jQuery, chroma.js, Day.js</div>
+					
+					<h3>Publication</h3>
+					
+					<ol>
+						<li>
+							<strong>小貫智弥</strong>
+							, 三末和男. 海鳥の行動分析作業の支援を目的とした可視化ツールの開発, 第15回データ工学と情報マネジメントに関するフォーラム (DEIM2022), No.4B-1-2, 2022.
+						</li>
+						
+					</ol>
 				</div>
 			</div>
 			

@@ -3,8 +3,6 @@
 <img0>../img/visual-k/kk.png</img0>
 
 <right>
-[http://visual-k.herokuapp.com](http://visual-k.herokuapp.com)
-
 筑波大学情報学群の講義 enPitにて制作した視覚表現。
 階層構造になった行列表現を用いた新たな視覚表現を提案することで、テニスの得点表を可視化した。
 
