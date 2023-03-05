@@ -1,6 +1,7 @@
 #!/bin/sh
 if [ $# = 2 ]; then
-  acv=$1'archive';
+  date=`date '+%Y-%m-%d_%H-%M-%S'`
+  acv=$1'archive_'$date;
 
   mkdir $acv
   for file in $1*; do
