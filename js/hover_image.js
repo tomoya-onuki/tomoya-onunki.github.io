@@ -1,4 +1,4 @@
-$(function () {
+function hoeverImage() {
     $('.flex_box').each(function () {
         $(this)
             .on('mouseover', function () {
@@ -16,8 +16,8 @@ $(function () {
                 $(this).find('img')
                     .attr('src', lowSrc)
                     .css({
-                        'filter': 'blur(10px)'
+                        'filter': 'blur(10px) saturate(1.2)'
                     });
             });
     });
-});
+};
