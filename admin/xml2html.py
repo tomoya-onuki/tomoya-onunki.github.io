@@ -236,10 +236,10 @@ if len(args) == 2:
     dirname = args[1]
     if not re.findall('.*/', args[1]):
         dirname = args[1]+'/'
-    print(dirname)
+    print('../' + dirname)
 
     cTree = contentsTree()
-    cTree.fileOpen(dirname)
+    cTree.fileOpen('../' + dirname)
     metadataList = cTree.getMetadataList()
 
     ###########################

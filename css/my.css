@@ -10,6 +10,11 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-x: hidden;
+
+  -webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 body::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -53,10 +58,11 @@ a {
   transform: rotate(60deg)
 }
 
+a,
 p a,
 h2 a,
 h1 a {
-  color: #000;
+  color: #222;
 }
 .head_menu a:hover,
 h2 a:hover,

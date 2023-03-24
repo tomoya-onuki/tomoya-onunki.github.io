@@ -7,6 +7,9 @@ function hoeverImage() {
                 $(this).find('img')
                     .attr('src', highSrc)
                     .css({
+                        'width': '100%',
+                        'height': '100%',
+                        'transform': 'translate(0, 0)',
                         'filter': `blur(0px)`
                     });
             })
@@ -16,7 +19,10 @@ function hoeverImage() {
                 $(this).find('img')
                     .attr('src', lowSrc)
                     .css({
-                        'filter': 'blur(10px) saturate(1.2)'
+                        'width': 'calc(100% + 12px)',
+                        'height': 'calc(100% + 12px)',
+                        'transform': 'translate(-6px, -6px)',
+                        'filter': 'blur(5px) saturate(1.2)'
                     });
             });
     });
