@@ -13,6 +13,7 @@
     width: calc(620*0.9px);
   }
 }
+
 @media screen and (max-width:620px) {
   .profile {
     width: 90%;
@@ -111,9 +112,11 @@
   color: #999;
   /* padding-right:10px; */
 }
+
 .profile .sub-item a {
   color: #999;
 }
+
 .profile .link {
   text-decoration: underline;
 }
@@ -181,4 +184,11 @@
 
 #show-more {
   cursor: pointer;
+}
+
+.lang-menu {
+  height: 10px;
+  width: 42px;
+  position: absolute;
+  right: 0px;
 }
