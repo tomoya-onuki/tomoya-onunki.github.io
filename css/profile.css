@@ -118,7 +118,9 @@
 }
 
 .profile .link {
+  color: #999;
   text-decoration: underline;
+  margin: 0 0 0 6px;
 }
 
 
@@ -188,7 +190,7 @@
 
 .lang-menu {
   height: 10px;
-  width: 42px;
+  width: auto;
   position: absolute;
   right: 0px;
 }
