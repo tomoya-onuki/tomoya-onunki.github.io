@@ -1,4 +1,4 @@
-.header2 {
+.header-logo {
     height: 65px;
     width: 100%;
     background: rgba(255,255,255,0);
@@ -9,7 +9,7 @@
     color: #000;
 }
 
-.header2 .head_font {
+.header-logo .head_font {
     font-size: 160%;
     font-family: "Helvetica Neue", Arial, sans-serif;
     text-decoration: none;
@@ -17,7 +17,7 @@
     color: #000;
 }
 
-.header2 .title {
+.header-logo .title {
     position: absolute;
     left: 5%;
     top: 20px;
@@ -31,7 +31,7 @@
     border-left: none;
   }
 
-.header2 .mobile .head_menu {
+.header-logo .mobile .head_menu {
     background: rgba(255, 255, 255, 0.5);
 
     position: absolute;
@@ -44,21 +44,21 @@
     padding-top: 0%;
 }
 
-.header2 .mobile .head_menu div {
+.header-logo .mobile .head_menu div {
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-.header2 .mobile .head_menu a {
+.header-logo .mobile .head_menu a {
     color: #000;
 }
 
-.header2 .mobile .head_menu a :hover {
+.header-logo .mobile .head_menu a :hover {
     color: #000;
     opacity: 1;
 }
 
-.header2 .pc .head_menu {
+.header-logo .pc .head_menu {
     display: none;
 }
 

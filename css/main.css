@@ -1,0 +1,193 @@
+body {
+  scroll-behavior: smooth;
+  /* font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro', sans-serif; */
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: #eee;
+  font-size: 80%;
+  font-weight: 100;
+
+  background-color: #222;
+
+  width: 100vw;
+  margin: 0 0 0 0;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.header-logo {
+  height: 50px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 2;
+  color: #eee;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-decoration: none;
+}
+
+.header-logo .title {
+  font-size: 120%;
+  font-weight: 800;
+}
+
+.header-logo .info {
+  font-size: 20%;
+  font-weight: 400;
+}
+
+.header-prof {
+  top: 20px;
+  right: 20px;
+  z-index: 4;
+  height: auto;
+  width: auto;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  color: #eee;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-decoration: none;
+  font-size: 120%;
+  font-weight: 800;
+}
+
+#main {
+  /* padding-top: 20px; */
+  width: calc(100vw - 160px);
+  margin: 10px 80px;
+  /* width: 100%; */
+  overflow: hidden;
+}
+
+ul, ol {
+  margin-left: -24px;
+}
+
+li {
+  padding-left: 10px;
+}
+
+
+.logo_img {
+  width: 17px;
+  height: 17px;
+  margin-right: 3px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+a,
+p a,
+h2 a,
+h1 a {
+  color: #eee;
+}
+
+.head_menu a:hover,
+h2 a:hover,
+h1 a:hover,
+.works_menu a:hover,
+.reel_menu a:hover,
+.sub_menu a:hover,
+p a:hover {
+  opacity: 0.4;
+}
+
+.sub_menu {
+  margin-bottom: 20px;
+}
+
+.sub_menu a {
+  font-size: 120%;
+  /* font-weight: bold; */
+  color: #eee;
+}
+
+
+
+
+
+
+/* video {
+  object-fit: cover;
+} */
+
+
+
+/*ヘッダのフォント設定*/
+
+.header_margin {
+  padding-top: 130px;
+  margin-top: -62px;
+}
+
+
+h1 {
+  color: #eee;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  /* font-size: 300% */
+  /* margin-bottom: 40px; */
+}
+
+h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  /* font-size: 100%; */
+  color: #eee;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #eee;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.underbar {
+  border-bottom: solid 1px #eee;
+  padding-bottom: 3px;
+}
+
+
+
+
+.footer {
+  font-size: 70%;
+  font-weight: normal;
+  color: #eee;
+
+  /* position:absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,0); */
+  /* width: 90%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding-bottom: 10px;
+}
