@@ -239,7 +239,8 @@ if len(args) == 2:
     print('../' + dirname)
 
     cTree = contentsTree()
-    cTree.fileOpen('../' + dirname)
+    cTree.fileOpen(dirname)
+    # cTree.fileOpen('../' + dirname)œ
     metadataList = cTree.getMetadataList()
 
     ###########################
