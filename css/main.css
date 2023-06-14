@@ -1,11 +1,10 @@
 body {
   scroll-behavior: smooth;
   /* font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ Pro', sans-serif; */
-  /* font-family: 'Zen Kaku Gothic New', sans-serif; */
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
   color: #eee;
   font-size: 80%;
-  font-weight: 100;
+  font-weight: 400;
 
   background-color: #222;
 
@@ -36,7 +35,8 @@ body::-webkit-scrollbar {
   padding: 20px;
   z-index: 2;
   color: #eee;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 120%;
   text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ body::-webkit-scrollbar {
   background: rgba(0, 0, 0, 0);
   position: fixed;
   color: #eee;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
   text-decoration: none;
   font-size: 120%;
   font-weight: 800;
