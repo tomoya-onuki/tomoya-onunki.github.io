@@ -172,12 +172,12 @@ def generateHTML(tempStr, xmlList, metadataList):
 def generateLinks(tempStr, contentsName, cTree):
     next = cTree.nextContentsName(contentsName)
     if next is not None:
-        str = '<a id="next" href="'+next+'.html"></a>'
+        str = '<a id="next" href="'+next+'"></a>'
         tempStr = tempStr.replace('<!-- next -->', str)
 
     prev = cTree.prevContentsName(contentsName)
     if prev is not None:
-        str = '<a id="prev" href="'+prev+'.html"></a>'
+        str = '<a id="prev" href="'+prev+'"></a>'
         tempStr = tempStr.replace('<!-- prev -->', str)
 
     str = '<a id="close" href="../"></a>'
@@ -253,7 +253,7 @@ if len(args) == 2:
         title = metadata[2]
 
         tag0 = '<div id="'+id+'" class="flex_box">'
-        tag1 = '<a href="./works/'+id+'.html">'
+        tag1 = '<a href="./works/'+id+'">'
         tag2 = '<img class="index-img" src="../img/index/'+id+'.jpeg">'
         tag3 = '<div class="title">'+title+'</div>'
 

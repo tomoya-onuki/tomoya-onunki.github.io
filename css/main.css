@@ -65,10 +65,10 @@ body::-webkit-scrollbar {
 }
 
 #main {
-  /* padding-top: 20px; */
-  width: calc(100vw - 160px);
-  margin: 10px 80px;
-  /* width: 100%; */
+  width: calc(100vw - 16%);
+  margin: 10px 8%;
+  /* width: calc(100vw - 160px);
+  margin: 10px 80px; */
   overflow: hidden;
 }
 
