@@ -192,3 +192,12 @@
   position: absolute;
   right: 0px;
 }
+
+/* #more-info {
+  display: none;
+} */
+
+#show-more {
+  margin-bottom: 50px;
+  /* text-align: center; */
+}
