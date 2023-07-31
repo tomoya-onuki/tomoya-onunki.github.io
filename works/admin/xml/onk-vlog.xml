@@ -7,11 +7,15 @@
 <imgr1>../img/onk-vlog/04.png</imgr1>
 <imgl2>../img/onk-vlog/05.png</imgl2>
 <imgr2>../img/onk-vlog/06.png</imgr2>
-<img0>../img/onk-vlog/07.png</img0>
+<imgl3>../img/onk-vlog/09.png</imgl3>
+<imgr3>../img/onk-vlog/08.png</imgr3>
 
 <right>
-実験的に取り組んでいるVlogチャンネルとその動画コンテンツ群、およびデザイン。
+実験的に取り組んでいるVlogチャンネルとその動画コンテンツ群、システム、およびデザイン。
+
+作者自身ではなく作者が見たものを切り取り、音声ではなく文字によって語るという形式で制作をしている。
+またアイキャッチデザインを簡単に生成できるonkVLog Eyecatch Makerというアプリケーションを開発した。
 
 - Youtube : [https://www.youtube.com/@onkvlog4975/](https://www.youtube.com/@onkvlog4975/)
-- Instagram : [https://www.instagram.com/onk_vlog/](https://www.instagram.com/onk_vlog/)
+- GitHub (Eyecatch Maker) : [https://github.com/tomoya-onuki/onkvlog_eyecatch_maker](https://github.com/tomoya-onuki/onkvlog_eyecatch_maker)
 </right>
