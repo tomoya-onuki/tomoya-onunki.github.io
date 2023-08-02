@@ -88,17 +88,18 @@ body::-webkit-scrollbar {
   display: none;
 }
 #head-menu .head-manu-item {
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
   width: 25px;
-  background-color: aqua;
+  height: 10px;
   border-top: #eee solid 2px; 
   transition: 0.2s;
 }
 #head-menu-chbox:checked ~ .head-manu-item:nth-of-type(1) {
-  transform: rotate(45deg) translate(3px, 10px);
+  transform: rotate(45deg) translate(0px, 5px);
 }
 #head-menu-chbox:checked ~ .head-manu-item:nth-of-type(2) {
-  transform: rotate(-45deg) translate(3px, -10px);
+  transform: rotate(-45deg) translate(8px, -4px);
 }
 
 #head-menu-view {
