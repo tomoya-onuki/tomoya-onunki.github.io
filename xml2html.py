@@ -252,7 +252,7 @@ if len(args) == 2:
         genre = metadata[1]
         title = metadata[2]
 
-        tag0 = '<div id="'+id+'" class="flex_box">'
+        tag0 = '<div id="'+id+'" class="flex_box ' + genre +'-box">'
         tag1 = '<a href="./works/'+id+'">'
         tag2 = '<img class="index-img" src="../img/index/'+id+'.jpeg">'
         tag3 = '<div class="title">'+title+'</div>'
@@ -266,7 +266,7 @@ if len(args) == 2:
             idx+=1
 
 
-        tmp = tag0 + tag1 + tag2 + '<div class="mask ' + genre + '"><div class="caption">' + tag3 + tag4 + '</div></div></a></div>\n'
+        tmp = tag0 + tag1 + tag2 + '<div class="mask ' + genre + '-mask"><div class="caption">' + tag3 + tag4 + '</div></div></a></div>\n'
         htmlText += tmp
 
     # テンプレートファイルを取得
