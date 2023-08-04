@@ -1,15 +1,17 @@
+import {fadeIn, fadeOut} from "./fadeIO.js";
+
 window.onload = function () {
     const headMenuChbox = document.querySelector("#head-menu-chbox");
     headMenuChbox.addEventListener('input', () => {
+        const headMenuView = document.querySelector("#head-menu-view")
         if (headMenuChbox.checked) {
-            document.querySelector("#head-menu-view").style.display = 'block';
+            fadeIn(headMenuView);
         } else {
-            document.querySelector("#head-menu-view").style.display = 'none';
+            fadeOut(headMenuView);
         }
     });
     const mediaArtChbox = document.querySelector("#mediaart-chbox");
     mediaArtChbox.addEventListener('input', () => {
-        console.log('click');
         document.querySelectorAll(".media-art-box").forEach(elem => {
             if (mediaArtChbox.checked) {
                 elem.style.display = 'block';
@@ -39,3 +41,4 @@ window.onload = function () {
         });
     });
 }
+
