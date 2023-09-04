@@ -98,21 +98,21 @@
 
 .profile .head {
   float: left;
-  width: 90px;
+  width: 70px;
 }
 
 .profile .item {
-  margin-left: 110px
+  margin-left: 80px
 }
 
 
 .profile .sub-item {
-  color: #888;
+  color: #bbb;
   /* padding-right:10px; */
 }
 
 .profile .sub-item a {
-  color: #888;
+  color: #bbb;
 }
 
 .profile .link {
