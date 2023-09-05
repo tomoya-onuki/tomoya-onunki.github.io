@@ -171,6 +171,7 @@ def generateHTML(tempStr, xmlList, metadataList):
 ###############
 def generateLinks(tempStr, contentsName, cTree):
     next = cTree.nextContentsName(contentsName)
+    # print(contentsName, cTree, next)
     if next is not None:
         str = '<a id="next" href="'+next+'"></a>'
         tempStr = tempStr.replace('<!-- next -->', str)
@@ -202,7 +203,7 @@ class contentsTree(object):
         for line in lines:
             token = line.split(',')
             self.metadataList.append(token) # メタデータ
-            self.contentsList.append(token[0]) # ID
+            self.contentsList.append(token[1]) # ID
         # print(seÚlf.contentsList)
 
 
