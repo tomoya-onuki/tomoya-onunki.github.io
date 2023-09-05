@@ -114,9 +114,9 @@ body::-webkit-scrollbar {
   cursor: pointer;
   padding: 0 5px 2px 5px;
   margin: 2px 5px;
+  background-color: rgba(0, 0, 0, 0);
   border: 2px solid #eee;
   color: #eee;
-  opacity: 0.2;
 }
 #head-menu-view input[type="checkbox"] {
   display: none;
@@ -124,10 +124,14 @@ body::-webkit-scrollbar {
 #mediaart-chbox:checked ~ #mediaart-chbox-label,
 #video-chbox:checked ~ #video-chbox-label,
 #software-chbox:checked ~ #software-chbox-label {
-  opacity: 1.0;
+  background-color: #eee;
+  border: 2px solid #eee;
+  color: #222;
 }
 #head-menu-view #profile-link {
   opacity: 1.0;
+  margin: 10px 0 0 10px;
+  margin-left: 10px;
 }
 
 #main {

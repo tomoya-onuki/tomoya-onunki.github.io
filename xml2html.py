@@ -248,20 +248,23 @@ if len(args) == 2:
     htmlText = ''
     for metadata in metadataList:
         # タイトルとdivを生成
-        id = metadata[0]
-        genre = metadata[1]
-        title = metadata[2]
+        id = metadata[1]
+        genre = metadata[2]
+        title = metadata[3]
 
         tag0 = '<div id="'+id+'" class="flex_box ' + genre +'-box">'
         tag1 = '<a href="./works/'+id+'">'
         tag2 = '<img class="index-img" src="../img/index/'+id+'.jpeg">'
         tag3 = '<div class="title">'+title+'</div>'
 
-        # infoタグの生成
+
+        # # infoタグの生成
         idx = 0
+        min = 4
+        # max = 6
         tag4 = ''
         for info in metadata:
-            if idx > 2:
+            if min <= idx and info != '':
                 tag4 += '<div class="info">'+info+'</div>'
             idx+=1
 
