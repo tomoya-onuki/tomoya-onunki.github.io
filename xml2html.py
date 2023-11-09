@@ -115,26 +115,26 @@ def generateHTML(tempStr, xmlList, metadataList):
 
         # 右側コンテンツ
         elif re.fullmatch(tag, 'right'):
-            rightContents = '<div class="block_r">' + md.convert(value) + '</div>'
+            rightContents = f'<div class="block_r">{md.convert(value)}</div>'
 
         # 左側コンテンツ(メイン)
         elif re.fullmatch(tag, 'mov'):
             if re.search('youtu', value):
                 token = value.split('/')
-                url = 'https://www.youtube.com/embed/' + token[-1]
-                leftContents += '<div class="mov">\n<iframe id="youtbe_player" src="' + url + '" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                url = f'https://www.youtube.com/embed/{token[-1]}'
+                leftContents += f'<div class="mov">\n<iframe id="youtbe_player" src="{url}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             elif re.search('drive', value):
-                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                leftContents += f'<div class="mov">\n<iframe src="{value}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             else:
-                leftContents += '<div class="mov">\n<iframe src="' + value  +'" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                leftContents += f'<div class="mov">\n<iframe src="{value}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
         elif re.search('img\d', tag):
-            leftContents += '<img src="' + value + '">\n'
+            leftContents += f'<img src="{value}">\n'
 
         # 左側コンテンツ(サブ)
         elif re.search('imgr\d', tag):
-            leftContents += '<img class="half_img_r" src="' + value + '">\n'
+            leftContents += f'<img class="half_img_r" src="{value}">\n'
         elif re.search('imgl\d', tag):
-            leftContents += '<img class="half_img_l" src="' + value + '">\n'
+            leftContents += f'<img class="half_img_l" src="{value}">\n'
         elif re.fullmatch(tag, 'left'):
             leftContents += md.convert(value)
     
@@ -155,8 +155,8 @@ def generateHTML(tempStr, xmlList, metadataList):
     #     tempStr = tempStr.replace('<!-- info -->', infoStr)
 
     # コンテンツの整形
-    leftContents = '<div class="block_l">\n' + leftContents + '\n</div>'
-    contents = leftContents + '\n' + rightContents 
+    leftContents = f'<div class="block_l">\n{leftContents}\n</div>'
+    contents = f'{leftContents}\n{rightContents}'
     contents = contents.replace('\\', '<br>')
     htmlContents = contents
     # htmlContents = md.convert(contents)
@@ -173,12 +173,12 @@ def generateLinks(tempStr, contentsName, cTree):
     next = cTree.nextContentsName(contentsName)
     # print(contentsName, cTree, next)
     if next is not None:
-        str = '<a id="next" href="'+next+'"></a>'
+        str = f'<a id="next" href="{next}"></a>'
         tempStr = tempStr.replace('<!-- next -->', str)
 
     prev = cTree.prevContentsName(contentsName)
     if prev is not None:
-        str = '<a id="prev" href="'+prev+'"></a>'
+        str = f'<a id="prev" href="{prev}"></a>'
         tempStr = tempStr.replace('<!-- prev -->', str)
 
     str = '<a id="close" href="../"></a>'
@@ -234,14 +234,12 @@ md = markdown.Markdown()
 
 
 if len(args) == 2:
-    dirname = args[1]
-    if not re.findall('.*/', args[1]):
-        dirname = args[1]+'/'
-    print('../' + dirname)
+    dirname = args[1] if args[1].endswith('/') else f'{args[1]}/'
+    print(f'../{dirname}')
 
     cTree = contentsTree()
     cTree.fileOpen(dirname)
-    # cTree.fileOpen('../' + dirname)œ
+    # cTree.fileOpen('../{dirname)œ
     metadataList = cTree.getMetadataList()
 
     ###########################
@@ -253,10 +251,10 @@ if len(args) == 2:
         genre = metadata[2]
         title = metadata[3]
 
-        tag0 = '<div id="'+id+'" class="flex_box ' + genre +'-box">'
-        tag1 = '<a href="./works/'+id+'">'
-        tag2 = '<img class="index-img" src="../img/index/'+id+'.jpeg">'
-        tag3 = '<div class="title">'+title+'</div>'
+        tag0 = f'<div id="'+id+'" class="flex_box {genre}-box">'
+        tag1 = f'<a href="./works/{id}">'
+        tag2 = f'<img class="index-img" src="../img/index/{id}.jpeg">'
+        tag3 = f'<div class="title">{title}</div>'
 
 
         # # infoタグの生成
@@ -266,11 +264,11 @@ if len(args) == 2:
         tag4 = ''
         for info in metadata:
             if min <= idx and info != '':
-                tag4 += '<div class="info">'+info+'</div>'
+                tag4 += f'<div class="info">{info}</div>'
             idx+=1
 
 
-        tmp = tag0 + tag1 + tag2 + '<div class="mask ' + genre + '-mask"><div class="caption">' + tag3 + tag4 + '</div></div></a></div>\n'
+        tmp = f'{tag0}{tag1}{tag2}<div class="mask {genre}-mask"><div class="caption">{tag3 + tag4}</div></div></a></div>\n'
         htmlText += tmp
 
     # テンプレートファイルを取得
@@ -335,8 +333,10 @@ if len(args) == 2:
         tempStr = generateLinks(tempStr, contentsName, cTree)
 
         # 全体の整形
-        tempStr = formatHTML(tempStr)
+        # tempStr = formatHTML(tempStr)
         # tempStr = tempStr.replace('\n', '')
+        tempStr = re.sub('>\s+<', '><', tempStr)
+        tempStr = re.sub('\s\s+', ' ', tempStr)
 
         # 新しいファイルに書き出す
         outFp = open(outFile,'w')

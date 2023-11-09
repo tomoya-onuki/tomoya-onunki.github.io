@@ -1,3 +1,4 @@
+/* コンテンツをタイル上に配置する。list.cssを消して、こっちをはいちする。 */
 .wrap {
   display: flex;
   flex-wrap: wrap;

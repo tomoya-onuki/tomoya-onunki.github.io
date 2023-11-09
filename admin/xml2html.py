@@ -325,7 +325,7 @@ if len(args) == 2:
         tempStr = generateLinks(tempStr, contentsName, cTree)
 
         # 全体の整形
-        tempStr = formatHTML(tempStr)
+        # tempStr = formatHTML(tempStr)
         # tempStr = tempStr.replace('\n', '')
 
         # 新しいファイルに書き出す
