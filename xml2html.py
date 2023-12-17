@@ -253,7 +253,7 @@ for metadata in metadataList:
 
     tag0 = f'<div id="'+id+'" class="flex_box {genre}-box">'
     tag1 = f'<a href="./works/{id}">'
-    tag2 = f'<img class="index-img" src="../img/index/{id}.jpeg">'
+    tag2 = f'<img class="index-img" src="./img/index/{id}.jpeg">'
     tag3 = f'<div class="title">{title}</div>'
 
 
