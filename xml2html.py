@@ -195,7 +195,7 @@ class contentsTree(object):
         super(contentsTree, self).__init__()
 
     def fileOpen(self, dirname):
-        contentsTree = path.join(path.dirname(__file__), dirname+'admin/contentsTree.csv')
+        contentsTree = path.join(path.dirname(__file__), dirname+'contentsTree.csv')
         self.contentsList = []
         self.metadataList = []
         with open(contentsTree, 'r') as fp:
@@ -233,116 +233,112 @@ args = sys.argv
 md = markdown.Markdown()
 
 
-if len(args) == 2:
-    dirname = args[1] if args[1].endswith('/') else f'{args[1]}/'
-    print(f'../{dirname}')
 
-    cTree = contentsTree()
-    cTree.fileOpen(dirname)
-    # cTree.fileOpen('../{dirname)œ
-    metadataList = cTree.getMetadataList()
+dirname = './res/'
+print(f'../{dirname}')
 
-    ###########################
-    # index.htmlを作成
-    htmlText = ''
-    for metadata in metadataList:
-        # タイトルとdivを生成
-        id = metadata[1]
-        genre = metadata[2]
-        title = metadata[3]
+cTree = contentsTree()
+cTree.fileOpen(dirname)
+# cTree.fileOpen('../{dirname)œ
+metadataList = cTree.getMetadataList()
 
-        tag0 = f'<div id="'+id+'" class="flex_box {genre}-box">'
-        tag1 = f'<a href="./works/{id}">'
-        tag2 = f'<img class="index-img" src="../img/index/{id}.jpeg">'
-        tag3 = f'<div class="title">{title}</div>'
+###########################
+# index.htmlを作成
+htmlText = ''
+for metadata in metadataList:
+    # タイトルとdivを生成
+    id = metadata[1]
+    genre = metadata[2]
+    title = metadata[3]
 
-
-        # # infoタグの生成
-        idx = 0
-        min = 4
-        # max = 6
-        tag4 = ''
-        for info in metadata:
-            if min <= idx and info != '':
-                tag4 += f'<div class="info">{info}</div>'
-            idx+=1
+    tag0 = f'<div id="'+id+'" class="flex_box {genre}-box">'
+    tag1 = f'<a href="./works/{id}">'
+    tag2 = f'<img class="index-img" src="../img/index/{id}.jpeg">'
+    tag3 = f'<div class="title">{title}</div>'
 
 
-        tmp = f'{tag0}{tag1}{tag2}<div class="mask {genre}-mask"><div class="caption">{tag3 + tag4}</div></div></a></div>\n'
-        htmlText += tmp
+    # # infoタグの生成
+    idx = 0
+    min = 4
+    # max = 6
+    tag4 = ''
+    for info in metadata:
+        if min <= idx and info != '':
+            tag4 += f'<div class="info">{info}</div>'
+        idx+=1
+
+
+    tmp = f'{tag0}{tag1}{tag2}<div class="mask {genre}-mask"><div class="caption">{tag3 + tag4}</div></div></a></div>\n'
+    htmlText += tmp
+
+# テンプレートファイルを取得
+with open(path.join(path.dirname(__file__), dirname+'templateIndex.html'), 'r') as tempIdxFp:
+    lines = tempIdxFp.read().splitlines()
+tempIdxStr = ''
+for line in lines:
+    tempIdxStr += line
+tempIdxFp.close()
+
+indexStr = tempIdxStr.replace('<!--CONTENTS-->', htmlText)
+
+outFp = open('./dist/index.html','w')
+# outFp = open(dirname+'index.html','w')
+indexStr = formatHTML(indexStr)
+outFp.write(indexStr)
+outFp.close()
+print("Out: ./dist/index.html")
+# print("Out: "+dirname+"index.html")
+###########################
+
+
+
+
+###########################
+# workディレクトリの内容物の生成
+for inFile in glob.glob(dirname+'xml/*.xml'):
+    outFile = './dist/works/' + inFile.split('/')[3].replace('.xml', '.html')
+
+    token = inFile.split('/')
+    contentsName = token[len(token)-1].replace('.xml', '')
+    print('Out: '+outFile)
+    # print('In : '+inFile+',  Out: '+outFile)
+
+    # 入力ファイルの内容を文字列として取得
+    inFp = open(inFile,'r')
+    inStr = ''
+    mdText = {}
+    for line in inFp:
+        inStr += line
+    inFp.close()
 
     # テンプレートファイルを取得
-    with open(path.join(path.dirname(__file__), dirname+'admin/templateIndex.html'), 'r') as tempIdxFp:
-        lines = tempIdxFp.read().splitlines()
-    tempIdxStr = ''
+    # tempFp = open('./template.html','r')
+    with open(path.join(path.dirname(__file__), dirname+'template.html'), 'r') as tempFp:
+        lines = tempFp.read().splitlines()
+    tempStr = ''
     for line in lines:
-        tempIdxStr += line
-    tempIdxFp.close()
+        tempStr += line
+    tempFp.close()
 
-    indexStr = tempIdxStr.replace('<!--CONTENTS-->', htmlText)
+    # XML解析
+    parser = xmlParser()
+    parser.feed(inStr)
+    xmlList = parser.getXmlList()
 
-    outFp = open('index.html','w')
-    # outFp = open(dirname+'index.html','w')
-    indexStr = formatHTML(indexStr)
-    outFp.write(indexStr)
+    # XML to HTML
+    # print(xmlList)
+    tempStr = generateHTML(tempStr, xmlList, metadataList)
+
+    # コンテンツのリンクを生成
+    tempStr = generateLinks(tempStr, contentsName, cTree)
+
+    # 全体の整形
+    # tempStr = formatHTML(tempStr)
+    # tempStr = tempStr.replace('\n', '')
+    tempStr = re.sub('>\s+<', '><', tempStr)
+    tempStr = re.sub('\s\s+', ' ', tempStr)
+
+    # 新しいファイルに書き出す
+    outFp = open(outFile,'w')
+    outFp.write(tempStr)
     outFp.close()
-    print("Out: index.html")
-    # print("Out: "+dirname+"index.html")
-    ###########################
-
-
-
-
-    ###########################
-    # workディレクトリの内容物の生成
-    for inFile in glob.glob(dirname+'admin/xml/*.xml'):
-        outFile = inFile.replace('.xml', '.html').replace('xml', '..') # 入力ファイル名を出力ファイル名に変換
-
-        token = inFile.split('/')
-        contentsName = token[len(token)-1].replace('.xml', '')
-        print('Out: '+outFile)
-        # print('In : '+inFile+',  Out: '+outFile)
-
-        # 入力ファイルの内容を文字列として取得
-        inFp = open(inFile,'r')
-        inStr = ''
-        mdText = {}
-        for line in inFp:
-            inStr += line
-        inFp.close()
-
-        # テンプレートファイルを取得
-        # tempFp = open('./template.html','r')
-        with open(path.join(path.dirname(__file__), dirname+'admin/template.html'), 'r') as tempFp:
-            lines = tempFp.read().splitlines()
-        tempStr = ''
-        for line in lines:
-            tempStr += line
-        tempFp.close()
-
-        # XML解析
-        parser = xmlParser()
-        parser.feed(inStr)
-        xmlList = parser.getXmlList()
-
-        # XML to HTML
-        # print(xmlList)
-        tempStr = generateHTML(tempStr, xmlList, metadataList)
-
-        # コンテンツのリンクを生成
-        tempStr = generateLinks(tempStr, contentsName, cTree)
-
-        # 全体の整形
-        # tempStr = formatHTML(tempStr)
-        # tempStr = tempStr.replace('\n', '')
-        tempStr = re.sub('>\s+<', '><', tempStr)
-        tempStr = re.sub('\s\s+', ' ', tempStr)
-
-        # 新しいファイルに書き出す
-        outFp = open(outFile,'w')
-        outFp.write(tempStr)
-        outFp.close()
-
-
-else:
-    print('Please Input Dir Name.')
