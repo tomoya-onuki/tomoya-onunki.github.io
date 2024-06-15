@@ -1,0 +1,16 @@
+<title>takobutsu</title>
+<info>2024.06 / Application</info>
+<img1>../img/takobutsu/000.png</img1>
+<img2>../img/takobutsu/001.png</img2>
+<img2>../img/takobutsu/002.png</img2>
+
+<right>
+[https://tomoya-onuki.github.io/takobutsu/](https://tomoya-onuki.github.io/takobutsu/)
+
+電気使用量とそれに基づく利用料金を可視化するプロダクト
+
+TGオクトパスエナジー社が提供しているAPIを経由しデータを取得し、D3.jsを用いて可視化する
+
+- GitHub: [https://github.com/tomoya-onuki/takobutsu](https://github.com/tomoya-onuki/takobutsu)
+- TGオクトパスエナジー: [https://octopusenergy.co.jp/](https://octopusenergy.co.jp/)
+</right>
