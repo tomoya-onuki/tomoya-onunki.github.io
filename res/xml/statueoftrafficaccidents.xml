@@ -1,0 +1,16 @@
+<title>ひとつの ー。</title>
+<info>2024.06 / Media Art</info>
+<img0>../img/statueoftrafficaccidents/00.png</img0>
+<img1>../img/statueoftrafficaccidents/01.png</img1>
+<img2>../img/statueoftrafficaccidents/02.png</img2>
+<img3>../img/statueoftrafficaccidents/03.png</img3>
+
+
+<right>
+[https://tomoya-onuki.github.io/statueoftrafficaccidents/](https://tomoya-onuki.github.io/statueoftrafficaccidents/)
+
+東京都の交通事故被害者数を可視化したバーチャル彫刻
+
+作者が交番の前を通るたびに交番に掲示されている交通事故被害数のボードに書かれた情報を記録したデータをもとに作成した作品。
+データ収集から視覚表現の設計、コーディングまで行った。
+</right>
