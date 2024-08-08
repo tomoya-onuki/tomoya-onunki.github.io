@@ -37,26 +37,10 @@
     </div>
 
     <div>
-        <video id="top_img" muted="True" loop="True">
+        <video id="top_img" muted="True" loop="True" autoplay>
             <source src="./media/REEL2023.mp4" type="video/mp4" />
         </video>
-        <div id="start_btn"></div>
-        <div id="pause_btn"></div>
     </div>
-    <script>
-        let start_btn = document.querySelector('#start_btn');
-        let pause_btn = document.querySelector('#pause_btn');
-        start_btn.addEventListener('click', () => {
-            document.querySelector('#top_img').play();
-            start_btn.style.display = 'none';
-            pause_btn.style.display = 'block';
-        });
-        pause_btn.addEventListener('click', () => {
-            document.querySelector('#top_img').pause();
-            start_btn.style.display = 'block';
-            pause_btn.style.display = 'none';
-        });
-    </script>
 </body>
 
 </html>
