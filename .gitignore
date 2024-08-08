@@ -1,6 +1,2 @@
-memo.html
-memo_en.html
-*.txt
-mov
-*.mp4
-*.mov
+venv/
+archive/
