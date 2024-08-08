@@ -27,13 +27,13 @@ body::-webkit-scrollbar {
 
 .header-logo {
   height: 50px;
-  width: 120px;
+  width: auto;
   background: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
   padding: 20px;
-  z-index: 2;
+  z-index: 4;
   color: #eee;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 120%;
@@ -71,9 +71,12 @@ body::-webkit-scrollbar {
   top: 0;
   right: 0;
   height: 200px;
-  width: 100px;
+  width: auto;
   padding: 25px 20px;
   z-index: 10;
+}
+#head-menu-box a:hover {
+  opacity: 50%;
 }
 #head-menu {
   display: block;

@@ -6,6 +6,7 @@
   align-content: space-between;
   margin-bottom: 0px;
   padding: 0 0 0 0;
+  margin-top: 80px;
 }
 
 .flex_box {
@@ -13,15 +14,13 @@
   flex-grow: 1;
   position: relative;
   overflow: hidden;
-
+  padding: 0;
+  margin: 5px;
   flex-basis: 320px;
+  border-radius: 12px;
 }
 
 .flex_box img {
-  /* width: calc(100% + 12px); */
-  /* height: calc(100% + 12px); */
-  /* transform: translate(-6px, -6px); */
-  /* filter: blur(5px) saturate(1.2); */
   width: 100%;
   height: 100%;
   object-fit: cover;

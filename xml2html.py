@@ -2,15 +2,15 @@ import markdown
 import glob
 import sys
 import re
-import json
 import html
 from os import path
+import os
+import shutil
 from html.parser import HTMLParser
 
-###############
-## HTML解析
-###############
-class xmlParser(HTMLParser):
+
+# HTML解析
+class xml_parser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.found_tag = False
@@ -26,31 +26,36 @@ class xmlParser(HTMLParser):
             self.texts[self.tag] = data
             self.found_tag = False
 
-    def getXmlList(self):
+    def get_xml_list(self):
         return self.texts
 
-###############
-## HTML整形
-###############
-def formatHTML(s, reset=None):  # HTMLを整形する。第2引数があるときはすでにあるインデントを除去する。
+
+# HTML整形
+def format_html(s, reset=None):  # HTMLを整形する。第2引数があるときはすでにあるインデントを除去する。
     if reset is not None:  # 第2引数がある時。
-        s = re.sub(r'(?<=>)\s+?(?=<)', "", s)  # 空文字だけのtextとtailを削除してすでにあるインデントをリセットする。
+        # 空文字だけのtextとtailを削除してすでにあるインデントをリセットする。
+        s = re.sub(r'(?<=>)\s+?(?=<)', "", s)
     indentunit = "\t"  # インデントの1単位。
-    tagregex = re.compile(r"(?s)<(?:\/?(\w+).*?\/?|!--.*?--)>|(?<=>).+?(?=<)")  # 開始タグと終了タグ、コメント、テキストノードすべてを抽出する正規表現オブジェクト。ただし<を含んだテキストノードはそこまでしか取得できない。
-    replTag = repltagCreator(indentunit)  # マッチオブジェクトを処理する関数を取得。
+    # 開始タグと終了タグ、コメント、テキストノードすべてを抽出する正規表現オブジェクト。ただし<を含んだテキストノードはそこまでしか取得できない。
+    tagregex = re.compile(r"(?s)<(?:\/?(\w+).*?\/?|!--.*?--)>|(?<=>).+?(?=<)")
+    replTag = repltag_creator(indentunit)  # マッチオブジェクトを処理する関数を取得。
     s = html.unescape(s)  # HTMLの文字参照をユニコードに戻す。
     s = tagregex.sub(replTag, s)  # script要素とstyle要素以外インデントを付けて整形する。
     s.replace('\n', '')
     return s.lstrip("\n")  # 先頭の改行を削除して返す。
 
-def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブジェクトを処理する関数を返す。
+
+def repltag_creator(indentunit):  # 開始タグと終了タグのマッチオブジェクトを処理する関数を返す。
     starttagregex = re.compile(r'<\w+.*?>')  # 開始タグ。
     endendtagregex = re.compile(r'<\/\w+>$')  # 終了タグで終わっているか。
-    noendtags = "br", "img", "hr", "meta", "input", "embed", "area", "base", "col", "link", "param", "source", "wbr", "track"  # HTMLでは終了タグがなくなるタグ。
+    # HTMLでは終了タグがなくなるタグ。
+    noendtags = "br", "img", "hr", "meta", "input", "embed", "area", "base", "col", "link", "param", "source", "wbr", "track"
     c = 0  # インデントの数。
     starttagtype = ""  # 開始タグと終了タグが対になっているかを確認するため開始タグの要素型をクロージャに保存する。
     txtnodeflg = False  # テキストノードを処理したときに立てるフラグ。テキストノードが分断されたときのため。
-    def replTag(m):  # 開始タグと終了タグのマッチオブジェクトを処理する関数。
+
+    # 開始タグと終了タグのマッチオブジェクトを処理する関数。
+    def replTag(m):
         nonlocal c, starttagtype, txtnodeflg  # 変更するクロージャ変数。
         txt = m.group(0)  # マッチした文字列を取得。
         tagtype = m.group(1)  # 要素型を取得。Noneのときもある。
@@ -61,7 +66,7 @@ def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブ
             txtnodeflg = False  # テキストノードのフラグを倒す。
         elif txt.endswith("</{}>".format(tagtype)):  # 終了タグの時。
             c -= 1  # インデントの数を減らす。
-            if tagtype!=starttagtype:  # 開始タグと同じ要素型ではない時。
+            if tagtype != starttagtype:  # 開始タグと同じ要素型ではない時。
                 txt = "".join(["\n", indentunit*c, txt])  # タグの前で改行してインデントする。
             starttagtype = ""  # 開始タグの要素型をリセットする。
             txtnodeflg = False  # テキストノードのフラグを倒す。
@@ -74,273 +79,273 @@ def repltagCreator(indentunit):  # 開始タグと終了タグのマッチオブ
             pass  # そのまま返す。
         else:  # 上記以外はテキストノードと判断する。
             if not txt.strip():  # 改行や空白だけのとき。
-                txt = ""  # 削除する。
-            if "\n" in txt: # テキストノードが複数行に渡る時。
+                txt = ""    # 削除する。
+            if "\n" in txt:
+                # テキストノードが複数行に渡る時。
                 txt = txt.rstrip("\n").replace("\n", "".join(["\n", indentunit*c]))  # 最後の改行を除いたあと全行をインデントする。
                 if not txtnodeflg:  # 直前に処理したのがテキストノードではない時。
                     txt = "".join(["\n", indentunit*c, txt])  # 前を改行してインデントする。
-                if endendtagregex.search(txt):  # 終了タグで終わっている時。テキストノードに<があるときそうなる。
-                    c -= 1  # インデントを一段上げる。
-                    txt = endendtagregex.sub(lambda m: "".join(["\n", indentunit*c, m.group(0)]), txt)  # 終了タグの前を改行してインデントする。
-                starttagtype = ""  # 開始タグの要素型をリセットする。開始タグと終了タグが一致しているままだと終了タグの前で改行されないため。
+                if endendtagregex.search(txt):
+                    # 終了タグで終わっている時。テキストノードに<があるときそうなる。
+                    # インデントを一段上げる。
+                    c -= 1
+                    # 終了タグの前を改行してインデントする。
+                    txt = endendtagregex.sub(lambda m: "".join(["\n", indentunit * c, m.group(0)]), txt)
+                # 開始タグの要素型をリセットする。開始タグと終了タグが一致しているままだと終了タグの前で改行されないため。
+                starttagtype = "" 
             elif not starttagtype:  # 単行、かつ、開始タグが一致していない時。
-                txt = "".join(["\n", indentunit*c, txt])  # テキストノードの前で改行してインデントする。
+                # テキストノードの前で改行してインデントする。
+                txt = "".join(["\n", indentunit*c, txt])
             txtnodeflg = True  # テキストノードのフラグを立てる。
         return txt
     return replTag
 
-###############
-## メインの処理
-###############
-def generateHTML(tempStr, xmlList, metadataList):
+
+# メインの処理
+def generate_html(temp_str, xml_list):
+    md = markdown.Markdown()
     # 左側のコンテンツの分析と整形
-    leftContents = ''
-    leftSubContents = ''
-    rightContents = ''
-    
+    left_contents = ''
+    right_contents = ''
+
     # タグの処理
-    for tag, value in xmlList.items():
+    for tag, value in xml_list.items():
         value = value.strip()
-        # # Titleのとき
-        # if re.fullmatch(tag, 'title'):
-        #     tempStr = tempStr.replace('<!-- '+tag+' -->', value)
+
         # TitleとInfoのとき
         if re.fullmatch(tag, 'title') or re.fullmatch(tag, 'info'):
-            tempStr = tempStr.replace('<!-- '+tag+' -->', value)
-
-        # リンクのとき
-        # if re.fullmatch(tag, 'prev') or re.fullmatch(tag, 'next'):
-        #     str = '<a id="'+tag+'" href="'+value+'.html"></a>'
-        #     tempStr = tempStr.replace('<!-- '+tag+' -->', str)
+            temp_str = temp_str.replace('<!-- '+tag+' -->', value)
 
         # 右側コンテンツ
         elif re.fullmatch(tag, 'right'):
-            rightContents = f'<div class="block_r">{md.convert(value)}</div>'
+            right_contents = f'<div class="block_r">{md.convert(value)}</div>'
 
         # 左側コンテンツ(メイン)
         elif re.fullmatch(tag, 'mov'):
             if re.search('youtu', value):
                 token = value.split('/')
                 url = f'https://www.youtube.com/embed/{token[-1]}'
-                leftContents += f'<div class="mov">\n<iframe id="youtbe_player" src="{url}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                left_contents += f'<div class="mov">\n<iframe id="youtbe_player" src="{url}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             elif re.search('drive', value):
-                leftContents += f'<div class="mov">\n<iframe src="{value}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                left_contents += f'<div class="mov">\n<iframe src="{value}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
             else:
-                leftContents += f'<div class="mov">\n<iframe src="{value}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
+                left_contents += f'<div class="mov">\n<iframe src="{value}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</div>\n'
         elif re.search('img\d', tag):
-            leftContents += f'<img src="{value}">\n'
+            left_contents += f'<img src="{value}">\n'
 
         # 左側コンテンツ(サブ)
         elif re.search('imgr\d', tag):
-            leftContents += f'<img class="half_img_r" src="{value}">\n'
+            left_contents += f'<img class="half_img_r" src="{value}">\n'
         elif re.search('imgl\d', tag):
-            leftContents += f'<img class="half_img_l" src="{value}">\n'
+            left_contents += f'<img class="half_img_l" src="{value}">\n'
         elif re.fullmatch(tag, 'left'):
-            leftContents += md.convert(value)
-    
-    # コンテンツツリーのメタデータを埋め込む
-    # for metadata in metadataList:
-    #     # infoの生成
-    #     infoStr = ''
-    #     size = len(metadata)
-    #     for idx in range(2, size):
-    #         infoStr += metadata[idx]
-            
-    #         if idx != size-1:
-    #             infoStr += ' , '
-            
-    #         if idx == 4:
-    #             infoStr += '<br>'
-
-    #     tempStr = tempStr.replace('<!-- info -->', infoStr)
+            left_contents += md.convert(value)
 
     # コンテンツの整形
-    leftContents = f'<div class="block_l">\n{leftContents}\n</div>'
-    contents = f'{leftContents}\n{rightContents}'
+    left_contents = f'<div class="block_l">\n{left_contents}\n</div>'
+    contents = f'{left_contents}\n{right_contents}'
     contents = contents.replace('\\', '<br>')
     htmlContents = contents
     # htmlContents = md.convert(contents)
-    tempStr = tempStr.replace('<!-- contents -->', htmlContents)
-    tempStr = tempStr.replace('<p>','<div>').replace('</p>','</div>')
+    temp_str = temp_str.replace('<!-- contents -->', htmlContents)
+    temp_str = temp_str.replace('<p>', '<div>').replace('</p>', '</div>')
 
-    return tempStr
+    return temp_str
 
 
-###############
-## コンテンツのリンクを生成
-###############
-def generateLinks(tempStr, contentsName, cTree):
-    next = cTree.nextContentsName(contentsName)
+# コンテンツのリンクを生成
+def generate_links(temp_str, contents_name, c_tree):
+    next = c_tree.next_contents_name(contents_name)
     # print(contentsName, cTree, next)
     if next is not None:
         str = f'<a id="next" href="{next}"></a>'
-        tempStr = tempStr.replace('<!-- next -->', str)
+        temp_str = temp_str.replace('<!-- next -->', str)
 
-    prev = cTree.prevContentsName(contentsName)
+    prev = c_tree.prev_contents_name(contents_name)
     if prev is not None:
         str = f'<a id="prev" href="{prev}"></a>'
-        tempStr = tempStr.replace('<!-- prev -->', str)
+        temp_str = temp_str.replace('<!-- prev -->', str)
 
-    str = '<a id="close" href="../"></a>'
+    str = '<a id="close" href="./"></a>'
     # str = '<a id="close" href="../#'+contentsName+'"></a>'
-    tempStr = tempStr.replace('<!-- close -->', str)
+    tempStr = temp_str.replace('<!-- close -->', str)
     return tempStr
 
 
-###############
-## コンテンツのリンクを取得
-###############
-class contentsTree(object):
+# コンテンツのリンクを取得
+class contents_tree(object):
     def __init__(self):
-        super(contentsTree, self).__init__()
+        super(contents_tree, self).__init__()
 
-    def fileOpen(self, dirname):
-        contentsTree = path.join(path.dirname(__file__), dirname+'contentsTree.csv')
-        self.contentsList = []
-        self.metadataList = []
-        with open(contentsTree, 'r') as fp:
+    def file_open(self, dirname):
+        contents_tree = path.join(path.dirname(__file__), f'res/{dirname}/contentsTree.csv')
+        self.contents_list = []
+        self.metadata_list = []
+        with open(contents_tree, 'r') as fp:
             lines = fp.read().splitlines()
         for line in lines:
             token = line.split(',')
-            self.metadataList.append(token) # メタデータ
-            self.contentsList.append(token[1]) # ID
-        # print(seÚlf.contentsList)
+            # メタデータ
+            self.metadata_list.append(token)
+            # ID
+            self.contents_list.append(token[0])
 
-
-    def prevContentsName(self, contentsName):
-        for i, name in enumerate(self.contentsList):
+    def prev_contents_name(self, contents_name):
+        for i, name in enumerate(self.contents_list):
             # print(name)
-            if contentsName == name:
+            if contents_name == name:
                 if i > 0:
-                    return self.contentsList[i-1]
+                    return self.contents_list[i-1]
         return None
 
-    def nextContentsName(self, contentsName):
-        for i, name in enumerate(self.contentsList):
-            if contentsName == name:
-                if i < len(self.contentsList) - 1:
-                    return self.contentsList[i+1]
+    def next_contents_name(self, contents_name):
+        for i, name in enumerate(self.contents_list):
+            if contents_name == name:
+                if i < len(self.contents_list) - 1:
+                    return self.contents_list[i+1]
         return None
 
-    def getMetadataList(self):
-        return self.metadataList
+    def get_metadata_list(self):
+        keys = [
+            'id',
+            'genre',
+            'title',
+            'date',
+            'detail_genre',
+            'size',
+            'roll',
+            'project_name'
+            ]
+        result = []
+        for metadata in self.metadata_list:
+            tmp = {}
+            for i, k in enumerate(keys):
+                if len(metadata) >= i:
+                    tmp[k] = metadata[i]
+                else:
+                    tmp[k] = ''
+            result.append(tmp)
+        return result
+    
 
-
-###############
-## メインの処理
-###############
-args = sys.argv
-md = markdown.Markdown()
-
-
-
-dirname = './res/'
-print(f'../{dirname}')
-
-cTree = contentsTree()
-cTree.fileOpen(dirname)
-# cTree.fileOpen('../{dirname)œ
-metadataList = cTree.getMetadataList()
-
-###########################
-# index.htmlを作成
-htmlText = ''
-for metadata in metadataList:
-    # タイトルとdivを生成
-    id = metadata[1]
-    genre = metadata[2]
-    title = metadata[3]
-
-    tag0 = f'<div id="'+id+'" class="flex_box {genre}-box">'
-    tag1 = f'<a href="./works/{id}">'
-    tag2 = f'<img class="index-img" src="./img/index/{id}.jpeg">'
-    tag3 = f'<div class="title">{title}</div>'
-
-
-    # # infoタグの生成
-    idx = 0
-    min = 4
-    # max = 6
-    tag4 = ''
-    for info in metadata:
-        if min <= idx and info != '':
-            tag4 += f'<div class="info">{info}</div>'
-        idx+=1
-
-
-    tmp = f'{tag0}{tag1}{tag2}<div class="mask {genre}-mask"><div class="caption">{tag3 + tag4}</div></div></a></div>\n'
-    htmlText += tmp
-
-# テンプレートファイルを取得
-with open(path.join(path.dirname(__file__), dirname+'templateIndex.html'), 'r') as tempIdxFp:
-    lines = tempIdxFp.read().splitlines()
-tempIdxStr = ''
-for line in lines:
-    tempIdxStr += line
-tempIdxFp.close()
-
-indexStr = tempIdxStr.replace('<!--CONTENTS-->', htmlText)
-
-outFp = open('./dist/index.html','w')
-# outFp = open(dirname+'index.html','w')
-# indexStr = formatHTML(indexStr)
-indexStr = re.sub('>\s+<', '><', indexStr)
-indexStr = re.sub('\s\s+', ' ', indexStr)
-outFp.write(indexStr)
-outFp.close()
-print("Out: ./dist/index.html")
-# print("Out: "+dirname+"index.html")
-###########################
-
-
-
-
-###########################
-# workディレクトリの内容物の生成
-for inFile in glob.glob(dirname+'xml/*.xml'):
-    outFile = './dist/works/' + inFile.split('/')[3].replace('.xml', '.html')
-
-    token = inFile.split('/')
-    contentsName = token[len(token)-1].replace('.xml', '')
-    print('Out: '+outFile)
-    # print('In : '+inFile+',  Out: '+outFile)
-
-    # 入力ファイルの内容を文字列として取得
-    inFp = open(inFile,'r')
-    inStr = ''
-    mdText = {}
-    for line in inFp:
-        inStr += line
-    inFp.close()
+def make_index_html(dirname, metadata_list):
+    # index.htmlを作成
+    html_text = ''
+    for metadata in metadata_list:
+        # タイトルとdivを生成
+        tmp = f"""
+        <div id="{metadata['id']}" class="flex_box {metadata['genre']}-box">
+            <a href="./{metadata['id']}">
+                <img class="index-img" src="../img/index/{metadata['id']}.jpeg">
+                <div class="mask {metadata['genre']}-mask">
+                    <div class="caption">
+                        <div class="title">{metadata['title']}</div>
+                        <div class="info">{metadata['date']}</div>
+                        <div class="info">{metadata['detail_genre']}</div>
+                        <div class="info">{metadata['size']}</div>
+                        <div class="info">{metadata['roll']}</div>
+                        <div class="info">{metadata['project_name']}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        """
+        html_text += tmp
 
     # テンプレートファイルを取得
-    # tempFp = open('./template.html','r')
-    with open(path.join(path.dirname(__file__), dirname+'template.html'), 'r') as tempFp:
-        lines = tempFp.read().splitlines()
-    tempStr = ''
-    for line in lines:
-        tempStr += line
-    tempFp.close()
+    with open(path.join(path.dirname(__file__), './res/templateIndex.html'), 'r') as f:
+        lines = f.read().splitlines()
+        temp_idx_str = ''
+        for line in lines:
+            temp_idx_str += line
 
-    # XML解析
-    parser = xmlParser()
-    parser.feed(inStr)
-    xmlList = parser.getXmlList()
+    index_str = temp_idx_str.replace('<!--CONTENTS-->', html_text)
 
-    # XML to HTML
-    # print(xmlList)
-    tempStr = generateHTML(tempStr, xmlList, metadataList)
+    menu_text = """
+    <div id="head-menu-box">
+        <a href="../art">Art</a> /
+        <a href="../film">Film</a> /
+        <a href="../code">Code</a> /
+        <a href="../profile.html">About</a>
+    </div>
+    """
+    top_upper_dirname = dirname[0].upper() + dirname[1:]
+    menu_text = menu_text.replace(top_upper_dirname, f'<u>{top_upper_dirname}</u>')
+    index_str = index_str.replace('<!-- MENU -->', menu_text)
+    
 
-    # コンテンツのリンクを生成
-    tempStr = generateLinks(tempStr, contentsName, cTree)
+    dir_path = f'./dist/{dirname}/'
+    if os.path.exists(dir_path):
+        shutil.rmtree(dir_path)
+    os.mkdir(dir_path)
+    with open(f'{dir_path}index.html', 'w') as f:
+        index_str = re.sub('>\s+<', '><', index_str)
+        index_str = re.sub('\s\s+', ' ', index_str)
+        f.write(index_str)
+    print(f'Out: {dir_path}index.html')
 
-    # 全体の整形
-    # tempStr = formatHTML(tempStr)
-    # tempStr = tempStr.replace('\n', '')
-    tempStr = re.sub('>\s+<', '><', tempStr)
-    tempStr = re.sub('\s\s+', ' ', tempStr)
 
-    # 新しいファイルに書き出す
-    outFp = open(outFile,'w')
-    outFp.write(tempStr)
-    outFp.close()
+def make_work_htmls(dirname, c_tree, metadata_list):
+    # workディレクトリの内容物の生成
+    xml_fnames = [metadata['id'] for metadata in metadata_list]
+    for in_file in glob.glob('./res//xml/*.xml'):
+        fid = in_file.split('/')[-1].replace('.xml', '')
+        # csvに含まれていなかったら飛ばす
+        if not fid in xml_fnames:
+            continue
+
+        out_file = f"./dist/{dirname}/{fid}.html"
+
+        token = in_file.split('/')
+        contents_name = token[len(token)-1].replace('.xml', '')
+        print('Out: '+out_file)
+
+        # 入力ファイルの内容を文字列として取得
+        with open(in_file, 'r') as f:
+            in_str = ''
+            for line in f.readlines():
+                in_str += line
+
+        # テンプレートファイルを取得
+        temp_fname = path.join(path.dirname(__file__), './res/template.html')
+        with open(temp_fname, 'r') as f:
+            temp_str = ''
+            for line in f.readlines():
+                temp_str += line
+
+        # XML解析
+        parser = xml_parser()
+        parser.feed(in_str)
+        xmlList = parser.get_xml_list()
+
+        # XML to HTML
+        # print(xmlList)
+        temp_str = generate_html(temp_str, xmlList)
+
+        # コンテンツのリンクを生成
+        temp_str = generate_links(temp_str, contents_name, c_tree)
+
+        # 全体の整形
+        temp_str = re.sub('>\s+<', '><', temp_str)
+        temp_str = re.sub('\s\s+', ' ', temp_str)
+
+        # 新しいファイルに書き出す
+        with open(out_file, 'w') as f:
+            f.write(temp_str)
+
+
+def main():
+    args = sys.argv
+    if len(args) >= 2:
+        for dirname in args[1:]:
+            print(f'{dirname}')
+
+            c_tree = contents_tree()
+            c_tree.file_open(dirname)
+            metadata_list = c_tree.get_metadata_list()
+            make_index_html(dirname, metadata_list)
+            make_work_htmls(dirname, c_tree, metadata_list)
+
+
+if __name__ == '__main__':
+    main()
