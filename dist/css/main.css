@@ -75,8 +75,9 @@ body::-webkit-scrollbar {
   padding: 25px 20px;
   z-index: 10;
 }
-#head-menu-box a:hover {
-  opacity: 50%;
+#head-menu-box a {
+  padding-left: 15px;
+  display: inline-block;
 }
 #head-menu {
   display: block;

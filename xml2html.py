@@ -263,21 +263,25 @@ def make_index_html(dirname, metadata_list):
 
     menu_text = """
     <div id="head-menu-box">
-        <a href="../art">Art</a> /
-        <a href="../film">Film</a> /
-        <a href="../code">Code</a> /
-        <a href="../profile.html">About</a>
+        <a href="/">Featured</a>
+        <a href="/art">Art</a>
+        <a href="/film">Film</a>
+        <a href="/code">Code</a>
+        <a href="/profile.html">About</a>
     </div>
     """
-    top_upper_dirname = dirname[0].upper() + dirname[1:]
-    menu_text = menu_text.replace(top_upper_dirname, f'<u>{top_upper_dirname}</u>')
+    if len(dirname) > 0:
+        top_upper_dirname = dirname[0].upper() + dirname[1:]
+        menu_text = menu_text.replace(top_upper_dirname, f'<u>{top_upper_dirname}</u>')
+    else:
+        menu_text = menu_text.replace('Featured', '<u>Featured</u>')
     index_str = index_str.replace('<!-- MENU -->', menu_text)
     
 
     dir_path = f'./dist/{dirname}/'
-    if os.path.exists(dir_path):
-        shutil.rmtree(dir_path)
-    os.mkdir(dir_path)
+    # if os.path.exists(dir_path):
+    #     shutil.rmtree(dir_path)
+    # os.mkdir(dir_path)
     with open(f'{dir_path}index.html', 'w') as f:
         index_str = re.sub('>\s+<', '><', index_str)
         index_str = re.sub('\s\s+', ' ', index_str)
@@ -346,6 +350,10 @@ def main():
             make_index_html(dirname, metadata_list)
             make_work_htmls(dirname, c_tree, metadata_list)
 
+    c_tree = contents_tree()
+    c_tree.file_open('')
+    metadata_list = c_tree.get_metadata_list()
+    make_index_html('', metadata_list)
 
 if __name__ == '__main__':
     main()
