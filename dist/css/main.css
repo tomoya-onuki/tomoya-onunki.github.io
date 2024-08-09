@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   z-index: 4;
   color: #eee;
   font-family: 'Zen Kaku Gothic New', sans-serif;
@@ -70,9 +70,9 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 0;
   right: 0;
-  height: 200px;
+  height: auto;
   width: auto;
-  padding: 25px 20px;
+  padding: 25px 20px 0px 20px;
   z-index: 10;
 }
 #head-menu-box a {
