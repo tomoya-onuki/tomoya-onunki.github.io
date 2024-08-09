@@ -1,24 +1,21 @@
 # 静的ポートフォリオ
+コンテンツはxmlとマークダウンが混じった独自の形式で記述し、コマンドライン上からpythonスクリプトでhtmlに変換する  
 
-## worksコンテンツの生成
-works内のコンテンツはxmlとマークダウンが混じった独自の形式で記述し、コマンドライン上からpythonスクリプトでhtmlに変換する  
-
-- xml2html.py
-    - xmlをhtmlに変換するpyhtonスクリプト
-    - ./works/admin/にある
-- markdown/
+## コンテンツの配置
+- /res/xml/
     - xmlの置き場所
     - ファイル名は自由
-- template.html
+- /res/template*.html
     - htmlのテンプレート
     - xml2html.py内で用いる
-- contentsTree.csv
+- /res/*/contentsTree.csv
     - worksコンテンツの順序を整理するためのcsv
     - treeとなっているが基本的には一方向配列
     - .html同士のリンクの生成に用いる
+    - コンテンツジャンルごとに階層が異なる
 
-- xmlの書き方
-```
+## xmlの書き方
+```xml
 <title>タイトル</title>
 <info>日付 / コンテンツの形式など</info>
 <mov>動画のリンク(推奨:youtube)</mov>
@@ -38,12 +35,19 @@ works内のコンテンツはxmlとマークダウンが混じった独自の形
 ```
 
 
-- 実行方法
-```
-python3 xml2html.py markdown/
-```
+## HTML生成方法
+- /xml2html.py
+  - xmlをhtmlに変換するpyhtonスクリプト
+- 実行コマンド
+  ```
+  python3 xml2html.py art film code
+  ```
 
-
+## webサーバーでの動作確認
+```
+cd dist
+python3 -m http.server 8000  
+```
 
 ## 画像のリサイズ
 ```
