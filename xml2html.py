@@ -158,12 +158,12 @@ def generate_links(temp_str, contents_name, c_tree):
     next = c_tree.next_contents_name(contents_name)
     # print(contentsName, cTree, next)
     if next is not None:
-        str = f'<a id="next" href="{next}"></a>'
+        str = f'<a id="next" href="{next}.html"></a>'
         temp_str = temp_str.replace('<!-- next -->', str)
 
     prev = c_tree.prev_contents_name(contents_name)
     if prev is not None:
-        str = f'<a id="prev" href="{prev}"></a>'
+        str = f'<a id="prev" href="{prev}.html"></a>'
         temp_str = temp_str.replace('<!-- prev -->', str)
 
     str = '<a id="close" href="./"></a>'
@@ -235,8 +235,8 @@ def make_index_html(dirname, metadata_list):
         # タイトルとdivを生成
         tmp = f"""
         <div id="{metadata['id']}" class="flex_box {metadata['genre']}-box">
-            <a href="./{metadata['id']}">
-                <img class="index-img" src="../img/index/{metadata['id']}.jpeg">
+            <a href="/{metadata['genre']}/{metadata['id']}.html">
+                <img class="index-img" src="/img/index/{metadata['id']}.jpeg">
                 <div class="mask {metadata['genre']}-mask">
                     <div class="caption">
                         <div class="title">{metadata['title']}</div>

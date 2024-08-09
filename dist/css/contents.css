@@ -55,7 +55,6 @@
   position: absolute;
   right: 0%;
   margin: 8px;
-  border-radius: 5px;
 }
 
 #next {
@@ -75,6 +74,7 @@
   height: 30px;
   left: 0;
   background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
 }
 
 #prev::after,
