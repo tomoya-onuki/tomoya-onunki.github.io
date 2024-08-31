@@ -5,12 +5,12 @@
 <img2>../img/takobutsu/002.png</img2>
 
 <right>
-[https://tomoya-onuki.github.io/takobutsu/](https://tomoya-onuki.github.io/takobutsu/)
+[https://onu-onu.github.io/takobutsu/](https://onu-onu.github.io/takobutsu/)
 
 電気使用量とそれに基づく利用料金を可視化するプロダクト
 
 TGオクトパスエナジー社が提供しているAPIを経由しデータを取得し、D3.jsを用いて可視化する
 
-- GitHub: [https://github.com/tomoya-onuki/takobutsu](https://github.com/tomoya-onuki/takobutsu)
+- GitHub: [https://github.com/onu-onu/takobutsu](https://github.com/onu-onu/takobutsu)
 - TGオクトパスエナジー: [https://octopusenergy.co.jp/](https://octopusenergy.co.jp/)
 </right>

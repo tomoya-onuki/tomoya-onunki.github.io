@@ -3,7 +3,7 @@
 <img0>../img/cvv/00.png</img0>
 
 <right>
-[https://tomoya-onuki.github.io/CVViewer/](https://tomoya-onuki.github.io/CVViewer/)
+[https://onu-onu.github.io/CVViewer/](https://onu-onu.github.io/CVViewer/)
 
 
 ###概要
@@ -26,5 +26,5 @@ CVViewerはサイクリックボルタンメトリー (cyclic voltammetry, CV) �
 TypeScript, D3.js, chroma.js
 
 ###GitHub
-[https://github.com/tomoya-onuki/CVViewer](https://github.com/tomoya-onuki/CVViewer)
+[https://github.com/onu-onu/CVViewer](https://github.com/onu-onu/CVViewer)
 </right>

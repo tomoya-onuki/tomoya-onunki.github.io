@@ -8,7 +8,7 @@
 <imgl2>../img/location-data-generator/02.png</imgl2>
 
 <right>
-[https://tomoya-onuki.github.io/locationDataGenerator/](https://tomoya-onuki.github.io/locationDataGenerator/)
+[https://onu-onu.github.io/locationDataGenerator/](https://onu-onu.github.io/locationDataGenerator/)
 
 時系列位置データを生成するためのツール
 
@@ -22,6 +22,6 @@ CSVをはじめKMLやGPXといったGPSログデータ形式での書き出し�
 TypeScript, Mapbox-gl-js
 
 ###GitHub
-[https://github.com/tomoya-onuki/locationDataGenerator](https://github.com/tomoya-onuki/locationDataGenerator)
+[https://github.com/onu-onu/locationDataGenerator](https://github.com/onu-onu/locationDataGenerator)
 
 </right>
